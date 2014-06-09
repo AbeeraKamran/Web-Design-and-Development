@@ -1,0 +1,314 @@
+/*************
+ * VARIABLES *
+ *************/
+
+// @import "foundation/components/global";
+// @import "foundation/components/grid";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms";
+// @import "foundation/components/dropdown-buttons";
+// @import "foundation/components/flex-video";
+// @import "foundation/components/top-bar";
+// @import "foundation-";
+
+$font-stack: 'Droid Sans', sans-serif;
+$font-serif: 'Playfair Display', serif;
+$color: #fcfcfc;
+$text-color: #1a1a1a;
+$heading-color: #f2f2f2;
+$box1-color: #feb100;
+$box2-color: #fec700;
+$footer-color: #e1632d;
+
+$h1-size: 2rem;
+$h2-size: 2.5rem;
+$h3-size: 1rem;
+$p-size: .5rem;
+
+
+
+/*************
+ * MIXINS    *
+ *************/
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 740px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 400px)  { @content; }
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin button($color) {
+  border-radius: 4px;
+  padding: 10px 15px;
+  background: $color;
+  color: white;
+  display: inline-block;
+}
+
+ /*************
+  * BODY      *
+  *************/
+
+.row {
+	max-width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.columns {
+	padding: 0;
+}
+
+#container {
+	max-width: 100%;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+body {
+	background-color: #fcfcfc;
+	font-family: $font-stack;
+	// background: url(img/conference_room.jpg) no-repeat center center ;
+	// background-size: cover;
+	// -webkit-background-size: cover;
+	// -moz-background-size: cover;
+	// -o-background-size: cover;
+
+}
+
+.crop-height {
+		max-height: 500px;
+		overflow: hidden;
+		position: absolute;
+}
+
+li {
+	list-style: none;
+}
+
+img.scale {
+	max-width: 100%;
+	display: block; 
+	width: 100%; /* corrects obscure Firefox bug */
+	
+	/* just in case, to force correct aspect ratio */
+	height: auto !important;
+	/*width: auto\9; 
+	/* ie8+9 - use modernizr instead of this \9 hack */
+	/* lt ie8 */
+	-ms-interpolation-mode: bicubic;
+}
+
+.flip {
+	-webkit-transform: rotate(180deg);
+	-moz-transform:    rotate(180deg);
+	-ms-transform:     rotate(180deg);
+	-o-transform:      rotate(180deg);
+	transform:         rotate(180deg);
+	/* needed? not sure */
+	zoom: 1; 
+}
+
+img.flip {
+	float: right;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.blurb {
+	position: absolute;
+	font-family: 'Playfair Display', Georgia;
+	font-size: 2rem;
+	background-color: rgba(255, 255, 255, 0.6);
+	margin: 10% 0 0 10%;
+	width: 78%%;
+	padding: 6% 4% 17% 4%;
+	float: left;
+	transition: width 500ms;
+
+	@include breakpoint(baby-bear) {
+		margin-top: 3%;
+	}
+
+}
+	
+
+.quote {
+	padding: 7%;
+	margin: 0 auto;
+	// padding: 5rem 7rem 9rem 6rem;
+	// float: left;
+	// line-height: 2.5rem;
+	// position: absolute;
+	// margin-left: 3rem;
+	// position: absolute;
+	// top: 50%;
+	// transform: 			translateY(-50%);
+
+
+	@include breakpoint(mama-bear) { 
+		font-size: 2.5rem;
+		// line-height: 2.5rem;
+		// padding:  4rem 5rem 10rem 6rem;
+	}
+	@include breakpoint(baby-bear) { 
+		font-size: 1.5rem;
+		// line-height: 1.5rem;
+		// padding:  2rem 4rem 4rem 4rem;
+	}
+  
+}
+
+	h3.author {
+		font-size: 1rem;
+		width: 24rem;
+		clear: both;
+		border-top: 1px solid #003baf;
+		margin-left: 7%;
+		padding-top: 6%;
+		position: absolute;
+
+		@include breakpoint(mama-bear) { 
+
+		}
+		@include breakpoint(baby-bear) { 
+			margin-top: 1%;
+			font-size: 1rem;
+			width: 15rem;
+			padding-top: 7%;
+		}
+	}
+
+	.bqstart {
+     float: left;
+     font-size: 200%;
+     // margin: 1.5em 0 0 4rem;
+     position: absolute;
+     top: 5rem;
+     left: 6rem;
+     z-index: 1;
+
+ 	}
+
+	 .bqend {
+     float: right;
+     font-size: 200%;
+     position: absolute;
+     top: 12rem;
+     left: 34rem;
+
+ 	}
+.content {
+	position: relative;
+}
+
+.top-bar {
+	margin-top: 33.5%;
+	transition: all 0.5s ease 0.1s;
+
+	.name h1 {
+		font-family: $font-serif, serif;
+		font-weight: 400;
+		font-size: 1.75rem;
+		color: $heading-color;
+		width: 100%;
+
+		@include breakpoint(mama-bear) { 
+		font-size: 1.25rem;
+		// line-height: 2.5rem;
+		// padding:  4rem 5rem 10rem 6rem;
+		}
+		@include breakpoint(baby-bear) { 
+			font-size: 1rem;
+		}
+	}
+
+
+   .top-bar-section ul {
+	background: none;
+	
+
+		li a {
+			color: $color;
+			text-decoration: none;
+			font-size: 1rem;
+			font-family: $font-serif;
+			// position: absolute;
+		}
+
+		li a:active {
+			background: $box2-color;
+			color: $heading-color;
+		}
+
+		li a:hover {
+			color: $box2-color;
+		}
+	}
+}
+
+
+.quick-nav {
+
+	color: $heading-color;
+	@include clearfix;
+	max-height: 25rem;
+
+	h3 {
+	font-size: 1.5rem;
+	padding-left: 2rem;
+	font-weight: 700; 
+	font-family: 'Droid Sans';
+	}
+
+	.box-1 {
+		background-color: $box1-color;
+		width: 25%;
+		float: left;
+		overflow: hidden;
+		max-height: 19rem;
+	}
+	.box-2 {
+		background-color: $box2-color;
+		width: 25%;
+		float: left;
+		overflow: hidden;
+		max-height: 19rem;
+	}
+
+}
+
+footer {
+	height: 20rem;
+}
+
+
+
+
+
+
+
+
