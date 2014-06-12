@@ -97,10 +97,15 @@ body {
 
 }
 
+.header {
+	position: relative;
+}
+
 .crop-height {
 		max-height: 500px;
 		overflow: hidden;
-		position: absolute;
+		// position: absolute;
+		// display: block;
 }
 
 li {
@@ -144,11 +149,16 @@ img.flip {
 	font-family: 'Playfair Display', Georgia;
 	font-size: 2rem;
 	background-color: rgba(255, 255, 255, 0.6);
-	margin: 10% 0 0 10%;
+	margin: -60% 0 0 10%;
 	width: 78%%;
 	padding: 6% 4% 17% 4%;
 	float: left;
 	transition: width 500ms;
+	z-index: 1;
+
+	@include breakpoint(mama-bear) {
+		margin-top: 3%;
+	}
 
 	@include breakpoint(baby-bear) {
 		margin-top: 3%;
@@ -183,54 +193,51 @@ img.flip {
   
 }
 
-	h3.author {
-		font-size: 1rem;
-		width: 24rem;
-		clear: both;
-		border-top: 1px solid #003baf;
-		margin-left: 7%;
-		padding-top: 6%;
-		position: absolute;
+h3.author {
+	font-size: 1rem;
+	width: 24rem;
+	clear: both;
+	border-top: 1px solid #003baf;
+	margin-left: 7%;
+	padding-top: 6%;
+	position: absolute;
 
-		@include breakpoint(mama-bear) { 
+	@include breakpoint(mama-bear) { 
 
-		}
-		@include breakpoint(baby-bear) { 
-			margin-top: 1%;
-			font-size: 1rem;
-			width: 15rem;
-			padding-top: 7%;
-		}
 	}
-
-	.bqstart {
-     float: left;
-     font-size: 200%;
-     // margin: 1.5em 0 0 4rem;
-     position: absolute;
-     top: 5rem;
-     left: 6rem;
-     z-index: 1;
-
- 	}
-
-	 .bqend {
-     float: right;
-     font-size: 200%;
-     position: absolute;
-     top: 12rem;
-     left: 34rem;
-
- 	}
-
-
-.content {
-	position: relative;
+	@include breakpoint(baby-bear) { 
+		margin-top: 1%;
+		font-size: 1rem;
+		width: 15rem;
+		padding-top: 7%;
+	}
 }
 
+.bqstart {
+ float: left;
+ font-size: 200%;
+ // margin: 1.5em 0 0 4rem;
+ position: absolute;
+ top: 5rem;
+ left: 6rem;
+ z-index: 1;
+
+}
+
+ .bqend {
+ float: right;
+ font-size: 200%;
+ position: absolute;
+ top: 12rem;
+ left: 34rem;
+}
+
+
 .top-bar {
-	margin-top: 33.5%;
+	// margin-top: 33.5%;
 	transition: all 0.5s ease 0.1s;
+	max-width: 100%;
+	clear: both;
 
 	.name h1 {
 		font-family: $font-serif, serif;
@@ -252,16 +259,15 @@ img.flip {
 
 
    .top-bar-section ul {
-   		
-		ul {
-			background-color: $box2-color;
-			padding: 0 0 0 22px;
-			
 
-			li {
-				margin-left: 0;
-			}
+
+		.right {
+			padding: 0 0 0 22px;
 		}
+		li {
+			margin-left: 0;
+		}
+		
 
 		li > a {
 			color: $color;
@@ -292,7 +298,7 @@ img.flip {
 		}
 
 		li.active:not(.has-form) a:not(.button) {
-			background-color: $text-color;
+			background-color: transparent;
 			color: $box1-color;	
 		}
 	}
@@ -325,7 +331,7 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 19rem;
+		max-height: 15rem;
 
 		@include breakpoint(mama-bear) { 
 		font-size: 1rem;

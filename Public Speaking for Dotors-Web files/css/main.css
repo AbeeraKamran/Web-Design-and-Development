@@ -30,10 +30,13 @@ body {
   font-family: "Droid Sans", sans-serif;
 }
 
+.header {
+  position: relative;
+}
+
 .crop-height {
   max-height: 500px;
   overflow: hidden;
-  position: absolute;
 }
 
 li {
@@ -77,11 +80,17 @@ img.flip {
   font-family: 'Playfair Display', Georgia;
   font-size: 2rem;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 10% 0 0 10%;
+  margin: -60% 0 0 10%;
   width: 78%%;
   padding: 6% 4% 17% 4%;
   float: left;
   transition: width 500ms;
+  z-index: 1;
+}
+@media (max-width: 1048px) {
+  .blurb {
+    margin-top: 3%;
+  }
 }
 @media (max-width: 400px) {
   .blurb {
@@ -139,13 +148,10 @@ h3.author {
   left: 34rem;
 }
 
-.content {
-  position: relative;
-}
-
 .top-bar {
-  margin-top: 33.5%;
   transition: all 0.5s ease 0.1s;
+  max-width: 100%;
+  clear: both;
 }
 .top-bar .name h1 {
   font-family: "Playfair Display", serif, serif;
@@ -165,11 +171,10 @@ h3.author {
     margin-left: -0.5rem;
   }
 }
-.top-bar .top-bar-section ul ul {
-  background-color: #fec700;
+.top-bar .top-bar-section ul .right {
   padding: 0 0 0 22px;
 }
-.top-bar .top-bar-section ul ul li {
+.top-bar .top-bar-section ul li {
   margin-left: 0;
 }
 .top-bar .top-bar-section ul li > a {
@@ -199,7 +204,7 @@ h3.author {
   color: #fec700;
 }
 .top-bar .top-bar-section ul li.active:not(.has-form) a:not(.button) {
-  background-color: #1a1a1a;
+  background-color: transparent;
   color: #feb100;
 }
 
@@ -234,7 +239,7 @@ h3.author {
   width: 25%;
   float: left;
   overflow: hidden;
-  max-height: 19rem;
+  max-height: 15rem;
 }
 @media (max-width: 1048px) {
   .quick-nav .box-1 {
