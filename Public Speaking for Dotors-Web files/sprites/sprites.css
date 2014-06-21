@@ -1,0 +1,16 @@
+.twitter-black, .twitter-yellow{
+	background: url(sprites.png) no-repeat;
+}
+
+.twitter-black{
+	background-position: 0 0;
+	width: 40px;
+	height: 40px;
+}
+
+.twitter-yellow{
+	background-position: 0 -45.01250457763672px ;
+	width: 40px;
+	height: 40px;
+}
+

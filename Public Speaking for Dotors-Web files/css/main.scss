@@ -33,10 +33,10 @@ $p-size: .5rem;
 
 @mixin breakpoint($point) {
   @if $point == papa-bear {
-    @media (max-width: 1600px) { @content; }
+    @media (max-width: 1048px) { @content; }
   }
   @else if $point == mama-bear {
-    @media (max-width: 1048px) { @content; }
+    @media (max-width: 750px) { @content; }
   }
   @else if $point == baby-bear {
     @media (max-width: 400px)  { @content; }
@@ -85,6 +85,12 @@ $p-size: .5rem;
 	visibility: hidden;
 }
 
+.ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 
 body {
 	background-color: #fcfcfc;
@@ -102,10 +108,11 @@ body {
 }
 
 .crop-height {
-		max-height: 500px;
-		overflow: hidden;
-		// position: absolute;
-		// display: block;
+	max-height: 500px;
+	overflow: hidden;
+	position: relative;
+
+	// display: block;
 }
 
 li {
@@ -138,78 +145,84 @@ img.scale {
 img.flip {
 	float: right;
 }
-
-.wrapper {
-	max-width: 1280px;
-	margin: 0 auto;
-}
+ 
+.block:before {
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+ 
+ }
 
 .blurb {
-	position: absolute;
+	// position: absolute;
+	display: inline-block;
+	vertical-align: middle;
 	font-family: 'Playfair Display', Georgia;
 	font-size: 2rem;
 	background-color: rgba(255, 255, 255, 0.6);
-	margin: -60% 0 0 10%;
-	width: 78%%;
-	padding: 6% 4% 17% 4%;
+	// margin: -57% 0 0 10%;
+	width: 100%;
+	padding: 4% 13% 17% 4%;
 	float: left;
 	transition: width 500ms;
 	z-index: 1;
 
-	@include breakpoint(mama-bear) {
-		margin-top: 3%;
-	}
+	// @include breakpoint(mama-bear) {
+	// 	margin-top: -60%;
+	// 	width: 90%;
+	// }
 
-	@include breakpoint(baby-bear) {
-		margin-top: 3%;
-	}
-
-}
+	// @include breakpoint(baby-bear) {
+	// 	margin-top: -57%;
+	// 	width:80%;
+	// }
 	
 
-.quote {
-	padding: 7%;
-	margin: 0 auto;
-	// padding: 5rem 7rem 9rem 6rem;
-	// float: left;
-	// line-height: 2.5rem;
-	// position: absolute;
-	// margin-left: 3rem;
-	// position: absolute;
-	// top: 50%;
-	// transform: 			translateY(-50%);
-
-
-	@include breakpoint(mama-bear) { 
-		font-size: 2.5rem;
+	.quote {
+		padding: 7%;
+		margin: 0 auto;
+		// padding: 5rem 7rem 9rem 6rem;
+		// float: left;
 		// line-height: 2.5rem;
-		// padding:  4rem 5rem 10rem 6rem;
-	}
-	@include breakpoint(baby-bear) { 
-		font-size: 1.5rem;
-		// line-height: 1.5rem;
-		// padding:  2rem 4rem 4rem 4rem;
-	}
-  
-}
+		// position: absolute;
+		// margin-left: 3rem;
+		// position: absolute;
+		// top: 50%;
+		// transform: 			translateY(-50%);
 
-h3.author {
-	font-size: 1rem;
-	width: 24rem;
-	clear: both;
-	border-top: 1px solid #003baf;
-	margin-left: 7%;
-	padding-top: 6%;
-	position: absolute;
 
-	@include breakpoint(mama-bear) { 
-
+		@include breakpoint(mama-bear) { 
+			font-size: 1.75rem;
+			// line-height: 2.5rem;
+			// padding:  4rem 5rem 10rem 6rem;
+		}
+		@include breakpoint(baby-bear) { 
+			font-size: 1.25rem;
+			// line-height: 1.5rem;
+			// padding:  2rem 4rem 4rem 4rem;
+		}
+	  
 	}
-	@include breakpoint(baby-bear) { 
-		margin-top: 1%;
+
+	h3.author {
 		font-size: 1rem;
-		width: 15rem;
-		padding-top: 7%;
+		width: 24rem;
+		clear: both;
+		border-top: 1px solid #003baf;
+		margin-left: 7%;
+		padding-top: 6%;
+		position: absolute;
+
+		@include breakpoint(mama-bear) { 
+
+		}
+		@include breakpoint(baby-bear) { 
+			margin-top: 1%;
+			font-size: .75rem;
+			width: 12rem;
+			padding-top: 7%;
+		}
 	}
 }
 
@@ -238,6 +251,25 @@ h3.author {
 	transition: all 0.5s ease 0.1s;
 	max-width: 100%;
 	clear: both;
+	list-style: none;
+
+	ul.title-area {
+
+		padding: 0 0 0 40px;
+
+		@include breakpoint(papa-bear) { 
+		padding:0 0 0 10px;
+		}
+
+		@include breakpoint(mama-bear) { 
+		padding:0 0 0 10px;
+		}
+
+		@include breakpoint(baby-bear) { 
+		padding:0 0 0 20px;
+		}
+
+	}
 
 	.name h1 {
 		font-family: $font-serif, serif;
@@ -246,8 +278,12 @@ h3.author {
 		color: $heading-color;
 		width: 100%;
 
-		@include breakpoint(mama-bear) { 
+		@include breakpoint(papa-bear) { 
 		font-size: 1.25rem;
+		}
+
+		@include breakpoint(mama-bear) { 
+		font-size: 1rem;
 		// line-height: 2.5rem;
 		// padding:  4rem 5rem 10rem 6rem;
 		}
@@ -257,14 +293,22 @@ h3.author {
 		}
 	}
 
-
-   .top-bar-section ul {
-
-
-		.right {
-			padding: 0 0 0 22px;
+	.toggle-topbar {
+		span {
+			font-family: $font-serif;
+			font-size: .75rem;
+			list-style: none;
+			font-weight: normal;
 		}
-		li {
+	}
+
+   .top-bar-section {
+
+   		ul.right {
+   			padding: 0;
+   		}
+
+   		li {
 			margin-left: 0;
 		}
 		
@@ -281,16 +325,23 @@ h3.author {
 			background-color: none;
 			color: $heading-color;
 			margin-top: 0;
+		
+		@include breakpoint(papa-bear) { 
+			font-size: .8rem;
+			padding: 0 11px;
+			}
 
 			@include breakpoint(mama-bear) { 
 			font-size: .8rem;
-			padding: 0 9px;
+			padding: 0 6px;
+			}
+		
+
+			@include breakpoint(baby-bear) { 
+				font-size: .8rem;
+				padding: 0 6px;
 			}
 
-		@include breakpoint(baby-bear) { 
-			font-size: .8rem;
-			padding: 0 9px;
-			}
 		}
 
 		li a:hover {
@@ -323,7 +374,30 @@ h3.author {
 	font-size: 1.5rem;
 	padding-left: 2rem;
 	font-weight: 700; 
-	font-family: 'Droid Sans';
+	font-family: 'Roboto Condensed', Helvetica, sans-serif;
+	text-transform: uppercase;;
+
+		@include breakpoint(baby-bear) {
+		font-size: 1rem;
+
+		}
+
+		@include breakpoint(baby-bear) {
+			font-size: 1.25rem;
+			padding: 1.5rem;
+			margin: 0 auto;
+		}
+	}
+
+	p {
+		margin: 2rem;
+	}
+
+	.read-more a{
+		font-family: $font-serif;
+		font-style: italic;
+		// text-decoration: none;
+		color: $heading-color;
 	}
 
 	.box-1 {
@@ -334,15 +408,13 @@ h3.author {
 		max-height: 15rem;
 
 		@include breakpoint(mama-bear) { 
-		font-size: 1rem;
 		width: 50%;
 		max-height: 15rem;
 		float:right;
 		}
-		@include breakpoint(baby-bear) { 
-		font-size: 1rem;
+		@include breakpoint(baby-bear) {
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 	}
 	.box-2 {
@@ -353,15 +425,13 @@ h3.author {
 		max-height: 15rem;
 
 		@include breakpoint(mama-bear) { 
-		font-size: 1rem;
 		width: 50%;
 		max-height: 15rem;
 		}
 
 		@include breakpoint(baby-bear) { 
-		font-size: 1rem;
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 	}
 	.box-3 {
@@ -372,7 +442,6 @@ h3.author {
 		max-height: 15rem;
 
 		@include breakpoint(mama-bear) { 
-		font-size: 1rem;
 		width: 50%;
 		max-height: 15rem;
 		}
@@ -380,7 +449,7 @@ h3.author {
 		@include breakpoint(baby-bear) { 
 		font-size: 1rem;
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 	}
 	.box-4 {
@@ -390,16 +459,14 @@ h3.author {
 		overflow: hidden;
 		max-height: 15rem;
 
-		@include breakpoint(mama-bear) { 
-		font-size: 1rem;
+		@include breakpoint(mama-bear) {
 		width: 50%;
 		max-height: 15rem;
 		}
 
 		@include breakpoint(baby-bear) { 
-		font-size: 1rem;
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 	}
 
@@ -411,9 +478,28 @@ footer {
 	color: $heading-color;
 	text-align: center;
 
-	.phone {
+	.sprite {
+    	background: url('../img/sprites.png') no-repeat;
+	}
+
+	.socials-icon a {
+	    display: block;
+	    width: 40px;
+	    height: 40px;
+	    margin: 0 auto;
+	}
+
+	.contact {
 		padding: 1rem;
 		font-size: $h3-size;
+	}
+
+	.twitter {
+		background-position: 0 0px;
+		// &:hover {
+		// 	background-position: 0 -45.01250457763672px;
+		// }
+
 	}
 
 	button {
@@ -429,14 +515,10 @@ footer {
 	}
 
 	button:hover {
-  		background-color: $box2-color;
-  		// color: $heading-color;
+  		background-color: $heading-color;
+  		color: $footer-color
   	}
 }
-
-
-
-
 
 
 
