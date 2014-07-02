@@ -86,25 +86,32 @@ img.flip {
 }
 
 .blurb {
-  display: inline-block;
-  vertical-align: middle;
   font-family: 'Playfair Display', Georgia;
   font-size: 2rem;
   background-color: rgba(255, 255, 255, 0.6);
-  width: 100%;
-  padding: 4% 13% 17% 4%;
+  padding: 3% 3% 10% 2%;
   float: left;
   transition: width 500ms;
   z-index: 1;
+  top: 11%;
+  margin-left: 4%;
+  position: absolute;
+}
+@media (max-width: 750px) {
+  .blurb {
+    padding-bottom: 11%;
+  }
+}
+@media (max-width: 400px) {
+  .blurb {
+    top: 10%;
+    margin-left: 8%;
+    padding-bottom: 16%;
+  }
 }
 .blurb .quote {
   padding: 7%;
   margin: 0 auto;
-}
-@media (max-width: 750px) {
-  .blurb .quote {
-    font-size: 1.75rem;
-  }
 }
 @media (max-width: 400px) {
   .blurb .quote {
@@ -113,12 +120,17 @@ img.flip {
 }
 .blurb h3.author {
   font-size: 1rem;
-  width: 24rem;
+  width: 23rem;
   clear: both;
   border-top: 1px solid #003baf;
-  margin-left: 7%;
-  padding-top: 6%;
+  margin-left: 6%;
+  padding-top: 10%;
   position: absolute;
+}
+@media (max-width: 1048px) {
+  .blurb h3.author {
+    padding-top: 6%;
+  }
 }
 @media (max-width: 400px) {
   .blurb h3.author {
@@ -285,9 +297,62 @@ img.flip {
   margin: 2rem;
 }
 .quick-nav .read-more a {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
+  font-family: "Droid Sans", sans-serif;
   color: #f2f2f2;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.quick-nav .app-calendar {
+  margin: 0 0 0 10%;
+  width: 104px;
+  float: left;
+}
+.quick-nav .app-calendar .app-city {
+  font-size: 1rem;
+  color: #f2f2f2;
+  margin: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.quick-nav .app-calendar #month {
+  background: #e1632d;
+  border-radius: 35px 35px 0 0;
+  color: #f9f9f9;
+  font-size: 24px;
+  line-height: 40px;
+  position: relative;
+  font-size: .90rem;
+  text-align: center;
+}
+.quick-nav .app-calendar #month:before,
+.quick-nav .app-calendar #month:after {
+  background: #f2f2f2;
+  border-radius: 50%;
+  content: "";
+  height: 5px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  width: 5px;
+  z-index: 1;
+}
+.quick-nav .app-calendar #month:before {
+  left: 10px;
+}
+.quick-nav .app-calendar #month:after {
+  right: 10px;
+}
+.quick-nav .app-calendar #day {
+  background: #f2f2f2;
+  border-radius: 0 0 35px 35px;
+  -webkit-box-shadow: 0 8px 0 #1a1a1a;
+  box-shadow: 0 8px 0 #1a1a1a;
+  color: #1a1a1a;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 62px;
+  line-height: 59px;
+  text-align: center;
 }
 .quick-nav .box-1 {
   background-color: #feb100;
@@ -390,17 +455,22 @@ footer .contact {
 footer .twitter {
   background-position: 0 0px;
 }
-footer button {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
-  margin: 0 auto;
+
+button {
+  color: #f2f2f2;
   padding: 1rem;
-  -moz-box-shadow: 5px 5px 0px 0px #0C0C0C;
-  -webkit-box-shadow: 5px 5px 0px 0px #0C0C0C;
-  box-shadow: 5px 5px 0px 0px #0C0C0C;
+  border: 3px solid #f2f2f2;
   display: block;
+  background-color: #fec700;
+  margin: 17% 0 0 50%;
 }
-footer button:hover {
-  background-color: #f2f2f2;
-  color: #e1632d;
+button .book_course {
+  text-decoration: underline;
+}
+button .email_button {
+  margin: 0 auto;
+}
+button:hover {
+  color: #1a1a1a;
+  border: 3px solid #1a1a1a;
 }

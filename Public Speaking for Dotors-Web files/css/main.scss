@@ -155,28 +155,32 @@ img.flip {
  }
 
 .blurb {
-	// position: absolute;
-	display: inline-block;
-	vertical-align: middle;
+	// // position: absolute;
+	// display: inline-block;
+	// vertical-align: middle;
 	font-family: 'Playfair Display', Georgia;
 	font-size: 2rem;
 	background-color: rgba(255, 255, 255, 0.6);
 	// margin: -57% 0 0 10%;
-	width: 100%;
-	padding: 4% 13% 17% 4%;
+	// width: 100%;
+	padding: 3% 3% 10% 2%;
 	float: left;
 	transition: width 500ms;
 	z-index: 1;
+	top: 11%;
+	margin-left: 4%;
+	position: absolute;
 
-	// @include breakpoint(mama-bear) {
-	// 	margin-top: -60%;
-	// 	width: 90%;
-	// }
 
-	// @include breakpoint(baby-bear) {
-	// 	margin-top: -57%;
-	// 	width:80%;
-	// }
+	@include breakpoint(mama-bear) {
+		padding-bottom: 11%;
+	}
+
+	@include breakpoint(baby-bear) {
+		top: 10%;
+		margin-left: 8%;
+		padding-bottom: 16%;
+	}
 	
 
 	.quote {
@@ -191,32 +195,33 @@ img.flip {
 		// top: 50%;
 		// transform: 			translateY(-50%);
 
+		
 
 		@include breakpoint(mama-bear) { 
-			font-size: 1.75rem;
-			// line-height: 2.5rem;
-			// padding:  4rem 5rem 10rem 6rem;
+			// padding-bottom: 14%
 		}
+
 		@include breakpoint(baby-bear) { 
 			font-size: 1.25rem;
 			// line-height: 1.5rem;
-			// padding:  2rem 4rem 4rem 4rem;
+			// padding-bottom: 14%
 		}
 	  
 	}
 
 	h3.author {
 		font-size: 1rem;
-		width: 24rem;
+		width: 23rem;
 		clear: both;
 		border-top: 1px solid #003baf;
-		margin-left: 7%;
-		padding-top: 6%;
+		margin-left: 6%;
+		padding-top: 10%;
 		position: absolute;
 
-		@include breakpoint(mama-bear) { 
-
+		@include breakpoint(papa-bear) {
+		padding-top: 6%;
 		}
+
 		@include breakpoint(baby-bear) { 
 			margin-top: 1%;
 			font-size: .75rem;
@@ -394,10 +399,65 @@ img.flip {
 	}
 
 	.read-more a{
-		font-family: $font-serif;
-		font-style: italic;
-		// text-decoration: none;
+		font-family: $font-stack;
 		color: $heading-color;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	.app-calendar {
+		// height: 120px;
+		margin:0 0 0 10%;
+		width: 104px;
+		float: left;
+		
+		.app-city {
+			font-size: 1rem;
+			color: $heading-color;
+			margin: 1rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		#month {
+			background: $footer-color;
+			border-radius: 35px 35px 0 0;
+			color: #f9f9f9;
+			font-size: 24px;
+			line-height: 40px;
+			position: relative;
+			font-size: .90rem;
+			text-align: center;
+		}
+
+		#month:before,
+		#month:after {
+			background: $heading-color;
+			border-radius: 50%;
+			content: "";
+			height: 5px;
+			margin-top: -4px;
+			position: absolute;
+			top: 50%;
+			width: 5px;
+			z-index: 1;
+		}
+
+		#month:before { left: 10px; }
+		#month:after { right: 10px; }
+
+		#day {
+			background: $heading-color;
+			border-radius: 0 0 35px 35px;
+			-webkit-box-shadow: 0 8px 0 $text-color;
+			box-shadow: 0 8px 0 $text-color;
+			color: $text-color;
+			font-size: 3rem;
+			font-weight: bold;
+			height: 62px;
+			line-height: 59px;
+			text-align: center;
+		}
 	}
 
 	.box-1 {
@@ -501,24 +561,33 @@ footer {
 		// }
 
 	}
-
-	button {
-		background-color: $heading-color;
-		color: $text-color;
-		margin: 0 auto;
-		padding: 1rem;
-		-moz-box-shadow:    5px 5px 0px 0px #0C0C0C;
-	  	-webkit-box-shadow: 5px 5px 0px 0px #0C0C0C;
-	  	box-shadow:         5px 5px 0px 0px #0C0C0C;
-	  	display: block;
-
-	}
-
-	button:hover {
-  		background-color: $heading-color;
-  		color: $footer-color
-  	}
 }
 
+button {
+		color: $heading-color;
+		padding: 1rem;
+		border: 3px solid $heading-color;
+		// -moz-box-shadow:    5px 5px 0px 0px #0C0C0C;
+	 //  	-webkit-box-shadow: 5px 5px 0px 0px #0C0C0C;
+	 //  	box-shadow:         5px 5px 0px 0px #0C0C0C;
+	  	display: block;
+	  	background-color: $box2-color;
+	  	margin: 17% 0 0 50%;
+
+		.book_course {
+	  		// margin: 17% 0 0 50%;
+	  		// background-color: $box2-color;
+	  		text-decoration: underline;
+
+	  	}
+	  	.email_button {
+	  		margin: 0 auto;
+	  	}
+
+		&:hover {
+	  		color: $text-color;
+	  		border: 3px solid $text-color;
+	  	}
+}
 
 
