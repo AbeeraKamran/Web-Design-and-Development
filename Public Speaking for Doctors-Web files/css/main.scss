@@ -11,20 +11,31 @@
 // @import "foundation/components/top-bar";
 // @import "foundation-";
 
-$font-stack: 'Droid Sans', sans-serif;
+$font-stack: 'Roboto Condensed', sans-serif;
 $font-serif: 'Playfair Display', serif;
 $color: #fcfcfc;
-$text-color: #1a1a1a;
+$text-color: #333333;
 $heading-color: #f2f2f2;
 $box1-color: #feb100;
 $box2-color: #fec700;
 $footer-color: #e1632d;
 
-$h1-size: 2rem;
-$h2-size: 2.5rem;
-$h3-size: 1rem;
-$p-size: .5rem;
+h1 {
+ 	font-size: 2rem;
+ }
 
+h2 {
+ 	font-size: 1.5rem;
+ }
+
+h3 {
+ 	font-size: 1.5rem;
+ }
+
+p {
+ 	font-size: 1rem;
+ 	font-family: $font-serif;
+ }
 
 
 /*************
@@ -36,7 +47,7 @@ $p-size: .5rem;
     @media (max-width: 1048px) { @content; }
   }
   @else if $point == mama-bear {
-    @media (max-width: 750px) { @content; }
+    @media (max-width: 768px) { @content; }
   }
   @else if $point == baby-bear {
     @media (max-width: 400px)  { @content; }
@@ -56,11 +67,11 @@ $p-size: .5rem;
 }
 
 @mixin button($color) {
-  border-radius: 4px;
-  padding: 10px 15px;
+  // border-radius: 4px;
+  padding: 1rem 2rem;
   background: $color;
-  color: white;
-  display: inline-block;
+  color: $text-color;
+  text-align: center;
 }
 
  /*************
@@ -77,10 +88,6 @@ $p-size: .5rem;
 	padding: 0;
 }
 
-#container {
-	max-width: 100%;
-}
-
 .hidden {
 	visibility: hidden;
 }
@@ -91,9 +98,15 @@ $p-size: .5rem;
     overflow: hidden;
 }
 
+.content {
+	margin: 2rem 2rem 2rem 4rem;
+	float: left;
+	clear: both;
+}
+
 
 body {
-	background-color: #fcfcfc;
+	background-color: #f2f2f2;
 	font-family: $font-stack;
 	// background: url(img/conference_room.jpg) no-repeat center center ;
 	// background-size: cover;
@@ -375,14 +388,13 @@ img.flip {
 	@include clearfix;
 	max-height: 25rem;
 
-	h3 {
-	font-size: 1.5rem;
+	h2 {
 	padding-left: 2rem;
 	font-weight: 700; 
 	font-family: 'Roboto Condensed', Helvetica, sans-serif;
 	text-transform: uppercase;;
 
-		@include breakpoint(baby-bear) {
+		@include breakpoint(mama-bear) {
 		font-size: 1rem;
 
 		}
@@ -390,12 +402,13 @@ img.flip {
 		@include breakpoint(baby-bear) {
 			font-size: 1.25rem;
 			padding: 1.5rem;
-			margin: 0 auto;
+			margin: 1 auto;
 		}
 	}
 
 	p {
 		margin: 2rem;
+		font-weight: lighter;
 	}
 
 	.read-more a{
@@ -403,13 +416,20 @@ img.flip {
 		color: $heading-color;
 		text-transform: uppercase;
 		text-decoration: none;
+		font-weight: bold;
 	}
 
 	.app-calendar {
 		// height: 120px;
-		margin:0 0 0 10%;
+		margin-top: 1.1rem;
 		width: 104px;
 		float: left;
+		-webkit-box-shadow: -10px 14px 11px -14px $text-color;
+		box-shadow: -10px 14px 11px -14px $text-color;
+
+			@include breakpoint(mama-bear) {
+			margin-top: 1.1rem;
+			}
 		
 		.app-city {
 			font-size: 1rem;
@@ -421,7 +441,6 @@ img.flip {
 
 		#month {
 			background: $footer-color;
-			border-radius: 35px 35px 0 0;
 			color: #f9f9f9;
 			font-size: 24px;
 			line-height: 40px;
@@ -430,28 +449,9 @@ img.flip {
 			text-align: center;
 		}
 
-		#month:before,
-		#month:after {
-			background: $heading-color;
-			border-radius: 50%;
-			content: "";
-			height: 5px;
-			margin-top: -4px;
-			position: absolute;
-			top: 50%;
-			width: 5px;
-			z-index: 1;
-		}
-
-		#month:before { left: 10px; }
-		#month:after { right: 10px; }
-
 		#day {
-			background: $heading-color;
-			border-radius: 0 0 35px 35px;
-			-webkit-box-shadow: 0 8px 0 $text-color;
-			box-shadow: 0 8px 0 $text-color;
-			color: $text-color;
+			background: $box1-color;
+			color: $heading-color;
 			font-size: 3rem;
 			font-weight: bold;
 			height: 62px;
@@ -465,11 +465,11 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 15rem;
+		max-height: 20rem;
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
-		max-height: 15rem;
+		max-height: 20rem;
 		float:right;
 		}
 		@include breakpoint(baby-bear) {
@@ -482,7 +482,7 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 15rem;
+		max-height: 20rem;
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
@@ -499,7 +499,7 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 15rem;
+		max-height: 20rem;
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
@@ -517,7 +517,7 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 15rem;
+		max-height: 20rem;
 
 		@include breakpoint(mama-bear) {
 		width: 50%;
@@ -537,6 +537,7 @@ footer {
 	background-color: $footer-color;
 	color: $heading-color;
 	text-align: center;
+	clear: both;
 
 	.sprite {
     	background: url('../img/sprites.png') no-repeat;
@@ -551,7 +552,7 @@ footer {
 
 	.contact {
 		padding: 1rem;
-		font-size: $h3-size;
+		font-size: 1.5rem;
 	}
 
 	.twitter {
@@ -563,31 +564,67 @@ footer {
 	}
 }
 
-button {
+// @include button ($color) {
+// 		color: $heading-color;
+// 		padding: 1rem;
+// 		border: 3px solid $heading-color;
+// 	  	background-color: $box2-color;
+
+// 		.book_course {
+// 	  		// margin: 17% 0 0 50%;
+// 	  		// background-color: $box2-color;
+// 	  		text-decoration: underline;
+
+// 	  	}
+// 	  	.email_button {
+// 	  		margin: 0 auto;
+// 	  	}
+// 	  	.enroll {
+// 	  		@include button (#f7931e);
+// 	  	}
+
+// 		&:hover {
+// 	  		color: $text-color;
+// 	  		border: 3px solid $text-color;
+// // 	  	}
+// }
+
+
+/*************
+ * COURSES    *
+ *************/
+
+
+.course-info {
+	float: right;
+
+	.upcoming {
+		background-color: $text-color;
 		color: $heading-color;
 		padding: 1rem;
-		border: 3px solid $heading-color;
-		// -moz-box-shadow:    5px 5px 0px 0px #0C0C0C;
-	 //  	-webkit-box-shadow: 5px 5px 0px 0px #0C0C0C;
-	 //  	box-shadow:         5px 5px 0px 0px #0C0C0C;
-	  	display: block;
-	  	background-color: $box2-color;
-	  	margin: 17% 0 0 50%;
+		margin: 3rem 0 0 0;
+	}
 
-		.book_course {
-	  		// margin: 17% 0 0 50%;
-	  		// background-color: $box2-color;
-	  		text-decoration: underline;
+	.date, .venue {
+		background-color: #666666;
+		color: $heading-color;
+		font-family: "Roboto Condensed";
+		padding: 1rem;
+		text-align: right;
+		margin: 0;
+	}
 
-	  	}
-	  	.email_button {
-	  		margin: 0 auto;
+	.tickets {
+		background-color: #999999;
+		color: $heading-color;
+		padding: 1rem;
+		margin: 0;
+		text-align: center;
+	}
+
+	.enroll {
+	  		@include button (#f7931e);
+	  		margin: 0;
 	  	}
 
-		&:hover {
-	  		color: $text-color;
-	  		border: 3px solid $text-color;
-	  	}
 }
-
-

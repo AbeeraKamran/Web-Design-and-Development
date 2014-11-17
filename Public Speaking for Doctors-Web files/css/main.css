@@ -1,6 +1,23 @@
 /*************
  * VARIABLES *
  *************/
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
 /*************
  * MIXINS    *
  *************/
@@ -17,10 +34,6 @@
   padding: 0;
 }
 
-#container {
-  max-width: 100%;
-}
-
 .hidden {
   visibility: hidden;
 }
@@ -31,9 +44,15 @@
   overflow: hidden;
 }
 
+.content {
+  margin: 2rem 2rem 2rem 4rem;
+  float: left;
+  clear: both;
+}
+
 body {
-  background-color: #fcfcfc;
-  font-family: "Droid Sans", sans-serif;
+  background-color: #f2f2f2;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .header {
@@ -97,7 +116,7 @@ img.flip {
   margin-left: 4%;
   position: absolute;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .blurb {
     padding-bottom: 11%;
   }
@@ -172,7 +191,7 @@ img.flip {
     padding: 0 0 0 10px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .top-bar ul.title-area {
     padding: 0 0 0 10px;
   }
@@ -194,7 +213,7 @@ img.flip {
     font-size: 1.25rem;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .top-bar .name h1 {
     font-size: 1rem;
   }
@@ -234,7 +253,7 @@ img.flip {
     padding: 0 11px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .top-bar .top-bar-section li:not(.has-form) a:not(.button) {
     font-size: .8rem;
     padding: 0 6px;
@@ -274,38 +293,46 @@ img.flip {
 .quick-nav:after {
   clear: both;
 }
-.quick-nav h3 {
-  font-size: 1.5rem;
+.quick-nav h2 {
   padding-left: 2rem;
   font-weight: 700;
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   text-transform: uppercase;
 }
-@media (max-width: 400px) {
-  .quick-nav h3 {
+@media (max-width: 768px) {
+  .quick-nav h2 {
     font-size: 1rem;
   }
 }
 @media (max-width: 400px) {
-  .quick-nav h3 {
+  .quick-nav h2 {
     font-size: 1.25rem;
     padding: 1.5rem;
-    margin: 0 auto;
+    margin: 1 auto;
   }
 }
 .quick-nav p {
   margin: 2rem;
+  font-weight: lighter;
 }
 .quick-nav .read-more a {
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #f2f2f2;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: bold;
 }
 .quick-nav .app-calendar {
-  margin: 0 0 0 10%;
+  margin-top: 1.1rem;
   width: 104px;
   float: left;
+  -webkit-box-shadow: -10px 14px 11px -14px #333333;
+  box-shadow: -10px 14px 11px -14px #333333;
+}
+@media (max-width: 768px) {
+  .quick-nav .app-calendar {
+    margin-top: 1.1rem;
+  }
 }
 .quick-nav .app-calendar .app-city {
   font-size: 1rem;
@@ -316,7 +343,6 @@ img.flip {
 }
 .quick-nav .app-calendar #month {
   background: #e1632d;
-  border-radius: 35px 35px 0 0;
   color: #f9f9f9;
   font-size: 24px;
   line-height: 40px;
@@ -324,30 +350,9 @@ img.flip {
   font-size: .90rem;
   text-align: center;
 }
-.quick-nav .app-calendar #month:before,
-.quick-nav .app-calendar #month:after {
-  background: #f2f2f2;
-  border-radius: 50%;
-  content: "";
-  height: 5px;
-  margin-top: -4px;
-  position: absolute;
-  top: 50%;
-  width: 5px;
-  z-index: 1;
-}
-.quick-nav .app-calendar #month:before {
-  left: 10px;
-}
-.quick-nav .app-calendar #month:after {
-  right: 10px;
-}
 .quick-nav .app-calendar #day {
-  background: #f2f2f2;
-  border-radius: 0 0 35px 35px;
-  -webkit-box-shadow: 0 8px 0 #1a1a1a;
-  box-shadow: 0 8px 0 #1a1a1a;
-  color: #1a1a1a;
+  background: #feb100;
+  color: #f2f2f2;
   font-size: 3rem;
   font-weight: bold;
   height: 62px;
@@ -359,12 +364,12 @@ img.flip {
   width: 25%;
   float: left;
   overflow: hidden;
-  max-height: 15rem;
+  max-height: 20rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .quick-nav .box-1 {
     width: 50%;
-    max-height: 15rem;
+    max-height: 20rem;
     float: right;
   }
 }
@@ -379,9 +384,9 @@ img.flip {
   width: 25%;
   float: left;
   overflow: hidden;
-  max-height: 15rem;
+  max-height: 20rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .quick-nav .box-2 {
     width: 50%;
     max-height: 15rem;
@@ -398,9 +403,9 @@ img.flip {
   width: 25%;
   float: left;
   overflow: hidden;
-  max-height: 15rem;
+  max-height: 20rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .quick-nav .box-3 {
     width: 50%;
     max-height: 15rem;
@@ -418,9 +423,9 @@ img.flip {
   width: 25%;
   float: left;
   overflow: hidden;
-  max-height: 15rem;
+  max-height: 20rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .quick-nav .box-4 {
     width: 50%;
     max-height: 15rem;
@@ -438,6 +443,7 @@ footer {
   background-color: #e1632d;
   color: #f2f2f2;
   text-align: center;
+  clear: both;
 }
 footer .sprite {
   background: url("../img/sprites.png") no-repeat;
@@ -450,27 +456,43 @@ footer .socials-icon a {
 }
 footer .contact {
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 footer .twitter {
   background-position: 0 0px;
 }
 
-button {
+/*************
+ * COURSES    *
+ *************/
+.course-info {
+  float: right;
+}
+.course-info .upcoming {
+  background-color: #333333;
   color: #f2f2f2;
   padding: 1rem;
-  border: 3px solid #f2f2f2;
-  display: block;
-  background-color: #fec700;
-  margin: 17% 0 0 50%;
+  margin: 3rem 0 0 0;
 }
-button .book_course {
-  text-decoration: underline;
+.course-info .date, .course-info .venue {
+  background-color: #666666;
+  color: #f2f2f2;
+  font-family: "Roboto Condensed";
+  padding: 1rem;
+  text-align: right;
+  margin: 0;
 }
-button .email_button {
-  margin: 0 auto;
+.course-info .tickets {
+  background-color: #999999;
+  color: #f2f2f2;
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
 }
-button:hover {
-  color: #1a1a1a;
-  border: 3px solid #1a1a1a;
+.course-info .enroll {
+  padding: 1rem 2rem;
+  background: #f7931e;
+  color: #333333;
+  text-align: center;
+  margin: 0;
 }
