@@ -25,7 +25,8 @@ h1 {
  }
 
 h2 {
- 	font-size: 1.5rem;
+ 	font-size: 2rem;
+ 	padding-top: 2rem;
  }
 
 h3 {
@@ -35,7 +36,13 @@ h3 {
 p {
  	font-size: 1rem;
  	font-family: $font-serif;
+ 	line-height: 1.5rem;
  }
+
+a {
+	text-decoration: none;
+	color: $heading-color;
+}
 
 
 /*************
@@ -74,6 +81,8 @@ p {
   text-align: center;
 }
 
+
+
  /*************
   * BODY      *
   *************/
@@ -99,9 +108,21 @@ p {
 }
 
 .content {
-	margin: 2rem 2rem 2rem 4rem;
+	margin: 0rem 0rem 2rem 6rem;
 	float: left;
-	clear: both;
+		h2{
+			@include breakpoint(mama-bear) { 
+			font-size: 1.5rem;
+			}
+		}
+		p, li{
+			@include breakpoint(mama-bear) { 
+			font-size: .9rem;
+			}
+		}
+		@include breakpoint(mama-bear) { 
+			margin: 0 0 2rem 3rem;
+		}
 }
 
 
@@ -222,7 +243,7 @@ img.flip {
 	  
 	}
 
-	h3.author {
+	h2.author {
 		font-size: 1rem;
 		width: 23rem;
 		clear: both;
@@ -388,7 +409,7 @@ img.flip {
 	@include clearfix;
 	max-height: 25rem;
 
-	h2 {
+	h3 {
 	padding-left: 2rem;
 	font-weight: 700; 
 	font-family: 'Roboto Condensed', Helvetica, sans-serif;
@@ -469,7 +490,7 @@ img.flip {
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
-		max-height: 20rem;
+		max-height: 15rem;
 		float:right;
 		}
 		@include breakpoint(baby-bear) {
@@ -532,86 +553,222 @@ img.flip {
 
 }
 
-footer {
-	height: 15rem;
-	background-color: $footer-color;
-	color: $heading-color;
-	text-align: center;
-	clear: both;
 
-	.sprite {
-    	background: url('../img/sprites.png') no-repeat;
+footer {
+	color: $heading-color;
+	text-align: left;
+	clear: both;
+	margin: 0;
+	width: 100%;
+	background-color: $footer-color;
+	position: absolute;
+
+	p {
+		margin-top: 2.5rem;
+		padding: 1rem;
+		float: left;
+		// background-color: $footer-color;
 	}
 
-	.socials-icon a {
-	    display: block;
-	    width: 40px;
-	    height: 40px;
-	    margin: 0 auto;
+	li, li a {
+		font-family: $font-serif;
+		font-size: 1rem;
+		color: $text-color;
+		&:hover {
+			color: $box2-color;
+		}
+	}
+
+	.jerry {
+		padding-top: 0.5rem;
+		font-style: italic;
+		margin-top: -1rem;
 	}
 
 	.contact {
 		padding: 1rem;
 		font-size: 1.5rem;
+		float: right;
+		margin: 4% 16%;
+		background-color: $footer-color;
 	}
 
-	.twitter {
-		background-position: 0 0px;
-		// &:hover {
-		// 	background-position: 0 -45.01250457763672px;
-		// }
+	.address {
+		border-bottom: 1px solid $text-color;
+		padding-bottom: .5rem;
+	}
 
+	.sprite {
+    	background: url('../img/sprites.png') no-repeat;
+
+	}
+
+	.socials-icon {
+	    display: block;
+	    width: 40px;
+	    height: 40px;
+	    // margin: 0 auto;
+	    // float: left;
+	}
+
+	.phone {
+		background-position: -4px -0.00000762939453125px;
+		&:hover {
+			background-position: -49.98750305175781px 0;
+		}
+	}
+	.twitter {
+	background-position: -3.0000076293945312px -53px;
+		&:hover {
+			background-position: -50.975006103515625px -53.00000762939453px;
+		}
+	}
+	.email {
+		
+	background-position: 0 -103.00000762939453px;
+		&:hover {
+			background-position: -50.98750305175781px -103.00000762939453px;
+		}
+	}
+
+}
+
+
+.buttons {
+
+	.book {
+		background-color: $box1-color;
+		border-color: $footer-color;
+
+	}
+
+	.btn {
+	position: relative;
+  	display: block;
+  	// border: 1px solid #ccc;
+  	text-decoration: none;
+  	padding: 1rem;
+  	transform-style: flat;
+  	transition: all 250ms ease-out;
+  	border-bottom: 3px solid $footer-color;
+	border-right: 3px solid $footer-color;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+  
+	  &:before,
+	  &:after {
+	      content: "";
+	      position: absolute;
+	      z-index: -2;
+	    	transition: all 250ms ease-out;
+ 		}
+	}
+
+	.paper p{
+	  	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+
+	}
+
+	.paper-raise-flatten {
+	  border-color: $footer-color;
+	  box-shadow: none;
+	  
+	  &:before {
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+	  }
+	  &:hover {
+	    border-color: #f15a24;
+	    
+	    &:before {
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+	    }
+	  }
 	}
 }
 
-// @include button ($color) {
-// 		color: $heading-color;
-// 		padding: 1rem;
-// 		border: 3px solid $heading-color;
-// 	  	background-color: $box2-color;
-
-// 		.book_course {
-// 	  		// margin: 17% 0 0 50%;
-// 	  		// background-color: $box2-color;
-// 	  		text-decoration: underline;
-
-// 	  	}
-// 	  	.email_button {
-// 	  		margin: 0 auto;
-// 	  	}
-// 	  	.enroll {
-// 	  		@include button (#f7931e);
-// 	  	}
-
-// 		&:hover {
-// 	  		color: $text-color;
-// 	  		border: 3px solid $text-color;
-// // 	  	}
-// }
 
 
 /*************
  * COURSES    *
  *************/
+ul.learning-points {
 
+	li {
+		list-style: disc;
+		line-height: 1.5rem;
+		font-family: $font-serif;
+	}
+}
 
 .course-info {
 	float: right;
+	font-family: "Roboto Condensed";
+	color: $heading-color;
+	clear: both;
 
-	.upcoming {
-		background-color: $text-color;
-		color: $heading-color;
-		padding: 1rem;
-		margin: 3rem 0 0 0;
+	p {
+		font-family: "Roboto Condensed";
+		}
+
+	.speaker-blurb {
+		background-color: #666666;
 	}
 
-	.date, .venue {
+	.upcoming, .instructor {
+		background-color: $text-color;
+		padding: 1rem;
+		margin: 5rem 0 0 0;
+		text-align: center;
+			@include breakpoint(mama-bear) { 
+			font-size: 1rem;
+			}
+	}
+
+	.date, .venue, .info {
 		background-color: #666666;
 		color: $heading-color;
-		font-family: "Roboto Condensed";
 		padding: 1rem;
-		text-align: right;
+		text-align: left;
 		margin: 0;
+		@include breakpoint(mama-bear) { 
+			font-size: .9rem;
+			}
+	}
+
+	.name, .byline {
+		font-size: .75rem;
+			@include breakpoint(mama-bear) { 
+			font-size: .8rem;
+			}
+	}
+
+	.byline {
+		padding-left: 1rem;
+	}
+
+	.name {
+		border-bottom: 1px solid $heading-color;
+		margin: 1rem 7rem 0 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.info {
+		margin-bottom: 2rem;
+	}
+
+	.speaker-pic {
+		float: right;
+		padding: 1rem;
+	}
+
+	.course-icon {
+		float:right;
+		margin: -1rem 0 0 0;
 	}
 
 	.tickets {
@@ -622,9 +779,10 @@ footer {
 		text-align: center;
 	}
 
-	.enroll {
-	  		@include button (#f7931e);
-	  		margin: 0;
-	  	}
+	// .book a {
+	//   		@include button (#f7931e);
+	//   		border-bottom: 3px solid #f15a24;
+	// 		border-right: 3px solid #f15a24;
+	//   	}
 
 }

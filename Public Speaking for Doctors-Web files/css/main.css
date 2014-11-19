@@ -6,7 +6,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding-top: 2rem;
 }
 
 h3 {
@@ -16,6 +17,12 @@ h3 {
 p {
   font-size: 1rem;
   font-family: "Playfair Display", serif;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #f2f2f2;
 }
 
 /*************
@@ -45,9 +52,23 @@ p {
 }
 
 .content {
-  margin: 2rem 2rem 2rem 4rem;
+  margin: 0rem 0rem 2rem 6rem;
   float: left;
-  clear: both;
+}
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .content p, .content li {
+    font-size: .9rem;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    margin: 0 0 2rem 3rem;
+  }
 }
 
 body {
@@ -137,7 +158,7 @@ img.flip {
     font-size: 1.25rem;
   }
 }
-.blurb h3.author {
+.blurb h2.author {
   font-size: 1rem;
   width: 23rem;
   clear: both;
@@ -147,12 +168,12 @@ img.flip {
   position: absolute;
 }
 @media (max-width: 1048px) {
-  .blurb h3.author {
+  .blurb h2.author {
     padding-top: 6%;
   }
 }
 @media (max-width: 400px) {
-  .blurb h3.author {
+  .blurb h2.author {
     margin-top: 1%;
     font-size: .75rem;
     width: 12rem;
@@ -293,19 +314,19 @@ img.flip {
 .quick-nav:after {
   clear: both;
 }
-.quick-nav h2 {
+.quick-nav h3 {
   padding-left: 2rem;
   font-weight: 700;
   font-family: 'Roboto Condensed', Helvetica, sans-serif;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .quick-nav h2 {
+  .quick-nav h3 {
     font-size: 1rem;
   }
 }
 @media (max-width: 400px) {
-  .quick-nav h2 {
+  .quick-nav h3 {
     font-size: 1.25rem;
     padding: 1.5rem;
     margin: 1 auto;
@@ -369,7 +390,7 @@ img.flip {
 @media (max-width: 768px) {
   .quick-nav .box-1 {
     width: 50%;
-    max-height: 20rem;
+    max-height: 15rem;
     float: right;
   }
 }
@@ -439,48 +460,184 @@ img.flip {
 }
 
 footer {
-  height: 15rem;
-  background-color: #e1632d;
   color: #f2f2f2;
-  text-align: center;
+  text-align: left;
   clear: both;
+  margin: 0;
+  width: 100%;
+  background-color: #e1632d;
+  position: absolute;
 }
-footer .sprite {
-  background: url("../img/sprites.png") no-repeat;
+footer p {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  float: left;
 }
-footer .socials-icon a {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
+footer li, footer li a {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  color: #333333;
+}
+footer li:hover, footer li a:hover {
+  color: #fec700;
+}
+footer .jerry {
+  padding-top: 0.5rem;
+  font-style: italic;
+  margin-top: -1rem;
 }
 footer .contact {
   padding: 1rem;
   font-size: 1.5rem;
+  float: right;
+  margin: 4% 16%;
+  background-color: #e1632d;
+}
+footer .address {
+  border-bottom: 1px solid #333333;
+  padding-bottom: .5rem;
+}
+footer .sprite {
+  background: url("../img/sprites.png") no-repeat;
+}
+footer .socials-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+footer .phone {
+  background-position: -4px -0.00000762939453125px;
+}
+footer .phone:hover {
+  background-position: -49.98750305175781px 0;
 }
 footer .twitter {
-  background-position: 0 0px;
+  background-position: -3.0000076293945312px -53px;
+}
+footer .twitter:hover {
+  background-position: -50.975006103515625px -53.00000762939453px;
+}
+footer .email {
+  background-position: 0 -103.00000762939453px;
+}
+footer .email:hover {
+  background-position: -50.98750305175781px -103.00000762939453px;
+}
+
+.buttons .book {
+  background-color: #feb100;
+  border-color: #e1632d;
+}
+.buttons .btn {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  transform-style: flat;
+  transition: all 250ms ease-out;
+  border-bottom: 3px solid #e1632d;
+  border-right: 3px solid #e1632d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.buttons .btn:before, .buttons .btn:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  transition: all 250ms ease-out;
+}
+.buttons .paper p {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+.buttons .paper-raise-flatten {
+  border-color: #e1632d;
+  box-shadow: none;
+}
+.buttons .paper-raise-flatten:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+}
+.buttons .paper-raise-flatten:hover {
+  border-color: #f15a24;
+}
+.buttons .paper-raise-flatten:hover:before {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 
 /*************
  * COURSES    *
  *************/
+ul.learning-points li {
+  list-style: disc;
+  line-height: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+
 .course-info {
   float: right;
-}
-.course-info .upcoming {
-  background-color: #333333;
+  font-family: "Roboto Condensed";
   color: #f2f2f2;
-  padding: 1rem;
-  margin: 3rem 0 0 0;
+  clear: both;
 }
-.course-info .date, .course-info .venue {
+.course-info p {
+  font-family: "Roboto Condensed";
+}
+.course-info .speaker-blurb {
+  background-color: #666666;
+}
+.course-info .upcoming, .course-info .instructor {
+  background-color: #333333;
+  padding: 1rem;
+  margin: 5rem 0 0 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .course-info .upcoming, .course-info .instructor {
+    font-size: 1rem;
+  }
+}
+.course-info .date, .course-info .venue, .course-info .info {
   background-color: #666666;
   color: #f2f2f2;
-  font-family: "Roboto Condensed";
   padding: 1rem;
-  text-align: right;
+  text-align: left;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .course-info .date, .course-info .venue, .course-info .info {
+    font-size: .9rem;
+  }
+}
+.course-info .name, .course-info .byline {
+  font-size: .75rem;
+}
+@media (max-width: 768px) {
+  .course-info .name, .course-info .byline {
+    font-size: .8rem;
+  }
+}
+.course-info .byline {
+  padding-left: 1rem;
+}
+.course-info .name {
+  border-bottom: 1px solid #f2f2f2;
+  margin: 1rem 7rem 0 1rem;
+  padding-bottom: 1rem;
+}
+.course-info .info {
+  margin-bottom: 2rem;
+}
+.course-info .speaker-pic {
+  float: right;
+  padding: 1rem;
+}
+.course-info .course-icon {
+  float: right;
+  margin: -1rem 0 0 0;
 }
 .course-info .tickets {
   background-color: #999999;
@@ -488,11 +645,4 @@ footer .twitter {
   padding: 1rem;
   margin: 0;
   text-align: center;
-}
-.course-info .enroll {
-  padding: 1rem 2rem;
-  background: #f7931e;
-  color: #333333;
-  text-align: center;
-  margin: 0;
 }
