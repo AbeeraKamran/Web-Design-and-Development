@@ -25,12 +25,25 @@ h1 {
  }
 
 h2 {
- 	font-size: 2rem;
- 	padding-top: 2rem;
+ 	font-size: 2.25rem;
+ 	// padding-top: 2rem;
+ 	// font-family: $font-serif;
+ 	// font-style: bold;
+ 	font-family: $font-stack, Helvetica, sans-serif;
+ 	font-weight: 700;
  }
 
 h3 {
  	font-size: 1.5rem;
+ 	color: $heading-color;
+ 	font-family: $font-stack, Helvetica, sans-serif;
+ 	font-weight: 700;
+ }
+
+ h4 {
+ 	font-size: 2.25rem;
+ 	color: $text-color;
+ 	font-family: $font-serif, Georgia, serif;
  }
 
 p {
@@ -43,6 +56,10 @@ a {
 	text-decoration: none;
 	color: $heading-color;
 }
+
+a:hover {
+		color: $heading-color;
+	}
 
 
 /*************
@@ -57,7 +74,7 @@ a {
     @media (max-width: 768px) { @content; }
   }
   @else if $point == baby-bear {
-    @media (max-width: 400px)  { @content; }
+    @media (max-width: 459px)  { @content; }
   }
 }
 
@@ -86,7 +103,11 @@ a {
  /*************
   * BODY      *
   *************/
-
+#container {
+	position: relative;
+	z-index: 0;
+	margin: 0;
+}
 .row {
 	max-width: 100%;
 	padding: 0;
@@ -107,9 +128,26 @@ a {
     overflow: hidden;
 }
 
+.main {
+
+	position: relative;
+  	z-index: 1;
+  	background-color: $heading-color;
+	-webkit-box-shadow: 0 0px 12px #333;
+  	-moz-box-shadow: 0 0px 12px #333;
+  	box-shadow: 0 0px 12px #333;
+  	overflow: hidden;
+  	padding: 0 4rem 0 0;
+}
+
+.main-home {
+	padding: 0;
+}
+
 .content {
 	margin: 0rem 0rem 2rem 6rem;
 	float: left;
+
 		h2{
 			@include breakpoint(mama-bear) { 
 			font-size: 1.5rem;
@@ -192,12 +230,11 @@ img.flip {
 	// // position: absolute;
 	// display: inline-block;
 	// vertical-align: middle;
-	font-family: 'Playfair Display', Georgia;
-	font-size: 2rem;
+	font-family: $font-serif, Georgia;
 	background-color: rgba(255, 255, 255, 0.6);
 	// margin: -57% 0 0 10%;
 	// width: 100%;
-	padding: 3% 3% 10% 2%;
+	padding: 4% 8% 9% 6%;
 	float: left;
 	transition: width 500ms;
 	z-index: 1;
@@ -218,7 +255,7 @@ img.flip {
 	
 
 	.quote {
-		padding: 7%;
+		// padding: 3%;
 		margin: 0 auto;
 		// padding: 5rem 7rem 9rem 6rem;
 		// float: left;
@@ -243,12 +280,13 @@ img.flip {
 	  
 	}
 
-	h2.author {
+	h4.author {
 		font-size: 1rem;
+		font-style: bold;
 		width: 23rem;
 		clear: both;
 		border-top: 1px solid #003baf;
-		margin-left: 6%;
+		margin-left: 4%;
 		padding-top: 10%;
 		position: absolute;
 
@@ -394,7 +432,7 @@ img.flip {
 	}
 }
 
-.top-bar.expanded {
+	.top-bar.expanded {
 	margin-top: 0;
 	padding: 0;
 	float: none;
@@ -403,20 +441,31 @@ img.flip {
 	}
 }
 
+
 .quick-nav {
 
 	color: $heading-color;
 	@include clearfix;
 	max-height: 25rem;
+	background-color: $box2-color;
 
+
+	.box-blurb {
+		overflow: hidden;
+		height: 9rem;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		}
+		
 	h3 {
 	padding-left: 2rem;
 	font-weight: 700; 
-	font-family: 'Roboto Condensed', Helvetica, sans-serif;
 	text-transform: uppercase;;
 
 		@include breakpoint(mama-bear) {
-		font-size: 1rem;
+		font-size: 1.25rem;
+		text-align: center;
+		padding: 1.5rem 0 1rem 0rem;
 
 		}
 
@@ -430,32 +479,34 @@ img.flip {
 	p {
 		margin: 2rem;
 		font-weight: lighter;
+		clear: both;
 	}
 
-	.read-more a{
+	.read-more {
 		font-family: $font-stack;
 		color: $heading-color;
 		text-transform: uppercase;
-		text-decoration: none;
+		text-decoration: underline;
 		font-weight: bold;
+	
 	}
 
 	.app-calendar {
 		// height: 120px;
-		margin-top: 1.1rem;
+		margin: 0rem 2rem 1rem;
 		width: 104px;
 		float: left;
-		-webkit-box-shadow: -10px 14px 11px -14px $text-color;
-		box-shadow: -10px 14px 11px -14px $text-color;
+		-webkit-box-shadow: 2px 14px 33px -14px $text-color;
+		box-shadow: 2px 14px 33px -14px $text-color;
 
-			@include breakpoint(mama-bear) {
-			margin-top: 1.1rem;
+			@include breakpoint(papa-bear) {
+			margin: 1rem 0.5rem 2rem .8rem;
 			}
 		
 		.app-city {
 			font-size: 1rem;
 			color: $heading-color;
-			margin: 1rem;
+			margin: .5rem;
 			text-align: center;
 			text-transform: uppercase;
 		}
@@ -467,7 +518,7 @@ img.flip {
 			line-height: 40px;
 			position: relative;
 			font-size: .90rem;
-			text-align: center;
+			text-align: center; 
 		}
 
 		#day {
@@ -478,6 +529,11 @@ img.flip {
 			height: 62px;
 			line-height: 59px;
 			text-align: center;
+			@include breakpoint(papa-bear) {
+				line-height: 40px;
+				height: 40px;
+				font-size: 2rem;
+			}
 		}
 	}
 
@@ -485,12 +541,11 @@ img.flip {
 		background-color: $box1-color;
 		width: 25%;
 		float: left;
-		overflow: hidden;
 		max-height: 20rem;
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		float:right;
 		}
 		@include breakpoint(baby-bear) {
@@ -507,7 +562,7 @@ img.flip {
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -524,7 +579,7 @@ img.flip {
 
 		@include breakpoint(mama-bear) { 
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -538,11 +593,11 @@ img.flip {
 		width: 25%;
 		float: left;
 		overflow: hidden;
-		max-height: 20rem;
+		height: 19.5rem;
 
 		@include breakpoint(mama-bear) {
 		width: 50%;
-		max-height: 15rem;
+		max-height: 7rem;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -553,27 +608,32 @@ img.flip {
 
 }
 
-
-footer {
+.footer-inner {
 	color: $heading-color;
 	text-align: left;
-	clear: both;
+	@include clearfix;
 	margin: 0;
 	width: 100%;
 	background-color: $footer-color;
-	position: absolute;
+	position: fixed;
+	z-index: -1;
+	bottom: 0;
 
 	p {
 		margin-top: 2.5rem;
 		padding: 1rem;
 		float: left;
-		// background-color: $footer-color;
+		@include breakpoint(baby-bear) { 
+			font-size: .9rem;
+			line-height: 1.25rem;
+		}
 	}
 
 	li, li a {
 		font-family: $font-serif;
 		font-size: 1rem;
 		color: $text-color;
+		padding: 1rem;
 		&:hover {
 			color: $box2-color;
 		}
@@ -586,17 +646,18 @@ footer {
 	}
 
 	.contact {
-		padding: 1rem;
+		padding: 2rem;
 		font-size: 1.5rem;
-		float: right;
-		margin: 4% 16%;
-		background-color: $footer-color;
+		@include breakpoint(baby-bear) { 
+		margin: 0 -1rem;
+		padding: 0;
+		}
 	}
 
-	.address {
-		border-bottom: 1px solid $text-color;
-		padding-bottom: .5rem;
-	}
+	// .address {
+	// 	border-bottom: 1px solid $text-color;
+	// 	padding-bottom: .5rem;
+	// }
 
 	.sprite {
     	background: url('../img/sprites.png') no-repeat;
@@ -608,7 +669,7 @@ footer {
 	    width: 40px;
 	    height: 40px;
 	    // margin: 0 auto;
-	    // float: left;
+	    float: left;
 	}
 
 	.phone {
@@ -633,13 +694,46 @@ footer {
 
 }
 
+.footer-bottom {
+	position: relative;
+	clear: both;
+  	z-index: -2;
+  	height: 16rem;
+  	@include breakpoint(baby-bear) { 
+			height: 26rem;
+	}
+}
+
+.footer-home {
+	position: relative;
+	clear: both;
+  	z-index: -2;
+  	height: 16rem;
+
+  	@include breakpoint(baby-bear) { 
+			height: 26rem;
+	}
+}
+
+
 
 .buttons {
 
 	.book {
 		background-color: $box1-color;
 		border-color: $footer-color;
-
+		text-align: center;
+	}
+		
+	.book-home {
+		clear: both;
+		margin: 0 auto;
+		width: 50%;
+		background-color: $heading-color;
+		color: $text-color;
+		@include breakpoint(papa-bear) {
+			width: 70%;
+		}
 	}
 
 	.btn {
@@ -665,14 +759,14 @@ footer {
  		}
 	}
 
-	.paper p{
+	.paper{
 	  	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 
 	}
 
 	.paper-raise-flatten {
 	  border-color: $footer-color;
-	  box-shadow: none;
+	  // box-shadow: none;
 	  
 	  &:before {
 	    top: 0;
@@ -709,7 +803,9 @@ ul.learning-points {
 	float: right;
 	font-family: "Roboto Condensed";
 	color: $heading-color;
-	clear: both;
+	@include clearfix;
+	max-height: 100%;
+	// margin: 0 27% 0 -27%;
 
 	p {
 		font-family: "Roboto Condensed";
@@ -778,11 +874,4 @@ ul.learning-points {
 		margin: 0;
 		text-align: center;
 	}
-
-	// .book a {
-	//   		@include button (#f7931e);
-	//   		border-bottom: 3px solid #f15a24;
-	// 		border-right: 3px solid #f15a24;
-	//   	}
-
 }
