@@ -90,6 +90,13 @@ a:hover {
   margin: 0rem 0rem 2rem 6rem;
   float: left;
 }
+.content:before, .content:after {
+  content: " ";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
 @media (max-width: 768px) {
   .content h2 {
     font-size: 1.5rem;
@@ -233,7 +240,6 @@ img.flip {
 }
 
 .top-bar {
-  transition: all 0.5s ease 0.1s;
   max-width: 100%;
   clear: both;
   list-style: none;
@@ -324,8 +330,8 @@ img.flip {
   color: #fec700;
 }
 .top-bar .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background-color: transparent;
-  color: #feb100;
+  background-color: #e1632d;
+  color: #f2f2f2;
 }
 
 .top-bar.expanded {
@@ -752,4 +758,163 @@ ul.learning-points li {
   padding: 1rem;
   margin: 0;
   text-align: center;
+}
+
+/*************
+ * CONTACTS    *
+ *************/
+.cont-contactInfo {
+  padding-right: 5%;
+  width: 45%;
+}
+.cont-contactInfo:before, .cont-contactInfo:after {
+  content: " ";
+  display: table;
+}
+.cont-contactInfo:after {
+  clear: both;
+}
+.cont-contactInfo h4 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.cont-contactInfo h4.section {
+  margin: 30px 0 0;
+}
+.cont-contactInfo p {
+  margin: 0;
+}
+.cont-contactInfo p > a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cont-contactBtn {
+  height: 25rem;
+  margin: 13rem 0rem 3rem 6rem;
+  position: relative;
+  clear: both;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+@media (max-width: 459px) {
+  .cont-contactBtn {
+    margin: 0 0rem 3rem 3rem;
+    height: 30rem;
+  }
+}
+.cont-contactBtn .cont-turn {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+}
+.cont-contactBtn .cont-turn .front, .cont-contactBtn .cont-turn .back {
+  display: block;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cont-contactBtn .cont-turn .front {
+  background-color: #feb100;
+}
+.cont-contactBtn .cont-turn .back {
+  background-color: #FCEFE4;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.cont-contactBtn .msg {
+  margin-top: 155px;
+  position: static;
+}
+.cont-contactBtn .cont-turn.flipped {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.cont-contactBtn .contact-form {
+  padding: 0 10%;
+  margin-top: 50px;
+}
+.cont-contactBtn .contact-form input, .cont-contactBtn .contact-form textarea {
+  border: 1px solid #808080;
+  font-size: 12px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.cont-contactBtn .contact-form input[type="text"] {
+  float: left;
+  margin-bottom: 8px;
+  padding-left: 3%;
+  width: 48.5%;
+}
+@media (max-width: 459px) {
+  .cont-contactBtn .contact-form input[type="text"] {
+    width: 100%;
+  }
+}
+.cont-contactBtn .contact-form .gutter {
+  margin-right: 2.8%;
+}
+.cont-contactBtn .contact-form textarea {
+  height: 9rem;
+  padding-left: 3%;
+  margin-bottom: 22px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.cont-contactBtn .contact-form input[type="submit"] {
+  background-color: #e1632d;
+  border: none;
+  color: #f2f2f2;
+  height: 45px;
+  width: 100%;
+  max-width: 93px;
+  text-align: center;
+}
+.cont-contactBtn .close {
+  display: block;
+  height: 19px;
+  width: 19px;
+  background-image: url("http://i.imgur.com/E7ci5ac.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 15px;
+  right: 3%;
+}
+
+.msg {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0 auto;
+  max-width: 280px;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+}
+@media (max-width: 459px) {
+  .msg {
+    max-width: 8rem;
+  }
 }

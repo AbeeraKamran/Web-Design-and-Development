@@ -99,6 +99,40 @@ a:hover {
 }
 
 
+@mixin perspective($pixels) {
+	-webkit-perspective: $pixels;
+	-moz-perspective: $pixels;
+	-o-perspective: $pixels;
+	perspective: $pixels;
+}
+
+@mixin transition($speed) {
+	-webkit-transition: -webkit-transform $speed;
+	-moz-transition: -moz-transform $speed;
+	-o-transition: -o-transform $speed;
+	transition: transform $speed;
+}
+
+@mixin transform-style() {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+@mixin transform($degrees) {
+	-webkit-transform: rotateX( $degrees + deg);
+	-moz-transform: rotateX( $degrees + deg);
+	-o-transform: rotateX( $degrees + deg);
+	transform: rotateX( $degrees + deg);
+}
+
+@mixin backface-visibility() {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
 
  /*************
   * BODY      *
@@ -147,6 +181,7 @@ a:hover {
 .content {
 	margin: 0rem 0rem 2rem 6rem;
 	float: left;
+	@include clearfix;
 
 		h2{
 			@include breakpoint(mama-bear) { 
@@ -325,7 +360,7 @@ img.flip {
 
 .top-bar {
 	// margin-top: 33.5%;
-	transition: all 0.5s ease 0.1s;
+	// transition: all 0.5s ease 0.1s;
 	max-width: 100%;
 	clear: both;
 	list-style: none;
@@ -426,8 +461,8 @@ img.flip {
 		}
 
 		li.active:not(.has-form) a:not(.button) {
-			background-color: transparent;
-			color: $box1-color;	
+			background-color: $footer-color;
+			color: $heading-color;	
 		}
 	}
 }
@@ -785,8 +820,6 @@ img.flip {
 	}
 }
 
-
-
 /*************
  * COURSES    *
  *************/
@@ -873,5 +906,162 @@ ul.learning-points {
 		padding: 1rem;
 		margin: 0;
 		text-align: center;
+	}
+}
+
+/*************
+ * CONTACTS    *
+ *************/
+
+.cont-contactInfo {
+	@include clearfix;
+	padding-right: 5%;
+	width: 45%;
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	h4.section {
+		margin: 30px 0 0;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	p > a {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+}
+
+.cont-contactBtn {
+	height: 25rem;
+  	margin: 13rem 0rem 3rem 6rem;
+	// width: 574px;
+	position: relative;
+	clear: both;
+
+	@include perspective(800px);
+	@include breakpoint(baby-bear) { 
+			margin: 0 0rem 3rem 3rem;
+			height: 30rem;
+		}
+
+	.cont-turn {
+		position: absolute;
+		@include transition(.5s);
+		@include transform-style();
+		height: 100%;
+		width: 100%;
+
+		.front, .back {
+			display: block;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+
+			@include backface-visibility;
+		}
+
+		.front {
+			background-color: $box1-color;
+		}
+
+		.back {
+			background-color: #FCEFE4;
+			@include transform(180);
+		}
+	}
+
+	.msg {
+		margin-top: 155px;
+		position: static;
+	}
+
+	.cont-turn.flipped {
+		@include transform(180);
+	}
+
+	.contact-form {
+		padding: 0 10%;
+		margin-top: 50px;
+		// width: 80%;
+
+		input, textarea {
+			border: 1px solid #808080;
+			font-size: 12px;
+			padding: 10px 0;
+			text-transform: uppercase;
+		}
+
+		input[type="text"] {
+			float: left;
+			margin-bottom: 8px;
+			padding-left: 3%;
+			width: 48.5%;
+			@include breakpoint(baby-bear){
+				width: 100%;
+			}
+		}
+
+		.gutter {
+			margin-right: 2.8%;
+		}
+
+		textarea {
+			height: 9rem;
+			padding-left: 3%;
+			margin-bottom: 22px;
+			// width: 96.2%;
+			font-family: $font-stack;
+		}
+
+		input[type="submit"] {
+			background-color: $footer-color;
+			border: none;
+			color: $heading-color;
+			height: 45px;
+			width: 100%;
+			max-width:93px;
+			text-align: center;
+		}
+
+	}
+
+	.close {
+		display: block;
+		height: 19px;
+		width: 19px;
+		background-image: url('http://i.imgur.com/E7ci5ac.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 15px;
+		right: 3%;
+	}
+}
+
+.msg {
+	// border: 3px $heading-color solid;
+ //  	color: $heading-color;
+	display: block;
+	font-size: 1.4rem;
+	font-weight: normal;
+	margin: 0 auto;
+	max-width: 280px;
+	padding: 15px 0;
+	text-align: center;
+	text-transform: uppercase;
+  	text-decoration: none;
+	width: 100%;
+
+	@include breakpoint(baby-bear) {
+		max-width: 8rem;
 	}
 }
