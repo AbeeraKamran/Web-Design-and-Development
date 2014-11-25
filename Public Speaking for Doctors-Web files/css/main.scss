@@ -762,10 +762,13 @@ img.flip {
 		
 	.book-home {
 		clear: both;
-		margin: 0 auto;
+		margin: 2rem;
+		font-size: 1.5rem;
+		font-weight: 700;
 		width: 50%;
 		background-color: $heading-color;
 		color: $text-color;
+		text-align: center;
 		@include breakpoint(papa-bear) {
 			width: 70%;
 		}
@@ -950,6 +953,7 @@ ul.learning-points {
 	@include breakpoint(baby-bear) { 
 			margin: 0 0rem 3rem 3rem;
 			height: 30rem;
+			font-size: 1rem;
 		}
 
 	.cont-turn {
@@ -974,7 +978,7 @@ ul.learning-points {
 		}
 
 		.back {
-			background-color: #FCEFE4;
+			background-color: $box1-color;
 			@include transform(180);
 		}
 	}
@@ -1062,6 +1066,7 @@ ul.learning-points {
 	width: 100%;
 
 	@include breakpoint(baby-bear) {
-		max-width: 8rem;
+		max-width: 9rem;
+		font-size: 1rem;
 	}
 }

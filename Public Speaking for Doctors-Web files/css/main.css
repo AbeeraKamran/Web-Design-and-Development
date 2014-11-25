@@ -625,10 +625,13 @@ img.flip {
 }
 .buttons .book-home {
   clear: both;
-  margin: 0 auto;
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   width: 50%;
   background-color: #f2f2f2;
   color: #333333;
+  text-align: center;
 }
 @media (max-width: 1048px) {
   .buttons .book-home {
@@ -804,6 +807,7 @@ ul.learning-points li {
   .cont-contactBtn {
     margin: 0 0rem 3rem 3rem;
     height: 30rem;
+    font-size: 1rem;
   }
 }
 .cont-contactBtn .cont-turn {
@@ -834,7 +838,7 @@ ul.learning-points li {
   background-color: #feb100;
 }
 .cont-contactBtn .cont-turn .back {
-  background-color: #FCEFE4;
+  background-color: #feb100;
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
@@ -915,6 +919,7 @@ ul.learning-points li {
 }
 @media (max-width: 459px) {
   .msg {
-    max-width: 8rem;
+    max-width: 9rem;
+    font-size: 1rem;
   }
 }
