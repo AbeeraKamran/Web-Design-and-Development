@@ -344,9 +344,9 @@ img.flip {
 }
 
 .quick-nav {
-  color: #f2f2f2;
+  color: #333333;
   max-height: 25rem;
-  background-color: #fec700;
+  background-color: #f2f2f2;
 }
 .quick-nav:before, .quick-nav:after {
   content: " ";
@@ -360,11 +360,13 @@ img.flip {
   height: 9rem;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  color: #333333;
 }
 .quick-nav h3 {
   padding-left: 2rem;
   font-weight: 700;
   text-transform: uppercase;
+  color: #333333;
 }
 @media (max-width: 768px) {
   .quick-nav h3 {
@@ -378,6 +380,7 @@ img.flip {
     font-size: 1.25rem;
     padding: 1.5rem;
     margin: 1 auto;
+    color: #f2f2f2;
   }
 }
 .quick-nav p {
@@ -386,34 +389,32 @@ img.flip {
   clear: both;
 }
 .quick-nav .read-more {
-  font-family: "Roboto Condensed", sans-serif;
-  color: #f2f2f2;
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: #333333;
+  font-style: italic;
 }
 .quick-nav .app-calendar {
-  margin: 0rem 2rem 1rem;
-  width: 104px;
+  margin: 0rem -1.5rem 1rem 2rem;
+  width: 146px;
   float: left;
+  background-color: #fec700;
   -webkit-box-shadow: 2px 14px 33px -14px #333333;
   box-shadow: 2px 14px 33px -14px #333333;
 }
 @media (max-width: 1048px) {
   .quick-nav .app-calendar {
     margin: 1rem 0.5rem 2rem .8rem;
+    width: 104px;
   }
 }
 .quick-nav .app-calendar .app-city {
   font-size: 1rem;
-  color: #f2f2f2;
   margin: .5rem;
   text-align: center;
   text-transform: uppercase;
 }
 .quick-nav .app-calendar #month {
   background: #e1632d;
-  color: #f9f9f9;
   font-size: 24px;
   line-height: 40px;
   position: relative;
@@ -422,7 +423,6 @@ img.flip {
 }
 .quick-nav .app-calendar #day {
   background: #feb100;
-  color: #f2f2f2;
   font-size: 3rem;
   font-weight: bold;
   height: 62px;
@@ -437,10 +437,15 @@ img.flip {
   }
 }
 .quick-nav .box-1 {
-  background-color: #feb100;
   width: 25%;
   float: left;
   max-height: 20rem;
+  border-right: 1px solid #e1632d;
+  transition: background-color 0.5s ease;
+}
+.quick-nav .box-1:hover {
+  background-color: #feb100;
+  color: #f2f2f2;
 }
 @media (max-width: 768px) {
   .quick-nav .box-1 {
@@ -453,14 +458,21 @@ img.flip {
   .quick-nav .box-1 {
     width: 50%;
     max-height: 7rem;
+    background-color: #feb100;
+    border: none;
   }
 }
 .quick-nav .box-2 {
-  background-color: #fec700;
   width: 25%;
   float: left;
   overflow: hidden;
   max-height: 20rem;
+  border-right: 1px solid #e1632d;
+  transition: background-color 0.5s ease;
+}
+.quick-nav .box-2:hover {
+  background-color: #fec700;
+  color: #f2f2f2;
 }
 @media (max-width: 768px) {
   .quick-nav .box-2 {
@@ -472,14 +484,21 @@ img.flip {
   .quick-nav .box-2 {
     width: 50%;
     max-height: 7rem;
+    background-color: #fec700;
+    border: none;
   }
 }
 .quick-nav .box-3 {
-  background-color: #feb100;
   width: 25%;
   float: left;
   overflow: hidden;
   max-height: 20rem;
+  border-right: 1px solid #e1632d;
+  transition: background-color 0.5s ease;
+}
+.quick-nav .box-3:hover {
+  background-color: #feb100;
+  color: #f2f2f2;
 }
 @media (max-width: 768px) {
   .quick-nav .box-3 {
@@ -492,14 +511,19 @@ img.flip {
     font-size: 1rem;
     width: 50%;
     max-height: 7rem;
+    background-color: #feb100;
+    border: none;
   }
 }
 .quick-nav .box-4 {
-  background-color: #fec700;
   width: 25%;
   float: left;
   overflow: hidden;
-  height: 19.5rem;
+  height: 20rem;
+}
+.quick-nav .box-4:hover {
+  background-color: #fec700;
+  transition: background-color 0.5s ease;
 }
 @media (max-width: 768px) {
   .quick-nav .box-4 {
@@ -511,6 +535,8 @@ img.flip {
   .quick-nav .box-4 {
     width: 50%;
     max-height: 7rem;
+    background-color: #fec700;
+    border: none;
   }
 }
 
@@ -559,6 +585,7 @@ img.flip {
 .footer-inner .contact {
   padding: 2rem;
   font-size: 1.5rem;
+  transition: color 0.5s ease;
 }
 @media (max-width: 459px) {
   .footer-inner .contact {
@@ -626,9 +653,10 @@ img.flip {
 .buttons .book-home {
   clear: both;
   margin: 2rem;
+  padding: .25rem;
   font-size: 1.5rem;
   font-weight: 700;
-  width: 50%;
+  width: 43%;
   background-color: #f2f2f2;
   color: #333333;
   text-align: center;
@@ -922,4 +950,67 @@ ul.learning-points li {
     max-width: 9rem;
     font-size: 1rem;
   }
+}
+
+/*************
+ * ABOUT US    *
+ *************/
+.doctors {
+  margin: 4rem 0 3rem 0;
+}
+.doctors .doc-info {
+  margin-top: 2rem;
+}
+.doctors ul {
+  margin: 0;
+}
+.doctors h3 {
+  background-color: #333333;
+  padding: 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  transition: background-color .3s ease;
+}
+.doctors h3:hover {
+  background-color: #feb100;
+}
+.doctors .sprite-linkedin {
+  background: url("../img/sprites-linkedin.png") no-repeat;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -3.15rem 1rem;
+  float: right;
+}
+.doctors .linkedin {
+  background-position: 0 0;
+}
+
+/*************
+ * RESOURCES    *
+ *************/
+.presentation {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.tips {
+  background-color: #feb100;
+  padding: 2rem;
+}
+.tips h3 {
+  color: #333333;
+}
+.tips img {
+  margin: 0 0 10% 15%;
+}
+.tips p {
+  font-size: .85rem;
+  border-top: 2px solid #333;
+  padding-top: 2rem;
 }
