@@ -321,7 +321,7 @@ img.flip {
 		width: 23rem;
 		clear: both;
 		border-top: 1px solid #003baf;
-		margin-left: 4%;
+		// margin-left: 4%;
 		padding-top: 10%;
 		position: absolute;
 
@@ -495,6 +495,7 @@ img.flip {
 		text-overflow: ellipsis;
 		word-wrap: break-word;
 		color: $text-color;
+		border-right: 1px solid $text-color;
 	}
 		
 	h3 {
@@ -519,7 +520,8 @@ img.flip {
 	}
 
 	p {
-		margin: 2rem;
+		// margin: 2rem;
+		padding: 0 2rem 0 2rem;
 		font-weight: lighter;
 		clear: both;
 	}
@@ -527,6 +529,7 @@ img.flip {
 	.read-more {
 		font-family: $font-serif;
 		color: $text-color;
+		margin-top: 3.5rem;
 		// text-decoration: underline;
 		font-style: italic;
 		// border-bottom: 1px solid $text-color;
@@ -547,12 +550,14 @@ img.flip {
 			margin: 1rem 0.5rem 2rem .8rem;
 			width:104px;
 			}
+
 		
 		.app-city {
 			font-size: 1rem;
 			margin: .5rem;
 			text-align: center;
 			text-transform: uppercase;
+			padding: 0;
 		}
 
 		#month {
@@ -584,8 +589,8 @@ img.flip {
 		width: 25%;
 		float: left;
 		max-height: 20rem;
-		border-right: 1px solid $footer-color;
-		transition: background-color 0.5s ease;
+		
+		transition: background-color 0.8s ease;
 		&:hover {
 		background-color: $box1-color;
 		color: $heading-color;
@@ -604,6 +609,7 @@ img.flip {
 		width: 50%;
 		max-height: 7rem;
 		float:right;
+		background-color: $box1-color;
 		}
 		@include breakpoint(baby-bear) {
 		width: 50%;
@@ -617,8 +623,8 @@ img.flip {
 		float: left;
 		overflow: hidden;
 		max-height: 20rem;
-		border-right: 1px solid $footer-color;
-		transition: background-color 0.5s ease;
+		// border-right: 1px solid $footer-color;
+		transition: background-color 0.8s ease;
 		&:hover {
 		background-color: $box2-color;
 		color: $heading-color;
@@ -627,6 +633,7 @@ img.flip {
 		@include breakpoint(mama-bear) { 
 		width: 50%;
 		max-height: 7rem;
+		background-color: $box2-color;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -641,8 +648,8 @@ img.flip {
 		float: left;
 		overflow: hidden;
 		max-height: 20rem;
-		border-right: 1px solid $footer-color;
-		transition: background-color 0.5s ease;
+		// border-right: 1px solid $footer-color;
+		transition: background-color 0.8s ease;
 		&:hover {
 		background-color: $box1-color;
 		color: $heading-color;
@@ -651,6 +658,7 @@ img.flip {
 		@include breakpoint(mama-bear) { 
 		width: 50%;
 		max-height: 7rem;
+		background-color: $box1-color;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -668,13 +676,14 @@ img.flip {
 		height: 20rem;
 		&:hover {
 		background-color: $box2-color;
-		transition: background-color 0.5s ease;
+		transition: background-color 0.8s ease;
 		// color: $heading-color;
 		}
 
 		@include breakpoint(mama-bear) {
 		width: 50%;
 		max-height: 7rem;
+		background-color: $box2-color;
 		}
 
 		@include breakpoint(baby-bear) { 
@@ -792,7 +801,7 @@ img.flip {
   	height: 16rem;
 
   	@include breakpoint(baby-bear) { 
-			height: 26rem;
+			height: 28rem;
 	}
 }
 
@@ -804,6 +813,7 @@ img.flip {
 		background-color: $box1-color;
 		border-color: $footer-color;
 		text-align: center;
+		padding: 1rem;
 	}
 		
 	.book-home {
@@ -818,6 +828,8 @@ img.flip {
 		text-align: center;
 		@include breakpoint(papa-bear) {
 			width: 70%;
+			padding: .5rem;
+			font-size: 1.25rem;
 		}
 	}
 
@@ -826,7 +838,7 @@ img.flip {
   	display: block;
   	// border: 1px solid #ccc;
   	text-decoration: none;
-  	padding: 1rem;
+  	
   	transform-style: flat;
   	transition: all 250ms ease-out;
   	border-bottom: 3px solid $footer-color;
@@ -1171,28 +1183,113 @@ ul.learning-points {
 /*************
  * RESOURCES    *
  *************/
-.presentation {
+.resources {
+	margin: 0rem 11rem 2rem 6rem;
+	@include clearfix;
+
+	@include breakpoint (papa-bear) {
+		margin: 0rem 5rem 2rem 6rem;
+	}
+
+}
+ .main-resources {
+ 	padding: 0;
+ }
+.presentation, .public {
 	text-align: center;
 	margin: 0 auto;
 	text-transform: uppercase;
-	padding: 1rem;
+	padding: 2rem;
+	@include breakpoint (baby-bear) {
+			padding: 1rem;
+			font-size: 1.5rem
+		}
 }
+
+.public {
+	padding: 0;
+}
+
 .tips {
 
 	background-color: $box1-color;
 	padding: 2rem;
+	float: left;
+	margin:0 0 4rem 2.5rem;
+	width: 16rem;
+	@include clearfix;
+
+	@include breakpoint (papa-bear) {
+			margin: 0 0 3rem 0;
+			width: 23rem;
+		}
+
+		@include breakpoint (mama-bear) {
+			margin: 0 0 .5rem 0;
+			width: 18rem;
+		}
+
+	@include breakpoint (baby-bear) {
+			padding: 1rem;
+			margin: 0 0 1rem 0;
+			width: 14rem;
+		}
 	h3 {
 		color: $text-color;
 	}
 
 	img {
 		margin:0 0 10% 15%;
+
+		@include breakpoint (papa-bear) {
+			margin:0 0 10% 28%;
+		}
+
+		@include breakpoint (mama-bear) {
+			margin:0 0 10% 22%;
+		}
+		@include breakpoint (baby-bear) {
+			width: 50%;
+			margin-left: 3rem;
+			margin:0 0 3% 24%;
+		}
 	}
 
 	p {
 		font-size: .85rem;
 		border-top: 2px solid #333;
 		padding-top: 2rem;
+		@include breakpoint (baby-bear) {
+			padding-top: 1rem;
+		}
+	}
+}
+.audience img {
+	margin: -1rem 0 0 0;
+	width: 100%;
+}
+.links {
+	@include clearfix;
+	clear: both;
+
+	@include breakpoint (baby-bear) {
+			padding-right: 4rem;
+		}
+
+	ul {
+		padding: 0;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		border-bottom: 1px solid #333;
+		font-style: italic;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		transition: color .5s ease;
+		&:hover {
+			color: $box1-color;
+		}
 	}
 }
 

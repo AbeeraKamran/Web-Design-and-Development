@@ -204,7 +204,6 @@ img.flip {
   width: 23rem;
   clear: both;
   border-top: 1px solid #003baf;
-  margin-left: 4%;
   padding-top: 10%;
   position: absolute;
 }
@@ -361,6 +360,7 @@ img.flip {
   text-overflow: ellipsis;
   word-wrap: break-word;
   color: #333333;
+  border-right: 1px solid #333333;
 }
 .quick-nav h3 {
   padding-left: 2rem;
@@ -384,13 +384,14 @@ img.flip {
   }
 }
 .quick-nav p {
-  margin: 2rem;
+  padding: 0 2rem 0 2rem;
   font-weight: lighter;
   clear: both;
 }
 .quick-nav .read-more {
   font-family: "Playfair Display", serif;
   color: #333333;
+  margin-top: 3.5rem;
   font-style: italic;
 }
 .quick-nav .app-calendar {
@@ -412,6 +413,7 @@ img.flip {
   margin: .5rem;
   text-align: center;
   text-transform: uppercase;
+  padding: 0;
 }
 .quick-nav .app-calendar #month {
   background: #e1632d;
@@ -440,8 +442,7 @@ img.flip {
   width: 25%;
   float: left;
   max-height: 20rem;
-  border-right: 1px solid #e1632d;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.8s ease;
 }
 .quick-nav .box-1:hover {
   background-color: #feb100;
@@ -452,6 +453,7 @@ img.flip {
     width: 50%;
     max-height: 7rem;
     float: right;
+    background-color: #feb100;
   }
 }
 @media (max-width: 459px) {
@@ -467,8 +469,7 @@ img.flip {
   float: left;
   overflow: hidden;
   max-height: 20rem;
-  border-right: 1px solid #e1632d;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.8s ease;
 }
 .quick-nav .box-2:hover {
   background-color: #fec700;
@@ -478,6 +479,7 @@ img.flip {
   .quick-nav .box-2 {
     width: 50%;
     max-height: 7rem;
+    background-color: #fec700;
   }
 }
 @media (max-width: 459px) {
@@ -493,8 +495,7 @@ img.flip {
   float: left;
   overflow: hidden;
   max-height: 20rem;
-  border-right: 1px solid #e1632d;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.8s ease;
 }
 .quick-nav .box-3:hover {
   background-color: #feb100;
@@ -504,6 +505,7 @@ img.flip {
   .quick-nav .box-3 {
     width: 50%;
     max-height: 7rem;
+    background-color: #feb100;
   }
 }
 @media (max-width: 459px) {
@@ -523,12 +525,13 @@ img.flip {
 }
 .quick-nav .box-4:hover {
   background-color: #fec700;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.8s ease;
 }
 @media (max-width: 768px) {
   .quick-nav .box-4 {
     width: 50%;
     max-height: 7rem;
+    background-color: #fec700;
   }
 }
 @media (max-width: 459px) {
@@ -641,7 +644,7 @@ img.flip {
 }
 @media (max-width: 459px) {
   .footer-home {
-    height: 26rem;
+    height: 28rem;
   }
 }
 
@@ -649,6 +652,7 @@ img.flip {
   background-color: #feb100;
   border-color: #e1632d;
   text-align: center;
+  padding: 1rem;
 }
 .buttons .book-home {
   clear: both;
@@ -664,13 +668,14 @@ img.flip {
 @media (max-width: 1048px) {
   .buttons .book-home {
     width: 70%;
+    padding: .5rem;
+    font-size: 1.25rem;
   }
 }
 .buttons .btn {
   position: relative;
   display: block;
   text-decoration: none;
-  padding: 1rem;
   transform-style: flat;
   transition: all 250ms ease-out;
   border-bottom: 3px solid #e1632d;
@@ -992,16 +997,75 @@ ul.learning-points li {
 /*************
  * RESOURCES    *
  *************/
-.presentation {
+.resources {
+  margin: 0rem 11rem 2rem 6rem;
+}
+.resources:before, .resources:after {
+  content: " ";
+  display: table;
+}
+.resources:after {
+  clear: both;
+}
+@media (max-width: 1048px) {
+  .resources {
+    margin: 0rem 5rem 2rem 6rem;
+  }
+}
+
+.main-resources {
+  padding: 0;
+}
+
+.presentation, .public {
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
-  padding: 1rem;
+  padding: 2rem;
+}
+@media (max-width: 459px) {
+  .presentation, .public {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.public {
+  padding: 0;
 }
 
 .tips {
   background-color: #feb100;
   padding: 2rem;
+  float: left;
+  margin: 0 0 4rem 2.5rem;
+  width: 16rem;
+}
+.tips:before, .tips:after {
+  content: " ";
+  display: table;
+}
+.tips:after {
+  clear: both;
+}
+@media (max-width: 1048px) {
+  .tips {
+    margin: 0 0 3rem 0;
+    width: 23rem;
+  }
+}
+@media (max-width: 768px) {
+  .tips {
+    margin: 0 0 .5rem 0;
+    width: 18rem;
+  }
+}
+@media (max-width: 459px) {
+  .tips {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    width: 14rem;
+  }
 }
 .tips h3 {
   color: #333333;
@@ -1009,8 +1073,65 @@ ul.learning-points li {
 .tips img {
   margin: 0 0 10% 15%;
 }
+@media (max-width: 1048px) {
+  .tips img {
+    margin: 0 0 10% 28%;
+  }
+}
+@media (max-width: 768px) {
+  .tips img {
+    margin: 0 0 10% 22%;
+  }
+}
+@media (max-width: 459px) {
+  .tips img {
+    width: 50%;
+    margin-left: 3rem;
+    margin: 0 0 3% 24%;
+  }
+}
 .tips p {
   font-size: .85rem;
   border-top: 2px solid #333;
   padding-top: 2rem;
+}
+@media (max-width: 459px) {
+  .tips p {
+    padding-top: 1rem;
+  }
+}
+
+.audience img {
+  margin: -1rem 0 0 0;
+  width: 100%;
+}
+
+.links {
+  clear: both;
+}
+.links:before, .links:after {
+  content: " ";
+  display: table;
+}
+.links:after {
+  clear: both;
+}
+@media (max-width: 459px) {
+  .links {
+    padding-right: 4rem;
+  }
+}
+.links ul {
+  padding: 0;
+}
+.links h4 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #333;
+  font-style: italic;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  transition: color .5s ease;
+}
+.links h4:hover {
+  color: #feb100;
 }
