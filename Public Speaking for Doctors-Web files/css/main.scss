@@ -811,7 +811,7 @@ img.flip {
 
 	.book {
 		background-color: $box1-color;
-		border-color: $footer-color;
+		border:none;
 		text-align: center;
 		padding: 1rem;
 	}
@@ -1293,7 +1293,30 @@ ul.learning-points {
 	}
 }
 
+/*************
+ * SIGN UP    *
+ *************/
 
+ 	#mc-embedded-subscribe{
+		font-family: $font-stack;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1.25rem;
+		color: $heading-color;
+		}
+ 
+
+.indicates-required {
+	font-family: $font-serif;
+	text-align: right;
+	color: $footer-color;
+	font-size: .8rem;
+}
+
+label {
+	font-family: $font-serif;
+
+}
 
 
 

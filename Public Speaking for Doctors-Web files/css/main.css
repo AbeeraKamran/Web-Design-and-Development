@@ -650,7 +650,7 @@ img.flip {
 
 .buttons .book {
   background-color: #feb100;
-  border-color: #e1632d;
+  border: none;
   text-align: center;
   padding: 1rem;
 }
@@ -1134,4 +1134,26 @@ ul.learning-points li {
 }
 .links h4:hover {
   color: #feb100;
+}
+
+/*************
+ * SIGN UP    *
+ *************/
+#mc-embedded-subscribe {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #f2f2f2;
+}
+
+.indicates-required {
+  font-family: "Playfair Display", serif;
+  text-align: right;
+  color: #e1632d;
+  font-size: .8rem;
+}
+
+label {
+  font-family: "Playfair Display", serif;
 }

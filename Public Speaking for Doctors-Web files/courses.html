@@ -53,6 +53,7 @@
         <div class="row">
             <div class="main">
                 <div class="small-12 medium-7 large-7 columns">
+
                     <div class="content">
                         <h2>WHY DO THE COURSE</h2>
                         <p>The healthcare industry is dynamic and ever changing, and the National Health Service (NHS) needs innovative medical leaders who can manage organisational change. Clearly communicating your vision is critical to becoming a successful healthcare leader and being valued in your role as a clinician. Our bespoke courses will equip you with the tools you need to be taken seriously when you present at meetings, conferences, or teaching sessions.
@@ -79,6 +80,8 @@
                         <p>Our courses are run by trainers who have years of professional experience in public speaking and executive skills coaching. Clients of some of our trainers have included 
                         MacMillan Cancer Support, Dell, and Imperial College London.</p>
                     </div>
+                     <h2><a href="#" data-reveal-id="myModal" data-reveal>Modal</a></h2>
+
                 </div>
                 <div class="small-10 small-offset-1 medium-3 large-2 large-offset-2 columns">
                     <div class="course-info">
@@ -86,7 +89,8 @@
                         <p class="date">Friday 14th December<br>8:30 am - 5:00 pm<img class="course-icon" src="img/calendar.png"></p>
                         <p class="venue">Marriott Hotel<br>West Midlands<br>BE6 Pq<img a href="#" class="course-icon" src="img/google_pin.png"></p>
                         <h3 class="tickets">TICKETS £200</h3>
-                        <div class="buttons"><a href="#"><h3 class="btn paper paper-raise-flatten book">BOOK NOW</h3></a></div>
+                        <div class="buttons"><a href="#" data-reveal-id="myModal"><h3 class="btn paper paper-raise-flatten book">BOOK NOW</h3></a></div>
+                        
                         <div class="speaker-blurb">
                             <h3 class="instructor">THE INSTRUCTOR</h3>
                             <img class="speaker-pic" src="img/speaker_pic.png">
@@ -124,9 +128,14 @@
             </div>
             </footer>
         </div>
+        <div id="myModal" class="reveal-modal small" data-reveal="">
+            <h2>Be the first to know!</h2>
+            <p>Enter your email adress below</p>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/min/foundation.min.js"></script>
         <script src="js/foundation/foundation.topbar.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -140,6 +149,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-        <script>$(document).foundation();</script>
+        <script>
+        $(document).foundation();
+        </script>
     </body>
 </html>
