@@ -18,11 +18,11 @@ $(document).ready(function(){
     return false;
   });
 
-	  $(".cancel").on("click",function(){
-	  $("form div").removeClass("mce_inline_error");
-	  $("form label").removeId("mce-success-response");
-	  $("form")[0].reset();
-	});
+	//   $(".cancel").on("click",function(){
+	//   $("form div").removeClass("mce_inline_error");
+	//   $("form label").removeId("mce-success-response");
+	//   $("form")[0].reset();
+	// });
 
 $(function() {
 
