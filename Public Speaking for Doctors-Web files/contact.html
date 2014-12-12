@@ -61,17 +61,30 @@
                     <div class="cont-contactBtn">
                         <div class="cont-turn">
                             <div class="front">
-                                <section class="buttons"><a href="#" class="msg msg-white turn btn paper paper-raise-flatten book">Send Message</a></section>
+                                <section class="buttons"><a href="#" class="msg msg-white turn btn paper <!--paper-raise-flatten--> book">Send Message</a></section>
                             </div>
                             <div class="back">
                                 <a href="#" class="turn close"></a>
-                                <form class="contact-form" action="">
-                                    <input class="gutter" type="text" placeholder="Name">
-                                    <input type="text" placeholder="Company">
-                                    <input class="gutter" type="text" placeholder="Telephone">
-                                    <input type="text" placeholder="Email">
-                                    <textarea name="" id="" placeholder="Leave a message"></textarea>
-                                    <input type="submit" value="Send">
+                                <div id="form-messages"></div>
+                                <form class="contact-form" id="ajax-contact" action="process.php" method="post">
+                                <div class="field">
+                                    <input class="gutter" type="text" name="name" id="name" placeholder="Name *" required>
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="hospital" id="hopsital" placeholder="Hospital">
+                                </div>
+                                <div class="field">
+                                    <input class="gutter" type="text" name="telephone" id="telephone" placeholder="Telephone">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="email" id="email" placeholder="Email *" required>
+                                </div>
+                                <div class="field">
+                                    <textarea name="message" id="message" placeholder="Leave a message"></textarea>
+                                </div>
+                                <div class="field">
+                                    <input type="submit" value="Submit">
+                                </div>
                                 </form>
                             </div>
                         </div>
@@ -102,7 +115,7 @@
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/min/foundation.min.js"></script>
         <script src="js/foundation/foundation.topbar.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -117,5 +130,6 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
         <script>$(document).foundation();</script>
+
     </body>
 </html>

@@ -644,7 +644,7 @@ img.flip {
 }
 @media (max-width: 459px) {
   .footer-home {
-    height: 28rem;
+    height: 27rem;
   }
 }
 
@@ -715,8 +715,10 @@ img.flip {
  *************/
 ul.learning-points li {
   list-style: disc;
-  line-height: 1.5rem;
+  line-height: 2.25rem;
   font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.25rem;
 }
 
 .course-info {
@@ -957,6 +959,30 @@ ul.learning-points li {
   }
 }
 
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 /*************
  * ABOUT US    *
  *************/
@@ -1155,5 +1181,19 @@ ul.learning-points li {
 }
 
 label {
+  font-family: "Playfair Display", serif;
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: none;
+  color: #e1632d;
+  font-family: "Playfair Display", serif;
+  font-size: .8rem;
+  font-weight: normal;
+  padding: 0;
+}
+
+div#mce-success-response {
+  padding-bottom: 1rem;
   font-family: "Playfair Display", serif;
 }

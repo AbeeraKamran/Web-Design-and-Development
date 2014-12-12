@@ -801,7 +801,7 @@ img.flip {
   	height: 16rem;
 
   	@include breakpoint(baby-bear) { 
-			height: 28rem;
+			height: 27rem;
 	}
 }
 
@@ -889,8 +889,10 @@ ul.learning-points {
 
 	li {
 		list-style: disc;
-		line-height: 1.5rem;
+		line-height: 2.25rem;
 		font-family: $font-serif;
+		font-style: italic;
+		font-size: 1.25rem;
 	}
 }
 
@@ -1130,6 +1132,30 @@ ul.learning-points {
 	}
 }
 
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
 /*************
  * ABOUT US    *
  *************/
@@ -1315,7 +1341,24 @@ ul.learning-points {
 
 label {
 	font-family: $font-serif;
+}
 
+
+
+#mc_embed_signup {
+	div.mce_inline_error {
+		background-color: none;
+		color: $footer-color;
+		font-family: $font-serif;
+		font-size: .8rem;
+		font-weight: normal;
+		padding: 0;
+	}
+}
+
+div#mce-success-response {
+	padding-bottom: 1rem;
+	font-family: $font-serif;
 }
 
 
