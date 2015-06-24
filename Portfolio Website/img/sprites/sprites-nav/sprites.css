@@ -1,0 +1,52 @@
+.behance-blue-40, .behance-fill-40, .github-blue-40, .github-fill-40, .instagram-blue-40, .instagram-fill-40, .twitter-blue-40, .twitter-fill-40{
+	background: url(sprites.png) no-repeat;
+}
+
+.behance-blue-40{
+	background-position: 0 0;
+	width: 40px;
+	height: 40px;
+}
+
+.behance-fill-40{
+	background-position: 0 -49px ;
+	width: 40px;
+	height: 40px;
+}
+
+.github-blue-40{
+	background-position: -154px 0;
+	width: 40px;
+	height: 40px;
+}
+
+.github-fill-40{
+	background-position: -154px -51px ;
+	width: 40px;
+	height: 40px;
+}
+
+.instagram-blue-40{
+	background-position: -52px -1px ;
+	width: 40px;
+	height: 40px;
+}
+
+.instagram-fill-40{
+	background-position: -52px -51px ;
+	width: 40px;
+	height: 40px;
+}
+
+.twitter-blue-40{
+	background-position: -103px 0;
+	width: 40px;
+	height: 40px;
+}
+
+.twitter-fill-40{
+	background-position: -103px -50px ;
+	width: 40px;
+	height: 40px;
+}
+

@@ -1,0 +1,254 @@
+/*
+Project Name: Abeera Kamrans Portfolio
+Client: Your Client
+Author: A Kamran
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/**/
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+#container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#main {
+  float: left;
+  background-color: #fffafa;
+  margin-left: 2em;
+}
+
+#main p {
+  float: left;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 62.5%;  /* equals 10px */
+  font-family:'Josefin Sans', Helvetica;
+  color: #333333;
+  background-color: #FFFAFA;
+  text-decoration: none;
+  background-image:  no-repeat center center fixed;
+}
+
+a {
+   text-decoration: none;
+   color: #333333;
+}
+
+a:hover {
+   text-decoration: none;
+   color: #e40000;
+}
+
+ul {
+  list-style: none;
+
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0 0 0 14%;
+  list-style: none;
+  width: 70%;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.flex2 {
+    flex-shrink: 2;
+}
+
+#masonry {
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+
+h5.info,
+p.border {
+  font-size: 1.75em;
+  text-align: center;
+  font-family: 'Josefin Sans', 'sans-serif';
+  color: rgba(255,255,255, 1);
+}
+
+h5.info {
+  margin-top: 120px;
+}
+
+.overlay {
+  position: absolute;
+  top: 4px; bottom: 4px; right: 4px; left: 4px;
+  opacity: 0;
+  background: #e40000;
+  padding: 3px;
+  transition: 0.6s ease-out;
+}
+
+.item {
+  width: 400px;
+  padding: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.item:hover .overlay {
+
+    opacity: 0.8;
+}
+
+p.border {
+  border-top: #fff 1px solid;
+  width: 75%;
+  margin: 0px auto;
+  padding: 13px;
+}
+
+
+footer {
+    text-align: center;
+    height: 25em;
+    width: 100%;
+    margin-right: -4%;
+    margin-top: 5%;
+    background-color: #ffeeee;
+    float: left;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+}
+
+footer li {
+    display: inline-block;
+}
+
+p.footer-text {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em;
+  color: #333333;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+p.footer-contact {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+  color: #333333;
+  margin: 0 auto;
+}
+
+.ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sprite {
+    background: url('../img/sprites/h_sprites.png') no-repeat;
+}
+
+
+.socials-icon a {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.behance {
+    background-position: -60px 0; ;
+}
+
+.behance:hover {
+    background-position: -60px -41px;
+}
+
+.twitter {
+    background-position: 0px 0px;
+}
+
+.twitter:hover {
+    background-position: 0 -43.98750305175781px;
+}
+
+.instagram {
+    background-position: -118.99999237060547px -1px;
+}
+
+.instagram:hover {
+    background-position: -118.99999237060547px -47.98750305175781px ;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #masonry {
+    margin-left: 10%;
+  }
+  .item{
+    width: 43%;
+  }
+
+  .flex2 {
+    flex-shrink: 2;
+    font-size: 5em;
+    width: 100px;
+  }
+}
+
+
+
+
+
+
+

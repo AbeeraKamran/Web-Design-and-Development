@@ -1,0 +1,102 @@
+h2 {
+    font-family: 'Josefin Sans', 'sans-serif';
+    font-size: 2.6em;
+    color: #1A1A1A;
+    clear: both;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 3em;
+    position: relative;
+}
+
+
+
+li.subhead {
+  font-size: 1em;
+  list-style: none;
+  color: #f18e7b;
+  font-weight: normal;
+  padding: .5em;
+  display: inline;
+}
+
+ul.subhead  {
+  padding: 0;
+  margin-left: 0;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
+}
+
+#socialMedia {
+  float: right;
+}
+
+ul li a.share {
+  margin-bottom: -3em;
+  margin-right: 20px;
+  /*width: 50%;*/
+}
+
+p {
+    font-size: 2em;
+    color: #1A1A1A;
+    text-decoration: none;
+    text-align: left;
+    padding-bottom: 50px;
+   /* margin-left: 33%;
+    margin-right: 30%;*/
+/*    max-width: 500px;
+*/    /*clear: both;*/
+ }
+
+a {
+   text-decoration: none;
+}
+ 
+
+
+#main img {
+    padding: 5px;
+}
+
+.row {
+  max-width: 85%;
+}
+
+
+.detail {
+  float:left;
+  width: 50%;
+}
+
+
+
+/******************************************
+ ADDITIONAL STYLES                   
+******************************************/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

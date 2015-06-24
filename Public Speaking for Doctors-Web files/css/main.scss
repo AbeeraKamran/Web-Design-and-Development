@@ -788,7 +788,7 @@ img.flip {
 	position: relative;
 	clear: both;
   	z-index: -2;
-  	height: 16rem;
+  	height: 15rem;
   	@include breakpoint(baby-bear) { 
 			height: 26rem;
 	}
@@ -1062,7 +1062,7 @@ ul.learning-points {
 			border: 1px solid #808080;
 			font-size: 12px;
 			padding: 10px 0;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 		}
 
 		input[type="text"] {
@@ -1085,6 +1085,9 @@ ul.learning-points {
 			margin-bottom: 22px;
 			// width: 96.2%;
 			font-family: $font-stack;
+			#message {
+				text-transform: none;
+			}
 		}
 
 		input[type="submit"] {
@@ -1099,6 +1102,7 @@ ul.learning-points {
 
 	}
 
+
 	.close {
 		display: block;
 		height: 19px;
@@ -1111,6 +1115,7 @@ ul.learning-points {
 		right: 3%;
 	}
 }
+
 
 .msg {
 	// border: 3px $heading-color solid;

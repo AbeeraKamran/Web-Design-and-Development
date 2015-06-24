@@ -1,0 +1,39 @@
+.letter {
+  position: relative;
+  display: inline-block;
+
+  height:   6rem;
+  width:    25%;
+
+  padding:  0;
+  margin:   0.5rem;
+
+  text-align: center;
+  font-size: 7rem;
+  color: #e40000;
+}
+
+.letter div {
+  position:   absolute;
+  top:        0;
+  left:       0;
+  width:      100%;
+  -moz-transition: all 50ms linear;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
+}
+
+.urdu {
+  font-family: 'Hussaini Nastaleeq';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
