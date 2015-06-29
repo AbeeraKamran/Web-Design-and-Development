@@ -1,0 +1,166 @@
+/* 
+Project Name: Tentative Collective Website
+Client: Yaminay Chaudhri, Mehreen Murtaza
+Author: A Kamran
+*/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+
+#container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#gradient {
+background: linear-gradient(251deg, #e4007e, #a2ff26, #008f45);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 45%}
+    50%{background-position:100% 56%}
+    100%{background-position:0% 45%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 45%}
+    50%{background-position:100% 56%}
+    100%{background-position:0% 45%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 45%}
+    50%{background-position:100% 56%}
+    100%{background-position:0% 45%}
+}
+
+#main {
+  background-color: #fff;
+  margin: -.25rem .75rem;
+}
+
+/******************************************
+/* NAV                   
+/*******************************************/
+/**/
+
+.logo {
+  width: 10rem;
+  padding: 1.5rem;
+  float: left;
+}
+
+.eye{
+  float: right;
+  width: 3.5rem;
+  margin: 2rem;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    position: relative;
+    color: $green;
+    font-family: $font-san;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+}
+.about {
+    position: absolute;
+    margin-left: 36%;
+}
+.archive {
+  position: absolute;
+  top: 40%;
+  right: -2.5rem;
+  
+  /* Rotate from top left corner (not default) */
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin:    0 0;
+  -ms-transform-origin:     0 0;
+  -o-transform-origin:      0 0;
+  
+  -webkit-transform: rotate(90deg); 
+  -moz-transform:    rotate(90deg); 
+  -ms-transform:     rotate(90deg); 
+  -o-transform:      rotate(90deg); 
+}
+.contact {
+  position: absolute;
+  top: 55%;
+  left: 1.5rem;
+  
+  /* Rotate from top left corner (not default) */
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin:    0 0;
+  -ms-transform-origin:     0 0;
+  -o-transform-origin:      0 0;
+  
+  -webkit-transform: rotate(270deg); 
+  -moz-transform:    rotate(270deg); 
+  -ms-transform:     rotate(270deg); 
+  -o-transform:      rotate(270deg); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
