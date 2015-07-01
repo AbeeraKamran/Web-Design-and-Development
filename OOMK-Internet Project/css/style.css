@@ -227,7 +227,6 @@ ul.snow li .italic {
 }
 
 a {
-  font-style: italic;
   color: black;
   text-decoration: underline;
   text-decoration: none;
@@ -394,3 +393,7 @@ a:active:after, a:hover:after {
     margin-bottom: -7px;
   }
 }
+/******************************************
+/* PAGE TRANSITIONS                   
+/*******************************************/
+/**/
