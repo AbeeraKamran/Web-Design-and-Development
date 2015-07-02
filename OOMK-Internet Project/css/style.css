@@ -102,49 +102,17 @@ body {
 }
 
 #main {
-  margin: -4rem;
-}
-
-.slider {
-  overflow-y: hidden;
-  max-height: 500px;
-  /* approximate max height */
-  transition-property: all;
-  transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.slider.closed {
-  max-height: 0;
-}
-
-/******************************************
-/* NAV                   
-/*******************************************/
-/**/
-ul.snow {
-  background-color: black;
-  margin: 3rem;
-}
-ul.snow li {
-  font-size: 6rem;
-  font-family: "Playfair Display", serif;
-  list-style: none;
-  text-align: center;
-  padding: 3rem 1rem;
-  color: snow;
-  margin: 0 auto;
-  font-style: italic;
-}
-ul.snow li .italic {
-  font-style: italic;
-  display: inline;
+  margin: 4rem;
 }
 
 .liar {
   font-style: italic;
 }
 
+/******************************************
+/* TYPING                   
+/*******************************************/
+/**/
 .console-wrapper {
   position: relative;
   width: 100%;
@@ -156,7 +124,8 @@ ul.snow li .italic {
   left: 85px;
   padding-right: 85px;
   max-width: 40rem;
-  line-height: 2rem;
+  line-height: 4rem;
+  font-size: 2rem;
 }
 
 .console span {
@@ -166,7 +135,7 @@ ul.snow li .italic {
 }
 
 .console span.placeholder {
-  color: #367be3;
+  color: black;
   display: block;
   -webkit-animation: placeholder-intro .5s;
   animation: placeholder-intro .5s;
@@ -394,6 +363,95 @@ a:active:after, a:hover:after {
   }
 }
 /******************************************
-/* PAGE TRANSITIONS                   
+/* CLICK AND REVEAL                  
 /*******************************************/
 /**/
+#outer {
+  width: 100%;
+  position: relative;
+}
+
+#content {
+  width: 840px;
+  position: absolute;
+  margin: 0 12px 200px 24px;
+}
+#content a, #content a:visited {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  background-image: -moz-linear-gradient(top, white 50%, #999999 50%);
+  background-image: -webkit-linear-gradient(top, white 50%, #999999 50%);
+  background-image: linear-gradient(to bottom, white 50%, #999999 50%);
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
+  background-position: 0 19px;
+}
+#content a.clicked {
+  background-image: linear-gradient(to bottom, white 50%, white 50%);
+  cursor: default;
+}
+#content a.outer, #content a.outer:visited {
+  color: #333;
+  background-image: -moz-linear-gradient(top, white 50%, #00ddff 50%);
+  background-image: -webkit-linear-gradient(top, white 50%, #00ddff 50%);
+  background-image: linear-gradient(to bottom, white 50%, #00ddff 50%);
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: inline;
+}
+
+p.on {
+  display: block;
+}
+
+/******************************************
+/* TOOLTIPS                  
+/*******************************************/
+/**/
+.pt-page-2 {
+  background-color: none;
+}
+
+.tooltip-numbers {
+  font-size: 3rem;
+}
+.tooltip-numbers .has-tip {
+  font-size: 6rem;
+  border-bottom: none;
+  color: red;
+  list-style: none;
+  z-index: 20;
+  position: absolute;
+}
+.tooltip-numbers .has-tip:hover {
+  color: red;
+}
+.tooltip-numbers .one {
+  margin: -12% 22%;
+}
+.tooltip-numbers .two {
+  margin: -6% 65%;
+}
+.tooltip-numbers .three {
+  margin: -2% 32%;
+}
+.tooltip-numbers .four {
+  margin: -12% 22%;
+}
+.tooltip-numbers .five {
+  margin: -6% 65%;
+}
+.tooltip-numbers .six {
+  margin: 1% 5%;
+}
+
+.tooltip-text {
+  text-align: center;
+  font-size: 4rem;
+}

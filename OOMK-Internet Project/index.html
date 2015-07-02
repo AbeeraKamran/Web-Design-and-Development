@@ -15,27 +15,30 @@
         <title>OOMK Internet Project</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.min.css"/>
-        <link rel="stylesheet" href="css/pagetransition.css" />
+        <link rel="stylesheet" type="text/css" href="css/transitions/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/transitions/transition-animations.css" />
         <link rel="stylesheet" href="css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-     
+        <script src="js/transitions/modernizr.custom.js"></script>
 
     </head>
-    <body cz-shortcut-listen="true">
+
+    <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
+        <!-- type your bizness -->
         
         <div id="main">
-            <div class="holder-text hide">
+            <div class="pt-wrapper">
+            <div class="holder-text hide pt-page pt-page-1">
                 Snow! Ice! Mountains of Ice! Where am I? 
                 <br>I...I feel better, I do, I...feel better. There are ice crystals in my lungs, wonderful and sharp. And the snow smells like cold crushed peaches.
                 <br> And there's something...some current of blood in the wind, how strange, it has that iron taste. <br> 
                 <br><span class="liar">Ozone.</span>
                 <br>Ozone! Where am I?
-                <br><i>The Kingdom of Ice, the bottomest part of the<!-- <span id="iterateEffects" class="pt-trigger" data-animation="67" data-goto="1"> --><a href="#">world</a>.<!-- </span> --></i>
+                <br><i>The Kingdom of Ice, the bottomest part of the world.</i>
             </div>            
             <div class="console-wrapper" style="height: 289px;"> 
                 <div class="console">
@@ -46,24 +49,51 @@
                 </div> 
             </div>
 
-            
-            <<!-- div id="pt-main">
-                <div class="pt-page pt-page-1">Cold shelter for the shattered. No sorrow here, tears freeze
-                    Antartica, antartica, oh boy oh boy LOOK at this, I..Wow, I must've really snapped the tether, huh?
-                    Apparently...
+        <!-- page slider commence! -->
+        
+            <button class="pt-trigger" data-animation="1" data-goto="2">NEXT</button>
+
+                <div class="pt-page pt-page-2">
+                        <div class="tooltip-text" >I want to stay here forever.</div>
+                        <ul class="tooltip-numbers">
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top one" title="Set up camp. Build things.">&#9674;</li>
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top two" title="Build a city, an enormous city made up of frontier forts, dark wood and green roofs">&#950;</li>
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top three" title="and high gates made of pointed logs and bonfires burning on every street corner, I should build by a river.">&#8756;</li>
+                        </ul>
+                            <div class="tooltip-text" >Where are the forests?</div>
+                            <div class="tooltip-text liar" >No timber here. Too cold. Ice, no trees.</div>
+                            <div class="tooltip-text" >Oh details! I'm sick of details</div>
+                        <ul class="tooltip-numbers">
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top four" title="I'll plant them and grow them">&#8745;</li>
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top five" title="Ill live off caribou fat, Ill melt it over the bonfires and drink it from long, curved goat-horn cups.">&#8709;</li>
+                            <li data-tooltip aria-haspopup="true" class="has-tip tip-top six" title="I should build by a river.">&#8501;</li>
+                        </ul>
+                        <div class="tooltip-text" >I want to make a new world here. So that I never have to go home again.</div>
+                </div>
+
+               <!--  <div class="pt-page pt-page-2"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+                <div class="pt-page pt-page-3"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+                <div class="pt-page pt-page-4"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+                <div class="pt-page pt-page-5"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+                <div class="pt-page pt-page-6"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div> -->
+        </div>
+            <!-- <div id="outer">
+                <div id="content">
+                    <p>
+                        <a data-opens="3">Antarctica</a>
+                        .
+                        <span data-openedby="3">
+                        This is
+                        <a data-opens="708">Antartica</a>
+                        </span>
+                    </p>
                 </div>
             </div> -->
-            <div>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>Oh details! I'm sick of details!</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                </tr>
-            </div>
+        
+
+             
+
+            
 
            <!--  <p>Where am I? I....I feel better, I do , I...feel better. There are ice crystals in my lungs, wonderful and sharp. And the snow smells like cold crushed peaches.</p>
             <p>And there's something...some current of blood in the wind, how strange, it has that iron taste</p>
@@ -96,15 +126,18 @@
 
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-                <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/foundation.min.js"></script>
+        <script src="js/foundation.tooltip.js"></script>
         <script src="js/typing.js"></script>
-                <script src="js/modernizr.custom.js"></script>
-
-        <script src="js/pagetransitions.js"></script>
+        <script src="js/transitions/transition.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(document).foundation();
+                });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

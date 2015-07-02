@@ -85,48 +85,17 @@ animation: AnimationName 30s ease infinite;
 }
 
 #main {
-  margin: -4rem;
+  margin: 4rem;
 }
 
-.slider {
-  overflow-y: hidden;
-  max-height: 500px; /* approximate max height */
-
-  transition-property: all;
-  transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.slider.closed {
-  max-height: 0;
-}
-
-/******************************************
-/* NAV                   
-/*******************************************/
-/**/
-
-ul.snow {
-  background-color: black;
-  margin: 3rem;
-  li {
-    font-size: 6rem;
-    font-family: $font-stack;
-    list-style: none;
-    text-align: center;
-    padding: 3rem 1rem;
-    color: snow;
-    margin: 0 auto;
-    font-style: italic;
-    .italic {
-      font-style: italic;
-      display: inline;
-    }
-  }
-}
 .liar {
   font-style: italic;
 }
+
+/******************************************
+/* TYPING                   
+/*******************************************/
+/**/
 
 .console-wrapper{
   position:relative;
@@ -137,7 +106,8 @@ ul.snow {
   bottom:115px;left:85px;
   padding-right:85px;
   max-width:40rem;
-  line-height:2rem;
+  line-height:4rem;
+  font-size: 2rem;
 }
 .console span{
   position:relative;
@@ -145,7 +115,7 @@ ul.snow {
   display:none
 }
 .console span.placeholder{
-  color:#367be3;
+  color:black;
   display:block;
   -webkit-animation:placeholder-intro .5s;
   animation:placeholder-intro .5s;
@@ -336,9 +306,117 @@ a:active:after,a:hover:after{
 }
 
 /******************************************
-/* PAGE TRANSITIONS                   
+/* CLICK AND REVEAL                  
 /*******************************************/
 /**/
+
+#outer {
+  width: 100%;
+  position: relative;
+  // a {
+  //   border-bottom: 1px dashed red;
+  //   &:hover {
+  //     color: black;
+  //   }
+  // }
+}
+
+#content {
+    width: 840px;
+    position: absolute;
+    margin: 0 12px 200px 24px;
+
+
+  a, a:visited {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: -moz-linear-gradient(top,#fff 50%,#999 50%);
+    background-image: -webkit-linear-gradient(top,#fff 50%,#999 50%);
+    background-image: linear-gradient(to bottom,#fff 50%,#999 50%);
+    background-repeat: repeat-x;
+    background-size: 100% 2px;
+    background-position: 0 19px;
+    }
+  a.clicked {
+    background-image: linear-gradient(to bottom,#fff 50%,#fff 50%);
+    cursor: default;    }
+  a.outer, a.outer:visited {
+    color: #333;
+    background-image: -moz-linear-gradient(top,#fff 50%,#00ddff 50%);
+    background-image: -webkit-linear-gradient(top,#fff 50%,#00ddff 50%);
+    background-image: linear-gradient(to bottom,#fff 50%,#00ddff 50%);
+    }
+}
+
+// span {
+//     display: none;
+//   }
+.off{
+  display: none;
+  }
+.on {
+  display: inline;
+  }
+p.on {
+  display: block;
+}
+
+/******************************************
+/* TOOLTIPS                  
+/*******************************************/
+/**/
+
+.pt-page-2 {
+  background-color: none;
+}
+
+.tooltip-numbers {
+  font-size: 3rem;
+
+  .has-tip {
+    font-size: 6rem;
+    border-bottom: none;
+    color: red;
+    list-style: none;
+    z-index: 20;
+    position: absolute;
+    &:hover {
+      color: red;
+      // border-bottom: none;
+    }
+  }
+  .one {
+    margin: -12% 22%;
+  }
+
+  .two {
+    margin: -6% 65%;
+  }
+
+  .three {
+    margin: -2% 32%;
+  }
+  .four {
+    margin: -12% 22%;
+  }
+
+  .five {
+    margin: -6% 65%;
+  }
+  .six {
+    margin: 1% 5%;
+  }
+
+}
+
+ .tooltip-text {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+$tooltip-padding: rem-calc(12);
+$tooltip-line-height: rem-calc(2);
 
 
 
