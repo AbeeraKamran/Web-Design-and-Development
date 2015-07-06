@@ -50,6 +50,8 @@ video {
 #gradient {
   background: linear-gradient(251deg, #e4007e, #a2ff26, #008f45);
   background-size: 600% 600%;
+  display: inline-block;
+  width: 100%;
   -webkit-animation: AnimationName 30s ease infinite;
   -moz-animation: AnimationName 30s ease infinite;
   animation: AnimationName 30s ease infinite;
@@ -99,7 +101,9 @@ video {
 
 #main {
   background-color: #fff;
-  margin: -.25rem .75rem;
+  margin: .75rem;
+  display: flex;
+  height: 60rem;
 }
 
 /******************************************
@@ -107,15 +111,16 @@ video {
 /*******************************************/
 /**/
 .logo {
-  width: 10rem;
-  padding: 1.5rem;
+  width: 8rem;
+  margin: 2rem;
   float: left;
 }
 
 .eye {
   float: right;
   width: 3.5rem;
-  margin: 2rem;
+  margin: 2% 80%;
+  position: absolute;
 }
 
 li {
@@ -161,4 +166,30 @@ li {
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
+}
+
+/******************************************
+/* PROJECT HOMEPAGE                   
+/*******************************************/
+/**/
+.project .thumbnail {
+  margin: 6rem;
+  float: left;
+}
+.project .blurb {
+  width: 24rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  border: 6px solid black;
+  background-color: snow;
+  float: right;
+  position: absolute;
+  padding: 1.5rem;
+  margin: 12.5rem 30rem;
+}
+.project .blurb a {
+  color: black;
+  font-size: .75rem;
+  font-weight: bold;
+  border-bottom: 2px solid black;
 }
