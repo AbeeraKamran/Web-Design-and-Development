@@ -42,10 +42,6 @@ video {
   vertical-align: middle;
 }
 
-body {
-  font-family: "Playfair Display", serif;
-}
-
 #container {
   margin: 0 auto;
   width: 100%;
@@ -124,13 +120,13 @@ body {
   left: 85px;
   padding-right: 85px;
   max-width: 40rem;
-  line-height: 4rem;
-  font-size: 2rem;
+  line-height: 6rem;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
 }
 
 .console span {
   position: relative;
-  color: black;
   display: none;
 }
 
@@ -362,6 +358,10 @@ a:active:after, a:hover:after {
     margin-bottom: -7px;
   }
 }
+.red {
+  color: red;
+}
+
 /******************************************
 /* CLICK AND REVEAL                  
 /*******************************************/
@@ -454,4 +454,99 @@ p.on {
 .tooltip-text {
   text-align: center;
   font-size: 4rem;
+}
+
+/******************************************
+/* BROD'S DROPDOWN                   
+/*******************************************/
+/**/
+#brod {
+  position: absolute;
+}
+
+select {
+  float: left;
+  position: absolute;
+}
+
+#body-sadness {
+  margin: 5%;
+  position: initial;
+}
+
+#covenant {
+  margin: 70% -50%;
+}
+
+#intellect {
+  margin: 75%;
+}
+
+#interpersonal {
+  margin: 10% 60%;
+  float: left;
+}
+
+#art-sadness {
+  margin: 30% 100%;
+  float: left;
+}
+
+#send-sadness {
+  position: absolute;
+  top: 700%;
+  left: 15%;
+  float: right;
+}
+#send-sadness h4 {
+  font-size: 12px;
+  font-family: verdana;
+  float: left;
+}
+#send-sadness .send {
+  font-family: verdana;
+  font-size: 12px;
+  clear: both;
+}
+#send-sadness input {
+  float: left;
+}
+#send-sadness p {
+  padding-top: .25rem;
+}
+#send-sadness .email {
+  float: right;
+}
+#send-sadness .name h4, #send-sadness .email h4 {
+  margin: 0;
+  padding: .25rem 0.5rem 0rem 0;
+}
+
+/******************************************
+/* KEROUAC SO EMOJI YAAR                 
+/*******************************************/
+/**/
+.automatic p {
+  position: absolute;
+  font-family: courier;
+}
+
+/******************************************
+/* ONDAATJE RINSE REPEAT                 
+/*******************************************/
+/**/
+.ondaatje {
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tooltip {
+  display: none;
+  background-color: #ffa;
+  border: 1px solid #cc9;
+  padding: 3px;
+  font-size: 13px;
+  -moz-box-shadow: 2px 2px 11px #666;
+  -webkit-box-shadow: 2px 2px 11px #666;
 }

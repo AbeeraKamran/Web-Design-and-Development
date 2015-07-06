@@ -51,7 +51,7 @@ video {
 }
 
 body {
-  font-family: $font-stack;
+  // font-family: $font-stack;
 }
 
 #container {
@@ -106,12 +106,14 @@ animation: AnimationName 30s ease infinite;
   bottom:115px;left:85px;
   padding-right:85px;
   max-width:40rem;
-  line-height:4rem;
-  font-size: 2rem;
+  line-height:6rem;
+  font-size: 4rem;
+  font-family: $font-stack;
 }
+
 .console span{
   position:relative;
-  color:black;
+  // color:black;
   display:none
 }
 .console span.placeholder{
@@ -305,6 +307,10 @@ a:active:after,a:hover:after{
   }
 }
 
+.red {
+  color: red;
+}
+
 /******************************************
 /* CLICK AND REVEAL                  
 /*******************************************/
@@ -418,18 +424,117 @@ p.on {
 $tooltip-padding: rem-calc(12);
 $tooltip-line-height: rem-calc(2);
 
+/******************************************
+/* BROD'S DROPDOWN                   
+/*******************************************/
+/**/
+
+// body {
+//   background-image: url(img/..Pink-Valentine-Roses-6.jpg);
+// }
+#brod {
+  position: absolute;
+
+}
+select {
+  float: left;
+  position: absolute;
+}
+
+#body-sadness {
+  margin: 5%;
+  position: initial;
+}
+
+#covenant {
+  margin: 70% -50%
+}
+
+#intellect {
+  margin: 75%
+}
+#interpersonal {
+  margin: 10% 60%;
+  float: left;
+}
+#art-sadness {
+  margin: 30% 100%;
+  float: left;
+}
+
+#send-sadness {
+  
+  position: absolute;
+  top: 700%; left: 15%;
+  float: right;
+  
+  h4 {
+    font-size: 12px;
+    font-family:verdana;
+    float: left;
+  }
+  .send {
+    font-family: verdana;
+    font-size: 12px;
+    clear: both;
+  }
+  input {
+    float: left;
+  }
+
+  p {
+    padding-top: .25rem;
+  }
+
+  .email {
+    float: right;
+  }
+  .name, .email {
+    h4 {
+    margin: 0;
+    padding: .25rem 0.5rem 0rem 0;
+    }
+  }
+}
+
+/******************************************
+/* KEROUAC SO EMOJI YAAR                 
+/*******************************************/
+/**/
+
+// .sweaty-emoji {
+//   cursor: url (img/emoji_beat.png);
+// }
+
+
+.automatic p {
+  position: absolute;
+  font-family: courier;
+
+}
 
 
 
+/******************************************
+/* ONDAATJE RINSE REPEAT                 
+/*******************************************/
+/**/
 
+.ondaatje {
+  line-height: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-
-
-
-
-
-
-
+.tooltip {
+  display:none;
+  background-color:#ffa;
+  border:1px solid #cc9;
+  padding:3px;
+  font-size:13px;
+  -moz-box-shadow: 2px 2px 11px #666;
+  -webkit-box-shadow: 2px 2px 11px #666;
+}
 
 
 
