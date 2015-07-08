@@ -56,7 +56,7 @@ $(function() {
 	    i = (i + 1) % str.length;
 	}, 30);
 
-	setTimeout(function( ) { clearInterval( stop ); }, 90000);
+	setTimeout(function( ) { clearInterval( stop ); }, 120000);
 
 	//Ondaatje Tooltip//
 

@@ -105,6 +105,22 @@ video {
   font-style: italic;
 }
 
+.logo {
+  position: fixed;
+  width: 11rem;
+  margin: 1.5rem;
+  float: left;
+}
+
+.archive {
+  float: right;
+  position: fixed;
+  margin: 2% 93%;
+}
+.archive img {
+  width: 3.5rem;
+}
+
 /******************************************
 /* TYPING                   
 /*******************************************/
@@ -470,7 +486,7 @@ select {
 }
 
 #body-sadness {
-  margin: 5%;
+  margin: 30% 5%;
   position: initial;
 }
 
@@ -493,9 +509,9 @@ select {
 }
 
 #send-sadness {
-  position: absolute;
-  top: 700%;
-  left: 15%;
+  position: fixed;
+  top: 69%;
+  left: 4%;
   float: right;
 }
 #send-sadness h4 {
