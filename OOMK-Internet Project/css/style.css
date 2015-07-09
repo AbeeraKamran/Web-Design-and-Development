@@ -110,6 +110,7 @@ video {
   width: 11rem;
   margin: 1.5rem;
   float: left;
+  z-index: 999;
 }
 
 .archive {
@@ -555,6 +556,24 @@ select {
   line-height: 15px;
   font-size: 14px;
   font-weight: bold;
+  position: absolute;
+  z-index: 1;
+}
+
+.triggers img {
+  cursor: pointer;
+  position: absolute;
+  z-index: 12;
+}
+.triggers .mango {
+  margin: 10%;
+}
+.triggers .floppy {
+  margin: 20% 35%;
+  width: 60px;
+}
+.triggers .peacock {
+  margin: 15% 65%;
 }
 
 .tooltip {

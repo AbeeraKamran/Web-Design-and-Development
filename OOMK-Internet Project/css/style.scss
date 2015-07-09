@@ -97,6 +97,7 @@ animation: AnimationName 30s ease infinite;
   width: 11rem;
   margin: 1.5rem;
   float: left;
+  z-index: 999;
 }
 
 .archive {
@@ -540,8 +541,29 @@ select {
   line-height: 15px;
   font-size: 14px;
   font-weight: bold;
+  position: absolute;
+  z-index: 1;
 }
 
+.triggers {
+  img {
+    cursor: pointer;
+    position: absolute;
+    z-index: 12;
+    
+  }
+  .mango {
+    margin: 10%;
+  }
+  .floppy {
+    margin: 20% 35%;
+    width: 60px;
+  }
+  .peacock {
+    margin: 15% 65%;
+    // width: 100px;
+  }
+}
 .tooltip {
   display:none;
   background-color:#ffa;

@@ -37,14 +37,7 @@ $(function() {
 	// 	update();
 	// })();
 
-	$(function () {
-	  $(".automatic p").each(function (i, elt) {
-	    $(elt).css({
-	      left: Math.random() * 1300,
-	      top: Math.random() * 650
-	    });
-	  });
-	});
+	
 
 	//Ondaatje sentence repeat//
 
@@ -64,19 +57,21 @@ $(function() {
           // use div.tooltip as our tooltip
           tip: '.tooltip',
  
-          // use the fade effect instead of the default
-          effect: 'fade',
+          // // use the fade effect instead of the default
+          // effect: 'fade',
  
           // make fadeOutSpeed similar to the browser's default
           fadeOutSpeed: 100,
  
-          // the time before the tooltip is shown
-          predelay: 400,
+          // // the time before the tooltip is shown
+          predelay: 100,
  
-          // tweak the position
-          position: "bottom right",
-          offset: [-50, -80]
+          // // tweak the position
+          // position: "bottom right",
+          // offset: [-50, -80]
       });
+    // $(".triggers img[title]").tooltip();
+
 
 
 	//Click and reveal functin//
