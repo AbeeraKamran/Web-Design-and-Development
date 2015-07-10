@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+body {
+  font-family: "Gill Sans", sans-serif;
+}
+
+/******************************************
+/* COVER IMAGE                   
+/*******************************************/
+/**/
+.header {
+  position: absolute;
+  margin-top: -2rem;
+}
+
+.crop-height {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+img.scale {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  /* corrects obscure Firefox bug */
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  /*width: auto\9; 
+  /* ie8+9 - use modernizr instead of this \9 hack */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic;
+}
+
+img.flip {
+  float: right;
+}
+
+/******************************************
+/* TEXT                 
+/*******************************************/
+/**/
+.project-title {
+  margin-top: 17rem;
+  font-family: "Gill Sans", sans-serif;
+}
+.project-title ul {
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+
+h2 {
+  color: #ff5de3;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.data {
+  list-style: none;
+  display: inline-block;
+  color: snow;
+  font-size: .75rem;
+  border-bottom: 3px solid;
+  text-align: center;
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+.data:hover {
+  background-color: #ff5de3;
+}
+
+.project-info {
+  background-color: snow;
+  border: 6px solid black;
+  padding: 3rem 3rem 5rem;
+}
+
+.read-more {
+  padding: 0;
+  position: absolute;
+  margin: 1.5rem 0;
+}
+.read-more a:active .project-para {
+  height: 44rem;
+  overflow: visible;
+}
+
+.project-para {
+  position: relative;
+  max-height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+.project-para p {
+  font-size: 1.25rem;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}

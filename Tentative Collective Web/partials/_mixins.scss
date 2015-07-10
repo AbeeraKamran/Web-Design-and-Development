@@ -62,3 +62,22 @@
   -webkit-transform: $transforms;
           transform: $transforms;
 }
+
+@mixin border-fade {
+  $borderWidth: 5px;
+
+  @include hacks();
+  @include prefixed(transition-duration, $mediumDuration);
+  @include prefixed(transition-property, box-shadow);
+  box-shadow:
+      inset 0 0 0 $borderWidth ,
+      0 0 1px rgba(0, 0, 0, 0); /* Hack to improve aliasing on mobile/tablet devices */
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow:
+      inset 0 0 0 $borderWidth $pink,
+      0 0 1px rgba(0, 0, 0, 0); /* Hack to improve aliasing on mobile/tablet devices */
+  }
+}

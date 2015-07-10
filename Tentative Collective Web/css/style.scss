@@ -51,9 +51,15 @@ video {
 }
 
 
-#container {
-  margin: 0 auto;
-  width: 100%;
+html {
+  height: 100%;
+}
+body {
+  font-family: $font-sans;
+}
+
+ul {
+  margin: 0;
 }
 
 #gradient {
@@ -63,9 +69,9 @@ display: inline-block;
 width: 100%;
 position: absolute;
 
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
+// -webkit-animation: AnimationName 30s ease infinite;
+// -moz-animation: AnimationName 30s ease infinite;
+// animation: AnimationName 30s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -84,12 +90,14 @@ animation: AnimationName 30s ease infinite;
     100%{background-position:0% 45%}
 }
 
+
+
 #main {
   background-color: #fff;
   margin:.75rem;
   // display: flex;
   display: list-item;
-  // height: 60rem;
+  position: relative;
 }
 
 .wrapper {
@@ -102,17 +110,27 @@ animation: AnimationName 30s ease infinite;
   }
 }
 
-.pace .pace-progress{
-  background:#000;
-  position:fixed;
-  z-index:2000;
-  top:0;right:100%;
-  width:100%;
-  height:1px
-  }
-.hidden{
-  display:none!important;visibility:hidden
+.hide {
+  opacity: 0;
+    -webkit-transition: 1s ease opacity;
+
 }
+
+.show {
+  opacity: 1;
+}
+
+// .pace .pace-progress{
+//   background:#000;
+//   position:fixed;
+//   z-index:2000;
+//   top:0;right:100%;
+//   width:100%;
+//   height:1px
+//   }
+// .hidden{
+//   display:none!important;visibility:hidden
+// }
 
 /******************************************
 /* NAV                   
@@ -135,50 +153,65 @@ animation: AnimationName 30s ease infinite;
   z-index: 10;
 }
 
-li {
+
+
+.menu {
+  position: fixed;
+  transition: opacity 0.3s cubic-bezier(0.015, 0.465, 0.445, 1.015) 0s;
+  width: 100%;
+  display: flex;
+
+  li {
     list-style: none;
     display: inline;
     position: relative;
     color: $green;
-    font-family: $font-san;
-    font-size: 1.25rem;
+    font-family: $font-sans;
+    font-size: 2rem;
     letter-spacing: .15rem;
-}
-.about {
+    text-transform: uppercase;
+    border-bottom: 5px solid snow;
+
+    &:hover {
+      border-bottom: 5px solid $pink;
+      -webkit-transition:border-color 500ms ease; 
+      -moz-transition:border-color 500ms ease; 
+      -o-transition:border-color 500ms ease; 
+      transition:border-color 500ms ease;
+      -webkit-transition:font-size 2.5rem ease; 
+
+    }
+
+  }
+
+  .about {
+      position: absolute;
+      margin: 7% 17%;
+  }
+  .work {
     position: absolute;
-    margin-left: 36%;
+    margin: 19% 43%;
+    
+  }
+  .contact {
+    position: absolute;
+    margin: 32% 75%;
+    
+    /* Rotate from top left corner (not default) */
+    // -webkit-transform-origin: 0 0;
+    // -moz-transform-origin:    0 0;
+    // -ms-transform-origin:     0 0;
+    // -o-transform-origin:      0 0;
+    
+    // -webkit-transform: rotate(270deg); 
+    // -moz-transform:    rotate(270deg); 
+    // -ms-transform:     rotate(270deg); 
+    // -o-transform:      rotate(270deg); 
+  }
 }
-.archive {
-  position: absolute;
-  top: 40%;
-  right: -2.5rem;
-  
-  /* Rotate from top left corner (not default) */
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin:    0 0;
-  -ms-transform-origin:     0 0;
-  -o-transform-origin:      0 0;
-  
-  -webkit-transform: rotate(90deg); 
-  -moz-transform:    rotate(90deg); 
-  -ms-transform:     rotate(90deg); 
-  -o-transform:      rotate(90deg); 
-}
-.contact {
-  position: absolute;
-  top: 55%;
-  left: 1.5rem;
-  
-  /* Rotate from top left corner (not default) */
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin:    0 0;
-  -ms-transform-origin:     0 0;
-  -o-transform-origin:      0 0;
-  
-  -webkit-transform: rotate(270deg); 
-  -moz-transform:    rotate(270deg); 
-  -ms-transform:     rotate(270deg); 
-  -o-transform:      rotate(270deg); 
+
+.white {
+  color: snow;
 }
 
 .overlay {
@@ -227,7 +260,7 @@ li {
   height: 40px;
   -webkit-transition: .5s ease-all;
   opacity: 1;
-  line-height: 130%;
+  top:100px; left: 100px;
 
   .inner {
     position: relative;
@@ -381,17 +414,23 @@ li {
     font-size: 1.25rem;
 
   }
-
-  a {
-    color: black;
-    font-size: .75rem;
-    font-weight: bold;
-    border-bottom: 2px solid black;
-  }
 }
 
 .thumbnail{
     padding-bottom: 4rem;
+}
+
+.view {
+    color: black;
+    font-size: .75rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding: 1rem;
+    &:hover {
+      color: $pink;
+      border-bottom: 1px solid $pink;
+      transition: .25s all ease-in-out;
+    }
   }
 
 
