@@ -567,18 +567,48 @@ select {
 }
 .triggers .mango {
   margin: 10%;
+  width: 60px;
 }
 .triggers .floppy {
   margin: 20% 35%;
   width: 60px;
 }
 .triggers .peacock {
-  margin: 15% 65%;
+  margin: 15% 55%;
+}
+.triggers .scorpion {
+  margin: 5% 60%;
+}
+.triggers .fan {
+  margin: 30% 5%;
+  width: 120px;
+}
+.triggers .crow {
+  margin: 5% 90%;
+}
+.triggers .frog {
+  margin: 40% 90%;
+}
+.triggers .butterfly {
+  margin: 5% 20%;
+}
+.triggers .twins {
+  margin: 3% 35%;
+}
+.triggers .matches {
+  margin: 40%;
+  height: 90px;
+}
+.triggers .ankles {
+  margin: 35% 70%;
+}
+.triggers .dolphin {
+  margin: 25% 80%;
 }
 
 .tooltip {
   display: none;
-  background-color: #ffa;
+  background-color: #fce37a;
   border: 1px solid #cc9;
   padding: 3px;
   font-size: 13px;

@@ -554,19 +554,48 @@ select {
   }
   .mango {
     margin: 10%;
+    width: 60px;
   }
   .floppy {
     margin: 20% 35%;
     width: 60px;
   }
   .peacock {
-    margin: 15% 65%;
-    // width: 100px;
+    margin: 15% 55%;
+  }
+  .scorpion {
+    margin: 5% 60%;
+  }
+  .fan {
+    margin: 30% 5%;
+    width: 120px;
+  }
+  .crow {
+    margin: 5% 90%;
+  }
+  .frog {
+    margin: 40% 90%;
+  }
+  .butterfly {
+    margin: 5% 20%;
+  }
+  .twins {
+    margin: 3% 35%;
+  }
+  .matches {
+    margin: 40%;
+    height: 90px;
+  }
+  .ankles {
+    margin: 35% 70%;
+  }
+  .dolphin {
+    margin: 25% 80%;
   }
 }
 .tooltip {
   display:none;
-  background-color:#ffa;
+  background-color:#fce37a;
   border:1px solid #cc9;
   padding:3px;
   font-size:13px;
