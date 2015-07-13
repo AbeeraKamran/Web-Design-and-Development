@@ -100,3 +100,17 @@ h2 {
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
+
+/******************************************
+/* CAROUSEL                 
+/*******************************************/
+/**/
+.th {
+  box-shadow: none;
+  border: none;
+  width: 155px;
+}
+
+.clearing-thumbs li {
+  margin: 10px 3px;
+}

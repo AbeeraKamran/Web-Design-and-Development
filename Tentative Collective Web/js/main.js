@@ -1,32 +1,32 @@
 /*! Zak Group Boilerplate ~ http://zakgroup.co.uk/ ~ Rupert Dunk */
 
 (function($) {
-	// $.fn.closestToOffset = function(offset) {
-	//     var el = null, elOffset, x = offset.left, y = offset.top, distance, dx, dy, minDistance;
-	//     this.each(function() {
-	//         elOffset = $(this).offset();
+	$.fn.closestToOffset = function(offset) {
+	    var el = null, elOffset, x = offset.left, y = offset.top, distance, dx, dy, minDistance;
+	    this.each(function() {
+	        elOffset = $(this).offset();
 
-	//         if (
-	//         (x >= elOffset.left)  && (x <= elOffset.right) &&
-	//         (y >= elOffset.top)   && (y <= elOffset.bottom)
-	//         ) {
-	//             el = $(this);
-	//             return false;
-	//         }
+	        if (
+	        (x >= elOffset.left)  && (x <= elOffset.right) &&
+	        (y >= elOffset.top)   && (y <= elOffset.bottom)
+	        ) {
+	            el = $(this);
+	            return false;
+	        }
 
-	//         var offsets = [[elOffset.left, elOffset.top], [elOffset.right, elOffset.top], [elOffset.left, elOffset.bottom], [elOffset.right, elOffset.bottom]];
-	//         for (off in offsets) {
-	//             dx = offsets[off][0] - x;
-	//             dy = offsets[off][1] - y;
-	//             distance = Math.sqrt((dx*dx) + (dy*dy));
-	//             if (minDistance === undefined || distance < minDistance) {
-	//                 minDistance = distance;
-	//                 el = $(this);
-	//             }
-	//         }
-	//     });
-	//     return el;
-	// }
+	        var offsets = [[elOffset.left, elOffset.top], [elOffset.right, elOffset.top], [elOffset.left, elOffset.bottom], [elOffset.right, elOffset.bottom]];
+	        for (off in offsets) {
+	            dx = offsets[off][0] - x;
+	            dy = offsets[off][1] - y;
+	            distance = Math.sqrt((dx*dx) + (dy*dy));
+	            if (minDistance === undefined || distance < minDistance) {
+	                minDistance = distance;
+	                el = $(this);
+	            }
+	        }
+	    });
+	    return el;
+	}
 
 	// function initializeMaps() {
 	// 	var mapStyle = [{"elementType": "geometry", "stylers": [{ "visibility": "simplified" }, { "saturation": -100 }, { "gamma": 1.6 } ] },{"elementType": "labels", "stylers": [{"saturation": -100}]},{"featureType": "water", "stylers": [{ "gamma": 3}, { "hue": "#ffffff" } ] }];var mapStyle = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"off"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{ "visibility": "simplified" },{"gamma": 1.6},{"saturation":-97}]}];
@@ -117,7 +117,7 @@
 	$(window).load(function(){
 		$overlay = $('.overlay');
 		$(window).resize(function(){
-			mapHeight = $('.map-wrap').outerHeight();
+			mapHeight = $('.footer').outerHeight();
 			overlayHeight = $overlay.height();
 			documentHeight = $(document).height()-mapHeight;
 			$overlay.positionPoints();
@@ -158,21 +158,21 @@
 		});
 
 
-		// $('a[href^="#"]').click(function(e){
-		// 	e.preventDefault();
-		// 	if ($(this).hasClass('cv')) {
-		// 		$('body').addClass("hide");
-		// 		var person = $(this).attr('href');
-		// 		$(person).addClass("active");
-		// 	} else {
-		// 		var target = $(this).attr('href');
-		// 		$('html, body').animate({
-		// 			scrollTop: $(target).offset().top
-		// 		}, 400);
-		// 	}
-		// });
+		$('a[href^="#"]').click(function(e){
+			e.preventDefault();
+			if ($(this).hasClass('cv')) {
+				$('body').addClass("hide");
+				var person = $(this).attr('href');
+				$(person).addClass("active");
+			} else {
+				var target = $(this).attr('href');
+				$('html, body').animate({
+					scrollTop: $(target).offset().top
+				}, 400);
+			}
+		});
 
-		// 
+		
 
 
 		function nextSection() {
@@ -232,15 +232,15 @@
 		});
 
 
-		// setTimeout(function(){
-		// 	$(window).mousemove(function(e){
-		// 		var X = e.pageX;
-		// 		var Y = e.pageY;
-		// 		var $elem = $('.point').closestToOffset({left:X , top:Y});
-		// 		$('.point').removeClass("highlight visible");
-		// 		$elem.addClass("highlight");
-		// 	});
-		// }, 1500);
+		setTimeout(function(){
+			$(window).mousemove(function(e){
+				var X = e.pageX;
+				var Y = e.pageY;
+				var $elem = $('.point').closestToOffset({left:X , top:Y});
+				$('.point').removeClass("highlight visible");
+				$elem.addClass("highlight");
+			});
+		}, 1500);
 
 	});
 
