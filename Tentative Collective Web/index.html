@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+  </script>
     </head>
     <body cz-shortcut-listen="true">
         <!--[if lt IE 7]>
@@ -34,7 +36,25 @@
             <div id="gradient">
                 <header class="scrollTo">
                     <h1><img class="logo" src="img/logo-04.png"></h1>
-                    <div class="menu">
+                    <a class="nav-trigger" href="#0">
+                        <span class="menu-text">Menu</span>
+                        <!-- <span class="cd-menu-icon"> -->
+                            <img class="eye" src="img/eye.png">
+                        <!-- </span> -->
+                    </a> <!-- cd-primary-nav-trigger -->
+                </header>
+                <nav>
+                    <ul class="cd-primary-nav">
+                        <li class="nav-links"><a href="#0">ABOUT</a></li>
+                        <li class="nav-links"><a href="#0">WORK</a></li>
+                        <li class="nav-links"><a href="#0">CONTACT</a></li>
+                        <li class="bg"></li>
+                        <li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
+                        <li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
+                        <li class="cd-social cd-twitter"><a href="#0">Twiter</a></li>
+                    </ul>
+                </nav>
+                    <!-- <div class="menu">
                         <div class="menu-icon">
                             <a href="#">
                                 <img class="eye" src="img/eye.png">
@@ -48,14 +68,14 @@
                                 <a href="#" class="contact"><li>Contact</li></a>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                 </header>
                 <!-- main  -->   
                 <main>
                     <div class="content show">
                         <div class="row">
                             <div class="large-12 small-16 columns push-1 project">
-                                <div class="projections project">
+                                <div class="projections project scrollTo">
                                     <img class="thumbnail" src="img/projections.jpg" alt="">
                                     <div class="blurb">
                                         <h3>Projections</h3>
@@ -65,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="large-12 columns push-5 project">
-                                <div class="mkmc">
+                                <div class="mkmc scrollTo">
                                     <img class="thumbnail" src="img/mkmc.jpg" alt="">
                                     <div class="blurb">
                                         <h3>Mera Karachi Mobile Cinema</h3>
@@ -75,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="large-12 small-16 columns push-1 project">
-                                <div class="beyond-walls project">
+                                <div class="beyond-walls project scrollTo">
                                     <img class="thumbnail" src="img/beyond_walls.jpg" alt="">
                                     <div class="blurb">
                                         <h3>Beyond  Walls</h3>
@@ -85,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="large-12 columns push-1 project">
-                                <div class="mkmc">
+                                <div class="mkmc scrollTo">
                                     <img class="thumbnail" src="img/mkmc.jpg" alt="">
                                     <div class="blurb">
                                         <h3>Mera Karachi Mobile Cinema</h3>
@@ -98,47 +118,62 @@
                     </div>
                 </main>
                 <!-- main -->
-                <footer>
-                    <button class="email">
-                        info@tentativecollective.come
-                    </button>
-                    <p class="phone"></p>
-                    <div class="socials">
-                        <a href="" class="insta"></a>
-                        <a href="" class="facebook"></a>
-                        <a href="" class="twitter"></a>
-                    </div> 
+                <div class="footer scrollTo">
+                    <footer>
+                        <a href="" class="email">
+                            <img src="img/email_button.png" alt="">
+                        </a>
+                        <p>info@tentativecollective.com</p>
+                        
+                        <p class="phone"></p>
+                        <div class="socials">
+                            <a href="" class="insta"></a>
+                            <a href="" class="facebook"></a>
+                            <a href="" class="twitter"></a>
+                        </div> 
+                    </footer> 
                 </div>
-            </footer> 
+                <svg height="0" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="drop-shadow">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+                        <feOffset dx="12" dy="12" result="offsetblur"/>
+                        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+                        <feComposite in2="offsetblur" operator="in"/>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </svg>
             <!-- gradient -->
 
             <div class="overlay">
                 <div class="points">
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="5" data-y="11">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="5" data-y="21">
                         <div class="inner">١</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="19" data-y="4.2">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="28" data-y="8">
                         <div class="inner">٢</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="37.8" data-y="52">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="90" data-y="6">
                         <div class="inner">٣</div>
                     </div>
                     <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="77" data-y="38">
                         <div class="inner">٤</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="11" data-y="55">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="11" data-y="45">
                         <div class="inner">٥</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="31" data-y="45">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="31" data-y="55">
                         <div class="inner">٦</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="5" data-y="85">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="5" data-y="55">
                         <div class="inner">٧</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="50" data-y="50">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="50" data-y="55">
                         <div class="inner">٨</div>
                     </div>
-                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="90" data-y="80">
+                    <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="90" data-y="60">
                         <div class="inner">٩</div>
                     </div>
                 
@@ -153,8 +188,8 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/overlay.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         // <script>

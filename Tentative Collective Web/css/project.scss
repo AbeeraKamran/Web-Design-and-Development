@@ -123,28 +123,32 @@ h2 {
 }
 
 /******************************************
-/* CAROUSEL                 
+/* CLEARING LIGHTBOX                 
 /*******************************************/
 /**/
 
-// .carousel {
-// 	padding: 1rem;
-// }
-
-.th {
-	box-shadow: none;
+#slider, #carousel {
+	margin: 1rem;
 	border: none;
-	width: 155px;
 }
 
-.clearing-thumbs {
+#carousel {
 	li {
-		margin: 10px 3px;
+		margin-right:.25rem;
 	}
 }
 
 
 
+
+/******************************************
+/* VIDEO                 
+/*******************************************/
+/**/
+
+.flex-video {
+	margin: 1rem;
+}
 
 
 

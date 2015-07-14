@@ -63,31 +63,35 @@ ul {
 }
 
 #gradient {
-background: linear-gradient(251deg, #e4007e, #a2ff26, #008f45);
-background-size: 600% 600%;
+
 display: inline-block;
 width: 100%;
 position: absolute;
 
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
+// background: linear-gradient(270deg, #9bfd18, #008113);
+background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 15s ease infinite;
+-moz-animation: AnimationName 15s ease infinite;
+animation: AnimationName 15s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 45%}
-    50%{background-position:100% 56%}
-    100%{background-position:0% 45%}
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 45%}
-    50%{background-position:100% 56%}
-    100%{background-position:0% 45%}
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
 @keyframes AnimationName { 
-    0%{background-position:0% 45%}
-    50%{background-position:100% 56%}
-    100%{background-position:0% 45%}
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+
 }
 
 
@@ -142,7 +146,7 @@ main {
   margin: 1rem 2rem;
   float: left;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
 }
 
 .eye{
@@ -150,65 +154,185 @@ main {
   width: 3.5rem;
   margin: 1% 89%;
   position: fixed;
-  z-index: 11;
+  z-index: 100;
 }
-
-
-
-.menu {
-  position: fixed;
-  transition: opacity 0.3s cubic-bezier(0.015, 0.465, 0.445, 1.015) 0s;
-  width: 100%;
-  display: flex;
-
-  li {
-    list-style: none;
-    display: inline;
-    position: relative;
-    color: $green;
-    font-family: $font-sans;
-    font-size: 2rem;
-    letter-spacing: .15rem;
-    text-transform: uppercase;
-    border-bottom: 5px solid snow;
-
-    &:hover {
-      border-bottom: 5px solid $pink;
-      -webkit-transition:border-color 500ms ease; 
-      -moz-transition:border-color 500ms ease; 
-      -o-transition:border-color 500ms ease; 
-      transition:border-color 500ms ease;
-      -webkit-transition:font-size 2.5rem ease; 
-
+.nav-trigger {
+  right: 0;
+  top: 0;
+  height: 100%;
+  // background-color: $yellow;
+  &:hover .cd-menu-text  {
+      opacity: 1;
     }
 
-  }
-
-  .about {
-      position: absolute;
-      margin: 7% 17%;
-  }
-  .work {
-    position: absolute;
-    margin: 19% 43%;
-    
-  }
-  .contact {
-    position: absolute;
-    margin: 32% 75%;
-    
-    /* Rotate from top left corner (not default) */
-    // -webkit-transform-origin: 0 0;
-    // -moz-transform-origin:    0 0;
-    // -ms-transform-origin:     0 0;
-    // -o-transform-origin:      0 0;
-    
-    // -webkit-transform: rotate(270deg); 
-    // -moz-transform:    rotate(270deg); 
-    // -ms-transform:     rotate(270deg); 
-    // -o-transform:      rotate(270deg); 
+  .menu-text {
+    color: $pink;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0;
+    /* hide the text on small devices */
+    display: none;
+    @include vendor(transition, all .9s ease-in-out);
   }
 }
+.cd-primary-nav {
+  /* by default it's hidden - on top of the viewport */
+  position: fixed;
+  left: 0;
+  top: -6px;
+  width: 100%;
+  height: 100%;
+  background: snow;
+  z-index: $nav-zindex;
+  text-align: center;
+  padding: $header-height-S 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  overflow: auto;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+
+  @include transform(translateY(-100%));
+  @include transition-property(transform);
+  @include transition-duration(.4s);
+
+  .nav-links {
+    width: 1rem;
+    margin: 0 45%;
+  }
+
+  li {
+    
+    font-weight: 400;
+    @include font-smoothing;
+    margin: .2em 0;
+    text-transform: capitalize;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 3rem;
+    padding: .4em 1em;
+    color: $green;
+    @include border-radius;
+    @include transition(background .2s);
+
+    &:hover {
+    color: $base-clr;
+    transition: .25s ease-in-out;
+    }
+
+    // .no-touch &:hover {
+    //   background-color: #facfc3;
+    // }
+  }
+
+  // .cd-social {
+  //   display: inline-block;
+  //   margin: 0 .4em;
+    
+  //   a {
+  //     width: 44px;
+  //     height: 44px;
+  //     padding: 0;
+  //     background-image: url('../img/cd-socials.svg');
+  //     background-repeat: no-repeat;
+
+  //     /* image replacement */
+  //     overflow: hidden;
+  //     text-indent: 100%;
+  //     white-space: nowrap;
+  //   }
+  // }
+  // .cd-facebook a {
+  //   background-position: 0 0;
+  // }
+
+  // .cd-instagram a {
+  //   background-position: -44px 0;
+  // }
+
+  // .cd-dribbble a {
+  //   background-position: -88px 0;
+  // }
+
+  // .cd-twitter a {
+  //   background-position: -132px 0;
+  // }
+
+  // &.is-visible {
+  //   @include transform(translateY(0));
+  // }
+
+  // @include MQ(M) {
+  //   padding: $header-height-M 0;
+  // }
+
+  // @include MQ(L) {
+  //   li {
+  //     @include font-size(30px);
+  //   }
+
+  //   .cd-label {
+  //     @include font-size(16px);
+  //   }
+  // }
+}
+// .menu {
+//   position: fixed;
+//   transition: opacity 0.3s cubic-bezier(0.015, 0.465, 0.445, 1.015) 0s;
+//   width: 100%;
+//   display: flex;
+
+//   li {
+//     list-style: none;
+//     display: inline;
+//     position: relative;
+//     color: $green;
+//     font-family: $font-sans;
+//     font-size: 2rem;
+//     letter-spacing: .15rem;
+//     text-transform: uppercase;
+//     border-bottom: 5px solid snow;
+
+//     &:hover {
+//       border-bottom: 5px solid $pink;
+//       -webkit-transition:border-color 500ms ease; 
+//       -moz-transition:border-color 500ms ease; 
+//       -o-transition:border-color 500ms ease; 
+//       transition:border-color 500ms ease;
+//       -webkit-transition:font-size 2.5rem ease; 
+
+//     }
+
+//   }
+
+//   .about {
+//       position: absolute;
+//       margin: 7% 17%;
+//   }
+//   .work {
+//     position: absolute;
+//     margin: 19% 43%;
+    
+//   }
+//   .contact {
+//     position: absolute;
+//     margin: 32% 75%;
+    
+//     /* Rotate from top left corner (not default) */
+//     // -webkit-transform-origin: 0 0;
+//     // -moz-transform-origin:    0 0;
+//     // -ms-transform-origin:     0 0;
+//     // -o-transform-origin:      0 0;
+    
+//     // -webkit-transform: rotate(270deg); 
+//     // -moz-transform:    rotate(270deg); 
+//     // -ms-transform:     rotate(270deg); 
+//     // -o-transform:      rotate(270deg); 
+//   }
+// }
 
 .white {
   color: snow;
@@ -221,8 +345,7 @@ main {
   z-index: 2;
   width: 100%;
   top: 0;
-  box-sizing: inherit;
-  height: 80%;
+  height: 80rem;
 }
 .overlay .overlay-image {
   opacity: 0;
@@ -433,13 +556,30 @@ footer {
   text-align: center;
   vertical-align: middle;
   position: relative;
+  height: 17rem;
+  p {
+    color: $pink;
+    margin: -3rem;
+    font-size: 1.25rem;
+    font-family: $font-sans;
+    position: relative;
+  }
 }
 
+.email {
+  img {
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow (OffX=12, OffY=12,
+    Color='#444')";
+    filter: url(#drop-shadow);
+    -webkit-filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
+    filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
+  }
 
 
+}
 
 /******************************************
-/* PROJECT HOMEPAGE                   
+/* PROJECT THUMBNAIL                   
 /*******************************************/
 /**/
 .projections {
@@ -512,17 +652,17 @@ footer {
 }
 
 .view {
-    color: black;
-    font-size: .75rem;
-    font-weight: bold;
-    border-bottom: 2px solid black;
-    padding: 1rem;
-    &:hover {
-      color: $pink;
-      border-bottom: 1px solid $pink;
-      transition: .25s all ease-in-out;
-    }
+  color: black;
+  font-size: .75rem;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding: 1rem;
+  &:hover {
+    color: $pink;
+    border-bottom: 1px solid $pink;
+    transition: .25s all ease-in-out;
   }
+}
 
 
 

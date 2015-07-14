@@ -56,55 +56,55 @@ ul {
 }
 
 #gradient {
-  background: linear-gradient(251deg, #e4007e, #a2ff26, #008f45);
-  background-size: 600% 600%;
   display: inline-block;
   width: 100%;
   position: absolute;
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 
   50% {
-    background-position: 100% 56%;
+    background-position: 50% 100%;
   }
 
   100% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 }
 
 @-moz-keyframes AnimationName {
   0% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 
   50% {
-    background-position: 100% 56%;
+    background-position: 50% 100%;
   }
 
   100% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 }
 
 @keyframes AnimationName {
   0% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 
   50% {
-    background-position: 100% 56%;
+    background-position: 50% 100%;
   }
 
   100% {
-    background-position: 0% 45%;
+    background-position: 51% 0%;
   }
 }
 
@@ -143,7 +143,7 @@ main {
   margin: 1rem 2rem;
   float: left;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
 }
 
 .eye {
@@ -151,7 +151,29 @@ main {
   width: 3.5rem;
   margin: 1% 89%;
   position: fixed;
-  z-index: 11;
+  z-index: 100;
+}
+
+.nav-trigger {
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.nav-trigger:hover .cd-menu-text {
+  opacity: 1;
+}
+.nav-trigger .menu-text {
+  color: #dd1b75;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0;
+  /* hide the text on small devices */
+  display: none;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .menu {
@@ -204,8 +226,7 @@ main {
   z-index: 2;
   width: 100%;
   top: 0;
-  box-sizing: inherit;
-  height: 80%;
+  height: 80rem;
 }
 
 .overlay .overlay-image {
@@ -314,10 +335,26 @@ footer {
   text-align: center;
   vertical-align: middle;
   position: relative;
+  height: 17rem;
+}
+footer p {
+  color: #dd1b75;
+  margin: -3rem;
+  font-size: 1.25rem;
+  font-family: "Gill Sans", sans-serif;
+  position: relative;
+}
+
+.email img {
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow (OffX=12, OffY=12,
+    Color='#444')";
+  filter: url(#drop-shadow);
+  -webkit-filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
 }
 
 /******************************************
-/* PROJECT HOMEPAGE                   
+/* PROJECT THUMBNAIL                   
 /*******************************************/
 /**/
 .projections {

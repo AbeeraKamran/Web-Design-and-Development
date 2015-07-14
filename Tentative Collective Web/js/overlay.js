@@ -98,7 +98,7 @@
 		if (percent > 1) {
 			var pos = (overlayHeight-windowHeight);
 			var excess = documentHeight-scrollPos;
-			$('.overlay').css({"position":"fixed","top":-pos+excess-mapHeight	});
+			$('.overlay').css({"position":"fixed","top":-pos+excess-mapHeight });
 		} else {
 			$('.overlay').css({"position":"fixed","top":-top});
 		}
@@ -117,7 +117,7 @@
 	$(window).load(function(){
 		$overlay = $('.overlay');
 		$(window).resize(function(){
-			mapHeight = $('.footer').outerHeight();
+			mapHeight = $('footer').outerHeight();
 			overlayHeight = $overlay.height();
 			documentHeight = $(document).height()-mapHeight;
 			$overlay.positionPoints();

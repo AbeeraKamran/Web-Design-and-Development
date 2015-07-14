@@ -15,25 +15,26 @@
         <title>Mera Karachi Mobile Cinema</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.min.css"/>
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/project.css">
-        <link href='http://fonts.googleapis.com/css?family=Raleway:600,400,300' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Cabin:400,600,400italic' rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+        </script>
+		<script src="js/jquery.flexslider.js"></script>
     </head>
-    <bodycz-shortcut-listen="true">
+
+    <body cz-shortcut-listen="true">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-       <!--  <div class="pace  pace-inactive">
-            <div class="pace-progress" data-progress-text="100%" data-progress="99" style="-webkit-transform: translate3d(100%, 0px, 0px); transform: translate3d(100%, 0px, 0px);"> -->
-         <!--    <div class="pace-progress-inner"></div>
-        </div>
-        <div class="pace-activity"></div></div> -->
             <div id="gradient">
-            	<div id="main">
+            	<main>
 		            <header>
 		            	<div class="header">
 			            	<div class="crop-height flip">
@@ -77,17 +78,73 @@
                             	<a href="#" class="view read-more">READ MORE</a>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="large-16 large-centered columns">
-                            	<ul class="clearing-thumbs" data-clearing>
+						<div class="row">
+							<div class="large-16 columns">
+								<div class="flex-video widescreen vimeo">
+									<iframe src="https://player.vimeo.com/video/62845610" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><!--  <p><a href="https://vimeo.com/62845610">Mera Karachi Mobile Cinema: promo and documentation</a> from <a href="https://vimeo.com/tentativecollective">Tentative Collective</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
+								</div>
+							</div>
+						</div>	
+						<!-- <div id="slider" class="flexslider">
+							<ul class="slides">
+							    <li>
+							      <img src="img/mkmc/good_ship.jpg" />
+							    </li>
+							    <li>
+							      <img src="img/mkmc/IMG_5174.jpg" />
+							    </li>
+							    <li>
+							      <img src="img/mkmc/2.png" />
+							    </li>
+							</ul>
+						</div> -->
+						<div id="main" role="main">
+      						<section class="slider">
+      							<div id="slider" class="flexslider">
+									<ul class="slides">
+									    <li>
+									      <img src="img/mkmc/good_ship.jpg" />
+									    </li>
+									    <li>
+									      <img src="img/mkmc/IMG_5174.jpg" />
+									    </li>
+									    <li>
+									      <img src="img/mkmc/2.png" />
+									    </li>
+									</ul>
+									<ul class="flex-direction-nav">
+										<li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li>
+										<li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+									</ul>
+								</div>
+								<div id="carousel" class="flexslider">
+									<ul class="slides">
+									    <li>
+									      <img src="img/mkmc/good_ship.jpg" />
+									    </li>
+									    <li>
+									      <img src="img/mkmc/IMG_5174.jpg" />
+									    </li>
+									    <li>
+									      <img src="img/mkmc/2.png" />
+									    </li>
+									</ul>
+								</div>
+								<ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul>
+							</section>
+
+						</div>
+                        <!-- <div class="row">
+                            <div class="large-16 large-centered columns carousel"> -->
+                            	<!-- <ul class="clearing-thumbs" data-clearing>
 									<li>
-										<a href="img/mkmc/good_ship.jpg"><img src="img/mkmc/thumb_good_ship.jpg"  class="th" ></a>
+										<a href="img/mkmc/good_ship.jpg"><img src="img/mkmc/thumb_good_ship.jpg"  class="th"></a>
 									</li>
 									<li>
-										<a class="th" href="img/mkmc/MG_5174.jpg"><img src="img/mkmc/thumb_IMG_5174.jpg" class="th"></a>
+										<a class="th" href="img/mkmc/IMG_5174.jpg"><img src="img/mkmc/thumb_IMG_5174.jpg" class="th"></a>
 									</li>
 									<li>
-										<a class="th" href="img/mkmc/i2.png"><img src="img/mkmc/thumb-2.jpg"></a>
+										<a class="th" href="img/mkmc/2.png"><img src="img/mkmc/thumb-2.jpg"></a>
 									</li>
 									<li>
 										<a class="th" href="img/mkmc/cantt_station_1.jpg"><img src="img/mkmc/thumb_cantt_station_1.jpg"></a>
@@ -95,32 +152,53 @@
 									<li>
 										<a class="th" href="img/mkmc/cantt_station_2.jpg"><img src="img/mkmc/thumb_cantt_station_2.jpg"></a>
 									</li>
-									<li><a class="th" href="img/mkmc/lyari"><img src="img/mkmc/thumb_lyari.jpg"></a></li>
+									<li><a class="th" href="img/mkmc/lyari.jpg"><img src="img/mkmc/thumb_lyari.jpg"></a></li>
 									<li>
-										<a class="th" href="img/mkmc/MG_5334.jpg"><img src="img/mkmc/thumb_IMG_5334.jpg" class="th"></a>
+										<a class="th" href="img/mkmc/IMG_5334.jpg"><img src="img/mkmc/thumb_IMG_5334.jpg" class="th"></a>
 									</li><li>
-										<a class="th" href="img/mkmc/MG_5701.jpg"><img src="img/mkmc/thumb_IMG_5701.jpg" class="th"></a>
+										<a class="th" href="img/mkmc/IMG_5701.jpg"><img src="img/mkmc/thumb_IMG_5701.jpg" class="th"></a>
 									</li>
-								</ul>
-                            </div>
-                        </div>
+								</ul> -->
+                          <!--   </div>
+                        </div> -->
                     </div>
-                </div>
-            </div>
-
-        </div>
+                </main>
+			    <footer>
+	                <button class="email">
+	                    info@tentativecollective.com
+	                </button>
+	                <p class="phone"></p>
+	                <div class="socials">
+	                    <a href="" class="insta"></a>
+	                    <a href="" class="facebook"></a>
+	                    <a href="" class="twitter"></a>
+	                </div> 
+	            </footer> 
+	        </div>
         
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+        </script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script defer src="js/jquery.flexslider.js"></script>
+
+		
 		<script src="js/foundation.js"></script>
 		<script src="js/foundation.clearing.js"></script>
   <!-- Other JS plugins can be included here -->
-		<script src="js/menuHide.js"></script>
-        <script src="js/main.js"></script>
+  		<script type="text/javascript" charset="utf-8">
+	        $(document).ready() 
+			  $('.flexslider').flexslider({
+			    animation: "slide",
+			    controlNav: "thumbnails"
+			  });
+			);
+		</script>
+  		<script src="js/plugins.js"></script>
         <script>
 		    $(document).foundation();
 		</script>
+		
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
