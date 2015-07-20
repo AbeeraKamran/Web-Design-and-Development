@@ -68,7 +68,6 @@ display: inline-block;
 width: 100%;
 position: absolute;
 
-// background: linear-gradient(270deg, #9bfd18, #008113);
 background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
 background-size: 600% 600%;
 
@@ -102,6 +101,7 @@ main {
   // display: flex;
   display: list-item;
   position: relative;
+  opacity: 1;
 }
 
 .wrapper {
@@ -115,13 +115,17 @@ main {
 }
 
 .hide {
-  opacity: 0;
-    -webkit-transition: 1s ease opacity;
+//   opacity: 0;
+//   visibility: hidden;
+// transition: visibility 0s 2s, opacity 2s linear;
+display: none;
+
 
 }
 
 .show {
   opacity: 1;
+
 }
 
 // .pace .pace-progress{
@@ -141,9 +145,13 @@ main {
 /*******************************************/
 /**/
 
+h1 {
+  margin: 0;
+}
+
 .logo {
   width: 8rem;
-  margin: 1rem 2rem;
+  margin: 4%;
   float: left;
   position: fixed;
   z-index: 100;
@@ -152,191 +160,100 @@ main {
 .eye{
   float: right;
   width: 3.5rem;
-  margin: 1% 89%;
+  margin: 4% 91%;
   position: fixed;
   z-index: 100;
 }
-.nav-trigger {
-  right: 0;
-  top: 0;
-  height: 100%;
-  // background-color: $yellow;
-  &:hover .cd-menu-text  {
-      opacity: 1;
-    }
 
-  .menu-text {
-    color: $pink;
-    text-transform: uppercase;
-    font-weight: 700;
-    opacity: 0;
-    /* hide the text on small devices */
-    display: none;
-    @include vendor(transition, all .9s ease-in-out);
-  }
-}
-.cd-primary-nav {
-  /* by default it's hidden - on top of the viewport */
-  position: fixed;
-  left: 0;
-  top: -6px;
+.menu-list {
+
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
   height: 100%;
-  background: snow;
-  z-index: $nav-zindex;
-  text-align: center;
-  padding: $header-height-S 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 
-  overflow: auto;
-  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
-  -webkit-overflow-scrolling: touch;
+  
+  border-left: 12px solid #a2ff26;
+  border-right: 12px solid #008113;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100% ;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 12px;
+  -moz-background-size: 100% 12px;
+  background-size: 100% 12px;
+  background-image: -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%), -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  background-image: -moz-linear-gradient(left, #a2ff26 0%, #008113 100%), -moz-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  background-image: -o-linear-gradient(left, #a2ff26 0%, #008113 100%), -o-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  background-image: linear-gradient(to right, #a2ff26 0%, #008113 100%), linear-gradient(to right, #a2ff26 0%, #008113 100%);
+  
 
-  @include transform(translateY(-100%));
-  @include transition-property(transform);
-  @include transition-duration(.4s);
+  ul {
+    padding-top: 15rem;
 
-  .nav-links {
-    width: 1rem;
-    margin: 0 45%;
   }
 
   li {
-    
-    font-weight: 400;
-    @include font-smoothing;
-    margin: .2em 0;
-    text-transform: capitalize;
-  }
-
-  a {
-    display: inline-block;
-    font-size: 3rem;
-    padding: .4em 1em;
+    list-style: none;
+    display: inline;
+    position: relative;
     color: $green;
-    @include border-radius;
-    @include transition(background .2s);
+    font-family: $font-sans;
+    font-size: 2rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
 
     &:hover {
-    color: $base-clr;
-    transition: .25s ease-in-out;
+      border-bottom: 5px solid $pink;
+      -webkit-transition:border-color 500ms ease; 
+      -moz-transition:border-color 500ms ease; 
+      -o-transition:border-color 500ms ease; 
+      transition:border-color 500ms ease;
+      color: $pink;
     }
 
-    // .no-touch &:hover {
-    //   background-color: #facfc3;
-    // }
   }
 
-  // .cd-social {
-  //   display: inline-block;
-  //   margin: 0 .4em;
+  .about {
+      // position: absolute;
+      margin: 7% 17%;
+  }
+  .work {
     
-  //   a {
-  //     width: 44px;
-  //     height: 44px;
-  //     padding: 0;
-  //     background-image: url('../img/cd-socials.svg');
-  //     background-repeat: no-repeat;
-
-  //     /* image replacement */
-  //     overflow: hidden;
-  //     text-indent: 100%;
-  //     white-space: nowrap;
-  //   }
-  // }
-  // .cd-facebook a {
-  //   background-position: 0 0;
-  // }
-
-  // .cd-instagram a {
-  //   background-position: -44px 0;
-  // }
-
-  // .cd-dribbble a {
-  //   background-position: -88px 0;
-  // }
-
-  // .cd-twitter a {
-  //   background-position: -132px 0;
-  // }
-
-  // &.is-visible {
-  //   @include transform(translateY(0));
-  // }
-
-  // @include MQ(M) {
-  //   padding: $header-height-M 0;
-  // }
-
-  // @include MQ(L) {
-  //   li {
-  //     @include font-size(30px);
-  //   }
-
-  //   .cd-label {
-  //     @include font-size(16px);
-  //   }
-  // }
+    margin: 19% 43%;
+    
+  }
+  .contact {
+    
+    margin: 32% 75%;
+    
+    /* Rotate from top left corner (not default) */
+    // -webkit-transform-origin: 0 0;
+    // -moz-transform-origin:    0 0;
+    // -ms-transform-origin:     0 0;
+    // -o-transform-origin:      0 0;
+    
+    // -webkit-transform: rotate(270deg); 
+    // -moz-transform:    rotate(270deg); 
+    // -ms-transform:     rotate(270deg); 
+    // -o-transform:      rotate(270deg); 
+  }
 }
-// .menu {
-//   position: fixed;
-//   transition: opacity 0.3s cubic-bezier(0.015, 0.465, 0.445, 1.015) 0s;
-//   width: 100%;
-//   display: flex;
 
-//   li {
-//     list-style: none;
-//     display: inline;
-//     position: relative;
-//     color: $green;
-//     font-family: $font-sans;
-//     font-size: 2rem;
-//     letter-spacing: .15rem;
-//     text-transform: uppercase;
-//     border-bottom: 5px solid snow;
 
-//     &:hover {
-//       border-bottom: 5px solid $pink;
-//       -webkit-transition:border-color 500ms ease; 
-//       -moz-transition:border-color 500ms ease; 
-//       -o-transition:border-color 500ms ease; 
-//       transition:border-color 500ms ease;
-//       -webkit-transition:font-size 2.5rem ease; 
-
-//     }
-
-//   }
-
-//   .about {
-//       position: absolute;
-//       margin: 7% 17%;
-//   }
-//   .work {
-//     position: absolute;
-//     margin: 19% 43%;
-    
-//   }
-//   .contact {
-//     position: absolute;
-//     margin: 32% 75%;
-    
-//     /* Rotate from top left corner (not default) */
-//     // -webkit-transform-origin: 0 0;
-//     // -moz-transform-origin:    0 0;
-//     // -ms-transform-origin:     0 0;
-//     // -o-transform-origin:      0 0;
-    
-//     // -webkit-transform: rotate(270deg); 
-//     // -moz-transform:    rotate(270deg); 
-//     // -ms-transform:     rotate(270deg); 
-//     // -o-transform:      rotate(270deg); 
-//   }
-// }
 
 .white {
   color: snow;
 }
+
+/******************************************
+/* OVERLAY                   
+/*******************************************/
+/**/
 
 .overlay {
   position: fixed;
