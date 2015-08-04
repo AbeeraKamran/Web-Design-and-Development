@@ -93,11 +93,21 @@ animation: AnimationName 30s ease infinite;
 }
 
 .logo {
-  position: fixed;
-  width: 11rem;
-  margin: 1.5rem;
+  position: absolute;
+  // width: 11rem;
+  margin: 1.5rem 0 0 1.5rem;
   float: left;
   z-index: 999;
+
+  img {
+    width: 70px;
+  }
+  .index {
+    font-size: .75rem;
+    font-family: courier;
+    color: #f78f00;
+    margin: 0 0.5rem;
+  }
 }
 
 .archive {
@@ -450,7 +460,7 @@ $tooltip-line-height: rem-calc(2);
 //   background-image: url(img/..Pink-Valentine-Roses-6.jpg);
 // }
 #brod {
-  position: absolute;
+  position: relative;
 
 }
 select {
@@ -459,41 +469,47 @@ select {
 }
 
 #body-sadness {
-  margin: 30% 5%;
-  position: initial;
+  margin: 8% 5%;
+  position: absolute;
 }
 
 #covenant {
-  margin: 70% -50%
+  margin: 26% 57% 0%;
+  position: absolute;
 }
 
 #intellect {
-  margin: 75%
+  margin: 15%;
+  position: absolute;
 }
 #interpersonal {
-  margin: 10% 60%;
+  margin: 4% 67%;
   float: left;
+  position: absolute;
 }
 #art-sadness {
-  margin: 30% 100%;
+  margin: 30% 100% 0%;
   float: left;
+  position: absolute;
 }
 
 #send-sadness {
   
-  position: fixed;
-  top: 69%; left: 4%;
-  float: right;
+  margin: 35% 1% 0%;
+  float: left;
   
   h4 {
     font-size: 12px;
     font-family:verdana;
     float: left;
   }
-  .send {
-    font-family: verdana;
-    font-size: 12px;
+  textarea {
+    padding: .25rem;
+  }
+  .submit {
+    font-size: 16px;
     clear: both;
+    margin: 1rem 0 1rem;
   }
   input {
     float: left;
@@ -515,7 +531,7 @@ select {
 }
 
 /******************************************
-/* KEROUAC SO EMOJI YAAR                 
+/* GEORGIA RINSE REPEAT                 
 /*******************************************/
 /**/
 
@@ -527,13 +543,43 @@ select {
 .automatic p {
   position: absolute;
   font-family: courier;
+}
 
+.reload {
+  margin: 42% 4%  0;
+  font-size: .9rem;
+  padding: .25rem;
+  position: absolute;
+  z-index: 101;
+  a {
+    &:hover {
+      color: black;
+    }
+  }
+
+}
+
+.next {
+  margin: 42% 90% 0;
+  position: absolute;
+   a:active,a:hover,a:visited{
+    color:black;
+  }
+}
+
+.next-home {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  a:active,a:hover,a:visited{
+    color:black;
+  }
 }
 
 
 
 /******************************************
-/* ONDAATJE RINSE REPEAT                 
+/* ONDAATJE SO GIF YAAR                
 /*******************************************/
 /**/
 
@@ -557,8 +603,12 @@ select {
     width: 60px;
   }
   .floppy {
-    margin: 20% 35%;
+    margin: 12% 28%;
     width: 60px;
+  }
+  .pia {
+    margin: 25% 35%;
+    width: 150px;
   }
   .peacock {
     margin: 15% 55%;
@@ -605,7 +655,48 @@ select {
 
 
 
+/******************************************
+/* AUTHOR              
+/*******************************************/
+/**/
 
+h3 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 5rem 2rem;
+}
+.transparent-bg {
+  background-repeat: repeat;
+  // position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.author {
+  margin: 7rem 2rem;
+  position: absolute;
+  z-index: 100;
+
+  tr{
+    display: table-row;
+  }
+
+  td {
+    display: table-cell;
+    background-color: white;
+    padding: .5rem;
+    border: 1px solid black;
+    a {
+      &:hover {
+        color: black;
+      }
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
 
 
 
