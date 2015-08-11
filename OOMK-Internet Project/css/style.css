@@ -575,6 +575,7 @@ select {
 .next {
   margin: 42% 90% 0;
   position: absolute;
+  z-index: 100;
 }
 .next a:active, .next a:hover, .next a:visited {
   color: black;
@@ -632,7 +633,7 @@ select {
   margin: 5% 90%;
 }
 .triggers .frog {
-  margin: 40% 90%;
+  margin: 35% 90%;
 }
 .triggers .butterfly {
   margin: 5% 20%;
