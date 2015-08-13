@@ -111,7 +111,6 @@ ul {
 main {
   background-color: #fff;
   margin: .75rem;
-  display: list-item;
   position: relative;
   opacity: 1;
 }
@@ -134,6 +133,10 @@ main {
   opacity: 1;
 }
 
+a:visited {
+  color: black;
+}
+
 /******************************************
 /* NAV                   
 /*******************************************/
@@ -148,6 +151,26 @@ h1 {
   float: left;
   position: fixed;
   z-index: 100;
+}
+
+#nav-trigger {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+#nav-trigger:hover .menu {
+  opacity: 1;
+}
+
+.menu {
+  opacity: 0;
+  font-size: .75rem;
+  color: #008f45;
+  -webkit-transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .eye {

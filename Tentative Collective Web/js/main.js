@@ -1,4 +1,15 @@
-// $(function() {
+$(function() {
+
+	// var $clickme = $('.clickme'),
+	//     $box = $('.box');
+
+	// $box.hide();
+
+	// $clickme.click( function(e) {
+	//     $(this).text(($(this).text() === 'Hide' ? 'Show' : 'Hide')).next('.box').slideToggle();;
+	//     e.preventDefault();
+	// });
+});
 
 // 	// if($(window).width() > MQL) {
 // 	// 	var headerHeight = $('.header').height();
@@ -42,4 +53,3 @@
 // 			});	
 // 		}
 // 	});
-// });

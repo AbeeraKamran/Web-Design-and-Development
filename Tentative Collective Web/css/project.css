@@ -9,7 +9,6 @@ body {
 /**/
 .header {
   position: absolute;
-  margin-top: -2rem;
 }
 
 .crop-height {
@@ -76,7 +75,8 @@ h2 {
 .project-info {
   background-color: snow;
   border: 6px solid black;
-  padding: 3rem 3rem 5rem;
+  padding: 3rem 3rem 3rem;
+  margin-bottom: 2rem;
 }
 
 .read-more {
@@ -91,8 +91,6 @@ h2 {
 
 .project-para {
   position: relative;
-  max-height: 30rem;
-  overflow: hidden;
   position: relative;
 }
 .project-para p {
@@ -101,8 +99,30 @@ h2 {
   word-wrap: break-word;
 }
 
+.member-heading {
+  color: #dd1b75;
+  margin-bottom: .25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.members {
+  margin-bottom: 2rem;
+}
+.members li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 2rem;
+  border-bottom: 1px black solid;
+}
+
+.about {
+  margin-bottom: 3rem;
+}
+
+/* This CSS is used for the Show/Hide functionality. */
 /******************************************
-/* CLEARING LIGHTBOX                 
+/* FLEXSLIDER                 
 /*******************************************/
 /**/
 #slider, #carousel {
@@ -112,6 +132,48 @@ h2 {
 
 #carousel li {
   margin-right: .25rem;
+}
+
+.flex-direction-nav a {
+  font-size: 31px;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 20px;
+  right: 10px;
+  left: 10px;
+  opacity: 0;
+  background: white;
+  border: 7px solid black;
+  transition: 0.6s ease-out;
+}
+.grid-overlay .info {
+  margin-top: 3rem;
+  font-size: 1.65rem;
+  text-align: center;
+  font-family: "Conv_NuptialScriptLTStd";
+  line-height: 1;
+  padding-right: .15rem;
+}
+.grid-overlay .subhead, .grid-overlay .date {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: .65rem;
+  margin-bottom: 0;
+}
+
+.small-block-grid-3 {
+  margin-top: 2rem;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+.item:hover .grid-overlay {
+  opacity: 1;
 }
 
 /******************************************
