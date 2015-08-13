@@ -167,7 +167,9 @@ h2 {
 /* FLEXSLIDER                 
 /*******************************************/
 /**/
-
+.locations {
+	padding: 2rem 1rem 0;
+}
 #slider, #carousel {
 	margin: 1rem;
 	border: none;
@@ -180,6 +182,10 @@ h2 {
 }
 .flex-direction-nav a {
 	font-size: 31px;
+}
+
+.flex-control-nav {
+	margin: 1rem 0 2rem;
 }
 
 
