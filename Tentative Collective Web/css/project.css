@@ -120,6 +120,20 @@ h2 {
   margin-bottom: 3rem;
 }
 
+.info {
+  border: 6px solid black;
+  max-width: 38rem;
+}
+
+.reveal-modal .close-reveal-modal {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.modalTitle {
+  font-family: "Conv_NuptialScriptLTStd";
+}
+
 /* This CSS is used for the Show/Hide functionality. */
 /******************************************
 /* FLEXSLIDER                 
@@ -157,7 +171,7 @@ h2 {
   border: 7px solid black;
   transition: 0.6s ease-out;
 }
-.grid-overlay .info {
+.grid-overlay .title {
   margin-top: 3rem;
   font-size: 1.65rem;
   text-align: center;

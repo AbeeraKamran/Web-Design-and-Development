@@ -61,10 +61,12 @@ body {
 ul {
   margin: 0;
 }
-
+.content {
+  padding: 3rem;
+}
 #gradient {
 
-display: inline-block;
+// display: inline-block;
 width: 100%;
 position: absolute;
 
@@ -161,8 +163,21 @@ h4 {
   border-bottom: 3px solid #333;
   width: 3.25rem; 
 }
+h5 {
+  font-size: 2rem;
+  font-family: $heading;
+  margin: 0;
+  padding: 1rem;
+}
 
-
+a {
+  color:black;
+}
+.cv {
+  a {
+    border-bottom: 1px solid black;
+  }
+}
 .logo {
   width: 8rem;
   margin: 4%;
@@ -514,6 +529,7 @@ footer {
 }
 
 .email {
+  text-align: center;
   img {
     filter: "progid:DXImageTransform.Microsoft.Dropshadow (OffX=12, OffY=12,
     Color='#444')";
@@ -523,6 +539,11 @@ footer {
   }
 
 
+}
+
+.facebook {
+  font-size: 2rem;
+  text-align: center;
 }
 
 /******************************************
@@ -574,7 +595,7 @@ footer {
 }
 
 .blurb {
-  width: 22rem;
+  width: 25rem;
   font-family: 'Gill Sans';
   font-size: 1.5rem;
   border: 6px solid black;

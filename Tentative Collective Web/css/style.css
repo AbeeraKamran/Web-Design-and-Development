@@ -55,8 +55,11 @@ ul {
   margin: 0;
 }
 
+.content {
+  padding: 3rem;
+}
+
 #gradient {
-  display: inline-block;
   width: 100%;
   position: absolute;
   background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
@@ -153,6 +156,21 @@ h4 {
   font-size: .8rem;
   border-bottom: 3px solid #333;
   width: 3.25rem;
+}
+
+h5 {
+  font-size: 2rem;
+  font-family: "Conv_NuptialScriptLTStd";
+  margin: 0;
+  padding: 1rem;
+}
+
+a {
+  color: black;
+}
+
+.cv a {
+  border-bottom: 1px solid black;
 }
 
 .logo {
@@ -380,12 +398,20 @@ footer p {
   position: relative;
 }
 
+.email {
+  text-align: center;
+}
 .email img {
   filter: "progid:DXImageTransform.Microsoft.Dropshadow (OffX=12, OffY=12,
     Color='#444')";
   filter: url(#drop-shadow);
   -webkit-filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
+}
+
+.facebook {
+  font-size: 2rem;
+  text-align: center;
 }
 
 /******************************************
@@ -435,7 +461,7 @@ footer p {
 }
 
 .blurb {
-  width: 22rem;
+  width: 25rem;
   font-family: 'Gill Sans';
   font-size: 1.5rem;
   border: 6px solid black;
