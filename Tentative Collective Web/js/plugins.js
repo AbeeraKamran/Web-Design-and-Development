@@ -22,29 +22,18 @@
 }());
 
 // Can also be used with $(document).ready()
-$(window).load(function() {
  
-  // Vimeo API nonsense
-  var player = document.getElementById('player_1');
-  $f(player).addEvent('ready', ready);
+
  
-  function addEvent(element, eventName, callback) {
-    if (element.addEventListener) {
-      element.addEventListener(eventName, callback, false)
-    } else {
-      element.attachEvent(eventName, callback, false);
-    }
-  }
- 
-  function ready(player_id) {
-    var froogaloop = $f(player_id);
-    froogaloop.addEvent('play', function(data) {
-      $('.flexslider').flexslider("pause");
-    });
-    froogaloop.addEvent('pause', function(data) {
-      $('.flexslider').flexslider("play");
-    });
-  }
+  // function ready(player_id) {
+  //   var froogaloop = $f(player_id);
+  //   froogaloop.addEvent('play', function(data) {
+  //     $('.flexslider').flexslider("pause");
+  //   });
+  //   froogaloop.addEvent('pause', function(data) {
+  //     $('.flexslider').flexslider("play");
+  //   });
+  // }
  
  
   // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
@@ -62,26 +51,54 @@ $(window).load(function() {
 
 
 // Flexslider for images with thumbnail.
+$(window).load(function() {
 
-
-  $('#carousel').flexslider({
+  $('#carousel1').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,
     slideshow: false,
     itemWidth: 210,
     itemMargin: 5,
-    asNavFor: '#slider'
+    asNavFor: '#slider1'
   });
 
-  $('#slider').flexslider({
+  $('#slider1').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    sync: "#carousel",
-    start: function(slider){
-    }
+    sync: "#carousel1",
   });
+
+ $('#carousel2').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    asNavFor: '#slider2'
+  });
+
+  $('#slider2').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel2",
+  });
+
+    // Vimeo API nonsense
+  var player = document.getElementById('player_1');
+  $f(player).addEvent('ready', ready);
+ 
+  function addEvent(element, eventName, callback) {
+    if (element.addEventListener) {
+      element.addEventListener(eventName, callback, false)
+    } else {
+      element.attachEvent(eventName, callback, false);
+    }
+  }
 });
         

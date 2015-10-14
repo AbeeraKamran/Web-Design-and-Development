@@ -144,12 +144,11 @@ h2 {
 }
 
 #slider, #carousel {
-  margin: 1rem;
   border: none;
 }
 
-#carousel li {
-  margin-right: .25rem;
+.slides img {
+  padding-right: .25rem;
 }
 
 .flex-direction-nav a {
@@ -198,8 +197,8 @@ h2 {
   opacity: 1;
 }
 
-.flexslider .slides li {
-  display: block;
+.flexslider {
+  margin: 0;
 }
 
 /******************************************
