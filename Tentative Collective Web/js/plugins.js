@@ -48,17 +48,17 @@ $(window).load(function() {
  
  
   // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
-  $(".flexslider")
-    .fitVids()
-    .flexslider({
-      animation: "slide",
-      useCSS: false,
-      animationLoop: false,
-      smoothHeight: true,
-      before: function(slider){
-        $f(player).api('pause');
-      }
-  });
+  // $(".flexslider")
+  //   .fitVids()
+  //   .flexslider({
+  //     animation: "slide",
+  //     useCSS: false,
+  //     animationLoop: false,
+  //     smoothHeight: true,
+  //     before: function(slider){
+  //       $f(player).api('pause');
+  //     }
+  // });
 
 
 // Flexslider for images with thumbnail.
@@ -81,7 +81,6 @@ $(window).load(function() {
     slideshow: false,
     sync: "#carousel",
     start: function(slider){
-      $('body').removeClass('loading');
     }
   });
 });
