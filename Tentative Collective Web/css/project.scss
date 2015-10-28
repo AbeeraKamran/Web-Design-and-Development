@@ -72,8 +72,8 @@ img.flip {
 }
 
 h2 {
-	color: #ff5de3;
-	font-size: 3rem;
+	color: white;
+	font-size: 2.75rem;
 	text-align: center;
 	font-family: $font-sans;
 }
@@ -145,7 +145,7 @@ h2 {
 
 .info{
 	border: 6px solid black;
-	max-width: 38rem;
+	// max-width: 38rem;
 }
 .reveal-modal .close-reveal-modal {
 	font-size: 1.5rem;
@@ -173,15 +173,40 @@ h2 {
 // 	  }
   
 // }
+
+.extra-info {
+	a {
+		font-size: 1.25rem;
+		color: $pink;
+		float: left;
+		padding:  0 2rem;
+	}
+}
   
 
 /******************************************
 /* FLEXSLIDER                 
 /*******************************************/
 /**/
-.locations {
-	padding: 2rem 1rem 0;
+.location-head {
+    padding: 1rem;
+    border: .35rem solid black;
+    display: inline-block;
+    position: absolute;
+    margin: 1rem -4rem;
+    z-index: 100;
+    background-color: white;
+    h3 {
+    	float: left;
+    	font-size: 1.25rem;
+    }
 }
+.map {
+	float: right;
+	width: 20px;
+	margin: 4px;
+}
+
 #slider, #carousel {
 	// margin: 1rem;
 	border: none;
@@ -224,7 +249,6 @@ h2 {
     .subhead, .date {
     	font-size: 1rem;
 	    text-align: center;
-	    padding-top: .65rem;
 	    margin-bottom: 0;
     }
 
@@ -244,6 +268,30 @@ h2 {
 
 .flexslider {
 	margin: 0;
+	clear: both;
+}
+
+// .flexslider .flex-direction-nav li a.flex-next {
+// background: url('../img/arrows-02.png') no-repeat 0 0 !important;
+// }
+
+// .flexslider .flex-direction-nav li a.flex-prev {
+// background: url('../img/arrows-01.png') no-repeat 0 -86px !important;
+// }
+
+.flex-direction-nav a {
+	color: transparent;
+	text-shadow: none;
+	 &:visited {
+	 	color: transparent;
+	 }
+}
+
+.flex-direction-nav a:before {
+	display: none;
+	content: none;
+	text-shadow: none;
+	color: transparent;
 }
 
 
@@ -255,6 +303,16 @@ h2 {
 .flex-video {
 	margin: 1rem;
 }
+.videos{
+	margin-bottom: 5rem;
+	padding: 4px;
+	li {
+		margin: 1rem 1rem 0 0;
+		display: inline-block;
+	}
+}
+
+
 
 
 

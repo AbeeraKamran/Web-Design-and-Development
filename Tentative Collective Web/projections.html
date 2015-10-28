@@ -19,9 +19,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/project.css">
         <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-
-  
-
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
         </script>
@@ -97,7 +94,22 @@
                                         <p>Bani Abidi will be projecting selected videos from her 2014 installation 'Funland' in different locations of Saddar Bazaar, Karachi. 'Funland' is a multichannel video installation which has been produced with the support of the 8th Berlin Biennale and the DAAD Kunstler Programme.</p>
                                         <p>The 6 videos in this work meander between being memorials to a cosmopolitan city that fights for its survival to melancholic imaginings of a hypothetical, deserted future. The Karachi iteration of 'Funland' around the streets of the historic Saddar Bazaar, is a unique one, as the work engages physically and literally with the very nerve that runs through the entire work.</p>
                                         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                                    </div>
+                                        <!-- <section class="slider"> -->
+                                            <div class="flexslider-projections ">
+                                                 <ul class="slides">
+                                                    <li>
+                                                      <img src="img/projections/bani_1.jpg" />
+                                                    </li>
+                                                    <li>
+                                                      <img src="img/projections/bani_2.jpg" />
+                                                    </li>
+                                                    <li>
+                                                      <img src="img/projections/bani_3.jpg" />
+                                                    </li>
+                                                </ul>
+                                            </div>
+<!--                                         </section>
+ -->                                </div>
                                 </li>
                                  <li class="item">
                                     <img src="img/projections/grid_shaheen.jpg" alt="">
@@ -194,7 +206,8 @@
                                 </li>
                                 <li class="item">
                                     <img src="img/projections/grid_yaminay.jpg" alt="">
-                                    <a href="#" data-reveal-id="sixthModal"><div class="grid-overlay">
+                                    <a href="#" data-reveal-id="sixthModal">
+                                    <div class="grid-overlay">
                                         <h5 class="title">Ephemeral projections of a beached ship becoming</h5>
                                         <p class="subhead">Yaminay Chaudhri</p>
                                         <p class="date">March 7, 2015</p>
@@ -208,13 +221,15 @@
                                 </li>
                                 <li class="item">
                                     <img src="img/projections/grid_fazal.jpg" alt="">
-                                    <a href="#" data-reveal-id="seventhModal"><div class="grid-overlay">
-                                        <h5 class="title">Teesri Manzil Kay Badaltay Nazaaray</h5>
-                                        <p class="subhead">Fazal Rizvi</p>
-                                        <p class="date">April 22, 2015</p>
-                                    </div></a>
+                                    <a href="#" data-reveal-id="seventhModal">
+                                        <div class="grid-overlay">
+                                            <h5 class="title">Teesri Manzil Kay Badaltay Nazaaray</h5>
+                                            <p class="subhead">Fazal Rizvi</p>
+                                            <p class="date">April 22, 2015</p>
+                                        </div>
+                                    </a>
                                     <div id="seventhModal" class="info reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-                                        <h5 class="modalTitle">Teesri Manzil Kay Badaltay Nazaaray</h3>>
+                                        <h5 class="modalTitle">Teesri Manzil Kay Badaltay Nazaaray</h5>
                                         <p><it>'That view from my old house, once showed a mountain
                                         Now that view or that mountain has a crack.'</it></p>
                                         <p>Rizvi grew up in a two story house and remembers looking at a mountain in the distant from the roof on the 3rd floor. However he does not remember when and why that mountain was cut into two.</p>
@@ -303,20 +318,11 @@
         <script src="js/foundation.reveal.js"></script>
 		<script src="js/plugins.js"></script>
 
-  		<script type="text/javascript" charset="utf-8">
-	        $(document).ready() 
-			  $('.flexslider').flexslider({
-			    animation: "slide",
-			    controlNav: "thumbnails"
-			  });
-			);
-		</script>
+  		
         <script>
 		    $(document).foundation();
 		</script>
-		        <script src="js/menuHide.js"></script>
-
-		
+        <script src="js/menuHide.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
