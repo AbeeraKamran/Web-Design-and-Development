@@ -1,0 +1,16 @@
+.email-light, .email-yellow{
+	background: url(sprites.png) no-repeat;
+}
+
+.email-light{
+	background-position: 0 -31px ;
+	width: 28px;
+	height: 28px;
+}
+
+.email-yellow{
+	background-position: 0 0;
+	width: 28px;
+	height: 28px;
+}
+

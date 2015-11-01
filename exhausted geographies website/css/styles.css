@@ -1,0 +1,536 @@
+/* 
+Project Name: Exhausted Geographies Website
+Client: Shahana Rajani, Zahra Malkani
+Author: A Kamran
+*/
+/******************************************
+/* SETUP                   
+/*******************************************/
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Sorts Mill Goudy", serif;
+}
+
+#main {
+  position: relative;
+}
+
+.row {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 7rem;
+  letter-spacing: 20px;
+  color: #4f4844;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 1rem;
+}
+@media only screen and (max-width: 414px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+h3 {
+  font-size: .75rem;
+  font-family: "Sorts Mill Goudy", serif;
+  color: #ffdf89;
+  letter-spacing: 5px;
+}
+@media only screen and (max-width: 414px) {
+  h3 {
+    font-size: .55rem;
+    letter-spacing: 2px;
+  }
+}
+
+h4 {
+  font-size: .8rem;
+  font-family: "Sorts Mill Goudy", serif;
+  padding: 1rem;
+  color: #2c2724;
+  width: 4.5rem;
+  border: 2px solid;
+  transition: 0.6s ease-out;
+}
+h4:hover {
+  border: 1px solid;
+  color: #ffdf89;
+}
+@media only screen and (max-width: 414px) {
+  h4 {
+    font-size: .6rem;
+    padding: .5rem;
+    width: 3.25rem;
+  }
+}
+
+h5 {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.25rem;
+  color: #ffdf89;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #2c2724;
+  font-size: .75rem;
+  float: none;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  float: none;
+}
+
+#index {
+  width: 50%;
+  float: left;
+}
+
+.light-grey {
+  background-color: #dfdad9;
+  width: 100%;
+  float: left;
+}
+
+#index-2 {
+  background-color: #2c2724;
+  width: 50%;
+  float: right;
+}
+
+.dark-grey {
+  background-color: #2c2724;
+  height: 100%;
+  float: right;
+  width: 100%;
+}
+
+button {
+  color: #ffdf89;
+  font-family: "Sorts Mill Goudy", serif;
+  background-color: none;
+  border-bottom: 3px solid #ffdf89;
+}
+@media only screen and (max-width: 414px) {
+  button {
+    padding: 0;
+  }
+}
+
+.inner-page {
+  background-color: #2c2724;
+}
+
+.excerpt-page {
+  background-color: #dfdad9;
+  margin: 0 auto;
+}
+
+.author {
+  color: #dfdad9;
+}
+
+/******************************************
+/* typography                  
+/*******************************************/
+/**/
+.logo {
+  margin: 1rem;
+  position: absolute;
+}
+@media only screen and (max-width: 414px) {
+  .logo {
+    margin: .5rem 0;
+    left: 40%;
+  }
+}
+
+.space {
+  padding-top: 1rem;
+}
+
+.exhausted {
+  clear: both;
+  margin: 1rem;
+  width: 71%;
+}
+@media only screen and (min-width: 768px) {
+  .exhausted {
+    width: 57%;
+    margin: 3rem 3rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .exhausted {
+    margin: 2rem 1rem;
+  }
+}
+
+.geographies {
+  clear: both;
+  margin: 0 1rem;
+  width: 71%;
+}
+@media only screen and (min-width: 768px) {
+  .geographies {
+    width: 55%;
+    margin: 0 3rem;
+  }
+}
+
+.blurb {
+  margin: 0 2rem;
+  font-style: italic;
+  color: #2c2724;
+  font-size: 1rem;
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .blurb {
+    margin: 0 3rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .blurb {
+    margin: 0 1rem;
+    padding: 4rem 0;
+    font-size: .65rem;
+  }
+}
+
+p.editor {
+  color: #dfdad9;
+}
+
+.designer {
+  margin-bottom: 3rem;
+}
+
+.authors {
+  margin-top: 8%;
+  padding: 2rem;
+  z-index: 3;
+}
+.authors li {
+  color: #dfdad9;
+}
+
+.nav {
+  position: relative;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 414px) {
+  .nav {
+    margin: 0;
+    font-size: .75rem;
+  }
+}
+.nav a {
+  position: absolute;
+  z-index: 2;
+  right: 0%;
+  padding: .5rem 1rem;
+}
+.nav .essays {
+  color: #dfdad9;
+  padding: .5rem 2rem;
+  left: 0%;
+}
+.nav li {
+  padding: 1rem 2rem;
+  text-align: center;
+  display: inline-block;
+}
+.nav li:hover {
+  color: #ffdf89;
+}
+
+.order {
+  float: left;
+  padding: 2rem;
+  width: 60%;
+}
+@media only screen and (max-width: 414px) {
+  .order button {
+    font-size: .8rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .order {
+    padding: 0;
+    margin: 0 2rem;
+  }
+}
+.order p {
+  color: #dfdad9;
+  padding-right: 6rem;
+}
+@media only screen and (max-width: 414px) {
+  .order p {
+    padding-right: 0;
+  }
+}
+
+.about {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1.15rem;
+  float: right;
+  padding: .75rem;
+}
+@media only screen and (max-width: 414px) {
+  .about {
+    font-size: .9rem;
+  }
+}
+
+.white {
+  color: #dfdad9;
+}
+
+/******************************************
+/* BIOS                 
+/*******************************************/
+/**/
+.grid-overlay {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  height: 29rem;
+  background: #2c2724;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.7s,opacity 0.7s linear;
+}
+.grid-overlay .title {
+  font-size: 1.25rem;
+  font-family: "Sorts Mill Goudy", serif;
+  padding-right: .15rem;
+  color: #ffdf89;
+}
+.grid-overlay p.info {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #dfdad9;
+}
+
+.item {
+  overflow: hidden;
+  width: 38rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 414px) {
+  .item {
+    font-size: .6rem;
+    line-height: 1.5rem;
+  }
+}
+.item:hover .grid-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.item:hover {
+  border-bottom: 1px solid #dfdad9;
+  width: 10rem;
+}
+.item:hover body {
+  background-color: #756a66;
+}
+
+.booklet-img {
+  float: left;
+  padding: 1rem;
+}
+
+.margin-about {
+  margin: 6rem 0;
+}
+
+.margin-img {
+  margin: 11rem 0;
+}
+
+.icon {
+  display: block;
+  width: 28px;
+  width: 28px;
+}
+
+.email {
+  background: url(../img/sprites.png) no-repeat;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-position: 0 0;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 414px) {
+  .email {
+    margin: 0;
+  }
+}
+.email:hover {
+  background-position: 0 -31px;
+  width: 28px;
+  height: 28px;
+}
+
+.mail {
+  float: right;
+  margin: 4rem;
+}
+@media only screen and (max-width: 414px) {
+  .mail {
+    margin: 0 2rem;
+    float: none;
+  }
+}
+.mail:hover p {
+  color: #dfdad9;
+}
+.mail p {
+  font-size: .5rem;
+  padding: .25rem;
+  color: #ffdf89;
+  transition: .4s ease-out;
+  float: left;
+}
+@media only screen and (max-width: 414px) {
+  .mail p {
+    padding: .25rem 0;
+    float: none;
+  }
+}
+
+/******************************************
+/* EXCERPTS                 
+/*******************************************/
+/**/
+.box {
+  padding: 4rem;
+  cursor: pointer;
+  min-height: 19rem;
+}
+.box:hover .excerpt-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.box p {
+  font-size: 1rem;
+}
+
+.box-1 {
+  background-color: #c5bcb9;
+}
+
+.box-2 {
+  background-color: #afa5a1;
+}
+
+.box-3 {
+  background-color: #948783;
+}
+
+.box-4 {
+  background-color: #756a66;
+}
+
+.box-5 {
+  background-color: #695f5b;
+}
+
+.box-6 {
+  background-color: #4f4844;
+}
+
+.box-7 {
+  background-color: #2c2724;
+}
+
+.excerpt-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: -303px;
+  right: 0px;
+  left: 0px;
+  padding: 2rem;
+  background-color: #dfdad9;
+  color: #2c2724;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.7s,opacity 0.7s linear;
+}
+
+.overlay {
+  bottom: 0px;
+}
