@@ -168,14 +168,21 @@ li {
   width: 100%;
 }
 
-button {
+.paypal {
   color: #ffdf89;
   font-family: "Sorts Mill Goudy", serif;
-  background-color: none;
+  background-color: #2c2724;
+  border: none;
+  float: left;
+  padding: 1rem;
   border-bottom: 3px solid #ffdf89;
+  transition: .4s ease-out;
+}
+.paypal:hover {
+  background-color: #1c1918;
 }
 @media only screen and (max-width: 414px) {
-  button {
+  .paypal {
     padding: 0;
   }
 }
@@ -202,6 +209,13 @@ button {
 .logo {
   margin: 1rem;
   position: absolute;
+}
+@media only screen and (max-width: 1170px) {
+  .logo {
+    margin: 1rem 0;
+    left: 46.5%;
+    z-index: 3;
+  }
 }
 @media only screen and (max-width: 768px) {
   .logo {
@@ -329,11 +343,10 @@ p.editor {
 
 .order {
   float: left;
-  padding: 2rem;
-  width: 60%;
+  padding: 2rem 0 0 2rem;
 }
-@media only screen and (max-width: 414px) {
-  .order button {
+@media only screen and (max-width: 768px) {
+  .order .paypal {
     font-size: .8rem;
   }
 }
@@ -346,6 +359,8 @@ p.editor {
 .order p {
   color: #dfdad9;
   padding-right: 6rem;
+  margin-top: 3rem;
+  clear: both;
 }
 @media only screen and (max-width: 414px) {
   .order p {
@@ -373,11 +388,6 @@ p.editor {
 /* BIOS                 
 /*******************************************/
 /**/
-.open {
-  opacity: 1;
-  visibility: visible;
-}
-
 .grid-overlay {
   position: absolute;
   top: 20px;
@@ -496,6 +506,16 @@ p.editor {
   float: right;
   margin: 4rem;
 }
+@media only screen and (max-width: 1170px) {
+  .mail {
+    margin: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mail {
+    float: left;
+  }
+}
 @media only screen and (max-width: 414px) {
   .mail {
     margin: 0 2rem;
@@ -528,6 +548,11 @@ p.editor {
   cursor: pointer;
   min-height: 19rem;
 }
+.box:hover .excerpt-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
 .box p {
   font-size: 1rem;
 }
@@ -535,30 +560,162 @@ p.editor {
 .box-1 {
   background-color: #c5bcb9;
 }
+@media only screen and (max-width: 1170px) {
+  .box-1 {
+    min-height: 38rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-1 {
+    min-height: 62rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-1 {
+    min-height: 62rem;
+  }
+}
 
 .box-2 {
   background-color: #afa5a1;
+}
+@media only screen and (max-width: 1170px) {
+  .box-2 {
+    min-height: 38rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-2 {
+    min-height: 31rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-2 {
+    min-height: 39rem;
+  }
 }
 
 .box-3 {
   background-color: #948783;
 }
+@media only screen and (max-width: 1170px) {
+  .box-3 {
+    min-height: 27rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-3 {
+    min-height: 31rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-3 {
+    min-height: 39rem;
+  }
+}
 
 .box-4 {
   background-color: #756a66;
+}
+@media only screen and (max-width: 1170px) {
+  .box-4 {
+    min-height: 27rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-4 {
+    min-height: 49rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-4 {
+    min-height: 39rem;
+  }
 }
 
 .box-5 {
   background-color: #695f5b;
 }
+@media only screen and (max-width: 1170px) {
+  .box-5 {
+    min-height: 38rem;
+  }
+  .box-5 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-5 {
+    min-height: 49rem;
+  }
+  .box-5 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-5 {
+    min-height: 62rem;
+  }
+  .box-5 p {
+    color: #dfdad9;
+  }
+}
 
 .box-6 {
   background-color: #4f4844;
+}
+@media only screen and (max-width: 1170px) {
+  .box-6 {
+    min-height: 38rem;
+  }
+  .box-6 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-6 {
+    min-height: 36rem;
+  }
+  .box-6 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-6 {
+    min-height: 39rem;
+  }
+  .box-6 p {
+    color: #dfdad9;
+  }
 }
 
 .box-7 {
   background-color: #2c2724;
   float: left;
+}
+@media only screen and (max-width: 1170px) {
+  .box-7 {
+    min-height: 38rem;
+  }
+  .box-7 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .box-7 {
+    min-height: 36rem;
+  }
+  .box-7 p {
+    color: #dfdad9;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box-7 {
+    min-height: 41rem;
+  }
+  .box-7 p {
+    color: #dfdad9;
+  }
 }
 
 .excerpt-overlay {
@@ -571,8 +728,36 @@ p.editor {
   background-color: #dfdad9;
   color: #2c2724;
   z-index: 4;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   transition: visibility 0s linear 0.7s,opacity 0.7s linear;
+}
+@media only screen and (max-width: 1170px) {
+  .excerpt-overlay {
+    visibility: visible;
+    opacity: 1;
+    top: 182px;
+    background-color: transparent;
+    padding: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .excerpt-overlay {
+    visibility: visible;
+    opacity: 1;
+    top: 182px;
+    background-color: transparent;
+    padding: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .excerpt-overlay {
+    visibility: visible;
+    opacity: 1;
+    top: 182px;
+    background-color: transparent;
+    padding: 2rem 4rem;
+  }
 }
 
 .overlay {

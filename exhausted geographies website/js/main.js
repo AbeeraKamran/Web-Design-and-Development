@@ -8,8 +8,8 @@ $(function() {
 	//     $(this).find('p + p').toggleClass('open');
 	// });
 
-	$( ".box" ).click(function() {     
-   $('.excerpt-overlay').toggle("slide", { direction: "right" }, 1000);	
-	});
+	// $( ".box" ).click(function() {     
+ //   $('.excerpt-overlay').toggle("slide", { direction: "right" }, 1000);	
+	// });
 
 });

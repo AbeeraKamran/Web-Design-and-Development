@@ -169,12 +169,19 @@ li {
   float: right;
   width: 100%;
 }
-button {
+.paypal {
   // margin-top: 40%;
   color: $accent;
   font-family: $font-stack;
-  background-color: none;
+  background-color: $body;
+  border: none;
+  float: left;
+  padding: 1rem;
   border-bottom: 3px solid $accent;
+  transition: .4s ease-out;
+  &:hover {
+    background-color: #1c1918;
+  }
     @include goldilocks (baby) {
       padding: 0;
     }
@@ -201,6 +208,11 @@ button {
 .logo {
   margin: 1rem;
   position: absolute;
+  @include goldilocks(papa) {
+    margin: 1rem 0;
+    left: 46.5%;
+    z-index: 3;
+  }
   @include goldilocks(mama) {
     margin: 1rem 0;
     left: 45%;
@@ -318,11 +330,11 @@ p.editor {
   // width: 16rem;
   // position: absolute;
   float: left;
-  padding: 2rem;
-  width: 60%;
+  padding: 2rem 0 0 2rem;
+  // width: 60%;
 
-  button {
-    @include goldilocks (baby) {
+  .paypal {
+    @include goldilocks (mama) {
       font-size: .8rem;
     }
   }
@@ -334,6 +346,8 @@ p.editor {
   p{
     color: $light;
     padding-right: 6rem;
+    margin-top: 3rem;
+    clear: both;
       @include goldilocks (baby) {
         padding-right: 0;
       }
@@ -357,10 +371,7 @@ p.editor {
 /* BIOS                 
 /*******************************************/
 /**/
-.open {
-  opacity: 1;
-  visibility: visible;
-}
+
 .grid-overlay {
     position: absolute;
     top: 20px;
@@ -481,6 +492,12 @@ p.editor {
 .mail{
   float: right;
   margin: 4rem;
+    @include goldilocks (papa) {
+      margin: 2rem;
+    }
+    @include goldilocks (mama) {
+      float: left;
+    }
     @include goldilocks (baby) {
     margin: 0 2rem;
     float: none;
@@ -513,47 +530,132 @@ p.editor {
   padding: 4rem;
   cursor: pointer;
   min-height: 19rem;
-  // min-height: 24rem;
-    //   &:active .excerpt-overlay {
-    //     // display: inline-block;
-    //   visibility:visible;
-    //   opacity:1;
-    //   transition-delay:0.4s;
-    // }
- 
-  // @include goldilocks (baby) {
-  //     &:focus .excerpt-overlay {
-  //     visibility:visible;
-  //     opacity:1;
-  //   }
-  // }
+    &:hover .excerpt-overlay {
+      // display: inline-block;
+    visibility:visible;
+    opacity:1;
+    transition-delay:0.4s;
+  }
   p {
     font-size: 1rem;
   }
   
 }
+
 .box-1{
   background-color: #c5bcb9;
+  @include goldilocks (papa) {
+    min-height: 38rem;
+   }
+   @include goldilocks (mama) {
+    min-height: 62rem;
+   }
+  @include goldilocks (baby) {
+    min-height: 62rem;
+  }
 }
+
 .box-2 {
   background-color: #afa5a1;
+  @include goldilocks (papa) {
+    min-height: 38rem;
+   }
+  @include goldilocks (mama) {
+    min-height: 31rem;
+   }
+  @include goldilocks (baby) {
+    min-height: 39rem;
+  }
 }
+
 .box-3 {
   background-color: #948783;
-  // margin-right: 4.75rem;
+  @include goldilocks (papa) {
+    min-height: 27rem;
+   }
+  @include goldilocks (mama) {
+    min-height: 31rem;
+   }
+  @include goldilocks (baby) {
+    min-height: 39rem;
+  }
 }
+
 .box-4 {
   background-color: #756a66;
+  @include goldilocks (papa) {
+    min-height: 27rem;
+   }
+  @include goldilocks (mama) {
+    min-height: 49rem;
+   }
+  @include goldilocks (baby) {
+    min-height: 39rem;
+  }
 }
 .box-5 {
   background-color: #695f5b;
+  @include goldilocks (papa) {
+    min-height: 38rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (mama) {
+    min-height: 49rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (baby) {
+    min-height: 62rem;
+    p {
+      color: $light; 
+    }
+  }
 }
 .box-6 {
   background-color: #4f4844;
+  @include goldilocks (papa) {
+    min-height: 38rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (mama) {
+    min-height: 36rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (baby) {
+    min-height: 39rem;
+    p {
+      color: $light; 
+    }
+  }
 }
 .box-7 {
   background-color: #2c2724;
   float: left;
+  @include goldilocks (papa) {
+    min-height: 38rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (mama) {
+    min-height: 36rem;
+    p {
+      color: $light; 
+    }
+   }
+  @include goldilocks (baby) {
+    min-height: 41rem;
+    p {
+      color: $light; 
+    }
+  }
 }
 
 
@@ -570,10 +672,32 @@ p.editor {
     // display: none;
     // padding: 3px;
     // transition: 0.6s ease-out;
-    // visibility:hidden;
-    display: none;
-    // opacity:0;
+    visibility:hidden;
+    opacity:0;
     transition:visibility 0s linear 0.7s,opacity 0.7s linear;
+
+    @include goldilocks (papa) {
+      visibility: visible;
+      opacity: 1;
+      top: 182px;
+      background-color: transparent;
+      padding: 2rem 4rem;
+    }
+    @include goldilocks (mama) {
+      visibility: visible;
+      opacity: 1;
+      top: 182px;
+      background-color: transparent;
+      padding: 2rem 4rem;
+    }
+
+    @include goldilocks (baby) {
+      visibility: visible;
+      opacity: 1;
+      top: 182px;
+      background-color: transparent;
+      padding: 2rem 4rem;
+    }
   }
 
 .overlay {
