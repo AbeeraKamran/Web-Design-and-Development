@@ -14,9 +14,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.min.css"/>
+        <link rel="stylesheet" href="css/visibility.css"/>
         <link rel="stylesheet" href="css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>
-
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -28,26 +28,22 @@
         <div id="main" data-equalizer>
             
             <div id="index" class="row">
-                
                 <div class="light-grey" data-equalizer-watch>
                     <div class="large-14 columns">
                     <div class="nav">
-                
-                <a href="about.html">About</a>
-<!--                 <a href="excerpts.html" class="essays">Excerpts</a>
- -->                
-            </div>
-                        <div class="exhausted">
-                            <h1>e</h1>
-                            <h1>x</h1>
-                            <h1>h</h1>
-                            <h1>a</h1>
-                            <h1>u</h1>
-                            <h1>s</h1>
-                            <h1>t</h1>
-                            <h1>e</h1>
-                            <h1>d</h1>
-                        </div>
+                        <a href="about.html">About</a>
+                    </div>
+                    <div class="exhausted">
+                        <h1>e</h1>
+                        <h1>x</h1>
+                        <h1>h</h1>
+                        <h1>a</h1>
+                        <h1>u</h1>
+                        <h1>s</h1>
+                        <h1>t</h1>
+                        <h1>e</h1>
+                        <h1>d</h1>
+                    </div>
                         <!-- <h1>exhaus<br>ted</h1> -->
                         <p class="blurb">An experimental art publication mapping the city of Karachi</p>
                     <div class="geographies">
@@ -83,14 +79,13 @@
                             <li class="item">Nausheen H. Anwar
                                 <div class="grid-overlay">
                                     <h5 class="title">Nausheen H. Anwar</h5>
-                                    <p class="info">is Assistant Professor of Urban Studies in the Department of Social Sciences at the Institute of Business Administration (IBA), Karachi, Pakistan. She received her PhD from the Graduate School of Architecture, Planning, and Preservation (GSAPP), Columbia University. She is the author of Infrastructure Redux: Crisis, Progress in Industrial Pakistan & Beyond (2015, Palgrave Macmillan), which explores, through detailed cases of Sialkot and Faisalabad in industrializing Punjab, the double-edged narratives of development that frame infrastructure in post-independence Pakistan. Nausheen is the recipient of several grants that center on themes such as gender and inequality, conflict resolution and urban governance, migration, and political-economy of infrastructure development. Her current project examines shifting registers of mobility, infrastructures and political authority that mediate everyday life in a constellation of cities and towns that connect the border regions of Iran and Pakistan. Aspects of Nausheen’s work also appear in the journals Antipode, Environment and Planning A, and South Asian History and Culture. She has held post-doctoral fellowships at Harvard University and at the Asia Research Institute (ARI), National University Singapore.</p>
+                                    <p class="info">is Assistant Professor of Urban Studies in the Department of Social Sciences at the Institute of Business Administration (IBA), Karachi, Pakistan. She received her PhD from the Graduate School of Architecture, Planning, and Preservation (GSAPP), Columbia University. She is the author of Infrastructure Redux: Crisis, Progress in Industrial Pakistan & Beyond (2015, Palgrave Macmillan), which explores, through detailed cases of Sialkot and Faisalabad in industrializing Punjab, the double-edged narratives of development that frame infrastructure in post-independence Pakistan. Nausheen is the recipient of several grants that center on themes such as gender and inequality, conflict resolution and urban governance, migration, and political-economy of infrastructure development.<span class="hide-for-small-only">Her current project examines shifting registers of mobility, infrastructures and political authority that mediate everyday life in a constellation of cities and towns that connect the border regions of Iran and Pakistan. Aspects of Nausheen’s work also appear in the journals Antipode, Environment and Planning A, and South Asian History and Culture. She has held post-doctoral fellowships at Harvard University and at the Asia Research Institute (ARI), National University Singapore.</span></p>
                                 </div>
                             </li>
                             <li class="item">Yaminay N. Chaudhri
                                 <div class="grid-overlay">
                                         <h5 class="title">Yaminay N. Chaudhri</h5>
-                                        <p class="info">is Assistant Professor of Urban Studies in the Department of Social Sciences at the Institute of Business Administration (IBA), Karachi, Pakistan. She received her PhD from the Graduate School of Architecture, Planning, and Preservation (GSAPP), Columbia University. She is the author of Infrastructure Redux: Crisis, Progress in Industrial Pakistan & Beyond (2015, Palgrave Macmillan), which explores, through detailed cases of Sialkot and Faisalabad in industrializing Punjab, the double-edged narratives of development that frame infrastructure in post-independence Pakistan. Nausheen is the recipient of several grants that center on themes such as gender and inequality, conflict resolution and urban governance, migration, and political-economy of infrastructure development. Her current project examines shifting registers of mobility, infrastructures and political authority that mediate everyday life in a constellation of cities and towns that connect the border regions of Iran and Pakistan. Aspects of Nausheen’s work also appear in the journals Antipode, Environment and Planning A, and South Asian History and Culture. She has held post-doctoral fellowships at Harvard University and at the Asia Research Institute (ARI), National University Singapore.</p>
-                                        <p class="date">March 7, 2015</p>
+                                        <p class="info">works with the emotional and physical architectures of longing, drawing on the precarious nature of place, home and cities. She uses multiple media including video, performance and text to recreate situations that are both intensely emotional and unexceptionally banal. Chaudhri has a degree in architecture from Cornell University, and an MFA in combined media studio arts from State University of New York at Albany. She has taught at Karachi University, Indus Valley School of Art and Architecture, Karachi, SZABIST, Karachi, the Aga Khan University, Karachi, and is the founder of the Tentative Collective.</p>
                                     </div>
                             </li>
                             <li class="item">Zahra Malkani
@@ -134,7 +129,15 @@
                         </ul>
                     </div>
                     <div class="order">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post"target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="encrypted" value="-----BEGIN
+                        PKCS7-----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-----END
+                        PKCS7-----
+                        ">
                         <button>Order A Copy</button>
+                    </form>
+                        
                         <!-- <p>$25</p>-->                        
                         <p>$25 |  Shipping Available for US and Canada only</p>
                     </div>

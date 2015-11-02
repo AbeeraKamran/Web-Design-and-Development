@@ -52,10 +52,7 @@ body {
 
 #main {
   position: relative;
-}
-
-.row {
-  max-width: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -65,7 +62,7 @@ h1 {
   color: #4f4844;
   float: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 6rem;
     line-height: 6rem;
@@ -74,6 +71,7 @@ h1 {
 @media only screen and (max-width: 414px) {
   h1 {
     font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
@@ -182,13 +180,15 @@ button {
   }
 }
 
-.inner-page {
+#inner-page {
   background-color: #2c2724;
+  width: 100%;
 }
 
 .excerpt-page {
   background-color: #dfdad9;
   margin: 0 auto;
+  min-width: 100%;
 }
 
 .author {
@@ -203,10 +203,18 @@ button {
   margin: 1rem;
   position: absolute;
 }
+@media only screen and (max-width: 768px) {
+  .logo {
+    margin: 1rem 0;
+    left: 45%;
+    z-index: 3;
+  }
+}
 @media only screen and (max-width: 414px) {
   .logo {
     margin: .5rem 0;
-    left: 40%;
+    left: 45%;
+    z-index: 3;
   }
 }
 
@@ -219,7 +227,7 @@ button {
   margin: 1rem;
   width: 71%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .exhausted {
     width: 57%;
     margin: 3rem 3rem;
@@ -227,7 +235,8 @@ button {
 }
 @media only screen and (max-width: 414px) {
   .exhausted {
-    margin: 2rem 1rem;
+    margin: 2rem 0 0 1rem;
+    width: 71%;
   }
 }
 
@@ -236,10 +245,16 @@ button {
   margin: 0 1rem;
   width: 71%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .geographies {
     width: 55%;
     margin: 0 3rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .geographies {
+    margin: 0 1rem;
+    width: 71%;
   }
 }
 
@@ -250,7 +265,7 @@ button {
   font-size: 1rem;
   clear: both;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .blurb {
     margin: 0 3rem;
   }
@@ -258,13 +273,14 @@ button {
 @media only screen and (max-width: 414px) {
   .blurb {
     margin: 0 1rem;
-    padding: 4rem 0;
+    padding: 1rem 0;
     font-size: .65rem;
   }
 }
 
 p.editor {
   color: #dfdad9;
+  font-size: 1rem;
 }
 
 .designer {
@@ -296,18 +312,19 @@ p.editor {
   right: 0%;
   padding: .5rem 1rem;
 }
+.nav a:hover, .nav a:focus {
+  color: #ffdf89;
+}
 .nav .essays {
   color: #dfdad9;
   padding: .5rem 2rem;
   left: 0%;
+  z-index: 4;
 }
 .nav li {
   padding: 1rem 2rem;
   text-align: center;
   display: inline-block;
-}
-.nav li:hover {
-  color: #ffdf89;
 }
 
 .order {
@@ -356,6 +373,11 @@ p.editor {
 /* BIOS                 
 /*******************************************/
 /**/
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .grid-overlay {
   position: absolute;
   top: 20px;
@@ -366,16 +388,32 @@ p.editor {
   opacity: 0;
   transition: visibility 0s linear 0.7s,opacity 0.7s linear;
 }
+@media only screen and (max-width: 414px) {
+  .grid-overlay {
+    height: 45rem;
+    margin: 0 .75rem 0 0;
+  }
+}
 .grid-overlay .title {
   font-size: 1.25rem;
   font-family: "Sorts Mill Goudy", serif;
   padding-right: .15rem;
   color: #ffdf89;
 }
+@media only screen and (max-width: 414px) {
+  .grid-overlay .title {
+    font-size: .75rem;
+  }
+}
 .grid-overlay p.info {
   font-size: 1rem;
   margin-bottom: 0;
   color: #dfdad9;
+}
+@media only screen and (max-width: 414px) {
+  .grid-overlay p.info {
+    font-size: .6rem;
+  }
 }
 
 .item {
@@ -383,12 +421,6 @@ p.editor {
   width: 38rem;
   line-height: 2rem;
   cursor: pointer;
-}
-@media only screen and (max-width: 414px) {
-  .item {
-    font-size: .6rem;
-    line-height: 1.5rem;
-  }
 }
 .item:hover .grid-overlay {
   visibility: visible;
@@ -401,6 +433,23 @@ p.editor {
 }
 .item:hover body {
   background-color: #756a66;
+}
+@media only screen and (max-width: 414px) {
+  .item {
+    font-size: .6rem;
+    line-height: 1.5rem;
+  }
+  .item:focus .grid-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  .item:focus body {
+    background-color: #756a66;
+  }
+  .item:focus {
+    border-bottom: 1px solid #dfdad9;
+    width: 10rem;
+  }
 }
 
 .booklet-img {
@@ -437,7 +486,7 @@ p.editor {
     margin: 0;
   }
 }
-.email:hover {
+.email:hover, .email:focus {
   background-position: 0 -31px;
   width: 28px;
   height: 28px;
@@ -453,7 +502,7 @@ p.editor {
     float: none;
   }
 }
-.mail:hover p {
+.mail:hover p, .mail:focus p {
   color: #dfdad9;
 }
 .mail p {
@@ -478,11 +527,6 @@ p.editor {
   padding: 4rem;
   cursor: pointer;
   min-height: 19rem;
-}
-.box:hover .excerpt-overlay {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0.4s;
 }
 .box p {
   font-size: 1rem;
@@ -514,6 +558,7 @@ p.editor {
 
 .box-7 {
   background-color: #2c2724;
+  float: left;
 }
 
 .excerpt-overlay {
@@ -526,8 +571,7 @@ p.editor {
   background-color: #dfdad9;
   color: #2c2724;
   z-index: 4;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   transition: visibility 0s linear 0.7s,opacity 0.7s linear;
 }
 

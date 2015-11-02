@@ -60,11 +60,12 @@ body {
 }
 #main {
   position: relative;
+  overflow: hidden;
 }
 
-.row {
-  max-width: 100%;
-}
+// .row {
+//   max-width: 100%;
+// }
 
 h1 {
   font-family: $font-stack;
@@ -79,6 +80,7 @@ h1 {
   }
   @include goldilocks(baby) {
     font-size: 2rem;
+    line-height: 2rem;
   }
 }
 h2 {
@@ -178,12 +180,14 @@ button {
     }
 }
 
-.inner-page {
+#inner-page {
   background-color: $body;
+  width: 100%;
 }
 .excerpt-page {
   background-color: $light;
   margin: 0 auto;
+  min-width: 100%;
 }
 .author {
   color: $light;
@@ -197,9 +201,15 @@ button {
 .logo {
   margin: 1rem;
   position: absolute;
+  @include goldilocks(mama) {
+    margin: 1rem 0;
+    left: 45%;
+    z-index: 3;
+  }
   @include goldilocks(baby) {
     margin: .5rem 0;
-    left: 40%;
+    left: 45%;
+    z-index: 3;
   }
 }
 .space {
@@ -215,16 +225,22 @@ width: 71%;
     margin: 3rem 3rem;
   }
   @include goldilocks (baby) {
-    margin: 2rem 1rem;
+    margin: 2rem 0 0 1rem;
+    width: 71%;
   }
 }
 .geographies {
   clear: both;
   margin: 0 1rem;
   width: 71%;
+  
   @include goldilocks (mama) {
     width: 55%;
     margin: 0 3rem;
+  }
+  @include goldilocks(baby) {
+    margin: 0 1rem;
+    width: 71%;
   }
 }
 .blurb {
@@ -238,7 +254,7 @@ width: 71%;
   }
     @include goldilocks (baby) {
     margin: 0 1rem;
-    padding: 4rem 0;
+    padding: 1rem 0;
     font-size: .65rem;
   }
 }
@@ -246,6 +262,7 @@ width: 71%;
 p.editor {
     // font-size: 1rem;
     color: $light;
+    font-size: 1rem;
 }
 
 .designer {
@@ -276,20 +293,22 @@ p.editor {
       z-index: 2;
       right:0%;
       padding: .5rem 1rem;
+      &:hover, &:focus{
+      color: $accent;
+      }
     }
     .essays {
     color: $light;
     padding: .5rem 2rem;
     left: 0%;
+    z-index: 4;
     }
   
   li {
     padding: 1rem 2rem;
     text-align: center;
     display: inline-block;
-    &:hover {
-      color: $accent;
-      }
+    
     
   }
 }
@@ -338,7 +357,10 @@ p.editor {
 /* BIOS                 
 /*******************************************/
 /**/
-
+.open {
+  opacity: 1;
+  visibility: visible;
+}
 .grid-overlay {
     position: absolute;
     top: 20px;
@@ -353,17 +375,27 @@ p.editor {
     visibility:hidden;
     opacity:0;
     transition:visibility 0s linear 0.7s,opacity 0.7s linear;
+    @include goldilocks(baby) {
+      height: 45rem;
+      margin: 0 .75rem 0 0;
+    }
 
     .title  {
       font-size: 1.25rem;
       font-family: $font-stack;
       padding-right: .15rem;
       color: $accent;
+      @include goldilocks(baby) {
+        font-size: .75rem;
+      }
     }
     p.info {
       font-size: 1rem;
       margin-bottom: 0;
       color: $light;
+      @include goldilocks(baby) {
+        font-size: .6rem;
+      }
     }
 }
 
@@ -373,10 +405,6 @@ p.editor {
   width: 38rem;
   line-height: 2rem;
   cursor: pointer;
-    @include goldilocks (baby) {
-    font-size: .6rem;
-    line-height: 1.5rem;
-  }
   // height: 20rem;
   &:hover .grid-overlay {
     // display: inline-block;
@@ -390,6 +418,25 @@ p.editor {
   }
   &:hover body {
     background-color: $heading;
+  }
+  @include goldilocks (baby) {
+    font-size: .6rem;
+    line-height: 1.5rem;
+    // border-bottom: 1px solid $light;
+    // width: 7rem;
+
+      &:focus .grid-overlay {
+      // display: inline-block;
+      visibility:visible;
+      opacity:1;
+    }
+      &:focus body {
+      background-color: $heading;
+    }
+      &:focus{
+      border-bottom: 1px solid $light;
+      width: 10rem;
+    }
   }
 
 }
@@ -424,7 +471,7 @@ p.editor {
     @include goldilocks (baby) {
       margin: 0;
     }
-  &:hover {
+  &:hover, &:focus {
     background-position: 0 -31px ;
     width: 28px;
     height: 28px;
@@ -438,7 +485,8 @@ p.editor {
     margin: 0 2rem;
     float: none;
   }
-  &:hover p{
+  &:hover p, 
+  &:focus p{
       color: $light;
     }
 
@@ -466,15 +514,23 @@ p.editor {
   cursor: pointer;
   min-height: 19rem;
   // min-height: 24rem;
-    &:hover .excerpt-overlay {
-      // display: inline-block;
-    visibility:visible;
-    opacity:1;
-    transition-delay:0.4s;
-  }
+    //   &:active .excerpt-overlay {
+    //     // display: inline-block;
+    //   visibility:visible;
+    //   opacity:1;
+    //   transition-delay:0.4s;
+    // }
+ 
+  // @include goldilocks (baby) {
+  //     &:focus .excerpt-overlay {
+  //     visibility:visible;
+  //     opacity:1;
+  //   }
+  // }
   p {
     font-size: 1rem;
   }
+  
 }
 .box-1{
   background-color: #c5bcb9;
@@ -497,6 +553,7 @@ p.editor {
 }
 .box-7 {
   background-color: #2c2724;
+  float: left;
 }
 
 
@@ -513,8 +570,9 @@ p.editor {
     // display: none;
     // padding: 3px;
     // transition: 0.6s ease-out;
-    visibility:hidden;
-    opacity:0;
+    // visibility:hidden;
+    display: none;
+    // opacity:0;
     transition:visibility 0s linear 0.7s,opacity 0.7s linear;
   }
 

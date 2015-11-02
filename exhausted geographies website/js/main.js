@@ -1,39 +1,15 @@
-
-// var box1 = $('.grid-overlay-1');
-
-// $('.item-1').hover(function () {
-  
-    
-//     box1.removeClass('hidden');
-//     setTimeout(function () {
-//       box1.removeClass('visuallyhidden');
-//     }, 20);
+$(function() {
 
 
-    
-    
-//   });
+	// $('body').hasClass('no-touch') ? event = 'mouseenter mouseleave' : event = 'click';
+	// //!$('body').hasClass('no-touch') ? event = 'mouseenter mouseleave' : event = 'click';
 
-// var box2 = $('.grid-overlay-2');
+	// $('.item').on(event, function() {
+	//     $(this).find('p + p').toggleClass('open');
+	// });
 
-// $('.item-2').on('mouseover', function () {
-  
-//   if (box2.hasClass('hidden')) {
-    
-//     box2.removeClass('hidden');
-//     setTimeout(function () {
-//       box2.removeClass('visuallyhidden');
-//     }, 20);
+	$( ".box" ).click(function() {     
+   $('.excerpt-overlay').toggle("slide", { direction: "right" }, 1000);	
+	});
 
-//   } else {
-    
-//     box2.addClass('visuallyhidden');
-    
-//     box2.one('transitionend', function(e) {
-
-//       box2.addClass('hidden');
-
-//     });
-    
-//   }
-// });
+});
