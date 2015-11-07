@@ -150,7 +150,7 @@ li {
 }
 
 .light-grey {
-  background-color: #dfdad9;
+  background-color: rgba(223, 217, 216, 0.54);
   width: 100%;
   float: left;
 }
@@ -473,6 +473,11 @@ p.editor {
 
 .margin-img {
   margin: 11rem 0;
+}
+@media only screen and (max-width: 414px) {
+  .margin-img {
+    margin: 0;
+  }
 }
 
 .icon {
