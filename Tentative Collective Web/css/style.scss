@@ -56,6 +56,7 @@ html {
 }
 body {
   font-family: $font-sans;
+  overflow-x: hidden;
 }
 
 ul {
@@ -95,8 +96,6 @@ animation: AnimationName 15s ease infinite;
 
 }
 
-
-
 main {
   background-color: #fff;
   margin:.75rem;
@@ -132,6 +131,10 @@ display: none;
 
 a:visited {
   color: black;
+}
+
+:focus {
+  outline: none;
 }
 
 // .pace .pace-progress{
@@ -629,6 +632,12 @@ footer {
     color: $pink;
     border-bottom: 1px solid $pink;
     transition: .25s all ease-in-out;
+  }
+}
+
+.gandi {
+  .blurb {
+    width: 30rem;
   }
 }
 

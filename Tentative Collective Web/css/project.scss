@@ -94,7 +94,7 @@ h2 {
 }
 
 .project-info {
-	background-color: snow;
+	background-color: white;
 	border: 6px solid black;
 	padding: 3rem 3rem 3rem;
 	margin-bottom: 2rem;
@@ -142,10 +142,14 @@ h2 {
 .about {
 	margin-bottom: 3rem;
 }
-
+.contributors {
+	max-width: 26rem;
+}
 .info{
 	border: 6px solid black;
-	// max-width: 38rem;
+	h5 {
+		padding: 1rem 0;
+	}
 }
 .reveal-modal .close-reveal-modal {
 	font-size: 1.5rem;
@@ -174,15 +178,39 @@ h2 {
   
 // }
 
-.extra-info {
-	a {
+ul.extra-info {
+	margin-bottom: 6rem;
+	text-align: center;
+	
+	li {
 		font-size: 1.25rem;
-		color: $pink;
-		float: left;
-		padding:  0 2rem;
+		display: inline-block;
+		padding:  0 2rem 0 0;
+	}
+	a {
+		
+		padding: .5rem;
+		border: 4px solid black;
+		&:hover {
+			background-color:  $pink;
+			color: white;
+		}
+	}
+
+}
+
+.publication {
+	a {
+		border-bottom: 2px solid black;
+		&:hover {
+			background-color: $pink;
+		}
 	}
 }
-  
+
+.pakhtun-quote {
+	text-align: center;
+}
 
 /******************************************
 /* FLEXSLIDER                 
@@ -223,8 +251,13 @@ h2 {
 
 .flex-control-nav {
 	margin: 1rem 0 2rem;
+	bottom: -6px;
 }
-
+.flexslider-projections {
+	li.clone {
+	width: 10% !important;
+}
+}
 
 .grid-overlay {
 	position: absolute;

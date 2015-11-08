@@ -49,6 +49,7 @@ html {
 
 body {
   font-family: "Gill Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
@@ -138,6 +139,10 @@ main {
 
 a:visited {
   color: black;
+}
+
+:focus {
+  outline: none;
 }
 
 /******************************************
@@ -493,4 +498,8 @@ footer p {
   color: #dd1b75;
   border-bottom: 1px solid #dd1b75;
   transition: .25s all ease-in-out;
+}
+
+.gandi .blurb {
+  width: 30rem;
 }
