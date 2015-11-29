@@ -1,0 +1,28 @@
+.facebook-white, .facebook-yellow, .vimeo-white, .vimeo-yellow{
+	background: url(sprites.png) no-repeat;
+}
+
+.facebook-white{
+	background-position: 0 -1px ;
+	width: 32px;
+	height: 32px;
+}
+
+.facebook-yellow{
+	background-position: 0 -41px ;
+	width: 32px;
+	height: 32px;
+}
+
+.vimeo-white{
+	background-position: -49px -1px ;
+	width: 32px;
+	height: 32px;
+}
+
+.vimeo-yellow{
+	background-position: -49px -41px ;
+	width: 32px;
+	height: 32px;
+}
+

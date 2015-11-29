@@ -36,7 +36,7 @@
   // }
  
  
-  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+  // // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
   // $(".flexslider")
   //   .fitVids()
   //   .flexslider({
@@ -49,13 +49,8 @@
   //     }
   // });
 
-
 // Flexslider for images with thumbnail.
 $(window).load(function() {
-
-  $('.flexslider-projections').flexslider({
-      animation: "slide"
-    });
 
   $('#carousel1').flexslider({
     animation: "slide",
@@ -142,19 +137,157 @@ $(window).load(function() {
     slideshow: false,
     sync: "#carousel5",
   });
+    
+//  $('.reveal-modal').on('opened', function() {
+//     $('#flex1').flexslider("setPosition", 0);
+// });
+// $('.flexslider-projections').flexslider({
+//       animation: "slide"
+//     });
+   $(document).ready(function() {
 
+    $(".owl-carousel").owlCarousel({
 
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
 
-    // Vimeo API nonsense
-  var player = document.getElementById('player_1');
-  $f(player).addEvent('ready', ready);
- 
-  function addEvent(element, eventName, callback) {
-    if (element.addEventListener) {
-      element.addEventListener(eventName, callback, false)
-    } else {
-      element.attachEvent(eventName, callback, false);
-    }
-  }
+        // "singleItem:true" is a shortcut for:
+        // items : 1, 
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+    });
 });
-        
+});
+
+
+function initFlexModal1() {
+    $('#flex1').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#firstModal').on('opened.fndtn.reveal', function () {
+    initFlexModal1();
+})
+
+function initFlexModal2() {
+    $('#flex2').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#secondModal').on('opened.fndtn.reveal', function () {
+    initFlexModal2();
+})
+
+function initFlexModal3() {
+    $('#flex3').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#thirdModal').on('opened.fndtn.reveal', function () {
+    initFlexModal3();
+})
+
+function initFlexModal4() {
+    $('#flex4').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#fourthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal4();
+})
+
+function initFlexModal5() {
+    $('#flex5').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#fifthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal5();
+})
+
+function initFlexModal6() {
+    $('#flex6').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#sixthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal6();
+})
+
+function initFlexModal7() {
+    $('#flex7').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#seventhModal').on('opened.fndtn.reveal', function () {
+    initFlexModal7();
+})
+
+function initFlexModal8() {
+    $('#flex8').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#eighthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal8();
+})
+
+function initFlexModal9() {
+    $('#flex9').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#ninthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal9();
+})
+
+ 

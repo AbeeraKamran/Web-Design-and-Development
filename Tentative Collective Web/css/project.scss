@@ -30,6 +30,10 @@ li {
 	list-style: none;
 }
 
+p {
+	margin-bottom: 0;
+}
+
 img.scale {
 	max-width: 100%;
 	display: block; 
@@ -73,7 +77,7 @@ img.flip {
 
 h2 {
 	color: white;
-	font-size: 2.75rem;
+	font-size: 2rem;
 	text-align: center;
 	font-family: $font-sans;
 }
@@ -117,7 +121,7 @@ h2 {
 	// overflow: hidden;
 	position: relative;
 	p {
-		font-size: 1.25rem;
+		font-size: 1.05rem;
 		text-overflow: ellipsis;
 		word-wrap: break-word;
 	}
@@ -154,6 +158,10 @@ h2 {
 .reveal-modal .close-reveal-modal {
 	font-size: 1.5rem;
 	color: black;
+}
+
+.reveal-modal {
+	max-width: 47rem;
 }
 .modalTitle {
 	font-family: $heading;
@@ -253,11 +261,11 @@ ul.extra-info {
 	margin: 1rem 0 2rem;
 	bottom: -6px;
 }
-.flexslider-projections {
-	li.clone {
-	width: 10% !important;
-}
-}
+// .flexslider-projections {
+// 	li.clone {
+// 	width: inherit !important;
+// 	}
+// }
 
 .grid-overlay {
 	position: absolute;
@@ -327,6 +335,9 @@ ul.extra-info {
 	color: transparent;
 }
 
+#flex3 {
+	padding: 0.5rem 0;
+}
 
 /******************************************
 /* VIDEO                 

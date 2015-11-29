@@ -183,10 +183,10 @@ a {
 }
 .logo {
   width: 8rem;
-  margin: 4%;
+  margin: 3% 4%;
   float: left;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
 }
 #nav-trigger {
   position: absolute;
@@ -207,7 +207,7 @@ a {
 .eye{
   float: right;
   width: 3.5rem;
-  margin: 4% 91%;
+  margin: 3% 91%;
   position: fixed;
   z-index: 100;
   
@@ -539,20 +539,53 @@ footer {
     filter: url(#drop-shadow);
     -webkit-filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
     filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
+    transition: 0.5s ease-in-out;
   }
-
-
+  &:hover img {
+      filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+      -webkit-filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0));
+    }
+}
+.socials {
+  margin: 8% 47%;
+}
+.socials-icon {
+  display: block;
+  width: 32px;
+  height: 33px;
+  float: left;
+}
+.facebook {
+  background-position: 0 -1px;
+  &:hover {
+    background-position: 0 -41px;
+  }
 }
 
-.facebook {
-  font-size: 2rem;
-  text-align: center;
+.vimeo {
+  margin-left: 6px;
+  background-position: -49px -1px;
+  &:hover {
+    background-position: -49px -41px;
+  }
+}
+.sprite {
+  background: url("../img/sprites.png") no-repeat;
+}
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /******************************************
 /* PROJECT THUMBNAIL                   
 /*******************************************/
 /**/
+
+.first-project {
+  margin-top: -1%;
+}
 .projections {
   margin: 1rem 0rem;
   .thumbnail{
@@ -561,7 +594,7 @@ footer {
   }
 
   .blurb {
-    margin: 6rem 33rem;
+    margin: 3rem 33rem;
     float: right;
     @include goldilocks(baby) {
       margin: 0 auto;
@@ -578,7 +611,7 @@ footer {
   }
 
   .blurb {
-    margin: 4rem -11rem;
+    margin: 4rem -14rem;
     float: right;
     @include goldilocks(baby) {
       margin: 0 auto;
@@ -598,9 +631,8 @@ footer {
 }
 
 .blurb {
-  width: 25rem;
+  width: 27rem;
   font-family: 'Gill Sans';
-  font-size: 1.5rem;
   border: 6px solid black;
   background-color: snow;
   position: absolute;
@@ -608,12 +640,12 @@ footer {
 
   h3 {
     font-family: $heading;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
 
   }
 }
@@ -635,11 +667,6 @@ footer {
   }
 }
 
-.gandi {
-  .blurb {
-    width: 30rem;
-  }
-}
 
 
 

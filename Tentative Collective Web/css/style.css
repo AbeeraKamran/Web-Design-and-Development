@@ -180,10 +180,10 @@ a {
 
 .logo {
   width: 8rem;
-  margin: 4%;
+  margin: 3% 4%;
   float: left;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
 }
 
 #nav-trigger {
@@ -209,7 +209,7 @@ a {
 .eye {
   float: right;
   width: 3.5rem;
-  margin: 4% 91%;
+  margin: 3% 91%;
   position: fixed;
   z-index: 100;
 }
@@ -412,17 +412,57 @@ footer p {
   filter: url(#drop-shadow);
   -webkit-filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0.5));
+  transition: 0.5s ease-in-out;
+}
+.email:hover img {
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  -webkit-filter: drop-shadow(-1px 6px 0px rgba(0, 0, 0, 0));
+}
+
+.socials {
+  margin: 8% 47%;
+}
+
+.socials-icon {
+  display: block;
+  width: 32px;
+  height: 33px;
+  float: left;
 }
 
 .facebook {
-  font-size: 2rem;
-  text-align: center;
+  background-position: 0 -1px;
+}
+.facebook:hover {
+  background-position: 0 -41px;
+}
+
+.vimeo {
+  margin-left: 6px;
+  background-position: -49px -1px;
+}
+.vimeo:hover {
+  background-position: -49px -41px;
+}
+
+.sprite {
+  background: url("../img/sprites.png") no-repeat;
+}
+
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /******************************************
 /* PROJECT THUMBNAIL                   
 /*******************************************/
 /**/
+.first-project {
+  margin-top: -1%;
+}
+
 .projections {
   margin: 1rem 0rem;
 }
@@ -430,7 +470,7 @@ footer p {
   float: left;
 }
 .projections .blurb {
-  margin: 6rem 33rem;
+  margin: 3rem 33rem;
   float: right;
 }
 @media only screen and (max-width: 414px) {
@@ -447,7 +487,7 @@ footer p {
   float: left;
 }
 .mkmc .blurb {
-  margin: 4rem -11rem;
+  margin: 4rem -14rem;
   float: right;
 }
 @media only screen and (max-width: 414px) {
@@ -466,9 +506,8 @@ footer p {
 }
 
 .blurb {
-  width: 25rem;
+  width: 27rem;
   font-family: 'Gill Sans';
-  font-size: 1.5rem;
   border: 6px solid black;
   background-color: snow;
   position: absolute;
@@ -476,11 +515,11 @@ footer p {
 }
 .blurb h3 {
   font-family: "Conv_NuptialScriptLTStd";
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2rem;
 }
 .blurb p {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .thumbnail {
@@ -498,8 +537,4 @@ footer p {
   color: #dd1b75;
   border-bottom: 1px solid #dd1b75;
   transition: .25s all ease-in-out;
-}
-
-.gandi .blurb {
-  width: 30rem;
 }
