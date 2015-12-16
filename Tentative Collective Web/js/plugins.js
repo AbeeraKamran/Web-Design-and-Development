@@ -21,6 +21,60 @@
     }
 }());
 
+$(document).ready(function() {
+
+    // Initialize Masonry
+    $('.grid').masonry({
+        columnWidth: $grid.find('.grid-sizer')[0],
+        itemSelector: '.grid-item',
+        // isFitWidth: true,
+        percentPosition: true,
+        // gutter: 5,
+        isAnimated: !Modernizr.csstransitions
+    }).imagesLoaded(function() {
+        $(this).masonry('reload');
+    });
+
+    // // Find all Vimeo videos
+    // var $allVideos = $("iframe[src^='//player.vimeo.com']"),
+
+    //     // The element that is fluid width
+    //     $fluidEl = $(".grid-item");
+
+    // // Figure out and save aspect ratio for each video
+    // $allVideos.each(function() {
+
+    //   $(this)
+    //     .data('aspectRatio', this.height / this.width)
+
+    //     // and remove the hard coded width/height
+    //     .removeAttr('height')
+    //     .removeAttr('width');
+
+    // });
+
+    // // When the window is resized
+    // $(window).resize(function() {
+
+    //   var newWidth = $fluidEl.width();
+
+    //   // Resize all videos according to their own aspect ratio
+    //   $allVideos.each(function() {
+
+    //     var $el = $(this);
+    //     $el
+    //       .width(newWidth)
+    //       .height(newWidth * $el.data('aspectRatio'));
+
+    //   });
+
+    // // Kick off one resize to fix all videos on page load
+    // }).resize();
+
+});
+   
+
+
 // Can also be used with $(document).ready()
  
 
@@ -51,6 +105,7 @@
 
 // Flexslider for images with thumbnail.
 $(window).load(function() {
+     
 
   $('#carousel1').flexslider({
     animation: "slide",
@@ -144,23 +199,23 @@ $(window).load(function() {
 // $('.flexslider-projections').flexslider({
 //       animation: "slide"
 //     });
-   $(document).ready(function() {
+// $(document).ready(function() {
 
-    $(".owl-carousel").owlCarousel({
+//     $(".owl-carousel").owlCarousel({
 
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
+//         navigation : true, // Show next and prev buttons
+//         slideSpeed : 300,
+//         paginationSpeed : 400,
+//         singleItem:true
 
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-    });
-});
+//         // "singleItem:true" is a shortcut for:
+//         // items : 1, 
+//         // itemsDesktop : false,
+//         // itemsDesktopSmall : false,
+//         // itemsTablet: false,
+//         // itemsMobile : false
+//     });
+// });
 });
 
 
@@ -289,5 +344,20 @@ function initFlexModal9() {
 $('#ninthModal').on('opened.fndtn.reveal', function () {
     initFlexModal9();
 })
+
+function initFlexModal11() {
+    $('#flex11').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#eleventhModal').on('opened.fndtn.reveal', function () {
+    initFlexModal11();
+})
+
 
  
