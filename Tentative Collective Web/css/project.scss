@@ -327,14 +327,17 @@ ul.extra-info {
 	padding: 0.5rem 0;
 }
 #masonry-grid {
-margin: 0 auto;
-width: 100%;
+	margin: 0 auto;
+	width: 100%;
+	img {
+		width: 100%;
+	}
 }
 #masonry-grid:nth-child(1) {
     margin: 0;
 }
 .grid-item {
-	padding: 3px;
+	padding: 2px;
 
 }
 .grid-sizer {
@@ -353,13 +356,17 @@ width: 100%;
 .large-grid-item {
 	width: 65%;
 	float: left;
-	// height: 649px;
 }
 .video-grid-item {
 	float: left;
+	width: 33.3%;
 }
 iframe {
-    max-width: 100%;
+    width: 100%;
+}
+
+.float-right {
+	float: right;
 }
 /******************************************
 /* VIDEO                 
@@ -388,8 +395,7 @@ iframe {
 }
 .location-head {
     padding: 1rem;
-    border-bottom: .35rem solid black;
-    border-top: .35rem solid black;
+    border: .35rem solid black;
 	text-align: center;
     margin: 1rem -4rem;
     clear: both;
