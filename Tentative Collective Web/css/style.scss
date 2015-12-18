@@ -62,6 +62,10 @@ body {
 ul {
   margin: 0;
 }
+
+.row {
+  clear: both;
+}
 .content {
   padding: 3rem;
 }
@@ -522,6 +526,7 @@ footer {
   vertical-align: middle;
   position: relative;
   height: 17rem;
+  clear: both;
   p {
     color: $pink;
     margin: -3rem;

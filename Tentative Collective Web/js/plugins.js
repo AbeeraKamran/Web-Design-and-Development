@@ -22,6 +22,7 @@
 }());
 
 $(document).ready(function() {
+    
 
     // Initialize Masonry
     $('.grid').masonry({
@@ -34,6 +35,8 @@ $(document).ready(function() {
     }).imagesLoaded(function() {
         $(this).masonry('reload');
     });
+         $(".video-grid-item").fitVids();
+
 
     // // Find all Vimeo videos
     // var $allVideos = $("iframe[src^='//player.vimeo.com']"),

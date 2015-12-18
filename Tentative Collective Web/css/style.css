@@ -56,6 +56,10 @@ ul {
   margin: 0;
 }
 
+.row {
+  clear: both;
+}
+
 .content {
   padding: 3rem;
 }
@@ -394,6 +398,7 @@ footer {
   vertical-align: middle;
   position: relative;
   height: 17rem;
+  clear: both;
 }
 footer p {
   color: #dd1b75;
