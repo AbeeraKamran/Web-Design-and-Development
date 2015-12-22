@@ -11,7 +11,7 @@ $papa:     1170px;
    @media only screen and (max-width: $baby) { @content; } 
   }
   @else if $canvas == mama {
-   @media only screen and (min-width: $mama) { @content; } 
+   @media only screen and (min-width: $mama) and (max-width : 1024px) { @content; } 
   }
   @else if $canvas == papa {
    @media only screen and (min-width: $papa) { @content; } 

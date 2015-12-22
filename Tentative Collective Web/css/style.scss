@@ -191,6 +191,11 @@ a {
   float: left;
   position: fixed;
   z-index: 1;
+  @include goldilocks (baby) {
+    width: 3rem;
+    position: absolute;
+    margin: 9% 5%;
+  }
 }
 #nav-trigger {
   position: absolute;
@@ -214,6 +219,12 @@ a {
   margin: 3% 91%;
   position: fixed;
   z-index: 100;
+   @include goldilocks (baby) {
+    width: 1.5rem;
+    margin: 9% 86%;
+    position: fixed;
+
+   }
   
 }
 
@@ -282,21 +293,8 @@ a {
   .contact {
     
     margin: 32% 75%;
-    
-    /* Rotate from top left corner (not default) */
-    // -webkit-transform-origin: 0 0;
-    // -moz-transform-origin:    0 0;
-    // -ms-transform-origin:     0 0;
-    // -o-transform-origin:      0 0;
-    
-    // -webkit-transform: rotate(270deg); 
-    // -moz-transform:    rotate(270deg); 
-    // -ms-transform:     rotate(270deg); 
-    // -o-transform:      rotate(270deg); 
   }
 }
-
-
 
 .white {
   color: snow;
@@ -591,37 +589,33 @@ footer {
 .first-project {
   margin-top: -1%;
 }
+
+.thumbnail{
+    float: left;
+    padding-bottom: 4rem;
+    @include goldilocks(baby) {
+      float: none;
+      padding-bottom: 0;
+    }
+}
+
 .projections {
   margin: 1rem 0rem;
-  .thumbnail{
-    // position: absolute;
-    float: left;
-  }
 
   .blurb {
     margin: 3rem 33rem;
-    float: right;
     @include goldilocks(baby) {
-      margin: 0 auto;
-      float: none;
+      margin: 5% -7%;
+      position: relative;
     }
   }
 }
 
 .mkmc {
   margin: 1rem 0rem;
-  .thumbnail{
-    // position: absolute;
-    float: left;
-  }
 
   .blurb {
     margin: 4rem -14rem;
-    float: right;
-    @include goldilocks(baby) {
-      margin: 0 auto;
-      float: none;
-    }
   }
 }
 
@@ -642,21 +636,32 @@ footer {
   background-color: snow;
   position: absolute;
   padding: 3rem;
+  float: right;
+  @include goldilocks(baby) {
+    padding: 1rem;
+    position: absolute;
+    width: 103%;
+  }
 
   h3 {
     font-family: $heading;
     font-size: 2rem;
     line-height: 2rem;
+    @include goldilocks(baby) {
+      font-size: 1.25rem;
+    }
   }
 
   p {
     font-size: 1rem;
+    @include goldilocks(baby) {
+      font-size: .75rem;
+    }
 
   }
-}
-
-.thumbnail{
-    padding-bottom: 4rem;
+  .date {
+  font-size: .80rem;
+  }
 }
 
 .view {

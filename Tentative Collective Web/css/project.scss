@@ -22,7 +22,6 @@ body {
 	max-height: 600px;
 	overflow: hidden;
 	position: relative;
-
 	// display: block;
 }
 
@@ -45,6 +44,10 @@ img.scale {
 	/* ie8+9 - use modernizr instead of this \9 hack */
 	/* lt ie8 */
 	-ms-interpolation-mode: bicubic;
+	@include goldilocks (baby) {
+		max-width: 220%;
+		width: 220%;
+	}
 }
 
 // .flip {
@@ -59,6 +62,9 @@ img.scale {
 
 img.flip {
 	float: right;
+	@include goldilocks (baby) {
+		float: left;
+	}
 }
 
 /******************************************
@@ -69,10 +75,23 @@ img.flip {
 .project-title {
 	margin-top: 17rem;
 	font-family: $font-sans;
+	@include goldilocks (baby) {
+		margin: 7rem 0 0 0;
+	}
 	ul {
 		text-align: center;
 		margin: 1rem 0 2rem;
 	}
+	.date {
+    font-size: .90rem;
+    text-align: center;
+    padding: .65rem;
+    color: white;
+    @include goldilocks (baby) {
+    	font-size: .65rem;
+    	padding: 0.25rem;
+    }
+  }
 }
 
 h2 {
@@ -80,6 +99,10 @@ h2 {
 	font-size: 2rem;
 	text-align: center;
 	font-family: $font-sans;
+	@include goldilocks (baby) {
+		font-size: 1rem;
+		margin: 0;
+	}
 }
 
 .data {
@@ -102,6 +125,11 @@ h2 {
 	border: 6px solid black;
 	padding: 3rem 3rem 3rem;
 	margin-bottom: 2rem;
+	 @include goldilocks (baby) {
+	 	padding: 1.5rem;
+	 	margin-bottom: 1rem;
+ 		border: 4px solid black;
+	 }
 }
 .read-more {
 	padding:0;
@@ -124,6 +152,9 @@ h2 {
 		font-size: 1.05rem;
 		text-overflow: ellipsis;
 		word-wrap: break-word;
+		 @include goldilocks (baby) {
+		 	font-size: .75rem;
+		 }
 	}
 }
 .member-heading {
@@ -189,11 +220,17 @@ h2 {
 ul.extra-info {
 	margin-bottom: 6rem;
 	text-align: center;
+	@include goldilocks (baby) {
+			margin-bottom: 2rem;
+		}
 	
 	li {
 		font-size: 1.25rem;
 		display: inline-block;
-		padding:  0 2rem 0 0;
+		// padding:  0 2rem 0 0;
+		@include goldilocks (baby) {
+			font-size: .85rem;
+		}
 	}
 	a {
 		
@@ -202,6 +239,9 @@ ul.extra-info {
 		&:hover {
 			background-color:  $pink;
 			color: white;
+		}
+		@include goldilocks (baby) {
+			border: 3px solid black;
 		}
 	}
 
@@ -218,6 +258,17 @@ ul.extra-info {
 
 .pakhtun-quote {
 	text-align: center;
+	padding-bottom: .75rem;
+}
+.donate a{
+	color: $pink;
+	text-transform: uppercase;
+	border-bottom: 1px solid $pink;
+	padding: .75rem 0 0 0;
+	font-size: .9rem;
+	text-align: center;
+	margin: 0 27%;
+	display: block;
 }
 
 /******************************************
@@ -365,6 +416,11 @@ ul.extra-info {
 	// float: right;
 	// height: 324px
 }
+.x-small-grid-item {
+	width: 25%;
+	// float: right;
+	// height: 324px
+}
 .video-grid-item {
 	float: right;
 	width: 33.3%;
@@ -389,6 +445,9 @@ iframe {
 	@include goldilocks(mama) {
 		width: 100%;
 	}
+}
+.padding-end-page {
+	padding: 2rem;
 }
 /******************************************
 /* VIDEO                 
