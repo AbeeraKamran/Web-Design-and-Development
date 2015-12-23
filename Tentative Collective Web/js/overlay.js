@@ -142,9 +142,12 @@
 		    });
 			$('.overlay, .caption').addClass("visible");
 			$('.caption').html($point.data('title'));
+
+
 		}, function(){
 			$('.overlay-image').removeClass('zoom');
 			$('.overlay, .caption').removeClass("visible");
+
 		});
 
 

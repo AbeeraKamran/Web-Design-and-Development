@@ -68,16 +68,18 @@ ul {
 }
 .content {
   padding: 3rem;
+  @include goldilocks(baby) {
+    padding: .8rem;
+  }
 }
 #gradient {
 
 // display: inline-block;
 width: 100%;
 position: absolute;
-
 background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
 background-size: 600% 600%;
-
+overflow: hidden;
 -webkit-animation: AnimationName 10s ease infinite;
 -moz-animation: AnimationName 10s ease infinite;
 animation: AnimationName 10s ease infinite;
@@ -153,6 +155,13 @@ a:visited {
 //   display:none!important;visibility:hidden
 // }
 
+.project {
+  @include goldilocks(baby) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 /******************************************
 /* NAV                   
 /*******************************************/
@@ -221,7 +230,7 @@ a {
   z-index: 100;
    @include goldilocks (baby) {
     width: 1.5rem;
-    margin: 9% 86%;
+    margin: 9% 85%;
     position: fixed;
 
    }
@@ -380,18 +389,18 @@ a {
   width: 200%;
 }
 .caption {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   position: fixed;
   opacity: 0;
   z-index: 2;
   -webkit-transition: .25s ease all 0s;
-  margin: 0 auto;
+  margin: 0 25%;
   top: 40%;
   font-family: 'gill Sans';
   color: snow;
   font-weight: normal;
-  width: 100%;
+  width: 50%;
 }
 .caption.visible{
   -webkit-transition:.25s ease all .5s;
@@ -404,6 +413,7 @@ a {
   transform:translateY(0);
   opacity:1
 }
+
 // .nobreak{
 //   white-space:nowrap
 // }
@@ -588,11 +598,17 @@ footer {
 
 .first-project {
   margin-top: -1%;
+  @include goldilocks(baby) {
+    margin-top: 0;
+  }
 }
 
 .thumbnail{
     float: left;
     padding-bottom: 4rem;
+    @include goldilocks(mamaTall) {
+      max-width: 36rem;
+    }
     @include goldilocks(baby) {
       float: none;
       padding-bottom: 0;
@@ -601,11 +617,20 @@ footer {
 
 .projections {
   margin: 1rem 0rem;
+  @include goldilocks(baby) {
+    margin: 2rem 0;
+  }
 
   .blurb {
-    margin: 3rem 33rem;
+    margin: 2rem 33rem;
+    @include goldilocks(mama) {
+      margin: 3.5rem 24rem;
+    }
+    @include goldilocks(mamaTall) {
+      margin: 2rem 18rem;
+    }
     @include goldilocks(baby) {
-      margin: 5% -7%;
+      margin: 5% 0%;
       position: relative;
     }
   }
@@ -615,7 +640,16 @@ footer {
   margin: 1rem 0rem;
 
   .blurb {
-    margin: 4rem -14rem;
+    margin: 2rem -14rem;
+    @include goldilocks(mama) {
+      margin: 3.5rem -7rem;
+    }
+    @include goldilocks(mamaTall) {
+      margin: 3.5rem -7rem;
+    }
+    @include goldilocks(baby) {
+      margin: 5% 0;
+    }
   }
 }
 
@@ -624,23 +658,26 @@ footer {
     word-spacing: 7px;
   }
   .blurb {
-    float: left;
     margin: -38rem 35rem;
   }
 }
 
 .blurb {
-  width: 27rem;
+  width: 29rem;
   font-family: 'Gill Sans';
   border: 6px solid black;
   background-color: snow;
   position: absolute;
   padding: 3rem;
   float: right;
+  @include goldilocks(mamaTall) {
+      width: 23rem;
+    }
   @include goldilocks(baby) {
     padding: 1rem;
-    position: absolute;
-    width: 103%;
+    position: relative;
+    width: 100%;
+    float: none;
   }
 
   h3 {
@@ -654,6 +691,12 @@ footer {
 
   p {
     font-size: 1rem;
+    @include goldilocks(mama) {
+      font-size: .75rem;
+    }
+    @include goldilocks(mamaTall) {
+      font-size: .75rem;
+    }
     @include goldilocks(baby) {
       font-size: .75rem;
     }
@@ -674,6 +717,14 @@ footer {
     color: $pink;
     border-bottom: 1px solid $pink;
     transition: .25s all ease-in-out;
+  }
+  @include goldilocks(mama) {
+    padding: 0 0 0.75rem;
+    border-bottom: 1px solid black;
+  }
+  @include goldilocks(baby) {
+    padding: 0 0 0.75rem;
+    border-bottom: 1px solid black;
   }
 }
 

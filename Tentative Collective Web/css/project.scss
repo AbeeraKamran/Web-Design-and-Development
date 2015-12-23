@@ -286,6 +286,15 @@ ul.extra-info {
 	// margin: 1rem;
 	border: none;
 }
+.carousel {
+	li {
+		max-width: 180px;
+		margin-right: 0;
+		@include goldilocks(baby) {
+			max-width: 100px;
+		}
+	}
+}
 
 .slides {
 	img {
@@ -293,7 +302,10 @@ ul.extra-info {
 	}
 }
 .flex-direction-nav a {
-	font-size: 31px;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: transparent;
 }
 
 .flex-control-nav {
@@ -351,17 +363,18 @@ ul.extra-info {
 	clear: both;
 }
 
-// .flexslider .flex-direction-nav li a.flex-next {
-// background: url('../img/arrows-02.png') no-repeat 0 0 !important;
-// }
+.flexslider .flex-direction-nav li a.flex-next {
+background: url('../img/arrows-02.png') no-repeat 0 0 !important;
+}
 
-// .flexslider .flex-direction-nav li a.flex-prev {
-// background: url('../img/arrows-01.png') no-repeat 0 -86px !important;
-// }
+.flexslider .flex-direction-nav li a.flex-prev {
+background: url('../img/arrows-01.png') no-repeat 0 -86px !important;
+}
 
 .flex-direction-nav a {
 	color: transparent;
 	text-shadow: none;
+	width: 45px;
 	 &:visited {
 	 	color: transparent;
 	 }
@@ -427,6 +440,10 @@ ul.extra-info {
 	@include goldilocks(mama) {
 		width: 33.3%;
 	}
+	@include goldilocks(baby) {
+		width: 100%;
+		height: 250px;
+	}
 }
 iframe {
     width: 100%;
@@ -443,6 +460,11 @@ iframe {
 }
 .mama-100 {
 	@include goldilocks(mama) {
+		width: 100%;
+	}
+}
+.baby-100 {
+	@include goldilocks(baby) {
 		width: 100%;
 	}
 }
