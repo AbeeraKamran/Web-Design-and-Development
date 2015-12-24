@@ -66,7 +66,14 @@ img.flip {
 		float: left;
 	}
 }
-
+.row-videos {
+	max-width: 100%;
+}
+.large-55 {
+	@include goldilocks(papa) {
+	width: 33.3%;
+	}
+}
 /******************************************
 /* TEXT                 
 /*******************************************/
@@ -260,6 +267,9 @@ ul.extra-info {
 	text-align: center;
 	padding-bottom: .75rem;
 }
+.pakhtun-video {
+	padding: 18px;
+}
 .donate a{
 	color: $pink;
 	text-transform: uppercase;
@@ -301,17 +311,17 @@ ul.extra-info {
 		padding-right:.25rem;
 	}
 }
-.flex-direction-nav a {
-	font-size: 10px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: transparent;
-}
+// .flex-direction-nav a {
+// 	font-size: 10px;
+// 	letter-spacing: 1px;
+// 	text-transform: uppercase;
+// 	color: transparent;
+// }
 
-.flex-control-nav {
-	margin: 1rem 0 2rem;
-	bottom: -6px;
-}
+// .flex-control-nav {
+// 	margin: 1rem 0 2rem;
+// 	bottom: -6px;
+// }
 // .flexslider-projections {
 // 	li.clone {
 // 	width: inherit !important;
@@ -336,12 +346,21 @@ ul.extra-info {
 	    text-align: center;
 	    font-family: $heading;
 	    line-height: 1;
-	    padding-right: .15rem;
+	    padding-right: .15rem; 
+	    @include goldilocks(baby) {
+	    	font-size: 1rem;
+	    	padding:0 0 .5rem 0;
+	    	margin-top: .75rem;
+
+	    }
     }
     .subhead, .date {
     	font-size: 1rem;
 	    text-align: center;
-	    margin-bottom: 0;
+	    margin-bottom: 0; 
+	    @include goldilocks(baby) {
+	    	font-size: .75rem;
+	    }
     }
 
 }
@@ -368,7 +387,7 @@ background: url('../img/arrows-02.png') no-repeat 0 0 !important;
 }
 
 .flexslider .flex-direction-nav li a.flex-prev {
-background: url('../img/arrows-01.png') no-repeat 0 -86px !important;
+background: url('../img/arrows-01.png') no-repeat 0 0px !important;
 }
 
 .flex-direction-nav a {
@@ -480,12 +499,8 @@ iframe {
 	margin: 1rem;
 }
 .videos{
-	margin-bottom: 5rem;
-	padding: 4px;
-	li {
-		margin: 1rem 1rem 0 0;
-		display: inline-block;
-	}
+	padding: 1px;
+	margin: 0;
 }
 
 

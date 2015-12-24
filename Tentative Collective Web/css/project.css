@@ -53,6 +53,16 @@ img.flip {
   }
 }
 
+.row-videos {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1170px) {
+  .large-55 {
+    width: 33.3%;
+  }
+}
+
 /******************************************
 /* TEXT                 
 /*******************************************/
@@ -239,6 +249,10 @@ ul.extra-info a:hover {
   padding-bottom: .75rem;
 }
 
+.pakhtun-video {
+  padding: 18px;
+}
+
 .donate a {
   color: #dd1b75;
   text-transform: uppercase;
@@ -278,18 +292,6 @@ ul.extra-info a:hover {
   padding-right: .25rem;
 }
 
-.flex-direction-nav a {
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: transparent;
-}
-
-.flex-control-nav {
-  margin: 1rem 0 2rem;
-  bottom: -6px;
-}
-
 .grid-overlay {
   position: absolute;
   top: 0px;
@@ -309,10 +311,22 @@ ul.extra-info a:hover {
   line-height: 1;
   padding-right: .15rem;
 }
+@media only screen and (max-width: 414px) {
+  .grid-overlay .title {
+    font-size: 1rem;
+    padding: 0 0 .5rem 0;
+    margin-top: .75rem;
+  }
+}
 .grid-overlay .subhead, .grid-overlay .date {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 0;
+}
+@media only screen and (max-width: 414px) {
+  .grid-overlay .subhead, .grid-overlay .date {
+    font-size: .75rem;
+  }
 }
 
 .small-block-grid-3 {
@@ -337,7 +351,7 @@ ul.extra-info a:hover {
 }
 
 .flexslider .flex-direction-nav li a.flex-prev {
-  background: url("../img/arrows-01.png") no-repeat 0 -86px !important;
+  background: url("../img/arrows-01.png") no-repeat 0 0px !important;
 }
 
 .flex-direction-nav a {
@@ -460,12 +474,8 @@ iframe {
 }
 
 .videos {
-  margin-bottom: 5rem;
-  padding: 4px;
-}
-.videos li {
-  margin: 1rem 1rem 0 0;
-  display: inline-block;
+  padding: 1px;
+  margin: 0;
 }
 
 /******************************************

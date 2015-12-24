@@ -22,7 +22,11 @@
 }());
 
 $(document).ready(function() {
+    $(document).on('click tap touchstart', '.reveal-modal-bg', function() {
+    return $('[data-reveal]').foundation('reveal', 'close');
+}); 
     
+    $("body").fitVids();
 
     // Initialize Masonry
     $('.grid').masonry({
@@ -35,7 +39,7 @@ $(document).ready(function() {
     }).imagesLoaded(function() {
         $(this).masonry('reload');
     });
-         $(".video-grid-item").fitVids();
+    
 
 
     // // Find all Vimeo videos
@@ -112,10 +116,14 @@ $(window).load(function() {
 
   $('#carousel1').flexslider({
     animation: "slide",
+    directionNav: false,
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 190,
+    minItems: 4,
+    keyboard: true,
+    touch: true,
     itemMargin: 5,
     asNavFor: '#slider1'
   });
@@ -125,15 +133,20 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
+    keyboard: true,
+    touch: true,
     sync: "#carousel1",
   });
 
  $('#carousel2').flexslider({
     animation: "slide",
-    controlNav: false,
+    directionNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 190,
+    minItems: 4,
+    keyboard: true,
+    touch: true,
     itemMargin: 5,
     asNavFor: '#slider2'
   });
@@ -142,6 +155,8 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
+    keyboard: true,
+    touch: true,
     sync: "#carousel2",
   });
 
@@ -150,7 +165,10 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 190,
+    minItems: 4,
+    keyboard: true,
+    touch: true,
     itemMargin: 5,
     asNavFor: '#slider3'
   });
@@ -159,6 +177,8 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
+    keyboard: true,
+    touch: true,
     sync: "#carousel3",
   });
 
@@ -167,7 +187,10 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 190,
+    minItems: 4,
+    keyboard: true,
+    touch: true,
     itemMargin: 5,
     asNavFor: '#slider4'
   });
@@ -184,7 +207,10 @@ $(window).load(function() {
     controlNav: false,
     animationLoop: false,
     slideshow: false,
-    itemWidth: 210,
+    itemWidth: 190,
+    minItems: 4,
+    keyboard: true,
+    touch: true,
     itemMargin: 5,
     asNavFor: '#slider5'
   });
@@ -228,7 +254,7 @@ function initFlexModal1() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
