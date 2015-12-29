@@ -39,7 +39,7 @@ $(document).ready(function() {
     }).imagesLoaded(function() {
         $(this).masonry('reload');
     });
-    
+
 
 
     // // Find all Vimeo videos
@@ -79,36 +79,8 @@ $(document).ready(function() {
     // }).resize();
 
 });
-   
-
-
-// Can also be used with $(document).ready()
- 
 
  
-  // function ready(player_id) {
-  //   var froogaloop = $f(player_id);
-  //   froogaloop.addEvent('play', function(data) {
-  //     $('.flexslider').flexslider("pause");
-  //   });
-  //   froogaloop.addEvent('pause', function(data) {
-  //     $('.flexslider').flexslider("play");
-  //   });
-  // }
- 
- 
-  // // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
-  // $(".flexslider")
-  //   .fitVids()
-  //   .flexslider({
-  //     animation: "slide",
-  //     useCSS: false,
-  //     animationLoop: false,
-  //     smoothHeight: true,
-  //     before: function(slider){
-  //       $f(player).api('pause');
-  //     }
-  // });
 
 // Flexslider for images with thumbnail.
 $(window).load(function() {
@@ -222,29 +194,6 @@ $(window).load(function() {
     sync: "#carousel5",
   });
     
-//  $('.reveal-modal').on('opened', function() {
-//     $('#flex1').flexslider("setPosition", 0);
-// });
-// $('.flexslider-projections').flexslider({
-//       animation: "slide"
-//     });
-// $(document).ready(function() {
-
-//     $(".owl-carousel").owlCarousel({
-
-//         navigation : true, // Show next and prev buttons
-//         slideSpeed : 300,
-//         paginationSpeed : 400,
-//         singleItem:true
-
-//         // "singleItem:true" is a shortcut for:
-//         // items : 1, 
-//         // itemsDesktop : false,
-//         // itemsDesktopSmall : false,
-//         // itemsTablet: false,
-//         // itemsMobile : false
-//     });
-// });
 });
 
 

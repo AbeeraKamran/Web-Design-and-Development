@@ -37,19 +37,21 @@
                 <!-- <div class="icon-eye-1 nav-trigger eye"></div> -->
                 <h1><img class="logo" src="img/logo-04.png"></h1>
                 <a href="#" id="nav-trigger">
+                    <!-- <p class="eye">OPEN</p> -->
                     <img class="eye" src="img/eye.png">
-                </a>
+                </a> 
             </header>
-                   
-            <nav class="menu-list hide" id="nav">
-                <ul>
-                    <a href="about.html"class="about" ><li>About</li></a>
-                    <a href="index.html" class="work"><li>Work</li></a>
-                    <!-- <a href="#"><li>Archive</li></a> -->
-                    <a href="cv.html" class="contact"><li>CV</li></a>
-                    <div class="bg"></div>
-                </ul>
-            </nav>
+            <div class="menu-nav">
+                <nav class="menu-list closed" id="nav">
+                    <ul>
+                        <a href="about.html"class="about" ><li>About</li></a>
+                        <a href="index.html" class="work"><li>Work</li></a>
+                        <!-- <a href="#"><li>Archive</li></a> -->
+                        <a href="cv.html" class="contact"><li>CV</li></a>
+                        <div class="bg"></div>
+                    </ul>
+                </nav>
+            </div>
 
             <div id="gradient">
                 <!-- main  -->   
@@ -131,8 +133,14 @@
                         </a>
                         <p class="phone"></p>
                         <div class="socials">
-                            <a href="https://www.facebook.com/TentativeCollective/?fref=ts" class="socials-icon sprite ir facebook">Facebook</a>
-                            <a href="https://vimeo.com/tentativecollective" class="socials-icon sprite ir vimeo">Vimeo</a>
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/TentativeCollective/?fref=ts" class="ir sprite socials-icon facebook"target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://vimeo.com/tentativecollective" class="ir sprite socials-icon vimeo" target="_blank">Vimeo</a>
+                                </li>
+                            </ul>
                         </div> 
                     </footer> 
                 </div>
@@ -155,7 +163,7 @@
                     <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="5" data-y="21">
                         <div class="inner">١</div>
                     </div>
-                    <div class="point" data-title=" 'پہلے تو دریا اگل دیا کرتا تھا، اب جو اندر جاتا ہے وہ کبھی واپس نہین اتا' Mohammad Saleem, Fisherman at the Ravi" data-x="20" data-y="8">
+                    <div class="point" data-title="پہلے تو دریا اگل دیا کرتا تھا، اب جو اندر جاتا ہے وہ کبھی واپس نہین اتا &#013; Mohammad Saleem, Fisherman at the Ravi" data-x="20" data-y="8">
                         <div class="inner">٢</div>
                     </div>
                     <div class="point" data-title="Ut assequas everios aut alia sectatem sum." data-x="90" data-y="6">
@@ -191,8 +199,8 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/menuHide.js"></script>
         <script src="js/overlay.js"></script>
+         <script src="js/slider.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         // <script>

@@ -1,0 +1,28 @@
+.facebook-01, .facebook-02, .facebook-hover-01, .facebook-hover-02{
+	background: url(sprites.png) no-repeat;
+}
+
+.facebook-01{
+	background-position: 0 -2px ;
+	width: 52px;
+	height: 52px;
+}
+
+.facebook-02{
+	background-position: -50px 0;
+	width: 52px;
+	height: 52px;
+}
+
+.facebook-hover-01{
+	background-position: 0 -56px ;
+	width: 52px;
+	height: 52px;
+}
+
+.facebook-hover-02{
+	background-position: -50px -56px ;
+	width: 52px;
+	height: 52px;
+}
+

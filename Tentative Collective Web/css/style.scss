@@ -199,11 +199,11 @@ a {
   margin: 3% 4%;
   float: left;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   @include goldilocks (baby) {
-    width: 3rem;
+    width: 6rem;
     position: absolute;
-    margin: 9% 5%;
+    margin: 13% 37%;
   }
 }
 #nav-trigger {
@@ -228,9 +228,10 @@ a {
   margin: 3% 91%;
   position: fixed;
   z-index: 100;
+  color: black;
    @include goldilocks (baby) {
-    width: 1.5rem;
-    margin: 9% 85%;
+    width: 2.5rem;
+    margin: 6% 43%;
     position: fixed;
 
    }
@@ -240,15 +241,20 @@ a {
 .menu-list {
 
   width: 100%;
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   background-color: white;
   height: 100%;
 
-  
-  border-left: 12px solid #a2ff26;
-  border-right: 12px solid #008113;
+  overflow-y: hidden;
+  max-height: 100%; /* approximate max height */
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+  // border-left: 12px solid #a2ff26;
+  // border-right: 12px solid #008113;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -257,14 +263,16 @@ a {
   -webkit-background-size: 100% 12px;
   -moz-background-size: 100% 12px;
   background-size: 100% 12px;
-  background-image: -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%), -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%);
-  background-image: -moz-linear-gradient(left, #a2ff26 0%, #008113 100%), -moz-linear-gradient(left, #a2ff26 0%, #008113 100%);
-  background-image: -o-linear-gradient(left, #a2ff26 0%, #008113 100%), -o-linear-gradient(left, #a2ff26 0%, #008113 100%);
-  background-image: linear-gradient(to right, #a2ff26 0%, #008113 100%), linear-gradient(to right, #a2ff26 0%, #008113 100%);
-  
+  // background-image: -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%), -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: -moz-linear-gradient(left, #a2ff26 0%, #008113 100%), -moz-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: -o-linear-gradient(left, #a2ff26 0%, #008113 100%), -o-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: linear-gradient(to right, #a2ff26 0%, #008113 100%), linear-gradient(to right, #a2ff26 0%, #008113 100%);
 
   ul {
     padding-top: 15rem;
+    // background-color: white;
+    margin: .75rem;
+    height: inherit;
 
   }
 
@@ -272,12 +280,12 @@ a {
     list-style: none;
     display: inline;
     position: relative;
-    color: $green;
+    color: white;
     font-family: $font-sans;
     font-size: 2rem;
     letter-spacing: .15rem;
     text-transform: uppercase;
-    border-bottom: 2px solid white;
+    // border-bottom: 2px solid white;
 
     &:hover {
       border-bottom: 5px solid $pink;
@@ -286,6 +294,21 @@ a {
       -o-transition:border-color 500ms ease; 
       transition:border-color 500ms ease;
       color: $pink;
+    }
+    @include goldilocks (mama) {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    @include goldilocks (mamaTall) {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    @include goldilocks (baby) {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
     }
 
   }
@@ -308,6 +331,72 @@ a {
 .white {
   color: snow;
 }
+.menu-nav {
+  overflow: hidden;
+  position: fixed;
+  z-index: 90;
+  width: 100%;
+
+}
+.menu-list {
+   transition: .5s cubic-bezier(0, 1, 0.5, 1);
+  transform: translateY(0);
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100% ;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 12px;
+  -moz-background-size: 100% 12px;
+  background-size: 100% 12px;
+  // background-image: -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%), -webkit-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: -moz-linear-gradient(left, #a2ff26 0%, #008113 100%), -moz-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: -o-linear-gradient(left, #a2ff26 0%, #008113 100%), -o-linear-gradient(left, #a2ff26 0%, #008113 100%);
+  // background-image: linear-gradient(to right, #a2ff26 0%, #008113 100%), linear-gradient(to right, #a2ff26 0%, #008113 100%);
+  background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
+  background-size: 600% 600%;
+  overflow: hidden;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:51% 0%}
+      50%{background-position:50% 100%}
+      100%{background-position:51% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:51% 0%}
+      50%{background-position:50% 100%}
+      100%{background-position:51% 0%}
+  }
+  @keyframes AnimationName { 
+      0%{background-position:51% 0%}
+      50%{background-position:50% 100%}
+      100%{background-position:51% 0%}
+
+    }
+}
+.menu-list.opened { 
+    /* visible */
+    -webkit-transform: translate(0, 0%);
+       -moz-transform: translate(0, 0%);
+        -ms-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+  }
+
+  .closed { 
+      /* completely offscreen */
+        transform: translateY(-100%);
+
+      -webkit-transform: translate(0, -100%);
+         -moz-transform: translate(0, -100%);
+          -ms-transform: translate(0, -100%);
+              transform: translate(0, -100%);
+  }
+
+
 
 /******************************************
 /* OVERLAY                   
@@ -336,7 +425,11 @@ a {
   -ms-transition:.5s cubic-bezier(.72,.04,.49,.7)all 0s;
   -o-transition:.5s cubic-bezier(.72,.04,.49,.7)all 0s;
   -webkit-transform:scale(4,4);-ms-transform:scale(4,4);
-  -o-transform:scale(4,4);transform:scale(4,4)
+  -o-transform:scale(4,4);transform:scale(4,4);
+  @include goldilocks (baby) {
+    -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
+    -o-transform:scale(1,4);transform:scale(1,4)
+  }
 }
 .overlay.visible .overlay-image {
   opacity: 1;
@@ -541,6 +634,13 @@ footer {
     font-size: 1.25rem;
     font-family: $font-sans;
     position: relative;
+    @include goldilocks (baby) {
+      font-size: 1rem;
+      margin: -2.65rem;
+    }
+  }
+  li {
+    display: inline-block;
   }
 }
 
@@ -560,37 +660,47 @@ footer {
     }
 }
 .socials {
-  margin: 8% 47%;
-}
-.socials-icon {
-  display: block;
-  width: 32px;
-  height: 33px;
-  float: left;
-}
-.facebook {
-  background-position: 0 -1px;
-  &:hover {
-    background-position: 0 -41px;
+  margin: 8% 0;
+  position: relative;
+  @include goldilocks (mamaTall) {
+    margin-top: 14%;
   }
-}
-
-.vimeo {
-  margin-left: 6px;
-  background-position: -49px -1px;
-  &:hover {
-    background-position: -49px -41px;
+  @include goldilocks (mama) {
+    margin-top: 10%;
   }
-}
-.sprite {
-  background: url("../img/sprites.png") no-repeat;
-}
-.ir {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
+  @include goldilocks (baby) {
+    margin-top: 35%;
+  }
+  .sprite {
+    background: url("../img/sprites.png") no-repeat;
+  }
+  .ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
+  .socials-icon {
+    display: block;
+    width: 52px;
+    height: 52px;
+    float: left;
+  }
+  .facebook {
+    background-position: 0 -2px;
+    &:hover {
+      background-position: 0 -56px;
+    }
+  }
+
+  .vimeo {
+    background-position: -50px 0;
+    &:hover {
+      background-position: -50px -56px;
+    }
+  }
+ 
+}
 /******************************************
 /* PROJECT THUMBNAIL                   
 /*******************************************/
@@ -599,7 +709,7 @@ footer {
 .first-project {
   margin-top: -1%;
   @include goldilocks(baby) {
-    margin-top: 0;
+    margin-top: 45%;
   }
 }
 

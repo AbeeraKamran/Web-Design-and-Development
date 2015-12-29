@@ -83,7 +83,7 @@ img.flip {
 	margin-top: 17rem;
 	font-family: $font-sans;
 	@include goldilocks (baby) {
-		margin: 7rem 0 0 0;
+		margin: 10rem 0 0 0;
 	}
 	ul {
 		text-align: center;
@@ -157,6 +157,7 @@ h2 {
 	position: relative;
 	p {
 		font-size: 1.05rem;
+		padding-bottom: .75rem;
 		text-overflow: ellipsis;
 		word-wrap: break-word;
 		 @include goldilocks (baby) {
@@ -279,6 +280,10 @@ ul.extra-info {
 	text-align: center;
 	margin: 0 27%;
 	display: block;
+	@include goldilocks (baby) {
+		margin: 0;
+		display: inline;
+	}
 }
 
 /******************************************
@@ -461,7 +466,6 @@ background: url('../img/arrows-01.png') no-repeat 0 0px !important;
 	}
 	@include goldilocks(baby) {
 		width: 100%;
-		height: 250px;
 	}
 }
 iframe {
