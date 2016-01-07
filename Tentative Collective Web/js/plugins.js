@@ -337,5 +337,45 @@ $('#eleventhModal').on('opened.fndtn.reveal', function () {
     initFlexModal11();
 })
 
+function initFlexModal12() {
+    $('#flex12').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#twelfthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal12();
+})
+function initFlexModal13() {
+    $('#flex13').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#thirteenthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal13();
+})
+function initFlexModal14() {
+    $('#flex14').flexslider({
+        animation: 'slide',
+        animationLoop: true,
+        itemMargin: 1,
+        controlNav: true,
+        directionNav: false,
+        slideshow: true
+    });
+};
+$('#fourteenthModal').on('opened.fndtn.reveal', function () {
+    initFlexModal14();
+})
+
 
  

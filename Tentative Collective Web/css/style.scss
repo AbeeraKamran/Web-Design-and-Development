@@ -179,48 +179,51 @@ h4 {
   border-bottom: 3px solid #333;
   width: 3.25rem; 
 }
-// h5 {
-//   font-size: 2rem;
-//   font-family: $heading;
-//   margin: 0;
-//   padding: 1rem;
-// }
+h5 {
+  font-size: 2rem;
+  font-family: $heading;
+  margin: 0;
+  padding: 1rem;
+}
 
 a {
   color:black;
-}
-.cv {
-  a {
-    border-bottom: 1px solid black;
-  }
 }
 .logo {
   width: 8rem;
   margin: 3% 4%;
   float: left;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   @include goldilocks (baby) {
-    width: 6rem;
+    width: 5rem;
     position: absolute;
-    margin: 13% 37%;
+    margin: 5% 7%;
   }
 }
 #nav-trigger {
   position: absolute;
   top: 0;
   height: 100%;
-
-  &:hover .menu {
+   &:hover .menu-text {
     opacity: 1 ;
+    position: fixed;
   }
 }
-.menu {
+.menu-text {
   opacity: 0;
   font-size: .75rem;
   color: $green;
-  @include vendor(transition, all .9s ease-in-out);
+  @include vendor(transition, all .9s ease-in);
+  z-index: 90;
+  text-transform: uppercase;
+  position: relative;
+  margin: 5% 92%;
+  @include goldilocks (baby) {
+  display: none;    
+  }
 }
+
 
 .eye{
   float: right;
@@ -230,18 +233,18 @@ a {
   z-index: 100;
   color: black;
    @include goldilocks (baby) {
-    width: 2.5rem;
-    margin: 6% 43%;
+    width: 2.25rem;
+    margin: 6% 83%;
     position: fixed;
 
-   }
+  }
   
 }
 
 .menu-list {
 
   width: 100%;
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: white;
@@ -270,9 +273,12 @@ a {
 
   ul {
     padding-top: 15rem;
-    // background-color: white;
+    background-color: white;
     margin: .75rem;
-    height: inherit;
+    height: 96%;
+    @include goldilocks (baby) {
+      padding-top: 40%;
+    }
 
   }
 
@@ -280,7 +286,7 @@ a {
     list-style: none;
     display: inline;
     position: relative;
-    color: white;
+    color: $green;
     font-family: $font-sans;
     font-size: 2rem;
     letter-spacing: .15rem;
@@ -333,13 +339,15 @@ a {
 }
 .menu-nav {
   overflow: hidden;
-  position: fixed;
-  z-index: 90;
+  // position: fixed;
   width: 100%;
+    z-index: 90;
+
 
 }
 .menu-list {
-   transition: .5s cubic-bezier(0, 1, 0.5, 1);
+  z-index: 90;
+  transition: .5s cubic-bezier(0, 1, 0.5, 1);
   transform: translateY(0);
   height: 100vh;
   -webkit-box-sizing: border-box;
@@ -357,9 +365,9 @@ a {
   background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
   background-size: 600% 600%;
   overflow: hidden;
-  -webkit-animation: AnimationName 10s ease infinite;
-  -moz-animation: AnimationName 10s ease infinite;
-  animation: AnimationName 10s ease infinite;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
 
   @-webkit-keyframes AnimationName {
       0%{background-position:51% 0%}
@@ -413,11 +421,13 @@ a {
   height: 80rem;
 }
 .overlay .overlay-image {
+
   opacity: 0;
   -webkit-transition:.25s cubic-bezier(.72,.04,.49,.7)all .15s;
   -moz-transition:.25s cubic-bezier(.72,.04,.49,.7)all .15s;
   -ms-transition:.25s cubic-bezier(.72,.04,.49,.7)all .15s;
   -o-transition:.25s cubic-bezier(.72,.04,.49,.7)all .15s 
+
 }
 .overlay .overlay-image.zoom{
   -webkit-transition:.5s cubic-bezier(.72,.04,.49,.7)all 0s;
@@ -480,20 +490,27 @@ a {
   
   height: 200%;
   width: 200%;
+  position: fixed;
 }
 .caption {
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 1.25rem;
+  text-align: left;
   position: fixed;
   opacity: 0;
   z-index: 2;
   -webkit-transition: .25s ease all 0s;
-  margin: 0 25%;
-  top: 40%;
-  font-family: 'gill Sans';
+  margin: 2rem;
+  top: 0;
+  left: 0;
+    right: 0;
+    height: 0;
+  font-family: $font-sans;
   color: snow;
   font-weight: normal;
-  width: 50%;
+  width: 60%;
+  @include goldilocks (baby) {
+    top: 25%;
+  }
 }
 .caption.visible{
   -webkit-transition:.25s ease all .5s;
@@ -504,12 +521,14 @@ a {
   -ms-transform:translateY(0);
   -o-transform:translateY(0);
   transform:translateY(0);
-  opacity:1
+  opacity:1;
+  white-space:pre-line;
 }
 
 // .nobreak{
-//   white-space:nowrap
+//   white-space:pre-line;
 // }
+
 // @media only screen and (max-width:400px){
 //   .indent .nobreak{
 //     display:block;margin-left:1em
@@ -635,8 +654,8 @@ footer {
     font-family: $font-sans;
     position: relative;
     @include goldilocks (baby) {
-      font-size: 1rem;
-      margin: -2.65rem;
+      font-size: .9rem;
+      margin: -2.25rem;
     }
   }
   li {
@@ -650,8 +669,8 @@ footer {
     filter: "progid:DXImageTransform.Microsoft.Dropshadow (OffX=12, OffY=12,
     Color='#444')";
     filter: url(#drop-shadow);
-    -webkit-filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
-    filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.6));
+    filter: drop-shadow(-1px 6px 0px rgba(0,0,0,0.6));
     transition: 0.5s ease-in-out;
   }
   &:hover img {
@@ -709,7 +728,7 @@ footer {
 .first-project {
   margin-top: -1%;
   @include goldilocks(baby) {
-    margin-top: 45%;
+    margin-top: 33%;
   }
 }
 
@@ -795,7 +814,7 @@ footer {
     font-size: 2rem;
     line-height: 2rem;
     @include goldilocks(baby) {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 

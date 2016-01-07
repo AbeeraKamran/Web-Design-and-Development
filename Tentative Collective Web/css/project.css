@@ -126,6 +126,19 @@ h2 {
   padding: 3rem 3rem 3rem;
   margin-bottom: 2rem;
 }
+.project-info a {
+  padding-bottom: .25rem;
+  border-bottom: 2px solid black;
+}
+.project-info a:hover {
+  background-color: #dd1b75;
+  color: white;
+}
+@media only screen and (max-width: 414px) {
+  .project-info a {
+    border-bottom: 1px solid black;
+  }
+}
 @media only screen and (max-width: 414px) {
   .project-info {
     padding: 1.5rem;
@@ -172,9 +185,7 @@ h2 {
 }
 .members li {
   list-style: none;
-  display: inline-block;
   margin-right: 2rem;
-  border-bottom: 1px black solid;
 }
 
 .about {
@@ -199,6 +210,9 @@ h2 {
 
 .reveal-modal {
   max-width: 47rem;
+}
+.reveal-modal p {
+  padding-bottom: .75rem;
 }
 
 .modalTitle {
@@ -238,10 +252,10 @@ ul.extra-info a:hover {
   }
 }
 
-.publication a {
+.publication .press-links {
   border-bottom: 2px solid black;
 }
-.publication a:hover {
+.publication .press-links:hover {
   background-color: #dd1b75;
 }
 
@@ -271,6 +285,20 @@ ul.extra-info a:hover {
   }
 }
 
+.cv h5 {
+  padding: 1rem 0;
+}
+.cv a {
+  border-bottom: 2px solid black;
+  padding-bottom: 0;
+}
+.cv li {
+  padding-bottom: 1rem;
+  line-height: 1.05rem;
+  list-style: disc;
+  margin-left: 1rem;
+}
+
 /******************************************
 /* FLEXSLIDER                 
 /*******************************************/
@@ -297,6 +325,22 @@ ul.extra-info a:hover {
 
 .slides img {
   padding-right: .25rem;
+}
+
+.flex-direction-nav a {
+  opacity: 0;
+}
+.flex-direction-nav a:hover {
+  opacity: 1;
+}
+@media only screen and (max-width: 414px) {
+  .flex-direction-nav a {
+    display: none;
+  }
+}
+
+.flexslider-projections .flex-viewport {
+  margin-top: 1rem;
 }
 
 .grid-overlay {
@@ -334,6 +378,10 @@ ul.extra-info a:hover {
   .grid-overlay .subhead, .grid-overlay .date {
     font-size: .75rem;
   }
+}
+
+.modal-gandi .title {
+  margin-top: 25%;
 }
 
 .small-block-grid-3 {
@@ -480,7 +528,7 @@ iframe {
 }
 
 .videos {
-  padding: 1px;
+  padding: 2px;
   margin: 0;
 }
 

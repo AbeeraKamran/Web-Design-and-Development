@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="css/foundation.min.css"/>
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/project.css">
 
@@ -34,21 +33,23 @@
 
         <!-- Add your site or application content here -->
         <header>
-        	<a href="index.html"><h1><img class="logo" src="img/logo-04.png"></h1></a>
-           	<a href="#" id="nav-trigger">
-                <img class="eye" src="img/eye.png">
-                <span class="menu">Menu</span>            
+            <h1><a href="index.html"><img class="logo" src="img/logo-04.png"></a></h1>
+            <a href="#" id="nav-trigger">
+                <img class="eye" src="img/eye.gif">
+                <span class="menu-text">Menu</span>
             </a>
         </header>
-        <nav class="menu-list hide" id="nav">
-            <ul>
-                <a href="about.html"class="about" ><li>About</li></a>
-                <a href="index.html" class="work"><li>Work</li></a>
-                <!-- <a href="#"><li>Archive</li></a> -->
-                <a href="contact.html" class="contact"><li>CV</li></a>
-                <div class="bg"></div>
-            </ul>
-        </nav>
+        <div class="menu-nav">
+            <nav class="menu-list closed" id="nav">
+                <ul>
+                    <a href="about.html"class="about" ><li>About</li></a>
+                    <a href="index.html" class="work"><li>Work</li></a>
+                    <!-- <a href="#"><li>Archive</li></a> -->
+                    <a href="cv.html" class="contact"><li>CV</li></a>
+                    <div class="bg"></div>
+                </ul>
+            </nav>
+        </div>
             <div id="gradient">
             	<main>
 	            	<div class="header">
@@ -59,7 +60,7 @@
                     <div class="row">
                         <div class="large-16 columns project-title">
                         	<h2>PROJECTIONS</h2>
-                            <p class="date">January 10-April 22, 2015</p>
+                            <p class="date">10 January-April 22 2015</p>
                         </div>
                     </div>
                     <div class="row">
@@ -212,7 +213,13 @@
                                     
                                         <div class="flexslider-projections" id="flex5">
                                             <h3 class="modalTitle">Sea View</h3>
+                                            <p>A city next to the sea awakens to a strange phenomenon. Asif Farrukhi’s story addresses a very tangible ecological concern in a subtle and unassuming manner, highlighting the very complex psyche and fabric of Karachi.
+                                            <a href="https://zambeeldramaticreadings.wordpress.com/projects/samundar-ki-chori/samundar-ki-chori/" target="_blank">Visit Zambeel's website</a>
+                                            </p>
                                             <ul class="slides">
+                                                <li>
+                                                  <img src="img/projections/zambeel_samundar.jpg" />
+                                                </li>
                                                 <li>
                                                   <img src="img/projections/zambeel_1.jpg" />
                                                 </li>
@@ -224,6 +231,9 @@
                                                 </li>
                                                 <li>
                                                   <img src="img/projections/zambeel_4.jpg" />
+                                                </li>
+                                                <li>
+                                                  <img src="img/projections/zambeel_5.jpg" />
                                                 </li>
                                             </ul>
                                         </div>
@@ -361,9 +371,7 @@
                                         <p>Drawing upon visible geographies of the city, Rizvi imagines and writes narratives around these manipulated sites hinting at the politics, tensions, despair and life that surrounds them.</p>
                                         <div class="flexslider-projections" id="flex9">
                                             <ul class="slides">
-                                                <li>
-                                                  <img src="img/projections/fazal_1.jpg" />
-                                                </li>
+                                                
                                                 <li>
                                                   <img src="img/projections/fazal_2.jpg" />
                                                 </li>
@@ -372,9 +380,6 @@
                                                 </li>
                                                 <li>
                                                   <img src="img/projections/fazal_4.jpg" />
-                                                </li>
-                                                 <li>
-                                                  <img src="img/projections/fazal_5.jpg" />
                                                 </li>
                                                 <li>
                                                   <img src="img/projections/fazal_6.jpg" />
@@ -390,14 +395,18 @@
 			    <footer>
                     <a href="mailto:thetentativecollective@gmail.com" class="email">
                         <img src="img/email_button.png" alt="">
+                        <p>thetentativecollective@gmail.com</p>
                     </a>
-                    <p>thetentativecollective@gmail.com</p>
-                    
                     <p class="phone"></p>
                     <div class="socials">
-                        <a href="" class="insta"></a>
-                        <a href="" class="facebook"></a>
-                        <a href="" class="twitter"></a>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/TentativeCollective/?fref=ts" class="ir sprite socials-icon facebook"target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://vimeo.com/tentativecollective" class="ir sprite socials-icon vimeo" target="_blank">Vimeo</a>
+                            </li>
+                        </ul>
                     </div> 
                 </footer> 
             
@@ -420,7 +429,7 @@
         </script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script defer src="js/jquery.flexslider.js"></script>
-        <script src="js/menuHide.js"></script>
+        <script src="js/slider.js"></script>
 		<script src="js/foundation.js"></script>
   <!-- Other JS plugins can be included here -->
         <script src="js/foundation.reveal.js"></script>

@@ -1,0 +1,32 @@
+// colors
+
+$pink: #dd1b75;
+$neon-green: #a2ff26;
+$green: #008f45;
+$yellow: #ffe500;
+$grey: #414042;
+$red: #fc351f;
+
+
+$color-1: #021725; // blue
+$color-2: #e36767; // red
+$color-3: #fff; // white
+
+// fonts 
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+
+$font-stack:'Raleway', sans-serif;
+$font-sans: 'Gill Sans', sans-serif;
+$heading: 'Conv_NuptialScriptLTStd';
+
+
+//header height
+
+$header-height-S: 50px;
+$header-height-M: 80px;
+
+// z-index 
+
+$content-zindex: 1;
+$nav-zindex: 2;
+$header-zindex: 3;

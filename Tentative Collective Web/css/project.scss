@@ -132,6 +132,17 @@ h2 {
 	border: 6px solid black;
 	padding: 3rem 3rem 3rem;
 	margin-bottom: 2rem;
+	a {
+		padding-bottom: .25rem;
+		border-bottom: 2px solid black;
+		&:hover {
+			background-color:  $pink;
+			color: white;
+		}
+		@include goldilocks (baby) {
+			border-bottom: 1px solid black;
+		}
+	}
 	 @include goldilocks (baby) {
 	 	padding: 1.5rem;
 	 	margin-bottom: 1rem;
@@ -176,9 +187,9 @@ h2 {
 	
 	li {
 		list-style: none;
-		display: inline-block;
+		// display: inline-block;
 		margin-right: 2rem;
-		border-bottom: 1px black solid;
+		// border-bottom: 1px black solid;
 	}
 }
 
@@ -201,10 +212,15 @@ h2 {
 
 .reveal-modal {
 	max-width: 47rem;
+	p {
+		padding-bottom: .75rem;
+	}
 }
 .modalTitle {
 	font-family: $heading;
 }
+
+
 /* This CSS is used for the Show/Hide functionality. */
 //    .text-reveal{
   
@@ -224,6 +240,7 @@ h2 {
 // 	  }
   
 // }
+
 
 ul.extra-info {
 	margin-bottom: 6rem;
@@ -256,7 +273,7 @@ ul.extra-info {
 }
 
 .publication {
-	a {
+	.press-links {
 		border-bottom: 2px solid black;
 		&:hover {
 			background-color: $pink;
@@ -284,6 +301,21 @@ ul.extra-info {
 		margin: 0;
 		display: inline;
 	}
+}
+.cv {
+	h5 {
+		padding: 1rem 0;
+	}
+  a {
+    border-bottom: 2px solid black;
+    padding-bottom: 0;
+  }
+  li {
+    padding-bottom: 1rem;
+    line-height: 1.05rem;
+    list-style: disc;
+    margin-left: 1rem;
+  }
 }
 
 /******************************************
@@ -316,22 +348,25 @@ ul.extra-info {
 		padding-right:.25rem;
 	}
 }
-// .flex-direction-nav a {
-// 	font-size: 10px;
-// 	letter-spacing: 1px;
-// 	text-transform: uppercase;
-// 	color: transparent;
-// }
+.flex-direction-nav a {
+	opacity: 0;
+	&:hover {
+		opacity: 1;
+	}
+	@include goldilocks(baby) {
+		display: none;
+	}
+}
 
 // .flex-control-nav {
 // 	margin: 1rem 0 2rem;
 // 	bottom: -6px;
 // }
-// .flexslider-projections {
-// 	li.clone {
-// 	width: inherit !important;
-// 	}
-// }
+.flexslider-projections {
+	.flex-viewport {
+	margin-top: 1rem;
+	}
+}
 
 .grid-overlay {
 	position: absolute;
@@ -368,6 +403,11 @@ ul.extra-info {
 	    }
     }
 
+}
+.modal-gandi {
+	.title {
+		margin-top: 25%;
+	}
 }
 
 .small-block-grid-3 {
@@ -503,7 +543,7 @@ iframe {
 	margin: 1rem;
 }
 .videos{
-	padding: 1px;
+	padding: 2px;
 	margin: 0;
 }
 
