@@ -185,6 +185,16 @@ h5 {
   margin: 0;
   padding: 1rem;
 }
+h6 {
+  font-family: $font-sans;
+  // font-size: .9rem;
+  // text-transform: uppercase;
+  border-bottom: 2px solid $pink;
+  display: inline-block;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  color: $pink;
+}
 
 a {
   color:black;
@@ -494,12 +504,12 @@ a {
 }
 .caption {
   font-size: 1.25rem;
-  text-align: left;
+  text-align: center;
   position: fixed;
   opacity: 0;
   z-index: 2;
   -webkit-transition: .25s ease all 0s;
-  margin: 2rem;
+  margin: 20%;
   top: 0;
   left: 0;
     right: 0;

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/earlyaccess/droidsansethiopic.css);
 body {
   font-family: "Gill Sans", sans-serif;
 }
@@ -180,11 +180,9 @@ h2 {
   font-size: 1rem;
 }
 
-.members {
-  margin-bottom: 2rem;
-}
 .members li {
   list-style: none;
+  display: inline-block;
   margin-right: 2rem;
 }
 
@@ -295,7 +293,7 @@ ul.extra-info a:hover {
 .cv li {
   padding-bottom: 1rem;
   line-height: 1.05rem;
-  list-style: disc;
+  list-style: none;
   margin-left: 1rem;
 }
 
@@ -343,6 +341,13 @@ ul.extra-info a:hover {
   margin-top: 1rem;
 }
 
+.projections-video p {
+  border-bottom: 2px solid #dd1b75;
+  padding-bottom: 2px;
+  display: inline;
+  color: #dd1b75;
+}
+
 .grid-overlay {
   position: absolute;
   top: 0px;
@@ -356,7 +361,7 @@ ul.extra-info a:hover {
 }
 .grid-overlay .title {
   margin-top: 3rem;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   text-align: center;
   font-family: "Conv_NuptialScriptLTStd";
   line-height: 1;
@@ -370,7 +375,7 @@ ul.extra-info a:hover {
   }
 }
 .grid-overlay .subhead, .grid-overlay .date {
-  font-size: 1rem;
+  font-size: .75rem;
   text-align: center;
   margin-bottom: 0;
 }

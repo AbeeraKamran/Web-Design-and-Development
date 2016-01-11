@@ -1,0 +1,284 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+/* 
+Project Name: Tentative Collective Website
+Client: Yaminay Chaudhri, Mehreen Murtaza
+Author: A Kamran
+*/
+/******************************************
+/* SETUP                   
+/*******************************************/
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 2rem;
+}
+
+h1 {
+  font-family: "Garamond", serif;
+  font-weight: normal;
+}
+
+/******************************************
+/* HEADER & NAV                  
+/*******************************************/
+/**/
+.name {
+  position: relative;
+  height: 1em;
+  font-size: 1.74rem;
+  font-family: "Garamond", serif;
+  clear: both;
+}
+.name:before {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: blue;
+}
+
+.split {
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.6em;
+  overflow: hidden;
+}
+
+.rotate {
+  top: 15rem;
+  left: 2rem;
+  z-index: 2;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.circle {
+  padding: 2rem;
+  z-index: 2;
+  position: fixed;
+}
+.circle:hover .black {
+  -webkit-transform: rotate(-180deg) translateX(0%);
+}
+
+.black {
+  height: 15px;
+  width: 30px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  background: blue;
+  -webkit-transform: rotate(-180deg) translateX(-100%);
+  transition: .35s all ease-in-out;
+}
+
+.blue {
+  height: 15px;
+  width: 30px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  background: black;
+}
+
+.menu-text {
+  opacity: 0;
+  color: black;
+  font-size: .5rem;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  margin: 1rem 2rem;
+  float: left;
+  text-transform: uppercase;
+  position: relative;
+}
+@media only screen and (max-width: 414px) {
+  .menu-text {
+    display: none;
+  }
+}
+
+.menu-list {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  /* approximate max height */
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  z-index: 2;
+}
+.menu-list ul {
+  float: left;
+}
+.menu-list li {
+  list-style: none;
+  font-size: .75rem;
+  color: white;
+  text-transform: uppercase;
+  display: inline;
+  padding: 1.75rem;
+  z-index: 3;
+}
+.menu-list a {
+  text-decoration: none;
+  padding: 0;
+}
+.menu-list a:hover {
+  background-color: magenta;
+}
+
+.menu-list.opened {
+  /* visible */
+  -webkit-transform: translate(0, 0%);
+  -moz-transform: translate(0, 0%);
+  -ms-transform: translate(0, 0%);
+  transform: translate(0, 0%);
+}
+
+.closed {
+  /* completely offscreen */
+  transform: translateY(-100%);
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+
+#nav-trigger {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+#nav-trigger:hover .menu-text {
+  opacity: 1;
+}
+
+.triangle-up-left {
+  width: 100%;
+  height: 0;
+  padding-left: 100%;
+}
+
+.triangle-up-left:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: -1450px;
+  border-bottom: 705px solid transparent;
+  border-left: 1450px solid blue;
+}
+
+/******************************************
+/* HOMEPAGE                 
+/*******************************************/
+/**/
+.highlight {
+  display: inline;
+  white-space: pre-wrap;
+  padding: 0 .25rem;
+  transition: .35s all ease-in-out;
+}
+
+p.heading {
+  font-size: 2.75rem;
+  font-family: "Arial", sans-serif;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .35s all ease-in-out;
+}
+p.heading:hover {
+  text-shadow: 1px 2px rgba(255, 0, 255, 0.75), 1px -2px rgba(0, 255, 255, 0.75), 3px 4px rgba(255, 255, 0, 0.75);
+}
+
+.quick-links {
+  color: blue;
+  font-size: 1.25rem;
+  list-style: none;
+  font-family: "Garamond", serif;
+}
+.quick-links li:hover .highlight {
+  background-color: magenta;
+  color: white;
+}
+.quick-links .buy {
+  float: right;
+  text-align: right;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+.quick-links .events {
+  float: right;
+  text-align: right;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.quick-links .submit {
+  float: left;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}

@@ -13,7 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,14 +22,46 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="content">
-            <header>
-                <div class="logo"> 
-                    <h1 class="split">Different Skies</h1>
-                </div>  
-            </header>  
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <nav>
+            <a href="#" id="nav-trigger">
+                <span class="menu-text">Menu</span>
+                <div class="circle">
+                    <div class="blue"></div>
+                    <div class="black"></div>
+                </div>
+            </a>
+        </nav> 
+        <div class="menu-list closed">
+            <div class="triangle-up-left"></div>
+            <ul>
+                <a href="about.html"><li>About</li></a>
+                <a href=""><li>Current Issue</li></a>
+                <a href=""><li>Back Issue</li></a>
+                <a href=""><li>Order A Hardcopy</li></a>
+                <a href=""><li>Subscribe</li></a>
+                <a href=""><li>Contributors</li></a><li>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </div> 
+        <header>
+            <div class="name rotate" title="Different Skies"> 
+                <span class="split">Different Skies</span>
+            </div>  
+        </header>
+        
+        <p class="heading">
+            Organ grinding is unskilled labour.<br>
+            The organ grinder cranks a handle.<br>
+            The tune repeats itself.<br>
+            The only prerequisite is an<br> 
+            approximate sense of time.<br>
+        </p>
+        <ul class="quick-links">
+            <li class="buy"><span class="highlight">Buy<br> New<br> Issue</span></li>
+            <li class="events"><span class="highlight">Writer's<br> Meetup<br> 20.03.2015</span></li> 
+            <li class="submit"><span class="highlight">How<br> To<br> Submit</span></li>
+        </ul>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

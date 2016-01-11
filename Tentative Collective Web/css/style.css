@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/earlyaccess/droidsansethiopic.css);
 /* 
 Project Name: Tentative Collective Website
 Client: Yaminay Chaudhri, Mehreen Murtaza
@@ -185,6 +185,15 @@ h5 {
   font-family: "Conv_NuptialScriptLTStd";
   margin: 0;
   padding: 1rem;
+}
+
+h6 {
+  font-family: "Gill Sans", sans-serif;
+  border-bottom: 2px solid #dd1b75;
+  display: inline-block;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  color: #dd1b75;
 }
 
 a {
@@ -519,12 +528,12 @@ a {
 
 .caption {
   font-size: 1.25rem;
-  text-align: left;
+  text-align: center;
   position: fixed;
   opacity: 0;
   z-index: 2;
   -webkit-transition: .25s ease all 0s;
-  margin: 2rem;
+  margin: 20%;
   top: 0;
   left: 0;
   right: 0;

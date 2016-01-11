@@ -183,11 +183,10 @@ h2 {
 	font-size: 1rem;
 }
 .members {
-	margin-bottom: 2rem;
 	
 	li {
 		list-style: none;
-		// display: inline-block;
+		display: inline-block;
 		margin-right: 2rem;
 		// border-bottom: 1px black solid;
 	}
@@ -313,7 +312,7 @@ ul.extra-info {
   li {
     padding-bottom: 1rem;
     line-height: 1.05rem;
-    list-style: disc;
+    list-style: none;
     margin-left: 1rem;
   }
 }
@@ -367,6 +366,12 @@ ul.extra-info {
 	margin-top: 1rem;
 	}
 }
+.projections-video p{
+	border-bottom: 2px solid $pink;
+	padding-bottom: 2px;
+	display: inline;
+	color: $pink;
+}
 
 .grid-overlay {
 	position: absolute;
@@ -382,7 +387,7 @@ ul.extra-info {
 
     .title {
     	margin-top: 3rem;
-	    font-size: 1.65rem;
+	    font-size: 1.5rem;
 	    text-align: center;
 	    font-family: $heading;
 	    line-height: 1;
@@ -395,7 +400,7 @@ ul.extra-info {
 	    }
     }
     .subhead, .date {
-    	font-size: 1rem;
+    	font-size: .75rem;
 	    text-align: center;
 	    margin-bottom: 0; 
 	    @include goldilocks(baby) {
