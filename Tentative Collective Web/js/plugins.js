@@ -40,8 +40,6 @@ $(document).ready(function() {
         $(this).masonry('reload');
     });
 
-
-
     // // Find all Vimeo videos
     // var $allVideos = $("iframe[src^='//player.vimeo.com']"),
 
@@ -217,7 +215,7 @@ function initFlexModal2() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -231,7 +229,7 @@ function initFlexModal3() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -245,7 +243,7 @@ function initFlexModal4() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -259,7 +257,7 @@ function initFlexModal5() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -273,7 +271,7 @@ function initFlexModal6() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -287,7 +285,7 @@ function initFlexModal7() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -301,7 +299,7 @@ function initFlexModal8() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -315,7 +313,7 @@ function initFlexModal9() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -329,7 +327,7 @@ function initFlexModal11() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -343,7 +341,7 @@ function initFlexModal12() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -356,7 +354,7 @@ function initFlexModal13() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };
@@ -369,7 +367,7 @@ function initFlexModal14() {
         animationLoop: true,
         itemMargin: 1,
         controlNav: true,
-        directionNav: false,
+        directionNav: true,
         slideshow: true
     });
 };

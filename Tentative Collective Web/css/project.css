@@ -128,7 +128,7 @@ h2 {
 }
 .project-info a {
   padding-bottom: .25rem;
-  border-bottom: 2px solid black;
+  color: #dd1b75;
 }
 .project-info a:hover {
   background-color: #dd1b75;
@@ -287,13 +287,13 @@ ul.extra-info a:hover {
   padding: 1rem 0;
 }
 .cv a {
-  border-bottom: 2px solid black;
   padding-bottom: 0;
+  color: #dd1b75;
 }
 .cv li {
   padding-bottom: 1rem;
-  line-height: 1.05rem;
-  list-style: none;
+  line-height: 1.25rem;
+  list-style: disc;
   margin-left: 1rem;
 }
 
@@ -389,6 +389,11 @@ ul.extra-info a:hover {
   margin-top: 25%;
 }
 
+.gandi-workshop li {
+  list-style: decimal;
+  list-style-position: inside;
+}
+
 .small-block-grid-3 {
   margin-top: 2rem;
 }
@@ -412,6 +417,18 @@ ul.extra-info a:hover {
 
 .flexslider .flex-direction-nav li a.flex-prev {
   background: url("../img/arrows-01.png") no-repeat 0 0px !important;
+}
+
+.flexslider-projections .flex-direction-nav li a.flex-next {
+  background: url("../img/arrows-02.png") no-repeat 0 0 !important;
+  right: -60px;
+  opacity: 1;
+}
+
+.flexslider-projections .flex-direction-nav li a.flex-prev {
+  background: url("../img/arrows-01.png") no-repeat 0 0px !important;
+  left: -40px;
+  opacity: 1;
 }
 
 .flex-direction-nav a {

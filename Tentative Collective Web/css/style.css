@@ -56,6 +56,10 @@ ul {
   margin: 0;
 }
 
+em, i {
+  letter-spacing: 1px;
+}
+
 .row {
   clear: both;
 }
@@ -487,7 +491,6 @@ a {
 }
 
 .point {
-  font-family: 'Droid Arabic Naskh', serif;
   color: #dd1b75;
   font-size: 1.5rem;
   z-index: 999;
@@ -532,13 +535,14 @@ a {
   position: fixed;
   opacity: 0;
   z-index: 2;
+  font-family: "Gill Sans", sans-serif;
+  line-height: 2rem;
   -webkit-transition: .25s ease all 0s;
   margin: 20%;
   top: 0;
   left: 0;
   right: 0;
   height: 0;
-  font-family: "Gill Sans", sans-serif;
   color: snow;
   font-weight: normal;
   width: 60%;
@@ -550,6 +554,135 @@ a {
 }
 
 .caption.visible {
+  -webkit-transition: .25s ease all .5s;
+  -moz-transition: .25s ease all .5s;
+  -ms-transition: .25s ease all .5s;
+  -o-transition: .25s ease all .5s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  white-space: pre-line;
+}
+
+/******************************************
+/* OVERLAY-URDU  literally the worst patch fix ugh hate this copy pasting                
+/*******************************************/
+/**/
+.overlay-urdu {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  height: 80rem;
+}
+
+.overlay-urdu .overlay-image-urdu {
+  opacity: 0;
+  -webkit-transition: 0.25s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0.15s;
+  -moz-transition: 0.25s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0.15s;
+  -ms-transition: 0.25s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0.15s;
+  -o-transition: 0.25s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0.15s;
+}
+
+.overlay-urdu .overlay-image-urdu.zoom {
+  -webkit-transition: 0.5s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0s;
+  -moz-transition: 0.5s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0s;
+  -ms-transition: 0.5s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0s;
+  -o-transition: 0.5s cubic-bezier(0.72, 0.04, 0.49, 0.7) all 0s;
+  -webkit-transform: scale(4, 4);
+  -ms-transform: scale(4, 4);
+  -o-transform: scale(4, 4);
+  transform: scale(4, 4);
+}
+@media only screen and (max-width: 414px) {
+  .overlay-urdu .overlay-image-urdu.zoom {
+    -webkit-transform: scale(1, 4);
+    -ms-transform: scale(1, 4);
+    -o-transform: scale(1, 4);
+    transform: scale(1, 4);
+  }
+}
+
+.overlay-urdu.visible .overlay-image-urdu {
+  opacity: 1;
+}
+
+.points-urdu {
+  position: absolute;
+  height: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.point-urdu {
+  color: #dd1b75;
+  font-size: 1.5rem;
+  z-index: 999;
+  position: absolute;
+  cursor: pointer;
+  pointer-events: all;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: .5s ease-all;
+  opacity: 1;
+  top: 100px;
+  left: 100px;
+}
+.point-urdu .inner-urdu {
+  position: relative;
+  text-align: center;
+  transform: scale(0.66);
+  -webkit-transition: .25s ease-all;
+  box-sizing: inherit;
+}
+
+.point-urdu.highlight {
+  opacity: 1;
+}
+
+.point-urdu.highlight .inner-urdu {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.overlay-image {
+  height: 200%;
+  width: 200%;
+  position: fixed;
+}
+
+.caption-urdu {
+  font-size: 1.75rem;
+  text-align: center;
+  position: fixed;
+  opacity: 0;
+  z-index: 2;
+  font-family: 'HussainiNastaleeqRegular';
+  line-height: 3rem;
+  -webkit-transition: .25s ease all 0s;
+  margin: 20%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  color: snow;
+  font-weight: normal;
+  width: 60%;
+}
+@media only screen and (max-width: 414px) {
+  .caption-urdu {
+    top: 25%;
+  }
+}
+
+.caption-urdu.visible {
   -webkit-transition: .25s ease all .5s;
   -moz-transition: .25s ease all .5s;
   -ms-transition: .25s ease all .5s;
