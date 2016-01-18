@@ -231,8 +231,9 @@ a {
   text-transform: uppercase;
   position: relative;
   margin: 5% 92%;
-  @include goldilocks (baby) {
-  display: none;    
+  
+    @include goldilocks (baby) {
+    display: none;   
   }
 }
 
@@ -259,7 +260,6 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
   height: 100%;
 
   overflow-y: hidden;
@@ -285,11 +285,11 @@ a {
 
   ul {
     padding-top: 15rem;
-    background-color: white;
+    // background-color: white;
     margin: .75rem;
     height: 96%;
     @include goldilocks (baby) {
-      padding-top: 40%;
+      padding-top: 35%;
     }
 
   }
@@ -298,7 +298,7 @@ a {
     list-style: none;
     display: inline;
     position: relative;
-    color: $green;
+    color: white;
     font-family: $font-sans;
     font-size: 2rem;
     letter-spacing: .15rem;
@@ -448,6 +448,14 @@ a {
   -o-transition:.5s cubic-bezier(.72,.04,.49,.7)all 0s;
   -webkit-transform:scale(4,4);-ms-transform:scale(4,4);
   -o-transform:scale(4,4);transform:scale(4,4);
+  @include goldilocks (mama) {
+    -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
+    -o-transform:scale(1,4);transform:scale(1,4)
+  }
+  @include goldilocks (mamaTall) {
+    -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
+    -o-transform:scale(1,4);transform:scale(1,4)
+  }
   @include goldilocks (baby) {
     -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
     -o-transform:scale(1,4);transform:scale(1,4)
@@ -498,10 +506,20 @@ a {
 }
 
 .overlay-image {
-  
   height: 200%;
   width: 200%;
   position: fixed;
+  img{
+    @include goldilocks (mama) {
+      height: 100%;
+    } 
+    @include goldilocks (mamaTall) {
+      height: 100%;
+    }
+    @include goldilocks (baby) {
+      height: 100%;
+    }
+  }
 }
 .caption {
   font-size: 1.25rem;
@@ -520,6 +538,14 @@ a {
   color: snow;
   font-weight: normal;
   width: 60%;
+  @include goldilocks (mama) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  @include goldilocks (mamaTall) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
   @include goldilocks (baby) {
     top: 25%;
   }
@@ -566,13 +592,33 @@ a {
   -o-transition:.5s cubic-bezier(.72,.04,.49,.7)all 0s;
   -webkit-transform:scale(4,4);-ms-transform:scale(4,4);
   -o-transform:scale(4,4);transform:scale(4,4);
-  @include goldilocks (baby) {
+  @include goldilocks (mama) {
     -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
     -o-transform:scale(1,4);transform:scale(1,4)
+  }
+  @include goldilocks (mamaTall) {
+    -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
+    -o-transform:scale(1,4);transform:scale(1,4)
+  }
+  @include goldilocks (baby) {
+    -webkit-transform:scale(1,4);-ms-transform:scale(1,4);
+    -o-transform:scale(1,4);transform:scale(1,4);
+
   }
 }
 .overlay-urdu.visible .overlay-image-urdu {
   opacity: 1;
+}
+.overlay-image-urdu img{
+  @include goldilocks (mama) {
+    height: 100%;
+  }
+  @include goldilocks (mamaTall) {
+    height: 100%;
+  }
+  @include goldilocks (baby) {
+    height: 100%;
+  }
 }
 .points-urdu {
   position: absolute;
@@ -614,8 +660,8 @@ a {
   -o-transform:scale(1);
   transform:scale(1);
 }
-.overlay-image { 
-  height: 200%;
+.overlay-image-urdu { 
+  height: 400%;
   width: 200%;
   position: fixed;
 }
@@ -636,8 +682,22 @@ a {
   color: snow;
   font-weight: normal;
   width: 60%;
+  @include goldilocks (mama) {
+    top: 30%;
+    margin: 0 auto;
+    width: 77%;
+  }
+  @include goldilocks (mamaTall) {
+    top: 30%;
+    margin: 0 auto;
+    width: 50%;
+  }
   @include goldilocks (baby) {
-    top: 25%;
+    top: 30%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    width: 80%;
   }
 }
 .caption-urdu.visible{
@@ -846,7 +906,22 @@ footer {
       background-position: -50px -56px;
     }
   }
- 
+}
+
+.credits {
+  font-size: .6rem;
+  text-align: center;
+  opacity: .8;
+  color: white;
+  a {
+    color: white;
+    &:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+  @include goldilocks (baby) {
+      margin-top: 2rem;
+    }
 }
 /******************************************
 /* PROJECT THUMBNAIL                   
@@ -875,7 +950,7 @@ footer {
 .projections {
   margin: 1rem 0rem;
   @include goldilocks(baby) {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 
   .blurb {

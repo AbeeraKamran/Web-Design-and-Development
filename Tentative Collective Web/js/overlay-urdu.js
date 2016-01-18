@@ -1,4 +1,4 @@
-/*! Zak Group Boilerplate ~ http://zakgroup.co.uk/ ~ Rupert Dunk */
+$(document).ready(function() {
 
 (function($) {
 	$.fn.closestToOffsetUrdu = function(offset) {
@@ -80,7 +80,7 @@
 			$point = $(this);
 			var offset = $('.overlay-urdu').offset();
 			var x = $point.offset().left + $point.width()/2;
-			var y = $point.offset().top + $point.height()/2 - offset.top;
+			var y = $point.offset().top + $point.height()/2 -offset.top;
 			var xp = x/$(window).width()*100;
 			var yp = y/(overlayHeight)*100;
 			$('.overlay-image-urdu').css({
@@ -198,3 +198,4 @@
 	});
 
 })(jQuery);
+})

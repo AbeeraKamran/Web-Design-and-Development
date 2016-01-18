@@ -139,9 +139,6 @@ h2 {
 			background-color:  $pink;
 			color: white;
 		}
-		@include goldilocks (baby) {
-			border-bottom: 1px solid black;
-		}
 	}
 	 @include goldilocks (baby) {
 	 	padding: 1.5rem;
@@ -193,7 +190,7 @@ h2 {
 }
 
 .about {
-	margin-bottom: 3rem;
+	margin: 1rem 0 3rem 0;
 }
 .contributors {
 	max-width: 26rem;
@@ -304,6 +301,10 @@ ul.extra-info {
 .cv {
 	h5 {
 		padding: 1rem 0;
+		@include goldilocks (baby) {
+			font-size: 1.5rem;
+			text-align: center;
+		}
 	}
   a {
     padding-bottom: 0;
@@ -357,14 +358,23 @@ ul.extra-info {
 	}
 }
 
-// .flex-control-nav {
-// 	margin: 1rem 0 2rem;
-// 	bottom: -6px;
-// }
 .flexslider-projections {
 	.flex-viewport {
 	margin-top: 1rem;
 	}
+	.flex-direction-nav a {
+		top: 70%;
+	}
+}
+
+.flex-gandi {
+	
+	.flex-direction-nav a {
+		top: 50%;
+	}
+}
+.flex-control-paging li a {
+	background: rgba(221, 27, 117, 0.5);
 }
 .projections-video p{
 	border-bottom: 2px solid $pink;
@@ -403,6 +413,7 @@ ul.extra-info {
     	font-size: .75rem;
 	    text-align: center;
 	    margin-bottom: 0; 
+	    color: black;
 	    @include goldilocks(baby) {
 	    	font-size: .75rem;
 	    }

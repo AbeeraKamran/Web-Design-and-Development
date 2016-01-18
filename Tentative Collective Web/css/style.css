@@ -270,7 +270,6 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
   height: 100%;
   overflow-y: hidden;
   max-height: 100%;
@@ -289,20 +288,19 @@ a {
 }
 .menu-list ul {
   padding-top: 15rem;
-  background-color: white;
   margin: .75rem;
   height: 96%;
 }
 @media only screen and (max-width: 414px) {
   .menu-list ul {
-    padding-top: 40%;
+    padding-top: 35%;
   }
 }
 .menu-list li {
   list-style: none;
   display: inline;
   position: relative;
-  color: #008f45;
+  color: white;
   font-family: "Gill Sans", sans-serif;
   font-size: 2rem;
   letter-spacing: .15rem;
@@ -469,6 +467,22 @@ a {
   -o-transform: scale(4, 4);
   transform: scale(4, 4);
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .overlay .overlay-image.zoom {
+    -webkit-transform: scale(1, 4);
+    -ms-transform: scale(1, 4);
+    -o-transform: scale(1, 4);
+    transform: scale(1, 4);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .overlay .overlay-image.zoom {
+    -webkit-transform: scale(1, 4);
+    -ms-transform: scale(1, 4);
+    -o-transform: scale(1, 4);
+    transform: scale(1, 4);
+  }
+}
 @media only screen and (max-width: 414px) {
   .overlay .overlay-image.zoom {
     -webkit-transform: scale(1, 4);
@@ -528,6 +542,21 @@ a {
   width: 200%;
   position: fixed;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .overlay-image img {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .overlay-image img {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .overlay-image img {
+    height: 100%;
+  }
+}
 
 .caption {
   font-size: 1.25rem;
@@ -546,6 +575,18 @@ a {
   color: snow;
   font-weight: normal;
   width: 60%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .caption {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .caption {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 @media only screen and (max-width: 414px) {
   .caption {
@@ -598,6 +639,22 @@ a {
   -o-transform: scale(4, 4);
   transform: scale(4, 4);
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .overlay-urdu .overlay-image-urdu.zoom {
+    -webkit-transform: scale(1, 4);
+    -ms-transform: scale(1, 4);
+    -o-transform: scale(1, 4);
+    transform: scale(1, 4);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .overlay-urdu .overlay-image-urdu.zoom {
+    -webkit-transform: scale(1, 4);
+    -ms-transform: scale(1, 4);
+    -o-transform: scale(1, 4);
+    transform: scale(1, 4);
+  }
+}
 @media only screen and (max-width: 414px) {
   .overlay-urdu .overlay-image-urdu.zoom {
     -webkit-transform: scale(1, 4);
@@ -609,6 +666,22 @@ a {
 
 .overlay-urdu.visible .overlay-image-urdu {
   opacity: 1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .overlay-image-urdu img {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .overlay-image-urdu img {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .overlay-image-urdu img {
+    height: 100%;
+  }
 }
 
 .points-urdu {
@@ -652,8 +725,8 @@ a {
   transform: scale(1);
 }
 
-.overlay-image {
-  height: 200%;
+.overlay-image-urdu {
+  height: 400%;
   width: 200%;
   position: fixed;
 }
@@ -676,9 +749,27 @@ a {
   font-weight: normal;
   width: 60%;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .caption-urdu {
+    top: 30%;
+    margin: 0 auto;
+    width: 77%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .caption-urdu {
+    top: 30%;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 414px) {
   .caption-urdu {
-    top: 25%;
+    top: 30%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    width: 80%;
   }
 }
 
@@ -786,6 +877,24 @@ footer li {
   background-position: -50px -56px;
 }
 
+.credits {
+  font-size: .6rem;
+  text-align: center;
+  opacity: .8;
+  color: white;
+}
+.credits a {
+  color: white;
+}
+.credits a:hover {
+  border-bottom: 1px solid white;
+}
+@media only screen and (max-width: 414px) {
+  .credits {
+    margin-top: 2rem;
+  }
+}
+
 /******************************************
 /* PROJECT THUMBNAIL                   
 /*******************************************/
@@ -820,7 +929,7 @@ footer li {
 }
 @media only screen and (max-width: 414px) {
   .projections {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 }
 .projections .blurb {
