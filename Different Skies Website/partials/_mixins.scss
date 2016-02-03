@@ -81,3 +81,37 @@
       0 0 1px rgba(0, 0, 0, 0); /* Hack to improve aliasing on mobile/tablet devices */
   }
 }
+
+@mixin perspective($pixels) {
+  -webkit-perspective: $pixels;
+  -moz-perspective: $pixels;
+  -o-perspective: $pixels;
+  perspective: $pixels;
+}
+@mixin transition($speed) {
+  -webkit-transition: -webkit-transform $speed;
+  -moz-transition: -moz-transform $speed;
+  -o-transition: -o-transform $speed;
+  transition: transform $speed;
+}
+
+@mixin transform-style() {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@mixin transform($degrees) {
+  -webkit-transform: rotateX( $degrees + deg);
+  -moz-transform: rotateX( $degrees + deg);
+  -o-transform: rotateX( $degrees + deg);
+  transform: rotateX( $degrees + deg);
+}
+
+@mixin backface-visibility() {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

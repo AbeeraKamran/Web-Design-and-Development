@@ -50,6 +50,10 @@ video {
     vertical-align: middle;
 }
 
+:focus, :active, :hover {
+  outline: none;
+}
+
 
 html {
   height: 100%;
@@ -62,12 +66,36 @@ body {
 ul {
   margin: 2rem;
 }
-
+ li {
+  list-style: none;
+ }
 h1 {
   font-family: $font-serif;
   font-weight: normal;
 }
 
+h2 {
+  font-size: 1.5rem;
+  color: $blue;
+  font-family: $font-serif;
+  margin: 6rem 0 2rem 0;
+  position: fixed;
+  text-align: center;
+}
+p{
+  line-height: 1.3rem;
+  font-size: .9rem;
+}
+a {
+  color: $pink;
+  transition: .25s ease-in-out;
+  &:hover {
+    color: white
+  }
+}
+tr { 
+  vertical-align: top;
+}
 /******************************************
 /* HEADER & NAV                  
 /*******************************************/
@@ -84,7 +112,7 @@ h1 {
   clear: both;
   &:before {
     content: attr(title);
-    position: absolute;
+    // position: absolute;
     left: 0;
     top: 0;
     color: $blue;
@@ -93,17 +121,18 @@ h1 {
 
 .split {
   color: black;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 0.6em;
+  height: 0.8em;
   overflow: hidden;
 }
 
 .rotate {
   top: 15rem;
   left: 2rem;
-  z-index: 2;
+  z-index: 4;
+  position: fixed;
  -webkit-transform-origin: 0 0;
   -moz-transform-origin:    0 0;
   -ms-transform-origin:     0 0;
@@ -118,11 +147,8 @@ h1 {
 
 .circle {
   padding: 2rem;
-  z-index: 2;
+  z-index: 4;
   position: fixed;
-  &:hover .black{
-  -webkit-transform: rotate(-180deg) translateX(0%);
-  }
 }
 .black{
   height:15px;
@@ -147,13 +173,24 @@ h1 {
   opacity: 0;
   color: black;
   font-size: .5rem;
+  outline: none;
+  &:hover {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+   &:active {
+    outline: none;
+  }      
+
   @include vendor(transition, all .5s ease-in);
   margin: 1rem 2rem;
   float: left;
   text-transform: uppercase;
   position: relative;
   @include goldilocks (baby) {
-  display: none;    
+  display: none;
   }
 }
 .menu-list {
@@ -170,7 +207,8 @@ h1 {
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   z-index: 2;
   ul{
-  float: left;
+    float: left;
+    margin: 2rem 5.75rem;
   }
   li{
     list-style: none;
@@ -178,12 +216,13 @@ h1 {
     color: white;
     text-transform: uppercase;
     display: inline;
-    padding: 1.75rem;
+    padding: 1.2rem;
     z-index: 3;
   }
   a {
     text-decoration: none;
     padding: 0;
+    color: white;
     &:hover {
       background-color: $pink;
     }
@@ -208,11 +247,13 @@ h1 {
 }
 
 #nav-trigger {
-  position: absolute;
   top: 0;
   z-index: 3;
   &:hover .menu-text {
     opacity: 1 ;
+  }
+  &:hover .black{
+  -webkit-transform: rotate(-180deg) translateX(0%);
   }
 }
 .triangle-up-left {
@@ -227,9 +268,26 @@ h1 {
     display: block;
     width: 0;
     height: 0;
-    margin-left: -1450px;
-    border-bottom: 705px solid transparent;
-    border-left: 1450px solid $blue;
+    margin-left: -100vw;
+    border-bottom: 100vh solid transparent;
+    border-left: 100vw solid blue;
+}
+
+.triangle-bg {
+  width: 30%;
+  height: 504px;
+    // padding-bottom: 49%;
+  padding-left: 504px;
+  padding-right: inherit;
+  padding-top: 0;
+}
+.triangle-bg:after {
+  content: "";
+    display: block;
+    width: 0;
+    margin-left: -504px;
+    border-bottom: 504px solid transparent;
+    border-left: 504px solid $blue;
 }
 /******************************************
 /* HOMEPAGE                 
@@ -241,16 +299,17 @@ h1 {
   padding: 0 .25rem;
   transition: .35s all ease-in-out;
 }
-a.heading {
+p.inner {
   font-size: 2.75rem;
   font-family: $font-sans;
   position: fixed;
-  top: 40%;
-  left: 50%;
+  top: 45%;
+  left: 52%;
   transform: translate(-50%, -50%);
   transition: .35s all ease-in-out;
   text-decoration: none;
   color: black;
+  line-height: 3.5rem;
   
   &:hover {
    cursor: url(../img/book_flip.gif);
@@ -263,15 +322,17 @@ a.heading {
 // .inner {
 //    transition: .3s; 
 //   transform: rotateY(40deg);
-}
 
-.quick-links a {
-  color: $blue;
-  font-size: 1.25rem;
-  list-style: none;
-  font-family: $font-serif;
+
+.quick-links {
+  a {
+    color: $blue;
+    font-size: 1.25rem;
+    list-style: none;
+    font-family: $font-serif;
+  }
   li {
-
+    list-style: none;
     &:hover .highlight {
       background-color: $pink;
       color: white;
@@ -300,3 +361,197 @@ a.heading {
     left: 1rem;
   }
 }
+.reveal-modal {
+  width: 32rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: $blue;
+}
+.modalTitle {
+  color: $pink;
+  padding: 3rem 0 .25rem;
+  font-family: $font-serif;
+  margin: 0 2rem 1rem 3rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+#firstModal.reveal-modal {
+  
+  p {
+    // float: left;
+    // clear: both;
+    color: white;
+    margin: 1rem 3rem 0 1rem; 
+    float: left;
+  }
+  .issue-title {
+    font-size: 1rem;
+    padding: 2rem 0 0 2rem;
+  }
+  .modal-img {
+    width: 18rem;
+    padding: 1rem .5rem 2rem 2rem;
+    float: left;
+  }
+  .price {
+    border-bottom: 1px solid white;
+    padding: 0rem;
+    margin: 1rem 0 0 1rem;
+    display: inline-block;
+    float: left;
+  }
+  button {
+    // float: left;
+    display: block;
+    background: $pink;
+    margin: 1rem 2rem 0 1rem;
+    color: white;
+    float: left;
+    font-size: .9rem;
+    &:hover {
+      background: white;
+      color: $pink;
+    }
+  }
+  .past-issues {
+    color: $pink;
+    border-bottom: 1px solid $pink;
+    float: left;
+    margin: 1rem;
+    padding: 0;
+  }
+}
+.modal-event.reveal-modal {
+    background: $blue;
+    border-radius: 0;
+  }
+.modal-event {
+  .modalTitle {
+    float: none;
+  }
+  p {
+    padding: 0 3rem;
+    color: white;
+    &:last-child{
+      margin-bottom: 3rem;
+    }
+  }
+}
+/******************************************
+/* CONTACT                
+/*******************************************/
+/**/
+.contact {
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    line-height: 1.4rem;
+    font-size: .9rem;
+  }
+}
+.contact-heading {
+  margin: 2rem 0 2rem 0;
+}
+input[type="text"] {
+  border: 1px solid $blue;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+.btn {
+  background: $blue;
+  color: $pink;
+  border: none;
+  padding: 1rem;
+  transition: .5s ease-in-out;
+  &:hover {
+    background: white;
+    color: $pink;
+  }
+}
+.ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.socials-icon {
+  display: block;
+  width: 52px;
+  height: 52px;
+  float: left;
+}
+
+/******************************************
+/* CONTENT                
+/*******************************************/
+/**/
+.about {
+  margin: 5rem 0 0;
+  position: fixed;
+  text-align: center;
+}
+#page-wrap {
+  margin: 8rem 20rem;
+} 
+.post {
+  width: 700px; 
+  padding:9rem 5rem;
+  p {
+    font-size:1rem;
+    line-height: 1.5rem;
+  }
+}
+.small-post {
+  width: 500px;
+}
+p.focus-text {
+  // font-size: 1.5rem;
+  // line-height: 1.75rem;
+  padding: 8rem 0;
+}
+
+
+.dot {
+  border-radius: 50%;
+  background: $blue;
+  width: 10px;
+  height: 10px;
+}
+.margin {
+  margin-top: 1rem;
+}
+.paper-row {
+  margin-left: 2rem;
+}
+.post-paper {
+  padding: 9rem 1rem;
+  width: 310px;
+  margin-left: 2rem;
+
+}
+.paper-info {
+  padding: .5rem 0;
+  p {
+    font-size: .8rem;
+    margin-bottom: 0;
+    line-height: 1.3rem;
+  }
+  .btn {
+    padding: .75rem;
+    font-size: .85rem;
+    &:hover {
+      background-color: $pink;
+      color: $blue;
+    }
+  }
+  .price {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+      display: inline-block;
+      margin-bottom: .25rem;
+    }
+}
+
