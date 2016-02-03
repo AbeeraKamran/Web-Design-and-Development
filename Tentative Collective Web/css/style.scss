@@ -528,7 +528,6 @@ a {
   opacity: 0;
   z-index: 2;
   font-family: $font-sans;
-  line-height: 2rem;
   -webkit-transition: .25s ease all 0s;
   margin: 20%;
   top: 0;
@@ -538,6 +537,7 @@ a {
   color: snow;
   font-weight: normal;
   width: 60%;
+  white-space:pre-line;
   @include goldilocks (mama) {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -682,6 +682,7 @@ a {
   color: snow;
   font-weight: normal;
   width: 60%;
+  white-space:pre-line;
   @include goldilocks (mama) {
     top: 30%;
     margin: 0 auto;

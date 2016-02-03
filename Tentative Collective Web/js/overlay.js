@@ -1,4 +1,4 @@
-/*! Zak Group Boilerplate ~ http://zakgroup.co.uk/ ~ Rupert Dunk */
+$(document).ready(function() {
 
 (function($) {
 	$.fn.closestToOffset = function(offset) {
@@ -248,3 +248,4 @@
 	});
 
 })(jQuery);
+})

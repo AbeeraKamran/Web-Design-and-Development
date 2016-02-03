@@ -178,9 +178,16 @@ h2 {
 	margin-bottom: .25rem;
 	text-transform: uppercase;
 	font-size: 1rem;
+	@include goldilocks (baby) {
+		font-size: .75rem;
+	}
+}
+.core-members{ 
+	@include goldilocks (baby) {
+		font-size: .75rem;
+	}
 }
 .members {
-	
 	li {
 		list-style: none;
 		display: inline-block;
@@ -210,6 +217,9 @@ h2 {
 	max-width: 47rem;
 	p {
 		padding-bottom: .75rem;
+	}
+	@include goldilocks(baby) {
+	    min-height: 0;
 	}
 }
 .modalTitle {
@@ -428,6 +438,9 @@ ul.extra-info {
 .gandi-workshop li{
 	list-style: decimal;
 	list-style-position: inside;
+	@include goldilocks(baby) {
+	    	font-size: .75rem;
+	    }
 }
 .small-block-grid-3 {
 	margin-top: 2rem;

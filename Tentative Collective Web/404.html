@@ -5,23 +5,18 @@
         <title>Page Not Found :(</title>
         <style>
             ::-moz-selection {
-                background: #b3d4fc;
                 text-shadow: none;
             }
 
             ::selection {
-                background: #b3d4fc;
                 text-shadow: none;
             }
 
             html {
-                padding: 30px 10px;
                 font-size: 20px;
                 line-height: 1.4;
-                color: #737373;
-                background: #f0f0f0;
-                -webkit-text-size-adjust: 100%;
-                -ms-text-size-adjust: 100%;
+                /*-webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;*/
             }
 
             html,
@@ -30,26 +25,15 @@
             }
 
             body {
-                max-width: 500px;
-                _width: 500px;
-                padding: 30px 20px 50px;
-                border: 1px solid #b3b3b3;
-                border-radius: 4px;
-                margin: 0 auto;
-                box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-                background: #fcfcfc;
-            }
-
+                min-height: 100vh;
+                position: relative;
+                margin: 0;
+                font-family: 'Gill Sans', sans-serif;
+                }
             h1 {
-                margin: 0 10px;
-                font-size: 50px;
-                text-align: center;
+                font-family: 'Conv_NuptialScriptLTStd';
+                font-weight: normal;
             }
-
-            h1 span {
-                color: #bbb;
-            }
-
             h3 {
                 margin: 1.5em 0 0.5em;
             }
@@ -64,9 +48,47 @@
             }
 
             .container {
-                max-width: 380px;
-                _width: 380px;
                 margin: 0 auto;
+                min-height: 100%;
+                min-width: 100%;
+                position: absolute;
+                background: linear-gradient(180deg, #06f219, #027b0c, #f01272);
+                background-size: 600% 600%;
+                overflow: hidden;
+                -webkit-animation: AnimationName 10s ease infinite;
+                -moz-animation: AnimationName 10s ease infinite;
+                animation: AnimationName 10s ease infinite;
+            }
+
+            @-webkit-keyframes AnimationName {
+                0%{background-position:51% 0%}
+                50%{background-position:50% 100%}
+                100%{background-position:51% 0%}
+            }
+            @-moz-keyframes AnimationName {
+                0%{background-position:51% 0%}
+                50%{background-position:50% 100%}
+                100%{background-position:51% 0%}
+            }
+            @keyframes AnimationName { 
+                0%{background-position:51% 0%}
+                50%{background-position:50% 100%}
+                100%{background-position:51% 0%}
+            }
+            
+
+            .eye{
+                float: right;
+                width: 3.5rem;
+                margin: 3% 91%;
+                position: fixed;
+                z-index: 100;
+                color: black;
+                @include goldilocks (baby) {
+                width: 2.25rem;
+                margin: 6% 83%;
+                position: fixed;
+                }
             }
 
             /* google search */
@@ -138,10 +160,17 @@
                 border: 0;
             }
         </style>
+                <link rel="stylesheet" href="css/fonts.css">
+
     </head>
     <body>
         <div class="container">
-            <h1>Not found <span>:(</span></h1>
+            <header class="scrollTo header">
+                <a href="#" id="nav-trigger">
+                    <img class="eye" src="img/eye.gif">
+                </a> 
+            </header>
+            <h1>Not found</h1>
             <p>Sorry, but the page you were trying to view does not exist.</p>
             <p>It looks like this was the result of either:</p>
             <ul>
