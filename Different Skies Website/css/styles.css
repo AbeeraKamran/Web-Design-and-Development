@@ -73,13 +73,12 @@ h2 {
   font-size: 1.5rem;
   color: blue;
   font-family: "Garamond", serif;
-  margin: 6rem 0 2rem 0;
+  margin: 3rem 0 0;
   position: fixed;
-  text-align: center;
+  padding-left: 0;
 }
 
 p {
-  line-height: 1.3rem;
   font-size: .9rem;
 }
 
@@ -138,9 +137,13 @@ tr {
 }
 
 .circle {
-  padding: 2rem;
+  margin: 2rem;
   z-index: 4;
   position: fixed;
+}
+
+.circle-home {
+  margin: 0rem 2rem;
 }
 
 .black {
@@ -191,6 +194,10 @@ tr {
   .menu-text {
     display: none;
   }
+}
+
+.menu-home {
+  margin: -1rem 2rem;
 }
 
 .menu-list {
@@ -304,14 +311,16 @@ tr {
 p.inner {
   font-size: 2.75rem;
   font-family: "Arial", sans-serif;
-  position: fixed;
-  top: 45%;
-  left: 52%;
-  transform: translate(-50%, -50%);
+  position: absolute;
   transition: .35s all ease-in-out;
   text-decoration: none;
   color: black;
   line-height: 3.5rem;
+  margin: auto;
+  left: 28%;
+  right: 0;
+  top: 25%;
+  bottom: 0;
 }
 p.inner:hover {
   cursor: url(../img/book_flip.gif);
@@ -384,7 +393,6 @@ p.inner:hover {
   float: left;
 }
 #firstModal.reveal-modal .price {
-  border-bottom: 1px solid white;
   padding: 0rem;
   margin: 1rem 0 0 1rem;
   display: inline-block;
@@ -404,7 +412,6 @@ p.inner:hover {
 }
 #firstModal.reveal-modal .past-issues {
   color: magenta;
-  border-bottom: 1px solid magenta;
   float: left;
   margin: 1rem;
   padding: 0;
@@ -434,7 +441,6 @@ p.inner:hover {
   font-size: 1.5rem;
 }
 .contact p {
-  line-height: 1.4rem;
   font-size: .9rem;
 }
 
@@ -474,34 +480,53 @@ input[type="text"] {
 }
 
 /******************************************
-/* CONTENT                
+/* ABOUT                
 /*******************************************/
 /**/
-.about {
-  margin: 5rem 0 0;
-  position: fixed;
-  text-align: center;
+.row-about {
+  max-width: 78.5em;
 }
 
-#page-wrap {
-  margin: 8rem 20rem;
+.padding-left {
+  padding-left: 0;
+}
+
+.margin-page {
+  margin-top: 3rem;
+}
+
+.about-page {
+  margin-top: 9rem;
 }
 
 .post {
-  width: 700px;
-  padding: 9rem 5rem;
+  width: 500px;
+  padding: 0;
+  margin-right: 11rem;
+  text-align: justify;
 }
 .post p {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: .9rem;
 }
 
-.small-post {
-  width: 500px;
+.slant:after {
+  border-left: 1px solid blue;
+  content: '';
+  display: inline-block;
+  height: 25rem;
+  position: absolute;
+  top: 48%;
+  -webkit-transform: translateY(-50%) rotate(11deg);
+  -ms-transform: translateY(-50%) rotate(11deg);
+  transform: translateY(-50%) rotate(11deg);
+  width: 0;
+  right: -88px;
 }
 
-p.focus-text {
-  padding: 8rem 0;
+.pull-quote {
+  font-size: 1.25rem;
+  color: blue;
+  width: 300px;
 }
 
 .dot {
@@ -511,8 +536,12 @@ p.focus-text {
   height: 10px;
 }
 
+/******************************************
+/* PAPER MACHINES                
+/*******************************************/
+/**/
 .margin {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .paper-row {
@@ -520,18 +549,17 @@ p.focus-text {
 }
 
 .post-paper {
-  padding: 9rem 1rem;
+  padding: 0;
   width: 310px;
-  margin-left: 2rem;
+  margin-right: 5rem;
 }
 
 .paper-info {
   padding: .5rem 0;
 }
 .paper-info p {
-  font-size: .8rem;
+  font-size: .75rem;
   margin-bottom: 0;
-  line-height: 1.3rem;
 }
 .paper-info .btn {
   padding: .75rem;
@@ -543,7 +571,7 @@ p.focus-text {
 }
 .paper-info .price {
   color: blue;
-  border-bottom: 1px solid blue;
   display: inline-block;
   margin-bottom: .25rem;
+  font-size: .8rem;
 }
