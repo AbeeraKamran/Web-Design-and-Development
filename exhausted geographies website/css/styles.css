@@ -302,7 +302,7 @@ p.editor {
 }
 
 .authors {
-  margin-top: 8%;
+  margin-top: 6%;
   padding: 2rem;
   z-index: 3;
 }
@@ -343,7 +343,7 @@ p.editor {
 
 .order {
   float: left;
-  padding: 2rem 0 0 2rem;
+  padding: 0rem 0 0 2rem;
 }
 @media only screen and (max-width: 768px) {
   .order .paypal {

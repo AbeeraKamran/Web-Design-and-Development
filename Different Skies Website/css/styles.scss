@@ -61,6 +61,15 @@ html {
 body {
   font-family: $font-sans;
   overflow-x: hidden;
+  position: relative;
+}
+
+.row {
+  max-width: 67.5em;
+}
+nav {
+  position: fixed;
+  top: 0;
 }
 
 ul {
@@ -75,25 +84,69 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: .8rem;
   color: $blue;
-  font-family: $font-serif;
-  margin: 3rem 0 0;
+  font-family: $font-sans;
+  margin: 2.25rem 7rem;
   position: fixed;
-  padding-left: 0;
+  text-transform: uppercase;
+}
+h3 {
+  margin: 7rem 0px 0 0;
+  font-size: .9rem;
+  background: $blue;
+  padding: .25rem .75rem;
+  display: inline-block;
+  color: white;
+}
+h5 {
+  font-size: 1.75rem;
+  line-height: 1.85rem;
+  font-family: $font-serif;
+  text-align: left;
+  height: 21rem;
 }
 p{
   font-size: .9rem;
 }
 a {
-  color: $pink;
+  color: black;
   transition: .25s ease-in-out;
   &:hover {
-    color: white
+    color: $pink;
   }
 }
 tr { 
   vertical-align: top;
+}
+ button {
+    display: block;
+    background: $pink;
+    margin: 1rem 2rem 0 1rem;
+    color: white;
+    font-size: .8rem;
+    padding: .25rem .75rem;
+    transition: .5s ease-in-out;
+    &:hover{
+      background: white;
+      color: $pink;
+      border: 1px solid $pink;
+    }
+    &:focus {
+      background: $pink;
+    }
+    &:hover a {
+      color: $pink;
+    }
+    a {
+      color: white;
+    }
+  }
+button.email {
+  margin: 1rem 2rem 0 0rem;;
+}
+.tickets {
+  margin: 1rem 2rem 1rem 3rem;
 }
 /******************************************
 /* HEADER & NAV                  
@@ -148,6 +201,7 @@ tr {
   margin:2rem;
   z-index: 4;
   position: fixed;
+  z-index: 999;
 }
 .circle-home {
   margin: 0rem 2rem;
@@ -176,6 +230,7 @@ tr {
   color: black;
   font-size: .5rem;
   outline: none;
+  z-index: 999;
   &:hover {
     outline: none;
   }
@@ -210,7 +265,7 @@ tr {
   transition-property: all;
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  z-index: 2;
+  z-index: 30;
   ul{
     float: left;
     margin: 2rem 5.75rem;
@@ -228,6 +283,7 @@ tr {
     text-decoration: none;
     padding: 0;
     color: white;
+    border-bottom: none;
     &:hover {
       background-color: $pink;
     }
@@ -253,7 +309,8 @@ tr {
 
 #nav-trigger {
   top: 0;
-  z-index: 3;
+  z-index: 35;
+  position: fixed;
   &:hover .menu-text {
     opacity: 1 ;
   }
@@ -369,11 +426,17 @@ p.inner {
   }
 }
 .reveal-modal {
-  width: 32rem;
+  width: 38rem;
+  top: 60px;
   padding: 0;
   border: none;
   border-radius: 0;
   background: $blue;
+  box-shadow: none;
+  p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
 }
 .modalTitle {
   color: $pink;
@@ -383,6 +446,7 @@ p.inner {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 2px;
+  display: block;
 }
 #firstModal.reveal-modal {
   
@@ -398,28 +462,15 @@ p.inner {
     padding: 2rem 0 0 2rem;
   }
   .modal-img {
-    width: 18rem;
-    padding: 1rem .5rem 2rem 2rem;
+    width: 21rem;
+    padding: 0 0 3rem 3rem;
     float: left;
   }
   .price {
     padding: 0rem;
-    margin: 1rem 0 0 1rem;
+    margin: 0rem 0 0 1rem;
     display: inline-block;
     float: left;
-  }
-  button {
-    // float: left;
-    display: block;
-    background: $pink;
-    margin: 1rem 2rem 0 1rem;
-    color: white;
-    float: left;
-    font-size: .9rem;
-    &:hover {
-      background: white;
-      color: $pink;
-    }
   }
   .past-issues {
     color: $pink;
@@ -427,11 +478,10 @@ p.inner {
     margin: 1rem;
     padding: 0;
   }
-}
-.modal-event.reveal-modal {
-    background: $blue;
-    border-radius: 0;
+  button {
+    float: left;
   }
+}
 .modal-event {
   .modalTitle {
     float: none;
@@ -439,15 +489,56 @@ p.inner {
   p {
     padding: 0 3rem;
     color: white;
-    &:last-child{
-      margin-bottom: 3rem;
+  }
+  
+}
+.reveal-modal >:last-child {
+  margin-bottom:3rem;
+  // font-size: .8rem;
+  // line-height: 1rem;
+}
+.cont-modal {
+  background: white;
+  border: 4px solid blue;
+  p {
+    color: black;
+    font-size: .9rem;  
+  }
+  ul {
+    margin-left: 3rem;
+  }
+  li {
+    padding: 0 0rem .5rem 0rem;
+  }
+  a {
+    font-size: .8rem;
+    &:hover {
+      color: $pink;
     }
   }
 }
+header:hover {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#alt_logo {
+  display: none;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  top: 42vh;
+}
+
 /******************************************
 /* CONTACT                
 /*******************************************/
 /**/
+.contact-page {
+  margin: 10rem 13rem;
+  position: absolute;
+}
 .contact {
   h2 {
     font-size: 1.5rem;
@@ -463,16 +554,23 @@ input[type="text"] {
   border: 1px solid $blue;
   box-shadow: none;
   color: rgba(0, 0, 0, 0.3);
+  font-size: .8rem;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background: white;
+  color: blue;
 }
 .btn {
   background: $blue;
   color: $pink;
   border: none;
-  padding: 1rem;
+  padding: .5rem;
+  font-size: .8rem;
   transition: .5s ease-in-out;
   &:hover {
     background: white;
-    color: $pink;
+    color: blue;
+    border: 1px solid $blue;
   }
 }
 .ir {
@@ -498,33 +596,43 @@ input[type="text"] {
 .padding-left {
   padding-left: 0;
 }
-.margin-page {
-  margin-top: 3rem;
-}
+
 .about-page {
-  margin-top: 9rem;
+  margin: 9rem 7rem;
+  position: absolute;
 }
+
 .post {
   width: 500px; 
   padding: 0;
-  margin-right: 11rem;
+  margin-right: 2rem;
   text-align: justify;
   p {
     font-size:.9rem;
   }
 }
 .slant:after {
-  border-left: 1px solid blue;
+  border-left: 2px solid blue;
   content: '';
   display: inline-block;
-  height: 25rem;
+  height: 25.5rem;
   position: absolute;
   top: 48%;
   -webkit-transform: translateY(-50%) rotate(11deg);
   -ms-transform: translateY(-50%) rotate(11deg);
   transform: translateY(-50%) rotate(11deg);
   width: 0;
-  right: -88px;
+  right: -70px;
+}
+.slant-paper:after {
+  top: 52%;
+  height: 28rem;
+  right: -83px;
+}
+.slant-events:after {
+  top: 52%;
+  height: 29.5rem;
+  right: -83px;
 }
 .pull-quote  {
   font-size: 1.25rem;
@@ -544,8 +652,9 @@ input[type="text"] {
 /* PAPER MACHINES                
 /*******************************************/
 /**/
-.margin {
-  margin-top: 2rem;
+.margin-paper {
+  margin: 8rem 7rem;
+  position: absolute;
 }
 .paper-row {
   margin-left: 2rem;
@@ -553,10 +662,14 @@ input[type="text"] {
 .post-paper {
   padding: 0;
   width: 310px;
-  margin-right: 5rem;
+  margin: 3rem 7rem 0 0;
+}
+.post-machine {
+  margin-right: 6rem;
 }
 .paper-info {
   padding: .5rem 0;
+  margin-top: 1.5rem;
   p {
     font-size: .75rem;
     margin-bottom: 0;
@@ -576,4 +689,217 @@ input[type="text"] {
       font-size: .8rem;
     }
 }
+#stack1, #stack2, #stack3, #stack4, #stack5 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+#stack4, #stack5 {
+  height: 350px;
+}
+article {
+  position: absolute;
+  width: 480px;
+  height: 400px;
+  overflow: hidden;
+  border-right: 2px solid blue;
+  border-bottom: 2px solid blue;
+  img {
+    cursor: pointer;
+  }
+}
+.c4, .c5 {
+  height: 325px;
+  .machine-details {
+    padding: 19%;
+  }
+}
+.machine-details {
+  background-color: white;
+  color: blue;
+  font-size: 1.25rem;
+  text-align: left;
+  padding: 28%;
+  font-family: $font-serif;
+  border: 2px solid $blue;
+}
+.event-details {
+  padding: 19%;
+}
+.grid-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: -20px;
+  right: 10px;
+  left: 0px;
+  opacity: 0;
+  background: $blue;
+  transition: 0.6s ease-in-out;
+  padding: 28% 22%;
+  p {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    font-family: $font-serif;
+  }
+}
+// .item {
+//   position: relative;
+//   overflow: hidden;
+//   &:hover .grid-overlay {
+//     opacity: 1;
+//   }
+// }
+
+/******************************************
+/* EVENTS              
+/*******************************************/
+/**/
+.margin-events {
+  margin-right: 7rem;
+}
+p.event-title{
+  font-family: $font-serif;
+  color: blue;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+p.event-date {
+  font-family: $font-serif;
+  color: blue;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.event-blurb p{
+  font-family: $font-serif;
+  font-size: 2.5rem;
+  text-align: left;
+  line-height: 2.75rem;
+}
+.event-info {
+  margin-top: 2rem;
+  p {
+    font-size: .9rem;
+    text-align: left;
+  }
+  .title {
+    font-size: 1rem;
+    color: blue;
+  }
+}
+.past-events{
+  margin-left: -10rem;
+}
+.ticket-tooltip {
+  background: $blue;
+  color: white;
+  font-family: $font-sans;
+}
+#event1, #event2, #event3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+/******************************************
+/* CONTRIBUTORS                 
+/*******************************************/
+/**/
+
+.editors {
+  font-size: 2rem;
+  font-family: $font-serif;
+  text-align: left;
+  margin: -2rem 0;
+}
+
+.contributors {
+  margin-left: -26.5rem;
+}
+
+.cont-list {
+  font-size: 1.25rem;
+  text-align: left;
+  margin: -2rem 0;
+  line-height: 2.75rem;
+}
+
+.slant-editor:after {
+  right: -5px;
+  top: 126%;
+  height: 28rem;
+}
+.slant-cont:after {
+  right: -5px;
+  top: 52%;
+  height: 28rem;
+}
+.slant-contact:after {
+  right: -92px;
+  top: 100%;
+}
+
+/******************************************
+/* ISSUES                 
+/*******************************************/
+/**/
+.current-issue {
+  margin-right: 0rem;
+}
+.archive {
+  margin-left: -22.5rem;
+}
+.issue-info {
+  color: $blue;
+  font-size: .8rem;
+  a {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+}
+.issue-title {
+  font-size: 1rem;
+  color: $pink;
+  margin: 1rem 0 0 0;
+}
+.issue-btn {
+  font-size: .7rem;
+  font-weight: normal;
+  padding: .25rem .75rem;
+  border: 1px solid blue;
+  background: white;
+  color: blue;
+  cursor: pointer;
+  transition: .6s ease-in-out;
+  &:hover {
+    color: $pink;
+    border: 1px solid $pink;
+  }
+}
+// span.has-tip.issue-btn.open{
+//   background: blue;
+//   color: white;
+//   font-size: .7rem;
+// }
+
+.slash {
+  float: left;
+  font-size: 2.5rem;
+  color: blue;
+  font-family: -webkit-pictograph;
+  margin: 2.5rem 5rem;
+  letter-spacing: -4px;
+}
+.slash-about {
+  margin-top: -0.5rem;
+}
+
+
+
+
 
