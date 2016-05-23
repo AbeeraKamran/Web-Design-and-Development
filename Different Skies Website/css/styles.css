@@ -153,6 +153,16 @@ button.email {
   margin: 1rem 2rem 1rem 3rem;
 }
 
+.post {
+  -webkit-columns: 500px;
+  -webkit-column-gap: 40px;
+  -webkit-column-rule: 4px outset #ff00ff;
+  padding: 0;
+  margin-right: 3rem;
+  text-align: justify;
+  font-size: .9rem;
+}
+
 /******************************************
 /* HEADER & NAV                  
 /*******************************************/
@@ -598,18 +608,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .about-page {
-  margin: 9rem 7rem;
+  margin: 11rem 7rem;
   position: absolute;
-}
-
-.post {
-  width: 500px;
-  padding: 0;
-  margin-right: 2rem;
-  text-align: justify;
-}
-.post p {
-  font-size: .9rem;
 }
 
 .slant:after {
@@ -697,17 +697,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   font-size: .8rem;
 }
 
-#stack1, #stack2, #stack3, #stack4, #stack5 {
+#machine1, #machine2, #machine3 {
   position: relative;
   top: 0;
   left: 0;
   width: 400px;
   height: 400px;
   cursor: pointer;
-}
-
-#stack4, #stack5 {
-  height: 350px;
 }
 
 article {
@@ -720,13 +716,6 @@ article {
 }
 article img {
   cursor: pointer;
-}
-
-.c4, .c5 {
-  height: 325px;
-}
-.c4 .machine-details, .c5 .machine-details {
-  padding: 19%;
 }
 
 .machine-details {
@@ -766,7 +755,11 @@ article img {
 /*******************************************/
 /**/
 .margin-events {
-  margin-right: 7rem;
+  margin: 1rem 5rem 0 0;
+}
+
+.margin-first-event {
+  margin-right: 0;
 }
 
 p.event-title {
@@ -783,11 +776,12 @@ p.event-date {
   margin-bottom: 1rem;
 }
 
-.event-blurb p {
+.event-blurb {
   font-family: "Garamond", serif;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   text-align: left;
   line-height: 2.75rem;
+  padding: 22%;
 }
 
 .event-info {
@@ -819,6 +813,10 @@ p.event-date {
   width: 400px;
   height: 400px;
   cursor: pointer;
+}
+
+.stack-top {
+  border: 4px solid blue;
 }
 
 /******************************************
@@ -868,6 +866,13 @@ p.event-date {
   margin-right: 0rem;
 }
 
+.past-issue {
+  color: blue;
+  font-size: .8rem;
+  width: 80px;
+  margin: 3rem;
+}
+
 .archive {
   margin-left: -22.5rem;
 }
@@ -884,7 +889,7 @@ p.event-date {
 .issue-title {
   font-size: 1rem;
   color: magenta;
-  margin: 1rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .issue-btn {
