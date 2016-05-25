@@ -37,6 +37,7 @@ $(function(){
     $(".post").wrap("<td></td>");
     $("body").mousewheel(function(event, delta) {
         this.scrollLeft -= (delta * 30);
+        this.scrollRight -= (delta * 30);
         event.preventDefault();
     });   
 });
