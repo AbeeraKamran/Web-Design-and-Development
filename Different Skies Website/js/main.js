@@ -7,67 +7,29 @@ $(document).ready(function() {
 			thisPanel = thisTrigger.next();
 
 	toggleButton.addEventListener('click', toggleSlider, false);
+	// toggleButton.addEventListener('touchend', toggleSlider, false);
 
 
 	function toggleSlider(e) {
 		e.stopPropagation();
 	  if (slide.classList.contains('closed')) {
 	    slide.classList.remove('closed');
+	    $('body').addClass('overflow-hidden');
 
 	  } else {
 	    slide.classList.add('closed');
+	    $('body').removeClass('overflow-hidden');
 	  }
 	}
 
-	jQuery(document).on("click", function() {
+	jQuery(document).on('click', function() {
 		slide.classList.add('closed');
+	    $('body').removeClass('overflow-hidden');
+
+	});
+		$('#inner').hover(function(){
+		$('.issue-index').css(visibility, visible);
 	});
 
-
-	spectrum();
-		
-		function spectrum(){
-		var hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 0)) + ',' + (Math.floor(Math.random() * 255)) + ')';
-			$('#inner').animate( { color: hue }, 150);
-			spectrum(); 
-	   	}
-
-	// $(function() {
-	
-	// initDropDowns($(".menu-list"));
-
-	// });
-
-	// function initDropDowns(allMenus) {
-
-	// 	allMenus("#nav-trigger").on("click", function() {
-			
-	// 		var thisTrigger = jQuery(this),
-	// 			thisMenu = thisTrigger.parent(),
-	// 			thisPanel = thisTrigger.next();
-
-	// 		if (thisMenu.hasClass("open")) {
-
-	//       		thisMenu.removeClass("open");
-				
-	//       		jQuery(document).off("click");                                 
-	//       		thisPanel.off("click");
-
-	// 		} else {			
-				
-	//     		allMenus.removeClass("open");	
-	// 			thisMenu.addClass("open");
-		
-	// 			jQuery(document).on("click", function() {
-	// 				allMenus.removeClass("open");
-	// 			});
-	// 			thisPanel.on("click", function(e) {
-	// 				e.stopPropagation();
-	// 			});
-	// 		}
-			
-	// 		return false;
-	// 	});
-	// }
 });
 

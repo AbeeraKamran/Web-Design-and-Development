@@ -32,11 +32,11 @@ $(document).ready(function() {
             css = {
                 left: function(index) {
                     var i = (index + inc) % count;
-                    return i * 2;
+                    return i * 4;
                 },
                 top: function(index) {
                     var i = (index + inc) % count;
-                    return i * 2;
+                    return i * 4;
                 },
                 zIndex: function(index) {
                     var i = (index + inc) % count;
