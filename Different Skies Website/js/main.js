@@ -14,11 +14,13 @@ $(document).ready(function() {
 		e.stopPropagation();
 	  if (slide.classList.contains('closed')) {
 	    slide.classList.remove('closed');
+	    $('.blue').css("background-color","white");;
 	    $('body').addClass('overflow-hidden');
 
 	  } else {
 	    slide.classList.add('closed');
 	    $('body').removeClass('overflow-hidden');
+	    $('.blue').css("background-color","blue");;
 	  }
 	}
 

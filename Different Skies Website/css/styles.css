@@ -68,6 +68,10 @@ body {
   overflow: hidden;
 }
 
+body.overflow {
+  overflow: hidden;
+}
+
 .row {
   max-width: 67.5em;
 }
@@ -101,14 +105,14 @@ h2 {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   h2 {
-    font-size: .7rem;
+    font-size: .8rem;
     margin-left: 7.5rem;
   }
 }
 @media only screen and (max-width: 435px) {
   h2 {
-    font-size: .7rem;
-    margin-left: 6rem;
+    font-size: .8rem;
+    margin-left: 5.5rem;
     z-index: 15;
   }
 }
@@ -147,7 +151,7 @@ h5 {
 }
 
 p {
-  font-size: .9rem;
+  font-size: .95rem;
 }
 
 a {
@@ -173,6 +177,7 @@ button {
   font-size: .8rem;
   padding: .25rem .75rem;
   transition: .5s ease-in-out;
+  border: 1px solid magenta;
 }
 button:hover {
   background: white;
@@ -275,17 +280,12 @@ button.email {
   position: fixed;
   z-index: 999;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .circle {
-    margin: 2rem 4rem;
-  }
-}
 
 .circle-home {
   margin: 0rem 2rem;
 }
 
-.black {
+.blue {
   height: 15px;
   width: 30px;
   border-radius: 90px 90px 0 0;
@@ -296,19 +296,19 @@ button.email {
   transition: .35s all ease-in-out;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .black {
+  .blue {
     height: 12px;
     width: 24px;
   }
 }
 @media only screen and (max-width: 435px) {
-  .black {
+  .blue {
     height: 12px;
     width: 24px;
   }
 }
 
-.blue {
+.black {
   height: 15px;
   width: 30px;
   border-radius: 90px 90px 0 0;
@@ -317,13 +317,13 @@ button.email {
   background: black;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .blue {
+  .black {
     height: 12px;
     width: 24px;
   }
 }
 @media only screen and (max-width: 435px) {
-  .blue {
+  .black {
     height: 12px;
     width: 24px;
   }
@@ -363,10 +363,6 @@ button.email {
   .menu-text {
     display: none;
   }
-}
-
-.menu-home {
-  margin: -1rem 2rem;
 }
 
 .menu-list {
@@ -464,7 +460,7 @@ button.email {
 }
 @media only screen and (max-width: 435px) {
   .white-bar {
-    height: 11%;
+    height: 12%;
     z-index: 12;
   }
 }
@@ -494,21 +490,21 @@ button.email {
 #nav-trigger:hover .menu-text {
   opacity: 1;
 }
-#nav-trigger:hover .black {
+#nav-trigger:hover .blue {
   -webkit-transform: rotate(-180deg) translateX(0%);
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  #nav-trigger:hover .black {
+  #nav-trigger:hover .blue {
     -webkit-transform: rotate(-180deg) translateX(-100%);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  #nav-trigger:hover .black {
+  #nav-trigger:hover .blue {
     -webkit-transform: rotate(-180deg) translateX(-100%);
   }
 }
 @media only screen and (max-width: 435px) {
-  #nav-trigger:hover .black {
+  #nav-trigger:hover .blue {
     -webkit-transform: rotate(-180deg) translateX(-100%);
   }
 }
@@ -709,14 +705,18 @@ button.email {
 @media only screen and (max-width: 435px) {
   .reveal-modal {
     width: 100vw;
-    top: 0;
-    max-height: 80vh;
+    top: -32px;
   }
 }
 .reveal-modal .close-reveal-modal {
   color: magenta;
   font-size: 1rem;
   font-weight: normal;
+}
+@media only screen and (max-width: 435px) {
+  .reveal-modal .close-reveal-modal {
+    font-size: 1.5rem;
+  }
 }
 
 .modalTitle {
@@ -872,17 +872,11 @@ header:hover {
 /**/
 .contact-page {
   margin: 10rem 0;
-  position: fixed;
   max-width: 100%;
 }
 @media only screen and (max-width: 435px) {
   .contact-page {
-    margin-top: 7rem;
-  }
-}
-@media only screen and (max-width: 435px) {
-  .contact-page .post {
-    width: 195px;
+    margin: 7rem 1rem 3rem 1rem;
   }
 }
 
@@ -894,11 +888,7 @@ header:hover {
 }
 .contact p {
   font-size: .9rem;
-}
-@media only screen and (max-width: 435px) {
-  .contact p {
-    font-size: .8rem;
-  }
+  line-height: 1.35rem;
 }
 .contact .post {
   margin-left: auto;
@@ -922,8 +912,22 @@ header:hover {
 input[type="text"] {
   border: 1px solid blue;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.3);
+  color: black;
   font-size: .8rem;
+}
+input[type="text"] input[type="placeholder"] {
+  color: rgba(0, 0, 0, 0.3);
+}
+input[type="text"]:focus {
+  color: black;
+  border: 1px solid magenta;
+}
+input[type="text"]:active {
+  color: black;
+  border: 1px solid magenta;
+}
+input[type="text"]:visited {
+  color: black;
 }
 @media only screen and (max-width: 435px) {
   input[type="text"] {
@@ -1001,6 +1005,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 @media only screen and (max-width: 435px) {
   .about-post {
     max-height: none;
+    margin-bottom: 2rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1037,6 +1042,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   .about-post p {
     margin-bottom: 1.1rem;
     line-height: 1.2rem;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .about-post p {
+    font-size: .9rem;
   }
 }
 
@@ -1119,7 +1129,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 @media only screen and (max-width: 435px) {
   .post-paper {
     width: 215px;
-    margin: 0 5rem 0 2rem;
+    margin: 0 5rem 2.5rem 2rem;
   }
 }
 
@@ -1156,8 +1166,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .paper-info .price {
   color: blue;
   display: inline-block;
-  margin-bottom: .25rem;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 #machine1, #machine2, #machine3 {
@@ -1204,7 +1213,7 @@ article img {
 }
 @media only screen and (max-width: 435px) {
   .machine-details {
-    font-size: .8rem;
+    font-size: .9rem;
     padding: 11%;
   }
 }
@@ -1214,7 +1223,7 @@ article img {
 }
 @media only screen and (max-width: 435px) {
   .event-details {
-    padding: 11%;
+    padding: 7%;
   }
 }
 
@@ -1350,8 +1359,8 @@ p.event-date {
 }
 @media only screen and (max-width: 435px) {
   .cont-list {
-    font-size: .9rem;
-    line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.65rem;
   }
 }
 
@@ -1381,7 +1390,7 @@ p.issue-info {
 }
 @media only screen and (max-width: 435px) {
   p.issue-info {
-    font-size: .7rem;
+    font-size: .79rem;
   }
 }
 p.issue-info a {
@@ -1390,19 +1399,19 @@ p.issue-info a {
 }
 
 .issue-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: magenta;
   margin: 3rem 0 0 0;
 }
 @media only screen and (max-width: 435px) {
   .issue-title {
     margin: 0;
-    font-size: .8rem;
+    font-size: .95rem;
   }
 }
 
 .issue-btn {
-  font-size: .7rem;
+  font-size: .75rem;
   font-weight: normal;
   padding: .25rem .75rem;
   border: 1px solid blue;
@@ -1416,6 +1425,10 @@ p.issue-info a {
   color: magenta;
   border: 1px solid magenta;
 }
+.issue-btn:hover .read-online {
+  color: blue;
+  border: 1px solid blue;
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .issue-btn {
     font-size: .5rem;
@@ -1426,18 +1439,58 @@ p.issue-info a {
   .issue-btn {
     display: inline-flex;
     margin-bottom: .4rem;
+    padding: .25rem .65rem;
+    font-size: .7rem;
   }
 }
 
-.issue-deets {
-  margin-bottom: 3rem;
+.read-online {
+  font-size: .75rem;
+  font-weight: normal;
+  padding: .25rem .75rem;
+  border: 1px solid blue;
+  background: white;
+  color: blue;
+  cursor: pointer;
+  transition: .6s ease-in-out;
+  text-align: left;
+  margin-right: .5rem;
+}
+.read-online:hover {
+  color: magenta;
+  border: 1px solid magenta;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .read-online {
+    font-size: .5rem;
+    padding: .25rem .5rem;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .read-online {
+    display: inline-flex;
+    margin-bottom: .4rem;
+    padding: .25rem .65rem;
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .issue-deets {
+    margin-bottom: 3rem;
+  }
 }
 
 .read-hover:hover .read-online {
-  background: magenta;
+  color: magenta;
+  border: 1px solid magenta;
 }
 .read-hover:hover h5 {
   color: blue;
+}
+
+.float-left {
+  float: left;
 }
 
 @media only screen and (max-width: 435px) {
@@ -1522,13 +1575,13 @@ p.issue-info a {
 }
 @media only screen and (max-width: 435px) {
   .audio-frame {
-    height: 320px;
-    width: 250px;
+    height: 250px;
+    width: 201px;
   }
 }
 @media only screen and (max-width: 435px) {
   .audio-frame article {
-    height: 280px;
+    height: 201px;
     width: 250px;
   }
 }
@@ -1540,6 +1593,6 @@ p.issue-info a {
 }
 @media only screen and (max-width: 435px) {
   iframe {
-    max-height: 280px;
+    max-height: 201px;
   }
 }
