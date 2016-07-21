@@ -517,17 +517,31 @@ button.email {
   padding: 0 .25rem;
   transition: .35s all ease-in-out;
 }
+.random {
+  transition: 150ms all ease-in-out;
+}
 .issue-index {
-  opacity: 0;
-  position: absolute;
-  margin: 15% 39%;
-  transition: .35s all ease-in-out;
-  text-align: center;
+  visibility: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 34% 23%;
+  transition: 150ms all ease-in-out;
+  text-align: left;
+  padding: 0 2rem;
+  // border: 2px solid $pink;
+  // background-color: $blue;
   .issue-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    font-family: $font-serif;
+    margin: 0;
       @include goldilocks (baby) {
         font-size: 1rem;
     }
+  }
+  .issue-info {
+    color: $blue;
+    text-align: left;
+
   }
   @include goldilocks (baby) {
     margin: 70% 20%;
@@ -555,7 +569,7 @@ button.email {
   margin: auto;
   left:25%; right: 20%;
   top:25%; bottom:30%;
-  -webkit-transition: all 500ms ease;
+  -webkit-transition: all 1s ease;
   @include goldilocks (mama) {
     line-height: 2.9rem;
     font-size: 2rem;
@@ -569,26 +583,31 @@ button.email {
     font-size: 1.2rem
   }
 }
-.home-text {
-   &:hover #inner {
-    transform: skew(46deg,30deg);
-    // background-color: $pink;
-    display: inline;
-    padding: 1rem;
-    left: 21%;
-    top: 36%;
-    @include goldilocks (baby) {
-      transform: skew(35deg, 29deg);
-      display: inline;
-      padding: 1rem;
-      left: 15%;
-      top: 38%;
-    }
-  }
-  &:hover .issue-index {
-    opacity: 1 ;
-    }
-  }
+// .home-text {
+//    &:hover #inner {
+//     // transform: skew(46deg,30deg);
+//     // // background-color: $pink;
+//     // display: inline;
+//     // padding: 1rem;
+//     // left: 21%;
+//     // top: 36%;
+//     // @include goldilocks (baby) {
+//     //   transform: skew(35deg, 29deg);
+//     //   display: inline;
+//     //   padding: 1rem;
+//     //   left: 15%;
+//     //   top: 38%;
+//     // }
+//   // background-color: $pink;  
+//   // color: $pink;
+// }
+// //   &:hover .issue-index {
+// //     opacity: 1 ;
+// //     }
+// // }
+.random {
+  display: initial;
+}
 
 .quick-links {
   a {
@@ -631,7 +650,7 @@ button.email {
   }
 }
 .reveal-modal {
-  width: 38rem;
+  width: 40rem;
   top: 60px;
   padding: 0;
   border: none;
@@ -764,7 +783,6 @@ button.email {
     color: white;
     font-size: .9rem; 
     line-height: 1.3rem;
-    text-align: justify; 
   }
   ul {
     margin-left: 3rem;
@@ -1260,7 +1278,6 @@ p.issue-info{
 .issue-title {
   font-size: 1.2rem;
   color: $pink;
-  margin: 3rem 0 0 0;
   // @include goldilocks (mama) {
   //   margin-top: 0rem;
   //   font-size: .7rem;

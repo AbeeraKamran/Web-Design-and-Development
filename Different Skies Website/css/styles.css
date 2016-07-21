@@ -103,13 +103,7 @@ h2 {
   text-transform: uppercase;
   z-index: 2;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  h2 {
-    font-size: .8rem;
-    margin-left: 7.5rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   h2 {
     font-size: .8rem;
     margin-left: 5.5rem;
@@ -135,14 +129,7 @@ h5 {
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  h5 {
-    font-size: 1.5rem;
-    height: 19rem;
-    line-height: 1.8rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   h5 {
     font-size: 1.15rem;
     line-height: 1.5rem;
@@ -209,7 +196,7 @@ button.email {
   text-align: justify;
   font-size: .9rem;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .post {
     width: 250px;
   }
@@ -239,7 +226,7 @@ button.email {
   top: 0;
   color: blue;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .name {
     font-size: 1rem;
   }
@@ -268,7 +255,7 @@ button.email {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .rotate {
     top: 10rem;
   }
@@ -295,13 +282,7 @@ button.email {
   -webkit-transform: rotate(-180deg) translateX(-100%);
   transition: .35s all ease-in-out;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .blue {
-    height: 12px;
-    width: 24px;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .blue {
     height: 12px;
     width: 24px;
@@ -316,13 +297,7 @@ button.email {
   -webkit-border-radius: 90px 90px 0 0;
   background: black;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .black {
-    height: 12px;
-    width: 24px;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .black {
     height: 12px;
     width: 24px;
@@ -354,12 +329,7 @@ button.email {
 .menu-text:active {
   outline: none;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .menu-text {
-    display: none;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .menu-text {
     display: none;
   }
@@ -384,7 +354,7 @@ button.email {
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .menu-list {
     background: blue;
     position: fixed;
@@ -396,12 +366,7 @@ button.email {
   float: left;
   margin: 2rem 5.75rem;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .menu-list ul {
-    margin-top: 1.5rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .menu-list ul {
     margin: 4rem 5.75rem;
   }
@@ -415,15 +380,10 @@ button.email {
   padding: 1.2rem;
   z-index: 3;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .menu-list li {
     display: block;
     padding: .5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .menu-list li {
-    display: block;
   }
 }
 .menu-list a {
@@ -448,17 +408,7 @@ button.email {
   pointer-events: none;
   background: white;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .white-bar {
-    height: 0%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .white-bar {
-    height: 8%;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .white-bar {
     height: 12%;
     z-index: 12;
@@ -493,17 +443,7 @@ button.email {
 #nav-trigger:hover .blue {
   -webkit-transform: rotate(-180deg) translateX(0%);
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  #nav-trigger:hover .blue {
-    -webkit-transform: rotate(-180deg) translateX(-100%);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  #nav-trigger:hover .blue {
-    -webkit-transform: rotate(-180deg) translateX(-100%);
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #nav-trigger:hover .blue {
     -webkit-transform: rotate(-180deg) translateX(-100%);
   }
@@ -524,7 +464,7 @@ button.email {
   border-bottom: 100vh solid transparent;
   border-left: 100vw solid blue;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .triangle-up-left:after {
     width: 100vw;
     height: 100vh;
@@ -560,27 +500,39 @@ button.email {
   transition: .35s all ease-in-out;
 }
 
+.random {
+  transition: 150ms all ease-in-out;
+}
+
 .issue-index {
-  opacity: 0;
-  position: absolute;
-  margin: 15% 39%;
-  transition: .35s all ease-in-out;
-  text-align: center;
+  visibility: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 34% 23%;
+  transition: 150ms all ease-in-out;
+  text-align: left;
+  padding: 0 2rem;
 }
 .issue-index .issue-title {
-  font-size: 2rem;
+  font-size: 1.25rem;
+  font-family: "Garamond", serif;
+  margin: 0;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .issue-index .issue-title {
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 435px) {
+.issue-index .issue-info {
+  color: blue;
+  text-align: left;
+}
+@media only screen and (max-width: 500px) {
   .issue-index {
     margin: 70% 20%;
   }
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .issue-index .issue-btn {
     margin: .5rem 0;
     text-align: center;
@@ -606,16 +558,9 @@ button.email {
   right: 20%;
   top: 25%;
   bottom: 30%;
-  -webkit-transition: all 500ms ease;
+  -webkit-transition: all 1s ease;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  #inner {
-    line-height: 2.9rem;
-    font-size: 2rem;
-    top: 30%;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #inner {
     top: 36%;
     right: 12%;
@@ -625,24 +570,8 @@ button.email {
   }
 }
 
-.home-text:hover #inner {
-  transform: skew(46deg, 30deg);
-  display: inline;
-  padding: 1rem;
-  left: 21%;
-  top: 36%;
-}
-@media only screen and (max-width: 435px) {
-  .home-text:hover #inner {
-    transform: skew(35deg, 29deg);
-    display: inline;
-    padding: 1rem;
-    left: 15%;
-    top: 38%;
-  }
-}
-.home-text:hover .issue-index {
-  opacity: 1;
+.random {
+  display: initial;
 }
 
 .quick-links a {
@@ -651,7 +580,7 @@ button.email {
   list-style: none;
   font-family: "Garamond", serif;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .quick-links a {
     font-size: 1rem;
   }
@@ -685,7 +614,7 @@ button.email {
 }
 
 .reveal-modal {
-  width: 38rem;
+  width: 40rem;
   top: 60px;
   padding: 0;
   border: none;
@@ -697,12 +626,12 @@ button.email {
   font-size: .9rem;
   line-height: 1.2rem;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .reveal-modal p {
     font-size: .8rem;
   }
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .reveal-modal {
     width: 100vw;
     top: -32px;
@@ -713,7 +642,7 @@ button.email {
   font-size: 1rem;
   font-weight: normal;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .reveal-modal .close-reveal-modal {
     font-size: 1.5rem;
   }
@@ -729,7 +658,7 @@ button.email {
   letter-spacing: 2px;
   display: block;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .modalTitle {
     font-size: .9rem;
   }
@@ -740,15 +669,10 @@ button.email {
   margin: 1rem 3rem 0 1rem;
   float: left;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #firstModal.reveal-modal p {
     float: none;
     margin-left: 3rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  #firstModal.reveal-modal p {
-    margin: 0rem 3rem 0 3rem;
   }
 }
 #firstModal.reveal-modal .issue-title {
@@ -760,7 +684,7 @@ button.email {
   padding: 0 0 3rem 3rem;
   float: left;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #firstModal.reveal-modal .modal-img {
     padding-bottom: .5rem;
     width: 83vw;
@@ -781,15 +705,10 @@ button.email {
 #firstModal.reveal-modal button {
   float: left;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #firstModal.reveal-modal button {
     float: none;
     margin-left: 3rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  #firstModal.reveal-modal button {
-    margin: 2rem 2rem 0 3rem;
   }
 }
 
@@ -808,7 +727,7 @@ button.email {
   padding: 3rem;
   border-bottom: 2px solid magenta;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #secondModal .event-blurb {
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -831,7 +750,6 @@ button.email {
   color: white;
   font-size: .9rem;
   line-height: 1.3rem;
-  text-align: justify;
 }
 .cont-modal ul {
   margin-left: 3rem;
@@ -874,7 +792,7 @@ header:hover {
   margin: 10rem 0;
   max-width: 100%;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .contact-page {
     margin: 7rem 1rem 3rem 1rem;
   }
@@ -929,7 +847,7 @@ input[type="text"]:active {
 input[type="text"]:visited {
   color: black;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   input[type="text"] {
     font-size: .7rem;
     height: 1.5rem;
@@ -985,12 +903,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 9rem 7rem 3rem 7rem;
   position: absolute;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about-page {
-    margin-top: 7rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .about-page {
     margin: 7rem 2rem 3rem 2rem;
   }
@@ -1002,34 +915,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   orphans: 2;
   max-height: 33rem;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .about-post {
     max-height: none;
     margin-bottom: 2rem;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about-post {
-    -webkit-columns: 320px;
-    -webkit-column-gap: 83px;
-    max-height: 40rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .about-post {
-    -webkit-columns: 260px;
-    max-height: 60rem;
-  }
-}
 .about-post .margin-bottom {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .about-post .margin-bottom {
-    margin-bottom: 1.25rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .about-post .margin-bottom {
     margin-bottom: 1.25rem;
   }
@@ -1038,13 +933,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   line-height: 1.3rem;
   text-align: justify;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about-post p {
-    margin-bottom: 1.1rem;
-    line-height: 1.2rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .about-post p {
     font-size: .9rem;
   }
@@ -1097,12 +986,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   margin: 8rem 7rem;
   position: absolute;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .margin-paper {
-    margin-top: 9rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .margin-paper {
     margin: 6rem 0 0 2rem;
   }
@@ -1120,13 +1004,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 310px;
   margin: 3rem 7rem 0 0;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .post-paper {
-    margin-top: 0rem;
-    width: 263px;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .post-paper {
     width: 215px;
     margin: 0 5rem 2.5rem 2rem;
@@ -1136,7 +1014,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .post-machine {
   margin-right: 6rem;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .post-machine {
     width: 220px;
   }
@@ -1146,7 +1024,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   padding: .5rem 0;
   margin-top: 1.5rem;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .paper-info {
     margin: 2.5rem 0;
   }
@@ -1177,7 +1055,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   height: 400px;
   cursor: pointer;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #machine1, #machine2, #machine3 {
     width: 220px;
     height: 185px;
@@ -1195,7 +1073,7 @@ article {
 article img {
   cursor: pointer;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   article {
     width: 241px;
     height: 201px;
@@ -1211,7 +1089,7 @@ article img {
   font-family: "Garamond", serif;
   border: 2px solid blue;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .machine-details {
     font-size: .9rem;
     padding: 11%;
@@ -1221,7 +1099,7 @@ article img {
 .event-details {
   padding: 19%;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .event-details {
     padding: 7%;
   }
@@ -1278,7 +1156,7 @@ p.event-date {
   line-height: 2.75rem;
   padding: 22%;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .event-blurb {
     font-size: 1.5rem;
     line-height: 1.75rem;
@@ -1316,7 +1194,7 @@ p.event-date {
   height: 400px;
   cursor: pointer;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   #event1, #event2, #event3 {
     height: 250px;
   }
@@ -1341,7 +1219,7 @@ p.event-date {
   margin: 10rem;
   position: fixed;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .contributors {
     margin: 6rem 5rem;
   }
@@ -1357,7 +1235,7 @@ p.event-date {
 .cont-list li {
   float: none;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .cont-list {
     font-size: 1rem;
     line-height: 1.65rem;
@@ -1388,7 +1266,7 @@ p.issue-info {
   font-size: .8rem;
   text-align: left;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   p.issue-info {
     font-size: .79rem;
   }
@@ -1401,9 +1279,8 @@ p.issue-info a {
 .issue-title {
   font-size: 1.2rem;
   color: magenta;
-  margin: 3rem 0 0 0;
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .issue-title {
     margin: 0;
     font-size: .95rem;
@@ -1429,13 +1306,7 @@ p.issue-info a {
   color: blue;
   border: 1px solid blue;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .issue-btn {
-    font-size: .5rem;
-    padding: .25rem .5rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .issue-btn {
     display: inline-flex;
     margin-bottom: .4rem;
@@ -1460,13 +1331,7 @@ p.issue-info a {
   color: magenta;
   border: 1px solid magenta;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .read-online {
-    font-size: .5rem;
-    padding: .25rem .5rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .read-online {
     display: inline-flex;
     margin-bottom: .4rem;
@@ -1475,7 +1340,7 @@ p.issue-info a {
   }
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .issue-deets {
     margin-bottom: 3rem;
   }
@@ -1493,7 +1358,7 @@ p.issue-info a {
   float: left;
 }
 
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .add-margin {
     margin-top: 4rem;
   }
@@ -1507,13 +1372,7 @@ p.issue-info a {
   margin: 2.5rem 5rem;
   letter-spacing: -4px;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .slash {
-    margin: -0.5rem 5rem;
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .slash {
     display: none;
   }
@@ -1530,12 +1389,7 @@ p.issue-info a {
   position: absolute;
   margin: 0 50%;
 }
-@media only screen and (max-width: 435px) {
-  .slash-about {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media only screen and (max-width: 500px) {
   .slash-about {
     display: none;
   }
@@ -1567,31 +1421,20 @@ p.issue-info a {
   width: 480px;
   height: 400px;
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .audio-frame {
-    height: 396px;
-    width: 375px;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .audio-frame {
     height: 250px;
     width: 201px;
   }
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   .audio-frame article {
     height: 201px;
     width: 250px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  iframe {
-    max-height: 395px;
-  }
-}
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 500px) {
   iframe {
     max-height: 201px;
   }
