@@ -1,0 +1,633 @@
+#machine1, #machine2, #machine3, #machine4, #machine5, #machine6, #machine7, #machine8, #machine9, #machine10, #machine11  {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 435px) {
+  #machine1, #machine2, #machine3, #machine4, #machine5, #machine6, #machine7, #machine8, #machine9, #machine10, #machine11 {
+    width: 220px;
+    height: 185px;
+  }
+}
+
+
+
+/* begin desktop styles */
+
+
+@media only screen and (min-width: 501px)  {
+
+#machine1, #machine2, #machine3, #machine4, #machine5, #machine6, #machine7, #machine8, #machine9, #machine10, #machine11 {
+    height: 420px;
+}
+
+.machine-details {
+padding: 11%;	
+}
+
+article {
+    width: 400px;
+}
+
+.post {
+    width: 440px;
+}
+
+.menu-list ul {
+    margin-left: 105px;
+}
+
+
+@media only screen and (max-height: 700px) {
+
+.white-bar {
+    background: none;
+}
+
+
+.margin-paper {
+    margin: 18vh 7rem;
+}
+
+.issue-title {
+    margin: 0 0 0 0;
+    font-size: 15px;
+	/*text-transform:uppercase;
+    letter-spacing: 0.5px;*/
+
+}
+
+h5 {
+    font-size: 1.5rem;
+	    height: 19rem;
+
+}
+  
+ 
+ article {
+    width: 300px;
+    height: 300px;  
+}
+
+.paper-info {
+margin-top: 0px;
+    padding-top: 0px;	
+}
+
+#machine1, #machine2, #machine3, #machine4, #machine5, #machine6, #machine7, #machine8, #machine9, #machine10, #machine11 {
+    height: 345px;
+}
+
+.post-machine {
+    width: 310px;
+}
+
+#event1, #event2, #event3 {
+    height: 335px;
+}
+
+p.issue-info {
+    margin-bottom: 15px;
+}
+
+.audio-frame {
+width: 360px;
+height: 300px;	
+}
+
+
+.machine-details {
+    padding: 5%;
+    font-size: 19px;
+}
+
+}
+
+
+@media only screen and (min-width: 500px) {
+
+.reveal-modal .close-reveal-modal {
+    top: 2.625rem;
+}
+.show-for-large-only {
+width: 800px;	
+}
+
+
+#aboutpage1 {
+    position: absolute;
+    width: 740px;
+	padding-right: 70px;
+}
+
+#aboutpage2 {
+    position: absolute;
+    width: 740px;
+	left: 740px;
+	padding-right: 70px;
+}
+
+#aboutpage3 {
+    position: absolute;
+    width: 740px;
+	left: 1480px;
+	padding-right: 70px;
+}
+
+.about-post p {
+    text-align: left;
+}
+
+.dropcap {
+color: blue;
+		text-transform: uppercase;
+    font-family: 'helvetica';
+    font-size: 13.7px;
+    letter-spacing: 0.5px;
+}
+
+.slash-about {
+display: none;	
+}
+
+}
+
+
+.post-paper {
+margin-top: 0rem;	
+}
+
+
+.slash {
+    margin-top: 0px;	
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+.issue-btn {
+    font-size: 0.75rem;
+}
+}
+
+
+.post-paper {
+width: 310px;	
+}
+
+.slash-cont {
+display: none;	
+}
+
+.contributors {
+position: absolute;	
+}
+
+
+
+.contributorscolumn2 { left: 400px; }
+.contributorscolumn3 { left: 800px; }
+.contributorscolumn4 { left: 1200px; }
+
+
+
+h2 {
+   font-size: 13.7px;
+}
+
+.margin-paper {
+    margin-left: 97px;
+}
+
+.machine-details {
+font-size: 23px;	
+}
+
+
+.quick-links a {
+font-size: 19px;	
+}
+
+.contact .post {
+	margin: 0px;
+}
+
+.white-bar {
+    background: none;
+}
+
+.row:before, .row:after {
+display: inline;	
+}
+
+.contact-page {
+margin: 200px 0px 0px 200px;	
+}
+	
+.margin-paper {
+    margin: 120px 0px 0px 113px;
+}
+
+.contact {
+height: 0px;	
+}
+
+.hide-for-small {
+    height: 0px;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 768px)   {
+
+#inner {
+    line-height: 2.9rem;
+    font-size: 1.5rem;
+	}
+}
+
+
+@media only screen and (min-height: 701px) {
+.issue-deets {
+margin-top: 40px;	
+}
+	
+}
+
+
+}
+
+/* end desktop styles */
+
+/* begin mobile styles */
+
+@media only screen and (max-width: 500px)  {
+
+
+
+
+.quick-links a {
+    font-size: 19px;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.rotate {
+    left: 25px;
+	top: 172px;
+}
+
+/* .white-bar {
+    box-shadow: 0 9px 23px 8px white;
+}*/
+
+.about-post {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+	}
+
+.white-bar {
+    height: 75px;
+}
+
+.about-page {
+margin-top: 100px;	
+}
+
+
+#nav-trigger {
+    left: -12px;
+}
+
+h2 {
+    left: -7px;
+	top: -7px;
+}
+
+.circle {
+	margin-top: 25px;
+}
+
+
+.current-issue {
+    width: 285px;
+}
+
+h5 {
+	font-size: 23px;
+	line-height: 30px;
+}
+
+.issue-title p {
+    font-size: 15px;
+	/*text-transform:uppercase;
+    letter-spacing: 0.5px;*/
+
+}
+
+p.issue-info {
+    font-family: 'garamond';
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.read-online {
+font-size: 14px;	
+}
+
+.slash {
+display: none;	
+}
+
+.post-paper {
+    width: 80%;
+	margin-left: 10%;	
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+#page-wrap {
+	width: 100vw;
+    margin-left: 0px;
+}
+
+.post-machine {
+	    width: calc(100% - 40px);
+    margin-left: 20px;
+	margin-right: 0px;
+}
+
+#machine1, #machine2, #machine3, #machine4, #machine5, #machine6, #machine7, #machine8, #machine9, #machine10, #machine11 {
+    width: 100%;
+    height: calc(100vw * 0.92);
+
+}
+
+article {
+        width: calc(100% - 20px);
+	height: calc(100vw * 0.8);
+}
+
+.paper-info {
+    margin-top: 0px;
+}
+
+#event1, #event2, #event3 {
+	        width: calc(100%);
+	height: calc(100vw * 0.7);
+	    margin-bottom: 40px;
+
+}
+
+#event1 {
+	 margin-bottom: 30px;
+}
+
+.margin-paper {
+    margin-left: 20px;
+    position: absolute;
+		margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+.contact-page {
+    margin-top: 100px;
+	    margin-bottom: 0px;
+}
+
+.contact .post {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+}
+
+.contact {
+    width: 100vw;
+}
+
+.machine-details {
+padding: 12px;	
+    font-size: 19px;
+}
+
+.menu-list ul {
+margin-right: 0px;	
+}
+
+}
+
+/* begin styles for both mobile and desktop */
+
+.menu-list li {
+font-size: 13px;
+    letter-spacing: 0.5px;
+	    font-weight: 100;	
+}
+
+h2 {
+font-size: 13.7px;
+    letter-spacing: 0.5px;
+	margin-right: 0px;
+	
+}
+
+
+
+.paper-info p {
+/*	text-transform: uppercase; 
+    font-size: 13.7px;  
+    letter-spacing: 0.5px;
+*/
+    font-family: 'helvetica';
+	text-align: left;
+	font-size: 15.5px;
+}
+
+
+
+.paper-info .price {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+
+.read-online {
+font-size: 14px;
+    padding: 7px 9px;
+	    line-height: 1.5em;	
+}
+
+.issue-btn {
+font-size: 14px;
+	text-transform: none;
+	    padding: 7px 9px;
+		    line-height: 1.5em;	
+}
+
+
+p.issue-info {
+    font-size: 16px;
+    font-family: 'helvetica';
+
+}
+
+p.event-details-subtext, p.event-details-subtext > a {
+    font-family: 'helvetica';
+		font-size: 15.5px;
+		color: blue;
+    text-align: left;
+
+}
+
+.paper-machines-btn {
+margin-top: 10px;	
+}
+
+.form .btn {
+font-size: 14px;
+	text-transform: none;
+	    padding: 7px 9px;
+		    line-height: 1.5em;	
+			    height: inherit;
+    border: solid;
+    border-width: 1px;	
+}
+
+.cont-list {
+    font-size: 16px;
+    line-height: 2rem;
+}
+
+input[type="text"] {
+    font-size: 14px;
+    font-weight: 100;
+	height: 2.5rem;
+}
+
+.contact p {
+    font-size: 15.5px;
+    line-height: 1.5rem;
+}
+
+.about-post p {
+    font-size: 15.5px;
+	line-height: 1.5rem;
+}
+
+.about-post p {
+		    margin: 0px;
+}
+
+.column, .columns {
+padding: 0px;	
+}
+
+.modalTitle {
+	text-transform: uppercase;
+    font-family: 'helvetica';
+    font-size: 13.7px;
+    letter-spacing: 0.5px;
+}
+
+.reveal-modal p {
+	    font-size: 15.5px;
+	line-height: 1.5rem;
+}
+
+button.email {
+	font-size: 14px;
+	    padding: 7px 9px;
+		    line-height: 1.5em;	
+}
+
+button {
+	font-size: 14px;
+	    padding: 7px 9px;
+		    line-height: 1.5em;	
+}
+
+#secondModal .event-blurb {
+font-size: 23px;
+    padding-bottom: 30px;
+    padding-top: 40px;	
+}
+
+.cont-modal li {
+    font-size: 15.5px;
+    line-height: 1.3em;
+    padding-top: 5px;
+}
+
+.hide-for-small{
+height: 0.8em;	
+}
+
+/*
+.maintextlarge:hover {
+background: black;
+color:black;	
+} */
+
+.issue-title {
+    margin: 0 0 0 0;
+    font-size: 15px;
+	/*text-transform:uppercase;
+    letter-spacing: 0.5px;*/
+
+}
+
+.show-for-small-up {
+width: 50vw;
+
+}
+
+/*.show-for-small-up:hover {
+background: black;
+color:black;
+display: inline !important;		
+}*/
+
+
+
+
+.issue-deets {
+margin-bottom: 0px;	
+margin-top: 0px;
+margin-left: 0px;
+padding-left: 0px;
+margin-right: 0px;	
+
+}
+
+.issue-index .issue-title {
+    font-size: 15px;
+    font-family: 'garamond';
+    /*text-transform: uppercase;*/
+    /*letter-spacing: 0.5px;*/
+
+}
+
+
+/* .maintextlarge { transition: all 150ms ease-in;}*/
+
+
+
+#inner {
+color: rgb(239, 63, 0);	
+}
+
+.read-hover > h5 > a:hover {
+	    color: blue;
+}
+
+.issue-title {
+text-align: left;	
+}
+
+

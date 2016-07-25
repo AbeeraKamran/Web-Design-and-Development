@@ -640,11 +640,13 @@ button.email {
 .reveal-modal .close-reveal-modal {
   color: magenta;
   font-size: 1rem;
+  top: 1.625rem;
   font-weight: normal;
 }
 @media only screen and (max-width: 500px) {
   .reveal-modal .close-reveal-modal {
     font-size: 1.5rem;
+    top: 2.625rem;
   }
 }
 

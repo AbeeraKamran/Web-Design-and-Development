@@ -63,6 +63,17 @@ $(document).ready(function() {
     	$('.issue-index').css("visibility", "hidden");
     	$('.random').css("background","none");
 	});
+	$('#inner').on('touchstart', function(){
+		var randomText = jQuery(".random").get().sort(function(){ 
+			return Math.round(Math.random())-0.3
+		}).slice(0,3);
+		$('.issue-index').css("visibility", "visible");
+		$(randomText).css("background","black");
+
+	},function(){
+    	$('.issue-index').css("visibility", "hidden");
+    	$('.random').css("background","none");
+	});
 
 	
 
