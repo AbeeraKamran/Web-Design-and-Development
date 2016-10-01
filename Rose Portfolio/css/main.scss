@@ -1,0 +1,273 @@
+/* 
+Project Name: Rose's Portfolio
+Client: Rose Nordin
+Author: A Kamran
+*/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+@font-face {
+  font-family: 'Jungka';
+  src: url("../fonts/jungka-regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jungka';
+  src: url("../fonts/jungka-medium.woff");
+  font-weight: bold;
+  font-style: normal;
+}
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+:focus, :active, :hover {
+  outline: none;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Jungka';
+  background-color: #f2f1ec;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1px;
+}
+#header {
+  height: 50px;
+  display: block;
+  width: 100%;
+}
+h1 {
+  font-family: 'Jungka';
+  text-align: center;
+  margin: 1rem 0 0 0;
+  background: #f2f1ec;
+  z-index: 10;
+  @include goldilocks(baby) {
+    font-size: 1.75rem;
+  }
+}
+h3 {
+  font-size: 1em;
+  padding-left: 3rem;
+  margin-bottom: 0;
+   @include goldilocks(baby) {
+    font-size: .9rem;
+    padding-left: 2rem;
+   }
+}
+a {
+  color: black;
+  text-decoration: none;
+  
+}
+ul {
+  padding:0;
+  margin-top: 0;
+}
+li {
+  list-style: none;
+}
+.intro {
+  @include goldilocks(baby) {
+    margin-top: 20%;
+  }
+}
+.info {
+  // margin-right: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 40%;
+  @include goldilocks(mama) {
+    font-size: 1.25rem;
+    // margin-left: 15%;
+    width: 65%;
+  }
+  @include goldilocks(mamaTall) {
+    font-size: 1.25rem;
+    // margin-left: 10%;
+    width: 75%
+  }
+  @include goldilocks(baby) {
+    // margin-left: 10%;
+    // margin-right: 10%;
+    font-size: .9rem;
+    width: 80%;
+  }
+  p {
+    width: 40%;
+    @include goldilocks(mama) {
+    width: 65%;
+  }
+  @include goldilocks(mamaTall) {
+    width: 75%
+  }
+  @include goldilocks(baby) {
+    width: 80%;
+  }
+  }
+}
+.contact {
+  a {
+    border-bottom: 1px solid black;
+    transition: .75s ease-in;
+    display: inline;
+    &:hover {
+      text-decoration: line-through;
+      border-bottom: none;
+    }
+  }
+  h3 {
+    display: inline;
+    padding-left: 0;
+  }
+}
+.fp-slides {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  @include goldilocks(mama) {
+    width: 70%;
+  }
+  @include goldilocks(mamaTall) {
+    width: 70%;
+  }
+  @include goldilocks(baby) {
+    width: 80%;
+  }
+}
+.fp-tableCell {
+  width: 100vw;
+  cursor: default;
+  img {
+    width: 50%;
+    @include goldilocks(mama) {
+      width: 70%;
+    }
+    @include goldilocks(mamaTall) {
+      width: 70%;
+    }
+    @include goldilocks(baby) {
+      width: 80%;
+    }
+  }
+}
+.fp-controlArrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+}
+.fp-next {
+  left: 55%;
+  width: 40%;
+  border-width: 0;
+  cursor: e-resize;
+  border-color: transparent transparent transparent #000;
+}
+.fp-controlArrow.fp-prev {
+  right: 45%;
+  left: 5%;
+  width: 40%;
+  border-width: 0;
+  cursor: w-resize;
+  border-color: transparent transparent transparent #000;
+}
+
+#fp-nav.right{
+  @include goldilocks (baby) {
+    right: 2px;
+  }
+}
+#fp-nav ul {
+  li{
+   a span {
+      top: 2px;
+      left: 2px;
+      width: 9px;
+      height: 9px;
+      border: 1px solid black;
+      background: none;
+      border-radius: 100%;
+      position: absolute;
+      z-index: 1;
+      -webkit-font-smoothing: antialiased;
+      &:hover {
+        width: 9px;
+        height: 9px;
+        width: 9px;
+        height: 9px;
+        border-radius: 100%;
+      }
+    }
+    a.active span {
+      background: black;
+      border-radius: 100%;
+      margin: -2px;
+      border: none;
+      width: 9px;
+      height: 9px;
+    }
+    .fp-tooltip {
+      color: black;
+      font-size: .75rem;
+      right: 20px;
+    }
+  }
+}
+footer {
+  position: fixed;
+  height: 3%;
+}
+
