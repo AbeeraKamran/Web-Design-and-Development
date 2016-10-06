@@ -271,3 +271,54 @@ footer {
   height: 3%;
 }
 
+h: 9px;
+        height: 9px;
+        border-radius: 100%;
+      }
+    }
+    a.active span {
+      background: black;
+      border-radius: 100%;
+      margin: -2px;
+      border: none;
+      width: 9px;
+      height: 9px;
+    }
+    .fp-tooltip {
+      color: black;
+      font-size: .75rem;
+      right: 20px;
+    }
+  }
+}
+/* Fixed header and footer.
+  * --------------------------------------- */
+  #footer{
+    position:fixed;
+    height: 7rem;
+    display:block;
+    width: 100%;
+    z-index:9;
+    text-align:center;
+    color: black;
+    padding: 3rem 0 0 0;
+  }
+
+  #header{
+    top:0px;
+  }
+  #footer{
+    bottom:0px;
+    a {
+      transition: .5s ease-in;
+      &:hover {
+        text-decoration: line-through;
+      }
+    }
+    li{
+      display: inline;
+      font-size: .8rem;
+      padding-right: 1rem;
+    }
+  }
+
