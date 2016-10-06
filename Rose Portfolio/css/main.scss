@@ -98,13 +98,19 @@ h3 {
   padding-left: 3rem;
   margin-bottom: 0;
    @include goldilocks(baby) {
-    font-size: .9rem;
+    font-size: .8rem;
     padding-left: 2rem;
    }
+}
+p{
+  font-size: .8rem;
 }
 a {
   color: black;
   text-decoration: none;
+  &:focus {
+    outline: none;
+  }
   
 }
 ul {
@@ -116,7 +122,7 @@ li {
 }
 .intro {
   @include goldilocks(baby) {
-    margin-top: 20%;
+    margin-top: 5%;
   }
 }
 .info {
@@ -125,20 +131,21 @@ li {
   margin-right: auto;
   display: block;
   width: 40%;
+  font-size: .8rem;
   @include goldilocks(mama) {
-    font-size: 1.25rem;
+    font-size: .9rem;
     // margin-left: 15%;
     width: 65%;
   }
   @include goldilocks(mamaTall) {
-    font-size: 1.25rem;
+    font-size: .9rem;
     // margin-left: 10%;
     width: 75%
   }
   @include goldilocks(baby) {
     // margin-left: 10%;
     // margin-right: 10%;
-    font-size: .9rem;
+    font-size: .8rem;
     width: 80%;
   }
   p {
@@ -169,34 +176,49 @@ li {
     padding-left: 0;
   }
 }
-.fp-slides {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+// .fp-slides {
+//   width: 100%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   @include goldilocks(mama) {
+//     width: 70%;
+//   }
+//   @include goldilocks(mamaTall) {
+//     width: 70%;
+//   }
+//   @include goldilocks(baby) {
+//     width: 80%;
+//   }
+
+.slide {
+  // max-height: 55%;
+  max-width: 40%;
+  text-align: center;
   @include goldilocks(mama) {
-    width: 70%;
+    max-width: 70%;
   }
   @include goldilocks(mamaTall) {
-    width: 70%;
+    max-width: 70%;
   }
   @include goldilocks(baby) {
-    width: 80%;
+    max-width: 80%;
   }
 }
-.fp-tableCell {
-  width: 100vw;
-  cursor: default;
-  img {
-    width: 50%;
-    @include goldilocks(mama) {
-      width: 70%;
-    }
-    @include goldilocks(mamaTall) {
-      width: 70%;
-    }
-    @include goldilocks(baby) {
-      width: 80%;
-    }
+img {
+  max-width: 45%;
+  @include goldilocks(mama) {
+    max-width: 60%;
+  }
+  @include goldilocks(mamaTall) {
+    max-width: 70%;
+  }
+  @include goldilocks(baby) {
+    max-width: 80%;
+  }
+}
+.project-info {
+  p {
+    font-size: .9rem;
   }
 }
 .fp-controlArrow {
@@ -230,6 +252,9 @@ li {
     right: 2px;
   }
 }
+#fp-nav {
+  top: 48%;
+}
 #fp-nav ul {
   li{
    a span {
@@ -247,31 +272,6 @@ li {
         width: 9px;
         height: 9px;
         width: 9px;
-        height: 9px;
-        border-radius: 100%;
-      }
-    }
-    a.active span {
-      background: black;
-      border-radius: 100%;
-      margin: -2px;
-      border: none;
-      width: 9px;
-      height: 9px;
-    }
-    .fp-tooltip {
-      color: black;
-      font-size: .75rem;
-      right: 20px;
-    }
-  }
-}
-footer {
-  position: fixed;
-  height: 3%;
-}
-
-h: 9px;
         height: 9px;
         border-radius: 100%;
       }

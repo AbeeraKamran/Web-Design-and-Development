@@ -1,4 +1,3 @@
-
-(document).ready(function() {
+$(document).ready(function() {
   $(".project-info").delay(3000);
 });

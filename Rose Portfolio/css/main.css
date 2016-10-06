@@ -112,14 +112,21 @@ h3 {
 }
 @media only screen and (max-width: 500px) {
   h3 {
-    font-size: .9rem;
+    font-size: .8rem;
     padding-left: 2rem;
   }
+}
+
+p {
+  font-size: .8rem;
 }
 
 a {
   color: black;
   text-decoration: none;
+}
+a:focus {
+  outline: none;
 }
 
 ul {
@@ -133,7 +140,7 @@ li {
 
 @media only screen and (max-width: 500px) {
   .intro {
-    margin-top: 20%;
+    margin-top: 5%;
   }
 }
 
@@ -142,22 +149,23 @@ li {
   margin-right: auto;
   display: block;
   width: 40%;
+  font-size: .8rem;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
   .info {
-    font-size: 1.25rem;
+    font-size: .9rem;
     width: 65%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .info {
-    font-size: 1.25rem;
+    font-size: .9rem;
     width: 75%;
   }
 }
 @media only screen and (max-width: 500px) {
   .info {
-    font-size: .9rem;
+    font-size: .8rem;
     width: 80%;
   }
 }
@@ -194,48 +202,47 @@ li {
   padding-left: 0;
 }
 
-.fp-slides {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+.slide {
+  max-width: 40%;
+  text-align: center;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
-  .fp-slides {
-    width: 70%;
+  .slide {
+    max-width: 70%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .fp-slides {
-    width: 70%;
+  .slide {
+    max-width: 70%;
   }
 }
 @media only screen and (max-width: 500px) {
-  .fp-slides {
-    width: 80%;
+  .slide {
+    max-width: 80%;
   }
 }
 
-.fp-tableCell {
-  width: 100vw;
-  cursor: default;
-}
-.fp-tableCell img {
-  width: 50%;
+img {
+  max-width: 45%;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
-  .fp-tableCell img {
-    width: 70%;
+  img {
+    max-width: 60%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .fp-tableCell img {
-    width: 70%;
+  img {
+    max-width: 70%;
   }
 }
 @media only screen and (max-width: 500px) {
-  .fp-tableCell img {
-    width: 80%;
+  img {
+    max-width: 80%;
   }
+}
+
+.project-info p {
+  font-size: .9rem;
 }
 
 .fp-controlArrow {
@@ -272,6 +279,10 @@ li {
   }
 }
 
+#fp-nav {
+  top: 48%;
+}
+
 #fp-nav ul li a span {
   top: 2px;
   left: 2px;
@@ -305,11 +316,7 @@ li {
   right: 20px;
 }
 
-footer {
-  position: fixed;
-  height: 3%;
-}
-ooter.
+/* Fixed header and footer.
   * --------------------------------------- */
 #footer {
   position: fixed;
