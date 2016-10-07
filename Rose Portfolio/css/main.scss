@@ -79,14 +79,14 @@ body {
   letter-spacing: 1px;
 }
 #header {
-  height: 50px;
   display: block;
   width: 100%;
 }
 h1 {
   font-family: 'Jungka';
+  font-size: 1.5rem;
   text-align: center;
-  margin: 1rem 0 0 0;
+  margin: .5rem 0 0 0;
   background: #f2f1ec;
   z-index: 10;
   @include goldilocks(baby) {
@@ -151,14 +151,20 @@ li {
   p {
     width: 40%;
     @include goldilocks(mama) {
-    width: 65%;
+      width: 65%;
+    }
+    @include goldilocks(mamaTall) {
+      width: 75%
+    }
+    @include goldilocks(baby) {
+      width: 75%;
+    }
   }
-  @include goldilocks(mamaTall) {
-    width: 75%
-  }
-  @include goldilocks(baby) {
-    width: 80%;
-  }
+  li {
+    @include goldilocks(baby) {
+      padding-bottom: .5rem;
+      line-height: 1.1rem;
+    }
   }
 }
 .contact {
@@ -252,11 +258,14 @@ img {
     right: 2px;
   }
 }
-#fp-nav {
-  top: 48%;
-}
+
 #fp-nav ul {
+  @include goldilocks (baby) {
+    margin-top: 35px;
+  }
   li{
+    width: 9px;
+    height: 9px;
    a span {
       top: 2px;
       left: 2px;
@@ -288,6 +297,8 @@ img {
       color: black;
       font-size: .75rem;
       right: 20px;
+      background: #f2f1ec;
+      padding: .25rem;
     }
   }
 }

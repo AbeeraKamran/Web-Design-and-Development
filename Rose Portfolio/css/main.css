@@ -87,15 +87,15 @@ body {
 }
 
 #header {
-  height: 50px;
   display: block;
   width: 100%;
 }
 
 h1 {
   font-family: 'Jungka';
+  font-size: 1.5rem;
   text-align: center;
-  margin: 1rem 0 0 0;
+  margin: .5rem 0 0 0;
   background: #f2f1ec;
   z-index: 10;
 }
@@ -184,7 +184,13 @@ li {
 }
 @media only screen and (max-width: 500px) {
   .info p {
-    width: 80%;
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .info li {
+    padding-bottom: .5rem;
+    line-height: 1.1rem;
   }
 }
 
@@ -279,10 +285,15 @@ img {
   }
 }
 
-#fp-nav {
-  top: 48%;
+@media only screen and (max-width: 500px) {
+  #fp-nav ul {
+    margin-top: 35px;
+  }
 }
-
+#fp-nav ul li {
+  width: 9px;
+  height: 9px;
+}
 #fp-nav ul li a span {
   top: 2px;
   left: 2px;
@@ -314,6 +325,8 @@ img {
   color: black;
   font-size: .75rem;
   right: 20px;
+  background: #f2f1ec;
+  padding: .25rem;
 }
 
 /* Fixed header and footer.
