@@ -84,9 +84,9 @@ body {
 }
 h1 {
   font-family: 'Jungka';
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
-  margin: .5rem 0 0 0;
+  margin: 1rem 0 0 0;
   background: #f2f1ec;
   z-index: 10;
   @include goldilocks(baby) {
@@ -167,6 +167,12 @@ li {
     }
   }
 }
+.clients li  {
+    @include goldilocks(baby) {
+      padding-bottom: 0rem;
+      line-height: 1.1rem;
+    }
+  }
 .contact {
   a {
     border-bottom: 1px solid black;

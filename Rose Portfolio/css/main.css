@@ -93,9 +93,9 @@ body {
 
 h1 {
   font-family: 'Jungka';
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
-  margin: .5rem 0 0 0;
+  margin: 1rem 0 0 0;
   background: #f2f1ec;
   z-index: 10;
 }
@@ -190,6 +190,13 @@ li {
 @media only screen and (max-width: 500px) {
   .info li {
     padding-bottom: .5rem;
+    line-height: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .clients li {
+    padding-bottom: 0rem;
     line-height: 1.1rem;
   }
 }
