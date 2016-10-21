@@ -1,0 +1,157 @@
+/* 
+Project Name: C.R.E.A.M Webpage
+Client: Taylor Le Melle & Imran Peretta
+Author: A Kamran
+*/
+/******************************************
+/* SETUP                   
+/*******************************************/
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+:focus, :active, :hover {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+.columns {
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+li .grid-item {
+  top: -29px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/******************************************
+/* Video Grid                   
+/*******************************************/
+/**/
+#masonry {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+.portrait-width {
+  width: 25%;
+}
+
+.feature-width {
+  width: 50%;
+}
+
+.vid-overlay {
+  visibility: hidden;
+  background: white;
+}
+
+.grid-item:hover .vid-overlay {
+  visibility: visible;
+}
+
+/******************************************
+/* Video Inner Pages                   
+/*******************************************/
+/**/
+.inner-vid-page {
+  margin: 3rem;
+}
+
+.draggable {
+  position: absolute !important;
+  margin: 0 auto;
+  cursor: -webkit-grab;
+}
+.draggable:active {
+  cursor: -webkit-grabbing;
+}
+
+.landmark {
+  z-index: 10;
+  text-align: center;
+  position: relative !important;
+}
+
+.text {
+  z-index: 9;
+  width: 30%;
+  float: right;
+  position: relative !important;
+}
+.text p {
+  margin: 0;
+  text-align: right;
+}
+
+.image {
+  z-index: 8;
+  width: 25%;
+  float: left;
+}
+
+.image1 {
+  width: 35%;
+  margin: 10%;
+}
+
+.image2 {
+  margin-left: 31%;
+}
+
+.image3 {
+  margin: 16%;
+}
+
+.inner-vid {
+  z-index: 5;
+}
+.inner-vid video {
+  height: 80vh;
+}
