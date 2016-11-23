@@ -125,7 +125,7 @@
     slices: 20
   });
 
-  kaleidoscope.domElement.style.position = 'absolute';
+  kaleidoscope.domElement.style.position = 'fixed';
 
   kaleidoscope.domElement.style.marginLeft = -kaleidoscope.radius + 'px';
 

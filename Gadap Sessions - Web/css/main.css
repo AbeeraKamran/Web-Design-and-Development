@@ -52,6 +52,7 @@ html {
 
 .columns {
   padding: 0;
+  position: relative;
 }
 
 ul {
@@ -70,10 +71,34 @@ a {
   text-decoration: none;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.gif {
+  min-height: 180vh;
+  min-width: 100vw;
+}
+
+.menu {
+  width: 6vw;
+  position: absolute;
+  text-align: center;
+  margin-left: 47%;
+  bottom: 20px;
+  font-size: .75rem;
+  border: 1px solid #0187d6;
+  z-index: 100;
+}
+
 /******************************************
 /* Video Grid                   
 /*******************************************/
 /**/
+.main-vid {
+  overflow: hidden;
+}
+
 #masonry {
   min-width: 100vw;
   overflow-x: hidden;
@@ -88,72 +113,20 @@ a {
 }
 
 .vid-overlay {
-  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
   background: white;
+  padding: 3px;
+  transition: 0.6s ease-out;
+  height: 655px;
 }
 
-.grid-item:hover .vid-overlay {
-  visibility: visible;
-}
-
-/******************************************
-/* Video Inner Pages                   
-/*******************************************/
-/**/
-.inner-vid-page {
-  margin: 3rem;
-}
-
-.draggable {
-  position: absolute !important;
-  margin: 0 auto;
-  cursor: -webkit-grab;
-}
-.draggable:active {
-  cursor: -webkit-grabbing;
-}
-
-.landmark {
-  z-index: 10;
-  text-align: center;
-  position: relative !important;
-}
-
-.text {
-  z-index: 9;
-  width: 30%;
-  float: right;
-  position: relative !important;
-}
-.text p {
-  margin: 0;
-  text-align: right;
-}
-
-.image {
-  z-index: 8;
-  width: 25%;
-  float: left;
-}
-
-.image1 {
-  width: 35%;
-  margin: 10%;
-}
-
-.image2 {
-  margin-left: 31%;
-}
-
-.image3 {
-  margin: 16%;
-}
-
-.inner-vid {
-  z-index: 5;
-}
-.inner-vid video {
-  height: 80vh;
+.columns:hover .vid-overlay {
+  opacity: 1;
 }
 
 /******************************************
@@ -161,8 +134,311 @@ a {
 /*******************************************/
 /**/
 .kalair {
-  z-index: 100;
+  z-index: 1;
   position: absolute;
-  width: 15%;
   margin: 8%;
+  -webkit-box-shadow: 13px -13px 30px -15px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 13px -13px 30px -15px rgba(0, 0, 0, 0.73);
+  box-shadow: 13px -13px 30px -15px rgba(0, 0, 0, 0.73);
+}
+
+map {
+  z-index: 2;
+}
+
+area {
+  z-index: 3;
+  position: absolute;
+  cursor: pointer;
+}
+
+/******************************************
+/* Padarii Chab                   
+/*******************************************/
+/**/
+.cont {
+  width: 100%;
+  height: 100vh !important;
+  margin: 0 auto;
+  position: absolute;
+  float: left;
+}
+
+.cont-right {
+  margin-left: 50%;
+  position: fixed;
+  background: white;
+}
+
+#test {
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#test2 {
+  position: absolute;
+  height: 100%;
+}
+
+.drag {
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: white;
+  border-left: 1px dashed black;
+  border-right: 1px dashed black;
+  cursor: move;
+}
+
+.video-drag {
+  margin: 3% 13% 0 3%;
+  float: left;
+}
+
+.audio-drag {
+  float: left;
+  margin: 5%;
+  position: absolute;
+}
+
+.din-mohd {
+  padding: 3rem;
+  max-width: 18rem;
+  font-family: serif;
+  float: left;
+}
+
+.din {
+  margin-left: 39%;
+}
+
+.map {
+  height: 100vh;
+  float: right;
+  cursor: help;
+}
+
+.pardarii-img {
+  width: 20rem;
+  padding-right: 1rem;
+  margin-top: 3%;
+  float: left;
+}
+
+.margin-left {
+  margin-left: 15%;
+}
+
+title {
+  font-family: serif;
+}
+
+/******************************************
+/* Bhagi                   
+/*******************************************/
+/**/
+.bhagi p {
+  font-family: serif;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+.bhagi a {
+  color: black;
+}
+
+.hide1, .hide2, .hide3, .hide4, .hide5, .hide6, .hide7, .hide8, .hide9, .hide10, .hide11 {
+  display: none;
+}
+
+#section1 {
+  margin: 2rem;
+  width: 35%;
+  float: right;
+  text-align: right;
+}
+
+#section2 {
+  width: 60%;
+  position: absolute;
+  bottom: 2rem;
+  margin-left: 2rem;
+  float: right;
+}
+
+#section3 {
+  height: 9vh;
+  bottom: 2rem;
+  margin-left: 2rem;
+  width: 32vw;
+  position: absolute;
+}
+#section3 p {
+  text-align: left;
+}
+#section3 img {
+  width: 27%;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  margin-top: -4%;
+  margin-left: 4%;
+}
+
+#section4 {
+  height: 53vh;
+  top: 2rem;
+  position: absolute;
+  width: 32vw;
+  overflow-y: hidden;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+#section4 .float {
+  float: right;
+  right: 11%;
+  position: absolute;
+  top: 5%;
+}
+
+#section5 {
+  position: absolute;
+  width: 37vw;
+  right: 2rem;
+  text-align: right;
+  margin-top: 15%;
+}
+#section5 img {
+  float: left;
+  width: 73%;
+  margin-left: 1rem;
+}
+#section5 .fracture {
+  float: right;
+}
+
+#section6 {
+  margin-top: 10%;
+}
+#section6 p {
+  text-align: center;
+  font-weight: normal;
+}
+
+#section7 {
+  width: 45vw;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+#section7 img {
+  margin-top: 5%;
+}
+#section7 .or {
+  margin-left: 80%;
+  margin-top: 35%;
+}
+
+#section8 {
+  width: 45vw;
+  position: absolute;
+  right: 2rem;
+}
+#section8 img {
+  margin-top: 5%;
+}
+#section8 p {
+  margin-top: 10%;
+  text-align: center;
+}
+
+#section9 {
+  margin: 2rem;
+}
+#section9 video {
+  margin: 0 auto;
+  width: 95vw;
+  position: absolute;
+  margin: 1% 0;
+}
+
+#section10 {
+  position: absolute;
+  width: 43vh;
+  margin-left: 36%;
+}
+#section10 .break {
+  margin-top: 30%;
+}
+
+.img-center {
+  margin: 10% 0 0 0%;
+}
+
+p.click9 {
+  margin-top: 27%;
+}
+
+.img-border {
+  padding: .25rem;
+  border: 1px solid black;
+}
+
+.divider {
+  position: absolute;
+  height: 100vh;
+  border-right: 1px solid black;
+  margin-left: 60%;
+}
+
+.divider2 {
+  width: 34%;
+  border-bottom: 1px solid black;
+  margin-top: 84vh;
+  position: absolute;
+}
+
+.divider3 {
+  width: 40%;
+  border-bottom: 1px solid black;
+  margin-top: 22vh;
+  margin-left: 60vw;
+  position: absolute;
+}
+
+.divider4 {
+  border-right: 1px solid black;
+  margin-left: 50vw;
+  position: absolute;
+  height: 100vh;
+}
+
+.divider5 {
+  position: absolute;
+  height: 100vh;
+  border-right: 1px solid black;
+  margin-left: 34%;
+}
+
+#bkgd, #bkgd2 {
+  position: absolute;
+  /* use fixed to keep it in place */
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: solid;
+  border-color: transparent transparent black black;
+  z-index: -2;
+}
+
+#bkgd2 {
+  right: 1px;
+  border-color: transparent transparent white white;
+  z-index: -1;
 }

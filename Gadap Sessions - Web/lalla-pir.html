@@ -14,27 +14,46 @@
         <link rel="stylesheet" href="css/foundation.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/lalla.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <link rel="stylesheet" type="text/css" 
         href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
     </head>
-    <body>
+    <body class="lalla">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
         <div class="main inner-vid-page">
-            <div class="landmark draggable"><h4>Khalair Tarai</h4></div>
-            <div class="text draggable">
-                <p>This was a small talaab. Khalair is the name of a tree in balochi. Next to the talaab was a very big khalair tree. People and livestock would rest under its shade.</p>
+            <select name="menu" onchange="top.location=this.options[this.selectedIndex].value" class="draggable menu">
+              <option selected="">browse</option>
+              <option value="video-gif.html">Roz</option>
+              <option value="lalla-pir.html">Lalla Pir</option>
+              <option value="bhagi1.html">Bhagi</option>
+              <option value="padaraii-chab.html">Padaraii Chab</option>
+              <option value="kalair-taraii.html">Kalair Taraii</option>
+              <option value="index.html">(no longer) Home</option>
+            </select>
+            <div class="bg-video"><video src="videos/bg-well-video.mp4" width="1900" autoplay loop muted></video></div>
+            <div class="bg-audio"><audio src="videos/kanda-khan.mp3" type="audio/mpeg" autoplay></audio></div>
+            <div class="drag-content">
+                <div class="text draggable">
+                    <p>This is Lalla Pir. The name carries forward the memory/history of a man called Lalla, who came here from Kerman (Iran) a very long time ago. He dug a well, found abundant water and decided to stay in Pahwaro. Over the centuries, many others like Lalla have journeyed and inhabited these mountains.  Its lands are marked with histories of place-making.</p>
+                </div>
+                <div class="inner-vid draggable resizable">
+                    <video src="videos/khalair_taraii.m4v" height="660" autoplay loop muted></video>
+                </div>
+                <div class="image image1 draggable resizable"><img src="img/lalla_1.jpg" alt=""> </div>
+                <div class="image image2 draggable resizable"><img src="img/lalla_2.jpg" alt=""></div>
+                <div class="image image3 draggable resizable"><img src="img/lalla_3.jpg" alt=""></div>
+                <div class="image image4 draggable resizable"><img src="img/lalla_4.jpg" alt=""></div>
+                <div class="image image3 draggable resizable"><img src="img/lalla_5.jpg" alt=""></div>
+                <p class="names name1 draggable ">للا</p>
+                <p class="names name2 draggable ">مراد</p>
+                <p class="names name3 draggable ">کتھو</p>
+                <p class="names name4 draggable ">جمع خان</p>
             </div>
-            <div class="inner-vid draggable resizable">
-                <video src="videos/khalair_taraii.m4v" height="660" autoplay loop muted></video>
-            </div>
-            <div class="image image1 draggable resizable"><img src="img/kalair_1.jpg" alt=""> </div>
-            <div class="image image2 draggable resizable"><img src="img/kalair_2.jpg" alt=""></div>
-            <div class="image image3 draggable resizable"><img src="img/kalair_3.jpg" alt=""></div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
