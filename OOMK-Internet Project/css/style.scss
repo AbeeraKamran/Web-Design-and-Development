@@ -133,9 +133,9 @@ animation: AnimationName 30s ease infinite;
   bottom:115px;left:85px;
   padding-right:85px;
   max-width:40rem;
-  line-height:6rem;
-  font-size: 4rem;
-  font-family: $font-stack;
+  line-height:1.7rem;
+  font-size: .8rem;
+  font-family: serif;
 }
 
 .console span{
@@ -169,15 +169,15 @@ animation: AnimationName 30s ease infinite;
 }
 .console .console--cursor{
   position:relative;
-  width:4px;height:65px;
+  width:1px;height:1rem;
   display:inline-block;
-  margin-bottom:-13px;
+  margin-bottom:-3px;
   z-index:2
 }
 .console .console--cursor.intro{
   position:absolute;
-  left:-7px;
-  top:9px;
+  left:0px;
+  top:0px;
   -webkit-animation:cursor-intro .8s cubic-bezier(0.77,0,.175,1);
   animation:cursor-intro .8s cubic-bezier(0.77,0,.175,1)
 }
@@ -186,7 +186,7 @@ animation: AnimationName 30s ease infinite;
   animation:cursor-animation .5s infinite;
   position:absolute;
   display:block;
-  left:0;right:0;bottom:0;top:0;
+  left:0;right:0;bottom:-3px;top:0;
   background:#ff5852
 }
 .console .console--cursor.ease-in{
@@ -572,6 +572,7 @@ select {
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 2rem;
+  margin-top: 10rem;
   a:active,a:hover,a:visited{
     color:black;
   }
