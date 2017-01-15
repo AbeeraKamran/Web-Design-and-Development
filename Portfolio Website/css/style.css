@@ -186,7 +186,7 @@ ul {
 }
 
 .subhead {
-  font-size: 1rem;
+  font-size: .9rem;
   text-align: center;
   font-family: 'Josefin Sans', 'sans-serif';
   color: blue;
@@ -888,9 +888,9 @@ a {
 }
 
 .category {
-  padding: .65rem;
+  padding: .65rem 0;
   float: left;
-  letter-spacing: .15rem;
+  letter-spacing: 1px;
   border-top: blue 1px dashed;
 }
 @media only screen and (max-width: 414px) {
@@ -1033,6 +1033,10 @@ a {
   box-sizing: border-box;
 }
 
+.increase-width {
+  width: 100%;
+}
+
 /******************************************
  BLOG STYLES                   
 ******************************************/
@@ -1071,21 +1075,23 @@ p.blog-byline {
   color: #414042;
   text-transform: uppercase;
   margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: none;
 }
 @media only screen and (max-width: 414px) {
   .blog-container .blog-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .blog-container .blog-posts {
   padding-top: 2rem;
 }
 .blog-container .blog-posts p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 @media only screen and (max-width: 414px) {
   .blog-container .blog-posts p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 .blog-container .blog-posts p:hover {
@@ -1094,4 +1100,5 @@ p.blog-byline {
 .blog-container .date {
   text-align: center;
   color: #808285;
+  font-size: .8rem;
 }

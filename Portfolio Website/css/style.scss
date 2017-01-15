@@ -214,7 +214,7 @@ ul {
     margin-top: 6rem;
     font-family: 'Josefin Sans', 'sans-serif';
     color: $blue;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 }
@@ -231,7 +231,7 @@ ul {
 }
 
 .subhead {
-font-size: 1rem;
+font-size: .9rem;
 text-align: center;
 font-family: 'Josefin Sans', 'sans-serif';
 color: $blue;
@@ -913,9 +913,9 @@ a {
 
 
 .category {
-  padding: .65rem;
+  padding: .65rem 0;
   float: left;
-  letter-spacing: .15rem;
+  letter-spacing: 1px;
   border-top: $blue 1px dashed;
   @include MQ(S) {
     padding: .5rem;
@@ -1054,6 +1054,10 @@ a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.increase-width {
+  width: 100%;
+}
+
 /******************************************
  BLOG STYLES                   
 ******************************************/
@@ -1095,17 +1099,19 @@ p.blog-byline {
     color: $grey;
     text-transform: uppercase;
     margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: none;
     @include MQ(S) {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
   }
 
   .blog-posts {
     padding-top: 2rem;
       p {
-      font-size: 1.5rem;
+      font-size: 1rem;
         @include MQ(S) {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
        &:hover {
         color: $grey;
@@ -1116,6 +1122,7 @@ p.blog-byline {
   .date {
     text-align: center;
     color: #808285;
+    font-size: .8rem;
   }
   
 }
