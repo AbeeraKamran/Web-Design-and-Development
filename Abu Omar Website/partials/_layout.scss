@@ -1,0 +1,23 @@
+// breakpoints
+   
+$baby:     414px;   
+$mama:     768px;     
+$papa:     1170px;     
+
+// media queries
+
+@mixin goldilocks($canvas) {
+  @if $canvas == baby {
+   @media only screen and (max-width: $baby) { @content; } 
+  }
+  @else if $canvas == mama {
+   @media only screen and (min-width: $mama) and (max-width : 1024px) and (orientation : landscape) { @content; } 
+  }
+  @else if $canvas == mamaTall {
+   @media only screen and (min-width: $mama) and (max-width : 1024px) and (orientation : portrait) { @content; } 
+  }
+  @else if $canvas == papa {
+   @media only screen and (min-width: $papa) { @content; } 
+  }
+  
+}

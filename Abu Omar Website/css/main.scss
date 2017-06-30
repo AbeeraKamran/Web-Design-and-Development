@@ -1,0 +1,707 @@
+/* 
+Project Name: C.R.E.A.M Webpage
+Client: Taylor Le Melle & Imran Peretta
+Author: A Kamran
+*/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+.hide-it {
+  opacity: 0;
+}
+
+.open {
+  display: block;
+}
+
+.float {
+  float: left;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+/**/
+#mfPreviewBar {
+  display: none;
+}
+
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+:focus, :active, :hover {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  // @include goldilocks(baby) {
+  //   width: 62.5em;
+  // }
+}
+body {
+  // background: #44c9f4; /* Old browsers */
+  // background: -moz-linear-gradient(top, #44c9f4 0%, #07fbe2 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top, #44c9f4 0%,#07fbe2 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to bottom, #44c9f4 0%,#07fbe2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44c9f4', endColorstr='#07fbe2',GradientType=0 ); /* IE6-9 */
+  font-family: $font-stack;
+  @include goldilocks(baby) {
+    margin: 0;
+  }
+}
+
+.home { 
+  // max-width: 100vw !important;
+  // max-height: 100vh !important;
+      overflow: hidden;
+
+  
+  @include goldilocks(baby) {
+     background: linear-gradient(182deg, #25cff9, #2ae4cd);
+    background-size: 400% 400%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 215%;
+  }
+}
+#gradient {
+  background: #44c9f4; /* Old browsers */
+  background: -moz-linear-gradient(top, #44c9f4 0%, #07fbe2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #44c9f4 0%,#07fbe2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #44c9f4 0%,#07fbe2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  width: 100%;
+  height: 330%;
+  position: absolute;
+  background-size:cover;
+  background-attachment:fixed;
+  margin-top: -2rem;
+  @include goldilocks(baby) {
+    height: 1000%;
+  }
+}
+.gradient-home {
+  @include goldilocks(baby) {
+    height: 215%;
+  }
+}
+.main {
+  margin: 1.5rem 2rem;
+  @include goldilocks(baby) {
+    margin: .5rem;
+    position: relative;
+  }
+}
+a {
+  text-decoration: none;
+
+}
+
+nav {
+  font-weight: bold;
+  font-size: 3rem;
+  float: left;
+  a {
+    color: black;
+  }
+}
+
+h1 {
+  margin: 0;
+  img { 
+    z-index: 100;
+    position: relative;
+  }
+  @include goldilocks(baby) {
+    margin: 0;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 6rem;
+  display: -webkit-inline-box;
+}
+
+h3 {
+  margin-bottom: 0;
+  margin-top: 2rem;
+  @include goldilocks(baby) {
+    font-size: 1rem;
+  }
+}
+.margin {
+  margin: 1.75rem 1.5rem;
+}
+.logo-papa {
+  display: none;
+  @include goldilocks(papa) {
+    display: block;
+  }
+}
+.logo-mama {
+  display: none;
+  @include goldilocks(mama) {
+    display: block;
+  }
+}
+
+.logo-mamaTall {
+  display: none;
+  @include goldilocks(mamaTall) {
+    display: block;
+  }
+}
+
+/******************************************
+/* SECOND MENU                   
+/*******************************************/
+/**/
+.mobile-gif {
+  margin-top: 1rem;
+  position: relative;
+}
+.nav-trigger {
+  float: right;
+  margin: 0.5rem 1rem 0rem 1rem;
+  z-index: 100;
+  position: relative;
+  @include goldilocks(baby) {
+    margin-top: 18%;
+    float: none;
+  }
+  @include goldilocks(mama) {
+    margin:0.5rem 0;
+  }
+}
+// .nav-contact {
+//   @include goldilocks(baby) {
+//     top: 1.5%;
+//   }
+// }
+.nav-home {
+  @include goldilocks(baby) {
+    right: 45%;
+  }
+}
+
+.open--menu {
+  float: right;
+  @include goldilocks(baby) {
+    float: none;
+  }
+}
+.menu-text {
+  color: $yellow;
+  font-size: .8rem;
+  margin: .25rem 1rem;
+  z-index: 100;
+  text-align: right;
+  float: left;
+  @include goldilocks(baby) {
+    margin: .5rem 0 0 0;
+    text-align: center;
+    float: none;
+  }
+}
+.hamburger__line {
+  background: yellow;
+  height: .25rem;
+  width: 1.725rem;
+  border-radius: 4rem;
+  margin-top: 5px;
+  display: block;
+  margin: 4px auto 0;
+  transition: all 0.3s;
+  z-index: 3;
+  @include goldilocks(baby) {
+    height: .25rem;
+    width: 2rem;
+    margin: 3px auto 0;
+  }
+}
+  
+.hamburger__line-active {
+  background: $yellow;
+
+  &:nth-child(1) {
+          display: none;
+
+  }
+
+  &:nth-child(2) {
+    transform: rotate(45deg);
+    position: relative;
+  }
+
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+    position: relative;
+    @include goldilocks(baby) {
+      top: -6px;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  
+  li {
+    padding: 1rem;
+    font-size: 1.2rem;
+    float: left;
+    @include goldilocks(mamaTall) {
+      float: none;
+    }
+  }
+}
+
+.body--lock {
+  overflow: hidden;
+}
+
+.menu-list {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+
+  background: rgba(48,206,245,1);
+  background: -moz-linear-gradient(top, rgba(48,206,245,1) 0%, rgba(41,254,211,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(48,206,245,1)), color-stop(100%, rgba(41,254,211,1)));
+  background: -webkit-linear-gradient(top, rgba(48,206,245,1) 0%, rgba(41,254,211,1) 100%);
+  background: -o-linear-gradient(top, rgba(48,206,245,1) 0%, rgba(41,254,211,1) 100%);
+  background: -ms-linear-gradient(top, rgba(48,206,245,1) 0%, rgba(41,254,211,1) 100%);
+  background: linear-gradient(to bottom, rgba(48,206,245,1) 0%, rgba(41,254,211,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30cef5', endColorstr='#29fed3', GradientType=0 );
+
+  overflow-x: hidden; // Disable horizontal scroll
+  transition: all 0.8s;
+  
+
+  li {
+    list-style-type: none;
+  }
+
+  .close--menu {
+    margin-top: 5px;
+    margin-right: 25px;
+    text-align: right;
+  }
+}
+
+.menu-list_height {
+    height: 100%;
+}
+
+$col: rgba(75,67,92, 1);
+
+/* Position the content inside the overlay */
+.menu-list_content {
+  position: relative;
+  color: lighten($col, 0.50);
+  width: 100%; /* 100% width */
+  top: 35%;
+  padding: 1rem 2rem;
+  text-align: left; /* Centered text/links */
+  margin-top: 10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  @include goldilocks(baby) {
+    top: 2%;
+    padding: 0.5rem;
+  }
+  @include goldilocks(mamaTall) {
+    top: 14%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* The navigation links inside the overlay */
+.menu-list a {
+ padding: 2rem 3rem 0 0;
+  text-decoration: none;
+  font-size: rem-calc(36);
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block; /* Display block instead of inline */
+  -webkit-transition: opacity 0.2s cubic-bezier(0.77,0.02,0.125,0.99);
+  transition: opacity 0.2s cubic-bezier(0.77,0.02,0.12);
+  &:hover {
+    color: $yellow;
+     -webkit-transition: color  ease-out .5s;
+  }
+  @include goldilocks(baby) {
+    font-size: 1.4rem;
+    padding-right: 100%;
+  }
+  @include goldilocks(mama) {
+    padding-right: 2rem;
+  }
+  @include goldilocks(mamaTall) {
+    font-size: 1.9rem;
+  }
+}
+
+.menu-list .menu-item {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: opacity 0.5s ease,-webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease,-webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease,transform 0.5s ease;
+  transition: opacity 0.5s ease,transform 0.5s ease,-webkit-transform 0.5s ease;
+}
+
+.menu-list_show {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0) !important;
+  -ms-transform: translateX(0) !important;
+  transform: translateX(0) !important;
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px !important; /* Override the font-size specified earlier (36px) for all navigation links */
+}
+
+/******************************************
+/* SECONDARY STYLES                   
+/*******************************************/
+/**/
+.intro {
+  margin-top: 3.5rem;
+  position: relative;
+  @include goldilocks(baby) {
+    margin-top: 1.5rem;
+    p {
+      font-size: .9rem;
+    }
+  }
+}
+.endnote {
+  font-size: .8rem;
+  // max-width: 30rem;
+}
+.flyer {
+  margin: 2rem 68rem;
+  position: absolute;
+  z-index: 200;
+  border: 1px black dashed;
+
+  img {
+    min-width: 22rem !important;
+    min-height: 33rem !important;
+    cursor: -webkit-grab;
+   
+  }
+}
+
+.draggable {
+  position: absolute !important;
+  margin: 0 auto;
+  cursor: -webkit-grab;
+}
+#pep {
+  @include goldilocks(baby) {
+    position: relative !important;
+  }
+}
+.mobile-flyer {
+  float: none;
+  clear: both;
+  img {
+    margin: 3rem 0 2rem 0;
+     @include goldilocks(baby) {
+      border: 1px dashed black;
+
+    }
+  }
+}
+.southbank {
+  margin: 4rem 0 6rem 0;
+  @include goldilocks(baby) {
+    margin: 2rem 0 5rem 0;
+  }
+  a {
+    font-size: 1rem;
+    color: $red;
+    border-bottom: 1px solid $red;
+    &:hover {
+      color: $yellow;
+      border-bottom: 1px solid $yellow;
+      -webkit-transition: all ease-in-out .7s;  
+    }
+    @include goldilocks(baby) {
+      font-size: .9rem;
+    }
+  }
+  .date {
+      padding-top: .25rem;
+      @include goldilocks(baby) {
+        font-size: .7rem;
+      }
+    }
+}
+
+.btn {
+  display: block;
+  // height: 2.5rem;
+  padding: 0.25rem .75rem;
+  text-decoration: none;
+  position: fixed;
+  line-height: 1.75rem;
+  color: black;
+  text-align: center;
+  width: 15rem;
+  font-size: .9rem;
+  font-weight: normal;
+  transition: all .3s ease-in-out;
+  bottom: 2rem;
+  margin-left: 7rem;
+  transform: translate3D(-50%, -50%, 0);
+  border: 2px solid black;
+  background: #25cff9; /* Old browsers */
+background: -moz-linear-gradient(left, #25cff9 2%, #25f7d5 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #25cff9 2%,#25f7d5 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #25cff9 2%,#25f7d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25cff9', endColorstr='#25f7d5',GradientType=1 ); /* IE6-9 */
+  a {
+    color: black;
+  }
+  &:before,
+  &:after {
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: $yellow;
+    transition: width .6s ease-in-out;
+    content: " ";
+  }
+
+  &:before {
+    left: 0;
+    top: -2px;
+  }
+
+  &:after {
+    bottom: -2px;
+    right: 0;
+  }
+
+  &:hover {
+    border-color: $yellow;
+      color: $yellow;
+
+    &:before,
+    &:after {
+      width: 100%;
+    }
+  }
+  @include goldilocks(baby) {
+    font-size: .9rem;
+    height: 2.5rem;
+    width: 17rem;
+    padding: 0;
+    border: 1px solid black;
+    margin-left: 49%;
+    line-height: 2.5rem;
+    position: relative;
+  }
+  @include goldilocks(mama) {
+    position: relative;
+    margin-top: 1rem;
+  }
+  @include goldilocks(mamaTall) {
+    position: relative;
+    margin-top: 6rem;
+  }
+}
+h4 {
+  margin-left: 2rem;
+}
+input {
+  display: block;
+  padding: .5rem;
+  margin: .5rem 2rem;
+  font-family: $font-stack;
+  border-radius: none;
+  @include goldilocks(baby) {
+    margin-top: 3.5rem;
+    border-radius: 0;
+  }
+}
+.reveal {
+  background: #25cff9; /* Old browsers */
+  background: -moz-linear-gradient(left, #25cff9 2%, #25f7d5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #25cff9 2%,#25f7d5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #25cff9 2%,#25f7d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25cff9', endColorstr='#25f7d5',GradientType=1 ); /* IE6-9 */
+  height: 35%;
+  width: 25%;
+  border: none;
+  border-radius: 0;
+  @include goldilocks(baby) {
+    height: auto;
+    width: auto;
+  }
+}
+.subscribe { 
+  // background: #25cff9; /* Old browsers */
+  // background: -moz-linear-gradient(left, #25cff9 2%, #25f7d5 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(left, #25cff9 2%,#25f7d5 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to right, #25cff9 2%,#25f7d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25cff9', endColorstr='#25f7d5',GradientType=1 ); /* IE6-9 */
+  border: 1px solid black;
+  padding: .5rem 2rem;
+  border: 1px solid black;    
+  color: black;
+  background: white;
+    &:hover {
+    color: $red;
+    border: 1px solid $red;
+      transition: all .4s ease-in-out;
+    }
+    @include goldilocks(baby) {
+      padding: .5rem 4.75rem;
+    }
+}
+.close-button {
+  float: right;
+  font-size: 1.5rem;
+}
+/******************************************
+  /* BLOG                 
+/*******************************************/
+/**/
+.blog-section {
+  position: sticky;
+  margin-top: 6rem;
+  @include goldilocks(baby) {
+    margin-top: 3rem;
+  }
+}
+.date {
+  font-size: .8rem;
+  margin-top: 0;
+}
+
+.archives {
+  display: grid;
+  margin: 1.5rem .5rem;
+  position: relative;
+  text-align: right;
+  li {
+    font-size: .8rem;
+    padding: .2rem 0;
+  }
+  .archives-heading {
+    font-size: 1rem;
+    color: $red;
+    font-weight: 600;
+    border-bottom: 1px solid $red;
+    margin-bottom: .7rem;
+  }
+  @include goldilocks(baby) {
+    text-align: left; 
+  }
+}
+
+.socials {
+  margin: 0;
+  position: relative;
+  // @include goldilocks (mamaTall) {
+  //   margin-top: 14%;
+  // }
+  // @include goldilocks (mama) {
+  //   margin-top: 10%;
+  // }
+  // @include goldilocks (baby) {
+  //   margin-top: 35%;
+  // }
+  li {
+      padding: 0 1rem 2rem 0;
+    }
+  .sprite {
+    background: url("../img/sprites.png") no-repeat;
+  }
+  .ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .socials-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+  .facebook {
+    background-position: -48px -1px;
+    &:hover {
+      background-position: -48px -37px;
+    }
+  }
+
+  .twitter {
+    background-position: 0 0;
+    &:hover {
+      background-position: 0 -36px;
+    }
+  }
+}
+
+.bio {
+  margin: 2rem 0;
+}

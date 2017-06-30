@@ -1,0 +1,28 @@
+.facebook-black, .facebook-yellow, .twitter-black, .twitter-yellow{
+	background: url(sprites.png) no-repeat;
+}
+
+.facebook-black{
+	background-position: -48px -1px ;
+	width: 30px;
+	height: 30px;
+}
+
+.facebook-yellow{
+	background-position: -48px -37px ;
+	width: 30px;
+	height: 30px;
+}
+
+.twitter-black{
+	background-position: 0 0;
+	width: 30px;
+	height: 30px;
+}
+
+.twitter-yellow{
+	background-position: 0 -36px ;
+	width: 30px;
+	height: 30px;
+}
+
