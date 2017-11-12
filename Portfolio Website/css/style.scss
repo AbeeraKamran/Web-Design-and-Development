@@ -38,7 +38,9 @@ Author: A Kamran
 	clear: both;
 }
 
-
+.float-none:last-child {
+  float: none !important;
+}
 /*************
  * MIXINS    *
  *************/
@@ -708,11 +710,11 @@ footer {
   p {
     text-align: center;
     padding: 3rem 0 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
-    font-weight: 700;
+    // font-weight: 700;
     color: $blue;
-    letter-spacing: .25rem;
+    letter-spacing: .15rem;
       @include MQ(S) {
         letter-spacing: .07rem;
       }
@@ -975,7 +977,7 @@ a {
   transition: 0.2s ease-out;
   text-transform: uppercase;
   position: inherit;
-  width: 9.5rem;
+  width: 10rem;
   margin: 0 auto;
     &:hover {
     border: $blue 1px solid;
@@ -1057,7 +1059,12 @@ a {
 .increase-width {
   width: 100%;
 }
-
+.photo-credit {
+  text-align: right;
+  font-size: .8rem;
+  color: #d9dadb;
+  margin-top: -2rem !important;
+}
 /******************************************
  BLOG STYLES                   
 ******************************************/

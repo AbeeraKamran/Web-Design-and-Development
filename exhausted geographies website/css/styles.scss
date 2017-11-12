@@ -63,9 +63,9 @@ body {
   overflow: hidden;
 }
 
-// .row {
-//   max-width: 100%;
-// }
+.row {
+  max-width: 100%;
+}
 
 h1 {
   font-family: $font-stack;
@@ -132,6 +132,7 @@ h5 {
   color: $accent;
   text-transform: uppercase;
   letter-spacing: 2px;
+
 }
 
 p {
@@ -192,7 +193,7 @@ li {
   width: 100%;
 }
 .excerpt-page {
-  background-color: $light;
+  background-color: #c5bcb9;
   margin: 0 auto;
   min-width: 100%;
 }
@@ -206,8 +207,9 @@ li {
 /**/
 
 .logo {
-  margin: 1rem;
+  margin: 1% 47.5%;
   position: absolute;
+  z-index: 10;
   @include goldilocks(papa) {
     margin: 1rem 0;
     left: 46.5%;
@@ -548,6 +550,10 @@ p.editor {
 
 .box-1{
   background-color: #c5bcb9;
+  .excerpt-overlay {
+    bottom: 0;
+    padding-bottom: 2.6rem
+  }
   @include goldilocks (papa) {
     min-height: 38rem;
    }
@@ -556,11 +562,15 @@ p.editor {
    }
   @include goldilocks (baby) {
     min-height: 62rem;
+    margin-top: 2rem;
   }
 }
 
 .box-2 {
   background-color: #afa5a1;
+  .excerpt-overlay{
+    padding-left: 2.75rem;
+  }
   @include goldilocks (papa) {
     min-height: 38rem;
    }
@@ -599,6 +609,10 @@ p.editor {
 }
 .box-5 {
   background-color: #695f5b;
+  .excerpt-overlay {
+    bottom: 0;
+    // margin-bottom: 1.8rem;
+  }
   @include goldilocks (papa) {
     min-height: 38rem;
     p {
