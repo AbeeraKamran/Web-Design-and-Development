@@ -4,6 +4,103 @@ Client: Sofia Niazi, Rose Nordin
 Author: A Kamran
 */
 /******************************************
+/* BASE CSS HOVER                   
+/*******************************************/
+.element {
+  display: inline;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -ms-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.element:hover,
+.element:focus {
+  outline: 0;
+  color: #fff;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -ms-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+  cursor: pointer;
+}
+
+.element:before {
+  -webkit-transition: all 1s ease;
+  /* add delay if wanted */
+  -moz-transition: all 1s ease;
+  /* add delay if wanted */
+  -ms-transition: all 1s ease;
+  /* add delay if wanted */
+  -o-transition: all 1s ease;
+  /* add delay if wanted */
+  transition: all 1s ease;
+  /* add delay if wanted */
+}
+
+.element:after {
+  -webkit-transition: all 1s ease;
+  /* add delay if wanted */
+  -moz-transition: all 1s ease;
+  /* add delay if wanted */
+  -ms-transition: all 1s ease;
+  /* add delay if wanted */
+  -o-transition: all 1s ease;
+  /* add delay if wanted */
+  transition: all 1s ease;
+  /* add delay if wanted */
+}
+
+.element:hover:after,
+.element:focus:after {
+  outline: 0;
+  background-color: #fff;
+  -webkit-transition: all 1s ease;
+  /* add delay if wanted */
+  -moz-transition: all 1s ease;
+  /* add delay if wanted */
+  -ms-transition: all 1s ease;
+  /* add delay if wanted */
+  -o-transition: all 1s ease;
+  /* add delay if wanted */
+  transition: all 1s ease;
+  /* add delay if wanted */
+}
+
+.element:hover:before,
+.element:focus:before {
+  outline: 0;
+  background-color: #fff;
+  -webkit-transition: all 1s ease;
+  /* add delay if wanted */
+  -moz-transition: all 1s ease;
+  /* add delay if wanted */
+  -ms-transition: all 1s ease;
+  /* add delay if wanted */
+  -o-transition: all 1s ease;
+  /* add delay if wanted */
+  transition: all 1s ease;
+  /* add delay if wanted */
+}
+
+/******************************************
 /* SETUP                   
 /*******************************************/
 /* Box Model Hack */
@@ -92,11 +189,26 @@ h3 {
   font-size: 1.2rem;
   margin: 0.75rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  h3 {
+    font-size: .9rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: .9rem;
+  }
+}
 
 h4 {
   text-align: center;
   font-size: .9rem;
   margin: 0;
+}
+@media only screen and (max-width: 500px) {
+  h4 {
+    font-size: .7rem;
+  }
 }
 
 h5 {
@@ -105,12 +217,29 @@ h5 {
   text-align: center;
   margin: 1.5rem 0 0.5rem 0;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  h5 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  h5 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: .9rem;
+  }
+}
 
 .float img {
   float: left;
   width: 50%;
-  padding-right: 1rem;
-  margin: 1rem 0 2rem 0;
+  padding: .5rem;
 }
 
 .rotate {
@@ -128,7 +257,12 @@ h5 {
 
 .nav {
   font-family: "Righteous", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+@media only screen and (max-width: 500px) {
+  .nav {
+    font-size: .9rem;
+  }
 }
 .nav ul {
   margin: 0;
@@ -136,6 +270,20 @@ h5 {
 .nav ul li {
   display: inline;
   margin-right: 13rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .nav ul li {
+    margin-right: 10rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .nav ul li {
+    margin-right: 1.1rem;
+    font-size: .8rem;
+  }
+  .nav ul li:last-child {
+    margin-right: 0;
+  }
 }
 .nav ul li:last-child {
   margin-right: 0;
@@ -145,7 +293,7 @@ h5 {
   transition: 200ms ease-in;
   padding-bottom: 20px;
 }
-.nav .studio:hover {
+.nav .publications:hover {
   color: cornflowerblue;
   transition: 200ms ease-in;
 }
@@ -158,12 +306,132 @@ h5 {
   transition: 200ms ease-in;
 }
 
+.linethrough-left:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 3px;
+}
+
+.linethrough-left:hover:after {
+  width: 100%;
+  height: 3px;
+  background-color: cornflowerblue;
+}
+
+.linethrough-left:after {
+  right: 0;
+  top: 50%;
+  z-index: 9;
+}
+
 .nav-left {
   float: left;
 }
 
 .nav-right {
   float: right;
+}
+
+#nav {
+  position: relative;
+}
+#nav:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+#nav li {
+  margin-right: 0;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-trigger {
+  position: relative;
+}
+.dropdown-trigger:focus + .dropdown-menu {
+  display: grid;
+  opacity: 1;
+}
+.dropdown-trigger::after {
+  position: absolute;
+  color: #e240ae;
+  font-size: 20px;
+  transform: rotate(90deg);
+  top: -5px;
+  right: -15px;
+}
+
+.dropdown-menu {
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 10rem;
+  margin: .5rem;
+}
+.dropdown-menu .brows {
+  padding: 1em;
+}
+@media only screen and (max-width: 500px) {
+  .dropdown-menu {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 7rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .dropdown-menu {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .dropdown-menu {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 8rem;
+  }
+}
+.dropdown-menu a {
+  color: black;
+  cursor: pointer;
+  font-size: .9rem;
+}
+@media only screen and (max-width: 500px) {
+  .dropdown-menu a {
+    color: white;
+    font-size: .8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .dropdown-menu a {
+    color: white;
+    font-size: .8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .dropdown-menu a {
+    color: white;
+    font-size: .8rem;
+  }
+}
+
+.dropdown-menu-item {
+  cursor: pointer;
+  padding-left: 1em;
+  text-align: center;
+}
+.dropdown-menu-item:hover {
+  color: #e240ae;
+  text-decoration: underline;
 }
 
 .blog-left {
@@ -178,7 +446,12 @@ h5 {
 .logo {
   position: relative;
   z-index: 10;
-  margin-top: 1.5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .logo {
+    width: 150%;
+    margin-left: -22%;
+  }
 }
 .logo p {
   font-family: "Righteous", sans-serif;
@@ -187,17 +460,21 @@ h5 {
   text-transform: uppercase;
   margin-bottom: .25rem;
 }
-.logo img {
-  width: 8rem;
-  left: 50%;
-  margin-left: -4rem;
-  position: absolute;
+@media only screen and (max-width: 500px) {
+  .logo p {
+    font-size: .5rem;
+  }
+}
+
+.current {
+  color: #8cbfe7;
+  border-bottom: 1px solid #8cbfe7;
 }
 
 .floaters {
   position: absolute;
   font-size: 1.2rem;
-  color: magenta;
+  color: #8cbfe7;
   font-family: "Righteous", sans-serif;
 }
 
@@ -212,7 +489,7 @@ h5 {
   font-size: 2rem;
   display: block;
   line-height: .7;
-  color: magenta;
+  color: #8cbfe7;
 }
 
 #buy-current-issue {
@@ -224,16 +501,30 @@ h5 {
   content: "__ _._..__._____...";
   display: block;
   line-height: 0;
-  color: magenta;
+  color: #8cbfe7;
 }
 
 .covers {
   position: relative;
-  margin-top: -2rem;
+  margin-top: -18%;
+  margin-bottom: 119%;
+  margin-left: 3%;
 }
-.covers #stack1 {
-  width: 26rem;
-  margin-left: -13rem;
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .covers {
+    margin-left: -3%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .covers {
+    margin-left: -17%;
+    margin-top: -23%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .covers {
+    margin-top: -21%;
+  }
 }
 .covers .c1 {
   border: 4px solid black;
@@ -259,14 +550,18 @@ article {
   overflow: hidden;
   width: 26rem;
 }
+@media only screen and (max-width: 500px) {
+  article {
+    width: inherit;
+  }
+}
 article img {
   cursor: pointer;
 }
 
 .banner {
   border: 2px solid #8cbfe7;
-  position: absolute;
-  bottom: 8rem;
+  position: relative;
   z-index: 20;
   background: #fef6f7;
   padding: .5rem;
@@ -274,26 +569,58 @@ article img {
   -moz-box-shadow: 4px 4px 0px 0px rgba(140, 191, 231, 0.75);
   box-shadow: 4px 4px 0px 0px rgba(140, 191, 231, 0.75);
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .banner {
+    margin-top: 16%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .banner {
+    margin-top: 35%;
+  }
+}
 .banner .banner-text {
   font-size: .8rem;
 }
 
-marquee {
-  -webkit-marquee-speed: slow;
-  margin: 0 2rem;
-}
-
 .blog-content {
-  margin-top: 45%;
+  margin-top: 2%;
 }
 .blog-content .blurb {
   font-size: .8rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .blog-content .blurb {
+    font-size: .7rem;
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-content .blurb {
+    font-size: .7rem;
+  }
 }
 
 .grid-item {
   width: 23.5%;
   padding: 1rem;
   margin: .5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .grid-item {
+    width: 46.5%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .grid-item {
+    width: 31%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .grid-item {
+    margin: .6rem 0;
+    width: 100%;
+  }
 }
 
 .tag {
@@ -445,26 +772,61 @@ footer {
 .blog-cover {
   margin-top: 6rem;
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .blog-cover {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .blog-cover {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-cover {
+    margin-top: 1rem;
+  }
+}
 
 .socials {
   text-align: center;
 }
-
-.socials-icon img:hover {
+.socials img {
+  display: inline !important;
+}
+.socials img:hover {
   opacity: 0.7;
 }
 
 .blog-text {
   margin-bottom: 5rem;
-  border-bottom: 1px dashed black;
   padding: 3rem 0;
 }
+.blog-text img {
+  display: -webkit-box;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .blog-text {
+    padding: 1.5rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blog-text {
+    padding: 1rem 0;
+  }
+}
 
-.photo-essay :last-child {
-  width: 120%;
+.photo-essay {
+  margin-bottom: 5rem;
 }
 .photo-essay img {
-  margin: .5rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  padding: .5rem;
+}
+.photo-essay .vertical-img {
+  margin-left: 10%;
 }
 
 .increase-width img {
@@ -478,4 +840,28 @@ footer {
 }
 .footnote a {
   border-bottom: 1px solid blue;
+}
+
+.credits {
+  font-size: .9rem;
+}
+
+.publications-top {
+  margin-top: 4rem;
+}
+
+.grid-publications {
+  padding: 1.5rem;
+  margin: .5rem 0;
+  background: white;
+}
+.grid-publications p {
+  padding: 2rem;
+}
+
+.press-links a {
+  margin-bottom: .5rem;
+  color: magenta;
+  border-bottom: 1px solid magenta;
+  display: table;
 }

@@ -47,7 +47,10 @@ $(document).ready(function() {
     }
     window.onload = masonry_init;
 
-	//MASONRY//
+    $( '#nav li:has(ul)' ).doubleTapToGo();
+
+
+	//moving manifesto//
 
 
 	dirR = "+=2";

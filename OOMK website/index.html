@@ -29,45 +29,48 @@
         <!-- Add your site or application content here -->
         <div class="main">
             <div class="grid-x align-justify">
-                <div class="cell">
-                    <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
-                        <button class="menu-icon" type="button" data-toggle="menu"></button>
-                    <div class="title-bar-title">Menu</div>
-                    </div>
-                    <div class="nav" id="menu">
+                <div class="cell small-12 nav">
                         <ul class="nav-left">
-                            <li><a href="about.html" class="about">About</a></li>
-                            <li><a href="studio.html" class="studio">Studio</a></li>
+                            <li><a href="about.html" class="about line-through">About</a></li>
+                            <li class=""><a href="publications.html" class="publications element linethrough-left">Publications</a></li>
                         </ul>
                         <ul class="nav-right">
-                            <li><a href="projects.html" class="projects">Projects</a></li>
-                            <li><a href="" class="shop">Shop</a></li>
+                            <li id="nav" class="nav-item-dropdown"><a href="#" class="projects dropdown-trigger linethrough-left">Projects</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="projects/brows.html" class="dropdown-menu-item brows">Brows</a></li>
+                                    <li><a href="projects/diy_cultures.html" class="dropdown-menu-item diy-cultures">DIY Cultures</a></li>
+                                    <li><a href="projects/rabbits_road_press.html" class="rabbits dropdown-menu-item">Rabbits Road</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="http://oomkzine.bigcartel.com" class="shop line-through">Shop</a></li>
                         </ul>
-                    </div>
-                    <div class="cell">
-                        <div class="logo">
-                            <a href="index.html">
-                                <p>One Of My Kind</p>
-                                <img src="img/oomk-logo3.png" alt=""
-                                ></a>
-                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="grid-x align-center">    
+                <div class="cell small-4 medium-2 large-1">
+                    <div class="logo">
+                        <a href="index.html">
+                            <p>One Of My Kind</p>
+                            <img src="img/oomk-logo3.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div>
+            <!-- <div>
                 <p id="manifesto" class="floaters"><a href="manifesto.html">OOMK Manifesto</a></p>
                 <p id="buy-current-issue" class="floaters">Buy Current Issue</p>
-            </div>
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell small-4">
+            </div> -->
+            <div class="grid-x  align-center">
+                <div class="cell small-12 medium-7 large-4">
                     <div class="covers">
                         <div id="stack1">
-                            <article class="c6 cover"><img src="img/OOMK-covers/oomk_cover6.png"></article>
-                            <article class="c5 cover"><img src="img/OOMK-covers/oomk_cover5.png"></article>
-                            <article class="c4 cover"><img src="img/OOMK-covers/oomk_cover4.png"></article>
+                            <article class="c6 cover"><img src="img/OOMK-covers/oomk_cover6.jpg"></article>
+                            <article class="c5 cover"><img src="img/OOMK-covers/oomk_cover5.jpg"></article>
+                            <article class="c4 cover"><img src="img/OOMK-covers/oomk_cover4.jpg"></article>
                             <article class="c3 cover"><img src="img/OOMK-covers/oomk_cover3.jpg"></article>
                             <article class="c2 cover"><img src="img/OOMK-covers/oomk_cover2.jpg"></article>
-                            <article class="c1 cover"><img src="img/OOMK-covers/oomk_cover1.png"></article>
+                            <article class="c1 cover"><img src="img/OOMK-covers/oomk_cover1.jpg"></article>
                         </div>
                     </div>
                 </div>
@@ -82,9 +85,9 @@
                 </div>
             </div>
             <div id="masonry" class="blog-content">
-                <div class="grid-item tag-news">
+                <div class="grid-item tag-news ">
                     <img src="img/thumbnails/oomk_hq.jpg" alt="">
-                    <a href=""><h3>New OOMK HQ: Somerset House Studios </h3></a>
+                    <a href="news/oomk_hq.html"><h3>New OOMK HQ: Somerset House Studios </h3></a>
                     <p class="tag">News</p>
                     <p class="blurb">After much anticipation and preparations (mainly just researching office plants), we moved into a new studio at Somerset House this month. Over the next year we’ll be working to develop OOMK into a sustainable publishers, specialising in work exploring women, art and activism.</p>
                 </div>
@@ -129,13 +132,13 @@
                 </div>
                 <div class="grid-item tag-interview">
                     <img src="img/thumbnails/seeing_red.jpg" alt="">
-                    <a href=""><h3>Seeing Red</h3></a>
+                    <a href="blog/issue_2_seeing_red.html"><h3>Seeing Red</h3></a>
                     <p class="tag">Interview</p>
                     <p class="blurb">See Red Women’s Workshop, a screen-printing workshop run as a women’s collective between 1974 and the early 1990s, was based in South London and produced some of the most striking posters and pamphlets to emerge from the ongoing feminist movement. OOMK interviewed founding members Pru Stevenson and Susan Mackie.</p>
                 </div>
                 <div class="grid-item tag-article">
-                    <img src="img/thumbnails/deep_roots.jpg" alt="">
-                    <h3>Deep Roots</h3>
+                    <img src="img/thumbnails/deep_roots.JPG" alt="">
+                    <a href="blog/issue_2_deep_roots.html"><h3>Deep Roots</h3></a>
                     <p class="tag">Article</p>
                     <p class="blurb">A committed trade unionist, cultural and political activist, and poet in his native Trinidad , John La Rose came to London in 1960 with sophisticated ideas on the relationship between print, publishing, and politics formed by the anti-colonial political and cultural struggles taking place in the Caribbean. </p>
                 </div>
@@ -154,8 +157,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/masonry.pkgd.min.js"></script>
+        
         <script src="js/vendor/foundation.min.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/doubleTaptoGo.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

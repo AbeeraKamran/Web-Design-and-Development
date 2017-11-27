@@ -10,6 +10,85 @@ Author: A Kamran
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import '../partials/effects';
+
+/******************************************
+/* BASE CSS HOVER                   
+/*******************************************/
+
+// .element {
+//   display: inline;
+//   position: relative;
+//   z-index: 2;
+//   text-decoration: none;
+//   box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   -webkit-user-select: none; 
+//   -moz-user-select: none; 
+//   -ms-user-select: none; 
+//   user-select: none; 
+//   -webkit-touch-callout: none; 
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+//   padding: 10px;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   -webkit-transition: color 1s ease;
+//   -moz-transition: color 1s ease;
+//   -ms-transition: color 1s ease;
+//   -o-transition: color 1s ease;
+//   transition: color 1s ease;
+// }
+
+// .element:hover,
+// .element:focus {
+//   outline: 0;
+//   color: #fff;
+//   -webkit-transition: color 1s ease;
+//   -moz-transition: color 1s ease;
+//   -ms-transition: color 1s ease;
+//   -o-transition: color 1s ease;
+//   transition: color 1s ease;
+//   cursor: pointer;
+// }
+
+// .element:before {
+//   -webkit-transition: all 1s ease; /* add delay if wanted */
+//   -moz-transition: all 1s ease; /* add delay if wanted */
+//   -ms-transition: all 1s ease; /* add delay if wanted */
+//   -o-transition: all 1s ease; /* add delay if wanted */
+//   transition: all 1s ease; /* add delay if wanted */
+// }
+
+// .element:after {
+//   -webkit-transition: all 1s ease; /* add delay if wanted */
+//   -moz-transition: all 1s ease; /* add delay if wanted */
+//   -ms-transition: all 1s ease; /* add delay if wanted */
+//   -o-transition: all 1s ease; /* add delay if wanted */
+//   transition: all 1s ease; /* add delay if wanted */  
+// }
+
+// .element:hover:after,
+// .element:focus:after {
+//   outline: 0;
+//   background-color:#fff;
+//   -webkit-transition:  all 1s ease; /* add delay if wanted */
+//      -moz-transition:  all 1s ease; /* add delay if wanted */
+//       -ms-transition:  all 1s ease; /* add delay if wanted */
+//        -o-transition:  all 1s ease; /* add delay if wanted */
+//           transition:  all 1s ease; /* add delay if wanted */
+// }
+
+// .element:hover:before,
+// .element:focus:before {
+//   outline: 0;
+//   background-color: #fff;
+//   -webkit-transition:  all 1s ease; /* add delay if wanted */
+//      -moz-transition:  all 1s ease; /* add delay if wanted */
+//       -ms-transition:  all 1s ease; /* add delay if wanted */
+//        -o-transition:  all 1s ease; /* add delay if wanted */
+//           transition:  all 1s ease; /* add delay if wanted */
+// }
 
 /******************************************
 /* SETUP                   
@@ -98,25 +177,47 @@ h3 {
   text-align: center;
   font-size: 1.2rem;
   margin: 0.75rem;
+  @include goldilocks(mama) {
+    font-size: .9rem;
+  }
+  @include goldilocks(baby) {
+    font-size: .9rem;
+  }
 
 }
 h4 {
   text-align: center;
   font-size: .9rem;
   margin: 0;
+  @include goldilocks(baby) {
+    font-size: .7rem;
+  }
 }
 h5 {
   font-size: 2rem;
   font-family: $font-heading;
   text-align: center;
   margin: 1.5rem 0 0.5rem 0;
+  @include goldilocks(mamaTall) {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  @include goldilocks(baby) {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+p {
+  @include goldilocks(baby) {
+    font-size: .9rem;
+  }
 }
 .float {
   img {
     float: left;
     width: 50%;
-    padding-right: 1rem;
-    margin: 1rem 0 2rem 0;
+    padding: .5rem;
   }
 }
 .rotate {
@@ -139,12 +240,25 @@ h5 {
 }
 .nav {
   font-family: $font-heading;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  @include goldilocks (baby) {
+    font-size: .9rem;
+  }
   ul{
     margin: 0;
     li {
       display: inline;
       margin-right: 13rem;
+       @include goldilocks (mamaTall) {
+        margin-right: 10rem;
+       }
+      @include goldilocks (baby) {
+        margin-right: 1.1rem;
+        font-size: .8rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
       &:last-child {
       margin-right: 0;
       }
@@ -156,7 +270,7 @@ h5 {
     padding-bottom: 20px;
 
   }
-  .studio:hover {
+  .publications:hover {
     color: cornflowerblue;
     transition: 200ms ease-in;
   }
@@ -169,6 +283,27 @@ h5 {
     transition: 200ms ease-in;
   }
 }
+.linethrough-left:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 3px; 
+}
+
+.linethrough-left:hover:after {
+  width: 100%;
+  height: 3px; 
+  background-color:cornflowerblue;
+}
+
+.linethrough-left:after {
+  right: 0;
+  top: 50%;
+  z-index: 9; 
+}
+
+
 .nav-left {
   float: left;
   // li {
@@ -185,6 +320,103 @@ h5 {
   //   }
   // }
 }
+
+#nav {
+  position: relative;
+  &:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+  li {
+    margin-right: 0;
+    display: block;
+    text-align: left;
+  }
+}
+.dropdown-trigger {
+  position: relative;
+  
+  &:focus + .dropdown-menu {
+    display: grid;
+    opacity: 1;
+  }
+  
+  &::after {
+    // content: "›";
+    position: absolute;
+    color: #e240ae;
+    font-size: 20px;
+    // font-weight: bold;
+    transform: rotate(90deg);
+    top: -5px;
+    right: -15px;
+  }
+}
+.dropdown-menu {
+  // background-color: black;
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  // top: 2.5rem;
+  // right: -10px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+  width: 10rem;
+  margin: .5rem;
+  .brows {
+    padding: 1em;
+  }
+  @include goldilocks (baby) {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 7rem;
+  }
+  @include goldilocks (mama) {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 8rem;
+  }
+  @include goldilocks (mamaTall) {
+    background: black;
+    z-index: 20;
+    padding: 1rem 0;
+    width: 8rem;
+  }
+
+  a {
+    color: black;
+    cursor: pointer;
+    font-size: .9rem;
+    @include goldilocks (baby) {
+      color: white;
+      font-size: .8rem;
+    }
+    @include goldilocks (mama) {
+      color: white;
+      font-size: .8rem;
+    }
+    @include goldilocks (mamaTall) {
+      color: white;
+      font-size: .8rem;
+    }
+  }
+}
+
+.dropdown-menu-item {
+  cursor: pointer;
+  padding-left: 1em;
+  text-align: center;
+  
+  &:hover {
+    color: #e240ae;
+    text-decoration: underline;
+  }
+
+}
+
 .blog-left {
   position: fixed;
 }
@@ -195,7 +427,12 @@ h5 {
 .logo {
   position: relative;
   z-index: 10;
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
+  @include goldilocks(mama) {
+    width: 150%;
+    margin-left: -22%;
+
+  }
 
   p {
     font-family: $font-heading;
@@ -203,19 +440,21 @@ h5 {
     font-size: .7rem;
     text-transform: uppercase;
     margin-bottom: .25rem;
+    @include goldilocks(baby) {
+      font-size: .5rem;
+    }
   }
-  img {
-    width: 8rem;
-    left: 50%;
-    margin-left: -4rem;
-    position: absolute;
-  }
+}
+
+.current {
+  color: $pale-blue;
+  border-bottom: 1px solid $pale-blue;
 }
 
 .floaters { 
   position: absolute;
   font-size: 1.2rem;
-  color: magenta; 
+  color: $pale-blue; 
   font-family: $font-heading;
 }
 #manifesto-btn {
@@ -228,7 +467,7 @@ h5 {
       font-size: 2rem;
       display: block;
       line-height:.7;
-      color: magenta;
+      color: $pale-blue;
     }
   } 
   #buy-current-issue {
@@ -239,20 +478,30 @@ h5 {
       content: "__ _._..__._____...";
       display: block;
       line-height:0;
-      color: magenta;
+      color: $pale-blue;
     }
   }  
 
 .covers{
   position: relative;
-  margin-top: -2rem;
+  margin-top: -18%;
+  margin-bottom: 119%;
+  margin-left: 3%;
+   @include goldilocks(mamaTall) {
+    margin-left: -3%;
+   }
+  @include goldilocks(mama) {
+    margin-left: -17%;
+    margin-top: -23%;
+  }
+  @include goldilocks(baby) {
+    margin-top: -21%;
+  }
   #stack1 {
     // position: absolute;
     // top:0;
     // left: 50%;
     // right: 0;
-    width: 26rem;
-    margin-left: -13rem;
   }
   .c1{
   border: 4px solid black;
@@ -277,6 +526,9 @@ article {
   position: absolute;
   overflow: hidden;
   width: 26rem;
+  @include goldilocks(baby) {
+    width: inherit;
+  }
   img {
     cursor: pointer;
   }
@@ -287,34 +539,58 @@ article {
 }
 .banner {
   border: 2px solid $pale-blue;
-  position: absolute;
-  bottom: 8rem;
+  position: relative;
+  // bottom: 8%;
   z-index: 20;
   background: $pale-pink;
   padding: .5rem;
   -webkit-box-shadow: 4px 4px 0px 0px rgba(140, 191, 231, 0.75);
   -moz-box-shadow:    4px 4px 0px 0px rgba(140, 191, 231, 0.75);
   box-shadow:         4px 4px 0px 0px rgba(140, 191, 231, 0.75);
+  @include goldilocks(mamaTall) {
+    margin-top: 16%;
+  }
+  @include goldilocks(mama) {
+    margin-top: 35%;
+  }
 
   .banner-text {
     font-size: .8rem;
   }
 }
-marquee {
-  -webkit-marquee-speed: slow;
-  margin: 0 2rem;
-}
+// marquee {
+//   -webkit-marquee-speed: slow;
+//   margin: 0 2rem;
+// }
 
 .blog-content {
-  margin-top: 45%;
+  margin-top: 2%;
+
   .blurb {
     font-size: .8rem;
+    @include goldilocks(mama) {
+      font-size: .7rem;
+      margin-top: 10%;
+    }
+    @include goldilocks(baby) {
+      font-size: .7rem;
+    }
   }
 }
 .grid-item {
   width: 23.5%;
   padding: 1rem;
   margin:.5rem;
+  @include goldilocks(mamaTall) {
+    width: 46.5%;
+  }
+  @include goldilocks(mama) {
+    width: 31%;
+  }
+  @include goldilocks(baby) {
+    margin: .6rem 0;
+    width: 100%;
+  }
 }
 .tag {
   font-size: .6rem;
@@ -458,12 +734,20 @@ footer {
 
 .blog-cover {
   margin-top: 6rem;
+  @include goldilocks(mamaTall) {
+    margin-top: 1rem;
+  }
+  @include goldilocks(mama) {
+    margin-top: 2rem;
+  }
+  @include goldilocks(baby) {
+    margin-top: 1rem;
+  }
 }
 .socials {
   text-align: center;
-}
-.socials-icon {
   img {
+    display: inline !important;
     &:hover {
       opacity: 0.7;
     }
@@ -471,15 +755,30 @@ footer {
 }
 .blog-text {
   margin-bottom: 5rem;
-  border-bottom: 1px dashed black;
+  // border-bottom: 1px dashed black;
   padding: 3rem 0; 
+  img {
+    display: -webkit-box;
+    margin: 0 auto;
+
+  }
+  @include goldilocks(mamaTall) {
+    padding: 1.5rem 0;
+  }
+  @include goldilocks(baby) {
+    padding: 1rem 0;
+  }
 }
 .photo-essay {
-  :last-child {
-      width: 120%;
-  }
+  margin-bottom: 5rem; 
+  
   img {
-    margin: .5rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    padding: .5rem;
+  }
+  .vertical-img {
+    margin-left: 10%;
   }
 }
 .increase-width img {
@@ -494,7 +793,28 @@ footer {
     border-bottom: 1px solid blue;
   }
 }
+.credits {
+  font-size: .9rem;
+}
+// PUBLICATIONS //
 
+.publications-top{
+  margin-top: 4rem;
+}
 
-
+.grid-publications {
+  // width: 45%;
+  padding: 1.5rem;
+  margin:.5rem 0;
+  background: white;
+  p {
+    padding: 2rem;
+  }
+}
+.press-links a{
+  margin-bottom: .5rem;
+  color: $pink;
+  border-bottom: 1px solid $pink;
+  display: table;
+}
 
