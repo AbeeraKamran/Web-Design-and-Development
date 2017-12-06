@@ -47,7 +47,7 @@ $(document).ready(function() {
     }
     window.onload = masonry_init;
 
-    $( '#nav li:has(ul)' ).doubleTapToGo();
+    // $('#nav li:has(ul)').doubleTapToGo();
 
 
 	//moving manifesto//

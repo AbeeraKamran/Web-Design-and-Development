@@ -32,12 +32,18 @@
             <div class="grid-x align-justify">
                 <div class="cell small-12 nav">
                         <ul class="nav-left">
-                            <li><a href="about.html" class="about">About</a></li>
-                            <li><a href="publications.html" class="publications">Publications</a></li>
+                            <li><a href="about.html" class="about element">About</a></li>
+                            <li class=""><a href="publications.html" class="publications element">Publications</a></li>
                         </ul>
                         <ul class="nav-right">
-                            <li><a href="projects.html" class="projects">Projects</a></li>
-                            <li><a href="" class="shop">Shop</a></li>
+                            <li id="nav" class="nav-item-dropdown"><a href="#" class="projects element">Projects</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="projects/brows.html" class="dropdown-menu-item brows">Brows</a></li>
+                                    <li><a href="projects/diy_cultures.html" class="dropdown-menu-item diy-cultures">DIY Cultures</a></li>
+                                    <li><a href="projects/rabbits_road_press.html" class="rabbits dropdown-menu-item">Rabbits Road</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="http://oomkzine.bigcartel.com" target="_blank" class="shop element">Shop</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -62,10 +68,10 @@
                         <div class="share-blog socials">
                             <ul>
                                 <li>
-                                    <a class="twitter-share-button socials-icon" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><img src="https://png.icons8.com/twitter-circled-filled/ios7/38/3498db"></a>
+                                    <a class="socials-icon icons8-twitter" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"></a>
                                 </li>
                                 <li>
-                                    <a class="facebook-share-button socials-icon" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="https://png.icons8.com/facebook-circled-filled/ios7/38/4267b2"></a>
+                                    <a class="icons8-facebook socials-icon" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"></a>
                                 </li>
                             </ul>
                         </div>
@@ -91,8 +97,6 @@
                         <p>As early as 1969 La Rose planned to open an educational resource for the growing body of archives and material relating to the cultural and political activity of New Beacon. In 1991, the George Padmore Institute, an archive named after the renowned pan-Africanist and internationalist, was opened above New Beacon Books now on Stroud Green Road. The collections include material which range in subject from the New Cross Massacre Action Committee, Carnival and the Black Parents Movement, to cassette recordings of scholar and activist Angela Davies talking in Cricklewood. The small family of staff and volunteers who work there are committed to sustaining a site of intergenerational anchorage in which indexical links to the rich imagined spaces and personal and social histories of radical Black culture in Britain can be found.</p>
 
                         <p>In the period of decolonisation and migration to Britain in which it was founded, New Beacon understood the importance of the role of the writer and the publishing industry in mediating a collective sense of the past. As a publishing house and booksellers, it developed into a fully integrated part of a small but powerful diasporic ecosystem with links ranging from the Notting Hill Carnival to the Oilfield Workers Trade Union in Trinidad. By choosing the path of slow organic growth over the temptation of institutional funding through which many bookshops eventually collapsed, New Beacon worked successfully to establish a form of autonomy within the British literary market. Re-appropriating the means through which identity, history and culture were produced, it handed information and the regulatory power of narrative back to Black communities. In doing so, New Beacon crafted innovative relationships between activism and print and bookshops as a site of education and spatial assemblage.</p> 
-
-						<img src="../img/blog-imgs/issue6_imgs/willowbrook_farm_6.png" alt="">
                     </div>
                 </div>
             </div>
@@ -101,7 +105,15 @@
         <div class="gradient"></div>
 
         <footer>
-           
+           <div class="grid-x align-center">
+               <div class="cell large-6">
+                   <ul>
+                       <li>&#169; OOMK 2017</li>
+                       <li>~</li>
+                       <li><a href="../contact.html">Contact OOMK</a></li>
+                   </ul>
+               </div>
+           </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

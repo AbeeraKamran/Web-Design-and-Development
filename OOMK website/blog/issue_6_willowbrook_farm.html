@@ -31,12 +31,18 @@
             <div class="grid-x align-justify">
                 <div class="cell small-12 nav">
                         <ul class="nav-left">
-                            <li><a href="about.html" class="about">About</a></li>
-                            <li><a href="publications.html" class="publications">Publications</a></li>
+                            <li><a href="about.html" class="about element">About</a></li>
+                            <li class=""><a href="publications.html" class="publications element">Publications</a></li>
                         </ul>
                         <ul class="nav-right">
-                            <li><a href="projects.html" class="projects">Projects</a></li>
-                            <li><a href="" class="shop">Shop</a></li>
+                            <li id="nav" class="nav-item-dropdown"><a href="#" class="projects element">Projects</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="projects/brows.html" class="dropdown-menu-item brows">Brows</a></li>
+                                    <li><a href="projects/diy_cultures.html" class="dropdown-menu-item diy-cultures">DIY Cultures</a></li>
+                                    <li><a href="projects/rabbits_road_press.html" class="rabbits dropdown-menu-item">Rabbits Road</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="http://oomkzine.bigcartel.com" target="_blank" class="shop element">Shop</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,10 +66,10 @@
                         <div class="share-blog socials">
                             <ul>
                                 <li>
-                                    <a class="twitter-share-button socials-icon" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"><img src="https://png.icons8.com/twitter-circled-filled/ios7/38/3498db"></a>
+                                    <a class="socials-icon icons8-twitter" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;"></a>
                                 </li>
                                 <li>
-                                    <a class="facebook-share-button socials-icon" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="https://png.icons8.com/facebook-circled-filled/ios7/38/4267b2"></a>
+                                    <a class="icons8-facebook socials-icon" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"></a>
                                 </li>
                             </ul>
                         </div>
@@ -105,7 +111,15 @@
         <div class="gradient"></div>
 
         <footer>
-           
+           <div class="grid-x align-center">
+               <div class="cell large-6">
+                   <ul>
+                       <li>&#169; OOMK 2017</li>
+                       <li>~</li>
+                       <li><a href="../contact.html">Contact OOMK</a></li>
+                   </ul>
+               </div>
+           </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

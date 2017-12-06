@@ -31,12 +31,18 @@
             <div class="grid-x align-justify">
                 <div class="cell small-12 nav">
                         <ul class="nav-left">
-                            <li><a href="about.html" class="about">About</a></li>
-                            <li><a href="publications.html" class="publications current">Publications</a></li>
+                            <li><a href="about.html" class="about element">About</a></li>
+                            <li class=""><a href="publications.html" class="publications current">Publications</a></li>
                         </ul>
                         <ul class="nav-right">
-                            <li><a href="projects.html" class="projects">Projects</a></li>
-                            <li><a href="" class="shop">Shop</a></li>
+                            <li id="nav" class="nav-item-dropdown"><a href="#" class="projects element">Projects</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="projects/brows.html" class="dropdown-menu-item brows">Brows</a></li>
+                                    <li><a href="projects/diy_cultures.html" class="dropdown-menu-item diy-cultures">DIY Cultures</a></li>
+                                    <li><a href="projects/rabbits_road_press.html" class="rabbits dropdown-menu-item">Rabbits Road</a></li>
+                                </ul>
+                            </li> 
+                            <li><a href="http://oomkzine.bigcartel.com" target="_blank" class="shop element">Shop</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,7 +66,7 @@
                     <p class="tag"> 2013 - Current</p>
                     <p>OOMK Zine is a publication about women, art and activism, the first issue was published in 2013 by Sofia Niazi, Sabba Khan and Rose Nordin. Printed biannually, its content pivots upon the imaginations, creativity and spirituality of women. Each issue centers around a different creative theme, with more general content exploring topics of faith, activism and identity.</p>
                 </cell>
-                <cell class="large-5 grid-publications">
+                <cell class="large-5 grid-publications pub-img">
                     <img src="img/publications/oomk_zine_collage.jpg" alt="">
                 </cell>
             </div>
@@ -71,7 +77,7 @@
                     Published by Book Works</p>
                     <p>The Library Was sees OOMK reimagining the function, aesthetic and user culture of the library. Opening in an austerity-stricken future in which all public libraries have closed, it goes on to assert the continued importance of libraries via interviews with London-based library enthusiasts, a profile of the revolutionary Cuban librarian Marta Terry González, a re-assessment of The Five Laws of Library Science, 1931, as they do and don't apply to the collection of contemporary zines, and an account of the stolen library of the late Saudi novelist Abd al-Rahman Munif. It also documents the publications donated to the Open School East Library during OOMK‘s Future Library Fair held in December 2015, and describes the work of a semi-fictional group of readers and activists, who have pooled their resources to establish The Library of Aimless Yet Meaningful Pursuit, a space for meeting and learning outside of the algorithmic ‘Grid’.</p>
                 </cell>
-                <cell class="large-5 grid-publications">
+                <cell class="large-5 grid-publications pub-img">
                     <img src="img/publications/thelibrarywas_1.jpg" alt="">
                 </cell>
             </div>
@@ -85,7 +91,7 @@
                         <a href="http://magculture.com/oomk-a-study-of-publishing-practices-in-malaysia/">MagCulture</a>
                     </p>
                 </cell>
-                <cell class="large-5 grid-publications">
+                <cell class="large-5 grid-publications pub-img">
                     <img src="img/publications/masia_1.jpg" alt="">
                 </cell>
             </div>
@@ -100,14 +106,19 @@
             </div> -->
         <div class="gradient"></div>
         <footer>
-            <!-- <marquee>
+           <div class="grid-x align-center">
+               <div class="cell large-6">
+                   <ul>
+                       <li>&#169; OOMK 2017</li>
+                       <li>~</li>
+                       <li><a href="../contact.html">Contact OOMK</a></li>
+                   </ul>
+               </div>
+           </div>
+        </footer>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/masonry.pkgd.min.js"></script>
-        
-        <script src="js/vendor/foundation.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
