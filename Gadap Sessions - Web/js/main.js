@@ -76,5 +76,35 @@ $(document).ready(function(){
 	w.resize(fixbkgd);
 	fixbkgd();
 
+    // $(document).ready(function() {
+    //     if $('.video')css({
+    //         opacity:1
+    //     })
+    //         $('.video').unmute
+    // }
+
+    // $( ".video" ).bind(
+    //         "mouseover",
+    //         function( event ){
+    //             $('.hidden').addClass('visible');
+    //         }
+    // );
+    // $( ".video" ).bind(
+    //     "mouseout",
+    //     function( event ){
+    //         $('.hidden').removeClass('visible');
+    //     }
+    // );
+
+     // $('.set-1').hover(function(){
+     //      $('.vid-1').addClass('op');
+     //      $("#set-1").fadeIn(0);
+     //  },
+     //  function(){
+     //      $('.group, .curated, .text, .video, .other').removeClass('op');
+     //      $("#solo").fadeOut(0);
+     //  });
+
+
 
 });

@@ -82,4 +82,21 @@ $(document).ready(function() {
 	setInterval (function() { $("#manifesto").css("left", dirL); $("#manifesto").css("top", dirR); moveDir(); } , 50)
 		setInterval (function() { $("#buy-current-issue").css("right", dirL); $("#buy-current-issue").css("bottom", dirR); moveDir(); } , 50)
 
+    // function changeClass(object,oldClass,newClass)
+    // {
+    //     // remove:
+    //     //object.className = object.className.replace( /(?:^|\s)oldClass(?!\S)/g , '' );
+    //     // replace:
+    //     var regExp = new RegExp('(?:^|\\s)' + oldClass + '(?!\\S)', 'g');
+    //     object.className = object.className.replace( regExp , newClass );
+    //     // add
+    //     //object.className += " "+newClass;
+    // }
+
+    // changeClass(myInput.submit,"stategood_disabled"," stategood_enabled");
+
+   
+
+
+
 });
