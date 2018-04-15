@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rivers</title>
+        <meta name="Chura Waro - Gadap Sessions" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" 
+        href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body cz-shortcut-listen="true">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=11JjNFZnIGwXzr1r-wJAiP7psbr6kpr4Z" width="1500" height="770"></iframe>
+        </div>
+
+        <div class="modals">
+            <div id="videoModal" class="modal" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe width="400" height="225" src="img/IMG_5990.m4v" loop></iframe>
+            </div>
+            
+            <div id="box1" class="modal">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_5.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box2" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_5.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box3" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_1.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            <div id="box4" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_1.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box5" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_5.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            <div id="box6" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_1.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box7" class="modal">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_4.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box8" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_4.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box9" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_2.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            <div id="box10" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_2.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            
+            <div id="box11" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_2.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+            <div id="box12" class="modal" data-reveal aria-hidden="true" role="dialog">
+                <button type='button' class='close-box' onclick='$(this).parent().remove();'>&#215;</button>
+                <iframe src="img/river_4.jpg" alt="" height="250px" width="141px"></iframe>
+            </div>
+        </div>
+
+
+ <script>
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            
+            styles: [
+                {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                
+            ]
+        });
+      }
+    </script>
+        
+       
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+ -->    
+        <!-- jquery.address plugin CDN -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     
+
+                <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

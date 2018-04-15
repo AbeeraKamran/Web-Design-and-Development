@@ -118,7 +118,7 @@
     };
   })(this);
 
-  image.src = 'https://s3.amazonaws.com/websiteimagery/kalair_4e.jpg';
+  image.src = 'https://s3.amazonaws.com/websiteimagery/kalair-4e.jpg';
 
   kaleidoscope = new Kaleidoscope({
     image: image,

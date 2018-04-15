@@ -15,7 +15,7 @@
         offsetScale: 1.0,
         offsetX: 0.0,
         offsetY: 0.0,
-        radius: 1100,
+        radius: 820,
         slices: 12,
         zoom: .5
       };
@@ -118,7 +118,7 @@
     };
   })(this);
 
-  image.src = 'https://s3.amazonaws.com/websiteimagery/kalair_4b.jpg';
+  image.src = 'https://s3.amazonaws.com/websiteimagery/kalair-4b.jpg';
 
   kaleidoscope = new Kaleidoscope({
     image: image,

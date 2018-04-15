@@ -26,40 +26,43 @@ $(document).ready(function(){
         });
                 
     });
-    $(".click1").click(function(){
-    	$(".hide1").show();
-    });
-    $(".click2").click(function(){
-    	$(".hide2").show();
+    $(".click").click(function(){
+    	$(this).siblings(".hidden").toggle();
 	});
-	$(".click3").click(function(){
-    	$(".hide3").show();
-    });
-    $(".click4").click(function(){
-    	$(".hide4").show();
-    });
-    $(".click5").click(function(){
-    	$(".hide5").show();
-    });
-    $(".click6").click(function(){
-    	// $(".shift-up").css({top: '20'+ px, position: 'fixed'});
-    	$(".hide6").show();
-    });
-    $(".click7").click(function(){
-    	$(".hide7").show();
-    });
-    $(".click8").click(function(){
-    	$(".hide8").show();
-    });
-    $(".click9").click(function(){
-    	$(".hide9").show();
-    });
-    $(".click10").click(function(){
-    	$(".hide10").show();
-    });
-    $(".click11").click(function(){
-    	$(".hide11").show();
-    });
+
+
+ //    $(".click2").click(function(){
+ //        $(".hide2").hide();
+ //    });
+	// $(".click3").click(function(){
+ //    	$(".hide3").toggleClass('.hide1');
+ //    });
+ //    $(".click4").click(function(){
+ //    	$(".hide4").show();
+ //    });
+ //    $(".click5").click(function(){
+ //    	$(".hide5").show();
+ //    });
+ //    $(".click6").click(function(){
+ //    	// $(".shift-up").css({top: '20'+ px, position: 'fixed'});
+ //    	$(".hide6").show();
+ //    });
+ //    $(".click7").click(function(){
+ //    	$(".hide7").show();
+ //    });
+ //    $(".click8").click(function(){
+ //    	$(".hide8").show();
+ //    });
+ //    $(".click9").click(function(){
+ //    	$(".hide9").show();
+ //    });
+ //    $(".click10").click(function(){
+ //    	$(".hide10").show();
+ //        $(this).hide();
+ //    });
+ //    $(".click11").click(function(){
+ //    	$(".hide11").show();
+ //    });
 
 
 	var w = $(window),
@@ -76,35 +79,10 @@ $(document).ready(function(){
 	w.resize(fixbkgd);
 	fixbkgd();
 
-    // $(document).ready(function() {
-    //     if $('.video')css({
-    //         opacity:1
-    //     })
-    //         $('.video').unmute
-    // }
-
-    // $( ".video" ).bind(
-    //         "mouseover",
-    //         function( event ){
-    //             $('.hidden').addClass('visible');
-    //         }
-    // );
-    // $( ".video" ).bind(
-    //     "mouseout",
-    //     function( event ){
-    //         $('.hidden').removeClass('visible');
-    //     }
-    // );
-
-     // $('.set-1').hover(function(){
-     //      $('.vid-1').addClass('op');
-     //      $("#set-1").fadeIn(0);
-     //  },
-     //  function(){
-     //      $('.group, .curated, .text, .video, .other').removeClass('op');
-     //      $("#solo").fadeOut(0);
-     //  });
-
-
+ $('.close-box').onclick = function(){
+                this.parentNode.parentNode.parentNode
+                .removeChild(this.parentNode.parentNode);
+                return false;
+            };
 
 });

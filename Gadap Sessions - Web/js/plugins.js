@@ -21,3 +21,47 @@
     }
 }());
 
+// $('.border').click(function() {
+//         $('.border').css({
+//             'background-color': 'white',
+//             'color': 'black'
+//          });
+//     });
+$(function(){
+    $('.chura-index a').click(function(){
+        $('.chura-index a.active').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+
+$(function(){
+    
+    // $('.linkA').click(function(){
+    //     $('.linkA.active').toggleClass('active');
+    //     // $(this).addClass('active');
+    // });
+    // $('.linkB').click(function(){
+    //     $('.linkB.active').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+    // $('.linkC').click(function(){
+    //     $('.linkC.active').removeClass('active');
+    //     $('.linkC').addClass('active');
+    // });
+    // $('.linkD').click(function(){
+    //     $('.linkD-1.active').removeClass('active');
+    //     $('.linkD-1').addClass('active');
+    // });
+    // $('.linkE').click(function(){
+    //     $('.linkE-1.active').removeClass('active');
+    //     $('.linkE-1').addClass('active');
+    // });
+    // $('.linkF').click(function(){
+    //     $('.linkF-1.active').removeClass('active');
+    //     $('.linkF-1').toggleClass('active');
+    // });
+    // $('.linkG').click(function(){
+    //     $('.linkA-1.active').removeClass('active');
+    //     $('.linkA-1').toggleClass('active');
+    // });
+});
